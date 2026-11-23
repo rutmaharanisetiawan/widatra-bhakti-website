@@ -16,6 +16,7 @@ import applicationRoutes from "./routes/applicationRoutes.js";
 import tourRoutes from "./routes/tourRoutes.js";
 import communityEventRoutes from "./routes/communityEventRoutes.js";
 import adminRoutes from "./routes/adminRoutes.js";
+import notificationRoutes from "./routes/notificationRoutes.js";
 import {
   getCompanyProfile,
   updateCompanyProfile,
@@ -82,6 +83,7 @@ app.use("/api/applications", applicationRoutes);
 app.use("/api/tour-bookings", tourRoutes);
 app.use("/api/community-events", communityEventRoutes);
 app.use("/api/admin", adminRoutes);
+app.use("/api/notifications", notificationRoutes);
 app.use("/api/media", mediaRoutes);
 app.use("/api/documents", documentRoutes);
 app.use("/api/contact-inquiries", contactRoutes);

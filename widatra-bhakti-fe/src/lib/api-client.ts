@@ -7,7 +7,7 @@
 
 export const API_BASE_URL: string =
   (import.meta as unknown as { env?: Record<string, string> }).env?.VITE_API_URL ||
-  (typeof window !== "undefined" ? "/api" : "http://localhost:8000/api");
+  (typeof window !== "undefined" ? "/api" : "http://localhost:8001/api");
 
 const TOKEN_KEY = "widatra_auth_token_v1";
 const EVENT_NAME = "widatra-auth-store-changed";
@@ -152,7 +152,7 @@ export const api = {
 export function absoluteUrl(pathOrUrl?: string | null): string {
   if (!pathOrUrl) return "";
   if (/^https?:\/\//i.test(pathOrUrl)) {
-    if (typeof window !== "undefined" && /(localhost|127\.0\.0\.1):8000/i.test(pathOrUrl)) {
+    if (typeof window !== "undefined" && /(localhost|127\.0\.0\.1):(8000|8001)/i.test(pathOrUrl)) {
       return pathOrUrl.replace(/^https?:\/\/[^/]+/i, "");
     }
     return pathOrUrl;

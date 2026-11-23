@@ -120,14 +120,11 @@ Semua akun terdaftar menggunakan kata sandi standar berikut untuk pengujian loka
 10. **Booking Kunjungan Pabrik (`/api/tour-bookings`)**: Booking publik, kode tiket `FT-YYMMDD-XXXX`, lookup status publik, persetujuan jadwal, dan catatan logistik.
 11. **Acara Komunitas (`/api/community-events`)**: Pengajuan proposal internal (`Internal Employee`), review & moderasi multi-stage (`approve`/`reject`/`revision`), dan publikasi langsung ke artikel berita (`Event Moderator`).
 12. **Manajemen Pengguna & Log Audit (`/api/admin/users`, `/api/admin/audit-logs`)**: Daftar pengguna, update role (sinkronisasi Spatie `model_has_roles`), suspend/aktivasi akun, dan pencatatan audit log terperinci (`Super Admin`).
+13. **Notifikasi Akun (`/api/notifications`)**: Daftar notifikasi user login, tanda sudah dibaca tunggal (`/:id/read`), dan tanda semua dibaca (`/read-all`).
+14. **Frontend Switchover (`widatra-bhakti-fe`)**: Vite dev proxy (`/api` dan `/storage`) dan `VITE_API_URL` telah dialihkan penuh ke Node.js backend (port 8001). Seluruh 8 role telah lulus pengujian end-to-end dengan status 100% hijau.
 
 ---
 
-### ⏳ Tugas yang Tersisa Sebelum Deployment Hari Rabu
+### 🚀 Kesiapan Deployment
 
-1. **Modul Notifikasi Akun (`/api/notifications`)**:
-   - `GET /api/notifications` (daftar notifikasi terhubung ke user yang login).
-   - `PATCH /api/notifications/:id/read` & `POST /api/notifications/mark-all-read`.
-2. **Pengalihan Port Frontend (Vite Proxy Switchover) & Pengujian Terpadu Seluruh 8 Role**:
-   - Di `widatra-bhakti-fe/vite.config.ts`, alihkan target proxy `/api` dan `/storage` dari `http://127.0.0.1:8000` (Laravel) ke `http://127.0.0.1:8001` (Node).
-   - Pengujian terpadu seluruh 8 role di antarmuka web.
+Seluruh sistem telah **100% selesai dimigrasikan ke Node.js Backend**, teruji lintas 8 role, dan siap dideploy untuk peluncuran hari Rabu. Arsitektur tetap mendukung fallback ke Laravel (port 8000) jika diperlukan kapan saja tanpa risiko *downtime*.
