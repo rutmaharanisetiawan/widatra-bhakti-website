@@ -1,0 +1,2661 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "aboutUs": "Tentang Kami",
+    "companyProfile": "Profil Perusahaan",
+    "management": "Manajemen",
+    "visionMission": "Visi & Misi",
+    "companyValues": "Nilai Perusahaan",
+    "videoProfile": "Video Profil",
+    "awards": "Penghargaan",
+    "ourProducts": "Produk Kami",
+    "factoryTour": "Kunjungan Pabrik",
+    "newsEvent": "Berita & Acara",
+    "csr": "TJSL",
+    "careers": "Karier",
+    "contact": "Kontak",
+    "joinUs": "Bergabung",
+    "signIn": "Masuk",
+    "signInRegister": "Masuk / Daftar",
+    "myAccount": "Akun Saya"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Otsuka Group Indonesia · Berdiri 1986",
+      "titleLine1": "Mitra Terpercaya",
+      "titleLine2": "untuk Kesehatan Lebih Baik.",
+      "description": "Saat ini, WIDATRA adalah produsen produk larutan intravena dasar terbesar dan pemimpin pasar di Indonesia — menuju posisi sebagai perusahaan larutan intravena terbesar di Asia Tenggara.",
+      "ctaExplore": "Jelajahi Solusi Kami",
+      "ctaTour": "Kunjungi Pabrik",
+      "scroll": "Gulir"
+    },
+    "stats": {
+      "years": "Tahun Keunggulan",
+      "units": "Unit Diproduksi per Tahun",
+      "productLines": "Lini Produk Terdaftar",
+      "cleanroom": "Sertifikasi Cleanroom"
+    },
+    "intro": {
+      "eyebrow": "(01) Tentang Kami",
+      "titlePrefix": "Produsen terbesar",
+      "titleHighlight": "larutan parenteral dasar",
+      "titleSuffix": "di Indonesia.",
+      "p1": "PT Widatra Bhakti adalah perusahaan farmasi dan anggota Otsuka Group Indonesia. Kami senantiasa berkontribusi bagi kesehatan masyarakat dengan memproduksi produk berkualitas tinggi dengan harga kompetitif, serta berperan strategis dalam Sistem Kesehatan Nasional Indonesia.",
+      "p2": "Kampus kami di Pandaan dikelilingi lingkungan hijau, memberikan suasana kerja yang nyaman dan sehat bagi setiap orang yang menjaga pasokan rumah sakit di Indonesia — setiap hari.",
+      "ctaStory": "Kisah Kami",
+      "ctaLeadership": "Kepemimpinan",
+      "otsukaLabel": "Otsuka Group",
+      "quote": "Mutu sangat penting di pabrik, begitu pula kemasan — kami memproduksi dan memasarkan dengan menempatkan diri pada posisi konsumen.",
+      "quoteAuthor": "— Busaburo Otsuka, Pendiri, Otsuka Group"
+    },
+    "manufacturing": {
+      "eyebrow": "(02) Keunggulan Manufaktur",
+      "titlePrefix": "Steril sejak desain.",
+      "titleHighlight": "Andal",
+      "titleSuffix": "melalui disiplin.",
+      "description": "Kami memadukan teknik rekayasa Jepang dengan keahlian Indonesia untuk memproduksi larutan IV penyelamat jiwa yang memenuhi standar farmakope internasional — dari air baku hingga palet akhir.",
+      "highlight": {
+        "number": "01",
+        "title": "Pengisian Steril Sistem Tertutup",
+        "desc": "Pengisian sistem tertutup di bawah aliran udara laminar Grade A memastikan nol kontaminasi dari formulasi hingga sterilisasi akhir."
+      },
+      "items": [
+        {
+          "title": "Air untuk Injeksi",
+          "desc": "Loop WFI on-site dipantau berkelanjutan untuk TOC, konduktivitas, dan endotoksin."
+        },
+        {
+          "title": "Autoklaf Terminal",
+          "desc": "Setiap batch disterilkan secara terminal dan 100% diuji kebocoran sebelum dirilis."
+        },
+        {
+          "title": "Inspeksi Visi Dalam Proses",
+          "desc": "Inspeksi optik otomatis menolak partikel mikro yang tak kasat mata."
+        }
+      ]
+    },
+    "facilities": {
+      "eyebrow": "(03) Fasilitas Produksi Kami",
+      "titlePrefix": "Pandaan, Jawa Timur —",
+      "titleHighlight": "rumah manufaktur kami.",
+      "description": "Berdiri di atas kampus industri hijau seluas 5+ hektare di Jl. Stadion, fasilitas Pandaan kami memiliki lini parenteral khusus, pabrik WFI internal, laboratorium mikrobiologi dan kimia, serta sistem manajemen lingkungan bersertifikat ISO 14001.",
+      "items": [
+        {
+          "title": "Ruang Pengisian Steril",
+          "desc": "Lini bottle-pack sistem tertutup Grade A/B"
+        },
+        {
+          "title": "Pabrik Utilitas",
+          "desc": "WFI, uap bersih, HVAC dengan pemantauan EMS berkelanjutan"
+        },
+        {
+          "title": "Laboratorium QC",
+          "desc": "HPLC, UV-Vis, endotoksin (LAL), sterilitas, bioburden"
+        },
+        {
+          "title": "Gudang & Logistik",
+          "desc": "Penyimpanan dan pengiriman terkendali 25°C sesuai GDP"
+        }
+      ],
+      "cta": "Kunjungi Pabrik"
+    },
+    "whyChoose": {
+      "eyebrow": "(04) Mengapa Memilih Widatra",
+      "titlePrefix": "Enam alasan rumah sakit mempercayai kami",
+      "titleHighlight": "di setiap shift.",
+      "items": [
+        {
+          "title": "Rekam Jejak 38 Tahun",
+          "desc": "Beroperasi secara andal sejak 1986, memasok jaringan rumah sakit terbesar di Indonesia."
+        },
+        {
+          "title": "Anggota Otsuka Group",
+          "desc": "Didukung oleh keahlian global Otsuka dan warisan farmasi."
+        },
+        {
+          "title": "Bersertifikat PIC/S GMP",
+          "desc": "Berlisensi BPOM dan diaudit sesuai PIC/S Good Manufacturing Practice."
+        },
+        {
+          "title": "Terintegrasi Vertikal",
+          "desc": "Dari bahan baku melalui WFI, pengisian, sterilisasi, hingga distribusi."
+        },
+        {
+          "title": "Pasokan Nasional yang Stabil",
+          "desc": "Kapasitas tangguh yang menjaga ketersediaan cairan IV kritis secara nasional."
+        },
+        {
+          "title": "Kualitas Utamakan Pasien",
+          "desc": "Tanpa kompromi pada sterilitas, identitas, potensi, dan apyrogenisitas."
+        }
+      ]
+    },
+    "process": {
+      "eyebrow": "(05) Proses Manufaktur",
+      "titlePrefix": "Dari",
+      "titleHighlight": "molekul",
+      "titleSuffix": "hingga pasien.",
+      "stepLabel": "LANGKAH",
+      "items": [
+        {
+          "title": "Pembangkitan WFI",
+          "desc": "Pemurnian air multi-tahap dengan pemantauan berkelanjutan."
+        },
+        {
+          "title": "Peracikan",
+          "desc": "Penimbangan presisi & pelarutan tervalidasi dalam tangki tersegel."
+        },
+        {
+          "title": "Pengisian Steril",
+          "desc": "Lini bottle-pack sistem tertutup, Grade A di bawah HEPA."
+        },
+        {
+          "title": "Sterilisasi Terminal",
+          "desc": "Siklus autoklaf uap tervalidasi untuk setiap batch."
+        },
+        {
+          "title": "Inspeksi",
+          "desc": "Visi otomatis + inspeksi visual akhir manual."
+        },
+        {
+          "title": "Rilis & Pengiriman",
+          "desc": "Rilis QC, pengiriman bebas rantai dingin sesuai GDP."
+        }
+      ]
+    },
+    "certifications": {
+      "eyebrow": "(06) Sertifikasi Internasional",
+      "titlePrefix": "Diaudit, disertifikasi,",
+      "titleHighlight": "dipercaya.",
+      "description": "Kami beroperasi dengan standar tertinggi mutu, lingkungan, dan keselamatan & kesehatan kerja — diverifikasi oleh lembaga sertifikasi pihak ketiga independen.",
+      "items": [
+        "ISO 9001:2015",
+        "ISO 14001:2015",
+        "ISO 45001:2018",
+        "PIC/S GMP",
+        "Berlisensi BPOM",
+        "Bersertifikat Halal",
+        "5R/5S Jawa Timur 2025",
+        "Penghargaan LKTP 2019",
+        "Kepatuhan Pajak 2015-2018",
+        "Penghargaan Donor Darah 2018",
+        "QMS Otsuka Group",
+        "Mitra BPJS"
+      ]
+    },
+    "qa": {
+      "eyebrow": "(07) Jaminan Mutu",
+      "titlePrefix": "Setiap batch,",
+      "titleHighlight": "setiap pengujian.",
+      "description": "Mutu direkayasa dari hulu dan diverifikasi di hilir. Kerangka QA kami mencakup identifikasi bahan baku, kontrol dalam proses, pemantauan mikrobiologi, integritas kemasan penutup, dan stabilitas dalam kondisi tropis — selaras penuh dengan PIC/S Annex 1.",
+      "stats": [
+        {
+          "k": "100%",
+          "v": "Rilis batch dengan persetujuan QC"
+        },
+        {
+          "k": "24 bln.",
+          "v": "Program stabilitas tervalidasi"
+        },
+        {
+          "k": "ALCOA+",
+          "v": "Catatan sesuai integritas data"
+        },
+        {
+          "k": "Annex 1",
+          "v": "Proses aseptik yang selaras"
+        }
+      ]
+    },
+    "products": {
+      "eyebrow": "(08) Produk Kami",
+      "titlePrefix": "Kemurnian di",
+      "titleHighlight": "setiap tetes.",
+      "cta": "Lihat Katalog Lengkap →",
+      "items": [
+        {
+          "title": "Intravena Dasar",
+          "desc": "Sodium Chloride, Ringer Lactate, WIDA NS, WIDA RL — tulang punggung perawatan rumah sakit sehari-hari."
+        },
+        {
+          "title": "Solusi Khusus",
+          "desc": "WIDA D5-NS, D5-½NS, D5-¼NS, 2A, RD, KN-2 — disesuaikan secara klinis untuk kebutuhan terapeutik tertentu."
+        },
+        {
+          "title": "Irigasi & Perangkat",
+          "desc": "WIDA WI Unicap dan WidaSet — sistem irigasi steril dan pengiriman presisi."
+        }
+      ]
+    },
+    "rnd": {
+      "eyebrow": "(09) Riset & Inovasi",
+      "titlePrefix": "Inovasi yang",
+      "titleHighlight": "dimulai di laboratorium.",
+      "description": "Tim R&D kami bermitra dengan universitas dan klinisi untuk mengembangkan formulasi steril baru, mengoptimalkan sistem pengiriman, dan terus meningkatkan standar kemasan, jaminan sterilitas, dan kinerja lingkungan.",
+      "items": [
+        {
+          "title": "Pengembangan Formulasi",
+          "desc": "Peningkatan skala bench-to-pilot dengan desain eksperimen statistik."
+        },
+        {
+          "title": "Inovasi Kemasan",
+          "desc": "Polimer medis yang dapat didaur ulang dan sistem penutup Unicap."
+        },
+        {
+          "title": "Ilmu Stabilitas",
+          "desc": "Protokol zona tropis jangka panjang yang memvalidasi umur simpan 24 bulan."
+        },
+        {
+          "title": "Rekayasa Proses",
+          "desc": "Program peningkatan hasil, OEE, dan right-first-time yang berkelanjutan."
+        }
+      ]
+    },
+    "partners": {
+      "eyebrow": "(10) Mitra Bisnis",
+      "titlePrefix": "Bekerja bersama para pemimpin",
+      "titleHighlight": "di bidang kesehatan.",
+      "items": [
+        "Otsuka Pharmaceutical",
+        "Amerta Indah Otsuka",
+        "Kemenkes RI",
+        "RS Cipto Mangunkusumo",
+        "RSUP Dr. Sardjito",
+        "RSUD Dr. Soetomo",
+        "BPJS Kesehatan",
+        "PT Kimia Farma",
+        "PT Bio Farma",
+        "Apotek Kimia Farma",
+        "Apotek Century",
+        "Jaringan Distributor"
+      ]
+    },
+    "timeline": {
+      "eyebrow": "(11) Linimasa Perusahaan",
+      "titlePrefix": "Empat puluh tahun",
+      "titleHighlight": "perawatan ilmiah.",
+      "items": [
+        {
+          "year": "1986",
+          "title": "Didirikan",
+          "desc": "PT Widatra Bhakti didirikan di Pandaan, Jawa Timur."
+        },
+        {
+          "year": "1992",
+          "title": "Kemitraan Otsuka",
+          "desc": "Bergabung dengan Otsuka Group Indonesia sebagai anggota strategis."
+        },
+        {
+          "year": "2003",
+          "title": "Ekspansi Kapasitas",
+          "desc": "Menggandakan kapasitas pengisian steril untuk memenuhi permintaan nasional."
+        },
+        {
+          "year": "2015",
+          "title": "ISO 9001 & 14001",
+          "desc": "Meraih sertifikasi mutu & lingkungan global."
+        },
+        {
+          "year": "2018",
+          "title": "ISO 45001",
+          "desc": "Bersertifikat sistem manajemen keselamatan & kesehatan kerja."
+        },
+        {
+          "year": "2025",
+          "title": "Penghargaan 5R/5S",
+          "desc": "Dianugerahi Penghargaan Keunggulan 5R/5S Jawa Timur."
+        }
+      ]
+    },
+    "news": {
+      "eyebrow": "(12) Berita Terbaru",
+      "title": "Wawasan & Pembaruan",
+      "cta": "Semua Berita →",
+      "featured": {
+        "category": "Korporasi · 08 November 2023",
+        "title": "PT Widatra Bhakti resmikan Kantor Pusat baru di Pondok Indah Office Tower 1",
+        "desc": "Setelah 21 tahun berkantor di Wisma Tugu Raden Saleh, Cikini, Kantor Pusat kami pindah ke Pondok Indah Office Tower 1, Jakarta Selatan — kini satu gedung dengan perusahaan-perusahaan Otsuka Group Indonesia lainnya."
+      },
+      "items": [
+        {
+          "category": "People · 22 Januari 2024",
+          "title": "Widatra Academy 2024: menumbuhkan “Otsuka DNA” pada setiap karyawan"
+        },
+        {
+          "category": "People · 24 Desember 2024",
+          "title": "Family Gathering 2024 — Widatra Bhakti Goes to Jogja"
+        },
+        {
+          "category": "Korporasi · 21 Agustus 2024",
+          "title": "Perayaan Hari Ulang Tahun ke-38 PT Widatra Bhakti"
+        }
+      ]
+    },
+    "csr": {
+      "eyebrow": "(13) Sorotan TJSL",
+      "titlePrefix": "Kepedulian yang",
+      "titleHighlight": "melampaui botol.",
+      "community": {
+        "label": "Komunitas",
+        "title": "Pengembangan komunitas di sekitar kampus Pandaan kami"
+      },
+      "environment": {
+        "label": "Lingkungan",
+        "title": "Pengelolaan lingkungan ISO 14001 & kampus hijau"
+      },
+      "cta": "Lihat Program TJSL →"
+    },
+    "factoryTour": {
+      "eyebrow": "(14) Kunjungan Pabrik",
+      "titlePrefix": "Saksikan",
+      "titleHighlight": "Inti Sterilnya.",
+      "description": "Rasakan fasilitas manufaktur kelas dunia kami melalui pemesanan terpandu 6 langkah — dari kalender interaktif hingga pengarahan pengunjung di gerbang.",
+      "cta": "Kunjungi Pabrik",
+      "stats": [
+        {
+          "n": "24/7",
+          "l": "Pemantauan Waktu Nyata"
+        },
+        {
+          "n": "Class A",
+          "l": "Tingkat Cleanroom"
+        },
+        {
+          "n": "6 Langkah",
+          "l": "Alur Pemesanan"
+        },
+        {
+          "n": "ISO 14001",
+          "l": "Lingkungan"
+        }
+      ]
+    },
+    "careers": {
+      "eyebrow": "(15) Karier di Widatra",
+      "titlePrefix": "Bangun karier Anda dalam misi",
+      "titleHighlight": "penyelamat jiwa",
+      "titleSuffix": ".",
+      "description": "Kami merekrut apoteker, insinyur, ilmuwan, dan profesional bisnis yang peduli mendalam terhadap mutu, keselamatan, dan hasil bagi pasien. Temukan posisi terbuka dan proses rekrutmen kami.",
+      "stats": [
+        {
+          "n": "8+",
+          "l": "Posisi Terbuka"
+        },
+        {
+          "n": "7",
+          "l": "Departemen"
+        },
+        {
+          "n": "1rb+",
+          "l": "Anggota Tim"
+        }
+      ],
+      "cta": "Lihat Posisi Terbuka"
+    },
+    "contact": {
+      "eyebrow": "(16) Hubungi Widatra",
+      "titlePrefix": "Distribusi, OEM, kemitraan, atau sekadar sapaan —",
+      "titleHighlight": "setiap pesan sampai kepada manusia sungguhan.",
+      "jakartaLabel": "Kantor Pusat Jakarta",
+      "jakartaAddress": "Pondok Indah Office Tower 1, Suite 902 · +62-21-7592-3057",
+      "pandaanLabel": "Pabrik Pandaan",
+      "pandaanAddress": "Jl. Stadion No. 1, Pandaan, Pasuruan · +62-343-631575",
+      "cta": "Buka Pusat Kontak"
+    }
+  },
+  "footer": {
+    "tagline": "Mitra Terpercaya untuk Kesehatan Lebih Baik. Anggota Otsuka Group Indonesia sejak 1995.",
+    "address1": "Jl. Stadion No. 1, Pandaan",
+    "address2": "Pasuruan 67156, Jawa Timur, Indonesia",
+    "phone": "+62-343-631575",
+    "columns": {
+      "company": {
+        "title": "Perusahaan",
+        "items": {
+          "aboutUs": "Tentang Kami",
+          "management": "Manajemen",
+          "factoryTour": "Kunjungan Pabrik",
+          "careers": "Karier"
+        }
+      },
+      "solutions": {
+        "title": "Solusi",
+        "items": {
+          "ourProduct": "Produk Kami",
+          "infusionFluids": "Cairan Infus",
+          "specialty": "Khusus",
+          "medicalDevices": "Alat Kesehatan"
+        }
+      },
+      "transparency": {
+        "title": "Transparansi",
+        "items": {
+          "newsEvent": "Berita & Acara",
+          "csrReport": "Laporan TJSL",
+          "certificates": "Sertifikat",
+          "governance": "Tata Kelola"
+        }
+      },
+      "support": {
+        "title": "Dukungan",
+        "items": {
+          "contact": "Kontak",
+          "locations": "Lokasi",
+          "pharmacovigilance": "Farmakovigilans"
+        }
+      }
+    },
+    "copyright": "© {{year}} PT Widatra Bhakti. Hak Cipta Dilindungi.",
+    "privacyPolicy": "Kebijakan Privasi",
+    "legalNotice": "Pemberitahuan Hukum",
+    "cookies": "Cookie"
+  },
+  "about": {
+    "sectionsNav": {
+      "profile": "Profil Perusahaan",
+      "management": "Manajemen",
+      "visionMission": "Visi & Misi",
+      "values": "Nilai Perusahaan",
+      "video": "Video Profil Perusahaan",
+      "certifications": "Penghargaan & Sertifikasi"
+    },
+    "hero": {
+      "eyebrow": "(Tentang) Kisah Kami",
+      "title": "Empat dekade",
+      "italic": "presisi yang tenang.",
+      "description": "Widatra Bhakti telah merancang larutan infus steril paling terpercaya di Indonesia sejak 1986 — sebuah kisah yang ditulis satu batch tervalidasi pada satu waktu."
+    },
+    "profile": {
+      "eyebrow": "(01) Profil Perusahaan",
+      "titlePrefix": "PT Widatra Bhakti —",
+      "titleHighlight": "produsen kepercayaan Indonesia.",
+      "p1": "PT Widatra Bhakti mendapatkan lisensi memproduksi produk larutan intravena dasar pada tahun 1986 di bawah lisensi manufaktur dan arahan teknis dari sebuah perusahaan Jerman terkemuka, berbasis di Pandaan, Jawa Timur.",
+      "p2": "Pada tahun 1995, Otsuka Pharmaceutical Co., Ltd., Jepang mengakuisisi PT Widatra Bhakti. Kini WIDATRA adalah produsen produk larutan intravena dasar terbesar dan pemimpin pasar di Indonesia, memasok rumah sakit dan institusi kesehatan di seluruh negeri.",
+      "stats": [
+        {
+          "n": "1986",
+          "l": "Didirikan"
+        },
+        {
+          "n": "1000+",
+          "l": "Karyawan"
+        },
+        {
+          "n": "50+",
+          "l": "SKU"
+        }
+      ]
+    },
+    "management": {
+      "eyebrow": "(02) Manajemen",
+      "titlePrefix": "Kepemimpinan yang berakar pada",
+      "titleHighlight": "ilmu dan pelayanan.",
+      "leaders": [
+        {
+          "name": "Suhari Mukti",
+          "role": "Presiden Direktur"
+        },
+        {
+          "name": "Kazushi Nagaya",
+          "role": "Presiden Komisaris"
+        },
+        {
+          "name": "Betty Zubaida",
+          "role": "Direktur Pabrik"
+        },
+        {
+          "name": "Evalin K. Jayakusli",
+          "role": "Direktur Keuangan & Administrasi"
+        },
+        {
+          "name": "Kimitaka Naito",
+          "role": "Komisaris"
+        }
+      ],
+      "cta": "Struktur Manajemen Lengkap →"
+    },
+    "visionMission": {
+      "eyebrow": "(03) Visi & Misi",
+      "titlePrefix": "Apa yang kami",
+      "titleHighlight": "perjuangkan.",
+      "visionLabel": "Visi",
+      "visionText": "Menjadi perusahaan farmasi terkemuka di Indonesia dan berperan penting di kawasan Asia.",
+      "missionLabel": "Misi",
+      "missionItems": [
+        "Berkontribusi tanpa henti bagi kesehatan masyarakat dengan memproduksi produk berkualitas tinggi dengan harga kompetitif.",
+        "Berperan strategis dalam Sistem Kesehatan Nasional Indonesia sebagai mitra terpercaya untuk kesehatan yang lebih baik.",
+        "Menjunjung pilar 5+1S — Speed, Synergy, Share, Simplify, Smart dan Sincere — dalam setiap pekerjaan kami.",
+        "Mengembangkan sumber daya manusia sebagai aset terpenting kami, dengan sikap, pengetahuan, keterampilan, dan pengalaman yang baik."
+      ]
+    },
+    "values": {
+      "eyebrow": "(04) Nilai Perusahaan",
+      "titlePrefix": "Prinsip yang",
+      "titleHighlight": "tidak akan kami kompromikan.",
+      "items": [
+        {
+          "index": "01",
+          "title": "Pasien Diutamakan",
+          "desc": "Setiap batch diukur berdasarkan kesejahteraan satu manusia."
+        },
+        {
+          "index": "02",
+          "title": "Presisi Terekayasa",
+          "desc": "Sistem tertutup, proses tervalidasi, diaudit di setiap shift."
+        },
+        {
+          "index": "03",
+          "title": "Kepengurusan yang Tenang",
+          "desc": "Investasi jangka panjang bagi manusia, lingkungan, dan mitra."
+        },
+        {
+          "index": "04",
+          "title": "Mutu yang Terbuka",
+          "desc": "Pelaporan transparan, dapat diaudit pihak ketiga, siap diregulasi."
+        }
+      ]
+    },
+    "video": {
+      "eyebrow": "(05) Video Profil Perusahaan",
+      "titlePrefix": "Perjalanan lima menit menyusuri",
+      "titleHighlight": "Widatra.",
+      "filmLabel": "Film Korporat · 05:12",
+      "filmTitle": "Widatra Bhakti — Perawatan, Terekayasa",
+      "badge": "HD 1080p"
+    },
+    "awards": {
+      "eyebrow": "(06) Penghargaan & Sertifikasi",
+      "titlePrefix": "Diaudit.",
+      "titleHighlight": "Diakui.",
+      "titleSuffix": "Dipercaya.",
+      "description": "Sistem manufaktur kami disertifikasi secara independen sesuai standar internasional yang mencakup mutu farmasi, manajemen lingkungan, dan keselamatan kerja.",
+      "items": [
+        {
+          "year": "2025",
+          "title": "East Java 5R/5S Excellence Award",
+          "body": "Pemerintah Provinsi Jawa Timur"
+        },
+        {
+          "year": "2019",
+          "title": "Penghargaan LKTP",
+          "body": "Pengakuan atas pelaporan kesehatan & keselamatan kerja"
+        },
+        {
+          "year": "2018",
+          "title": "Penghargaan Donor Darah",
+          "body": "PMI Pasuruan"
+        }
+      ],
+      "certifications": [
+        {
+          "name": "CPOB",
+          "label": "BPOM Indonesia"
+        },
+        {
+          "name": "PIC/S GMP",
+          "label": "Skema Internasional"
+        },
+        {
+          "name": "ISO 9001",
+          "label": "Manajemen Mutu"
+        },
+        {
+          "name": "ISO 14001",
+          "label": "Lingkungan"
+        },
+        {
+          "name": "ISO 45001",
+          "label": "Keselamatan Kerja"
+        },
+        {
+          "name": "Halal MUI",
+          "label": "Sertifikasi Indonesia"
+        }
+      ]
+    },
+    "aerialCta": {
+      "titlePrefix": "Lihat tempat di mana",
+      "titleHighlight": "perawatan direkayasa.",
+      "cta": "Pesan Kunjungan Pabrik"
+    }
+  },
+  "management": {
+    "hero": {
+      "eyebrow": "(Manajemen) Kepemimpinan",
+      "title": "Struktur Manajemen",
+      "italic": "PT Widatra Bhakti",
+      "description": "Dewan Komisaris dan Dewan Direksi yang bersatu dalam dedikasi tinggi membangun produsen cairan infus berkualitas internasional terpercaya di Indonesia dan Asia (Otsuka Group)."
+    },
+    "letter": {
+      "eyebrow": "Pesan dari Presiden Direktur",
+      "presidentName": "Suhari Mukti",
+      "presidentRole": "Presiden Direktur",
+      "quote": "Kami berupaya tanpa henti untuk berkontribusi pada kesehatan masyarakat dengan memproduksi produk berkualitas tinggi dengan harga yang kompetitif.",
+      "p1": "PT Widatra Bhakti adalah perusahaan farmasi dan anggota Grup Otsuka di Indonesia. Kami berupaya tanpa henti untuk berkontribusi pada kesehatan masyarakat dengan memproduksi produk berkualitas tinggi dengan harga yang kompetitif.",
+      "p2": "Dengan kerja keras dan dedikasi tinggi, seluruh Manajemen dan karyawan selaras dengan Visi Perusahaan untuk menjadi perusahaan farmasi terkemuka di Indonesia dan memainkan peran penting di kawasan Asia. Terima kasih kepada Pemegang Saham atas kepercayaannya dan Manajemen yang telah bekerja dengan baik demi kemajuan PT Widatra Bhakti.",
+      "p3": "Kami siap bekerja sama untuk meningkatkan dan mengembangkan kehidupan masyarakat Indonesia. Terima kasih telah mengunjungi situs web kami."
+    },
+    "executive": {
+      "eyebrow": "Struktur Kepemimpinan",
+      "titlePrefix": "Dewan Komisaris &",
+      "titleHighlight": "Dewan Direksi",
+      "description": "Jajaran kepemimpinan eksekutif dan dewan komisaris yang mengawal standar CPOB, WHO GMP, serta nilai filosofis Otsuka Group.",
+      "filterAll": "Semua",
+      "filterCommissioners": "Dewan Komisaris",
+      "filterDirectors": "Dewan Direksi"
+    },
+    "governance": {
+      "eyebrow": "(03) Tata Kelola",
+      "titlePrefix": "Dibangun atas",
+      "titleHighlight": "integritas & kepatuhan.",
+      "description": "Kerangka tata kelola PT Widatra Bhakti mengintegrasikan pengawasan independen Dewan Komisaris dan keunggulan operasional Dewan Direksi sesuai standar Otsuka Pharmaceutical Global.",
+      "items": [
+        {
+          "title": "Dewan Komisaris",
+          "desc": "Pengawasan independen terhadap strategi korporasi, kepatuhan hukum, dan manajemen risiko."
+        },
+        {
+          "title": "Dewan Direksi",
+          "desc": "Eksekusi operasional manufaktur steril, inovasi teknologi closed-system, dan administrasi keuangan."
+        },
+        {
+          "title": "Jaminan Mutu Farmasi (CPOB & GMP)",
+          "desc": "Pengawasan kepatuhan sterilitas 100% bebas pirogen pada setiap batch produksi Pandaan."
+        },
+        {
+          "title": "Keselamatan & Lingkungan (K3 & ISO 14001)",
+          "desc": "Pengelolaan lingkungan kampus industri hijau berkelanjutan seluas 5+ hektar di Pandaan."
+        }
+      ]
+    }
+  },
+  "products": {
+    "hero": {
+      "eyebrow": "(Produk) Katalog",
+      "title": "Kemurnian di",
+      "italic": "setiap tetes.",
+      "description": "Portofolio yang terus berkembang berisi larutan intravena dasar, khusus, dan irigasi — dibuat sesuai standar farmakope internasional dan dipercaya di seluruh Indonesia."
+    },
+    "filters": {
+      "all": "Semua",
+      "generic": "Generik",
+      "branded": "Bermerek",
+      "productsSuffix": "produk"
+    },
+    "brandLabels": {
+      "generic": "Generik",
+      "branded": "Bermerek"
+    },
+    "flagship": {
+      "label": "Produk Unggulan",
+      "cta": "Lihat Spesifikasi Lengkap"
+    },
+    "specLabels": {
+      "osmolarity": "Osmolaritas",
+      "calorie": "Kalori",
+      "nie": "NIE",
+      "shelfLife": "Masa Simpan",
+      "packaging": "Kemasan"
+    },
+    "cardSpecLabels": {
+      "osm": "Osm.",
+      "cal": "Kal.",
+      "pack": "Kemasan"
+    },
+    "grid": {
+      "titleAllPrefix": "Seluruh",
+      "titleAllHighlight": "portofolio.",
+      "titleGenericHighlight": "Generik",
+      "titleGenericSuffix": "produk.",
+      "titleBrandedHighlight": "Bermerek",
+      "titleBrandedSuffix": "produk.",
+      "countOf": "dari",
+      "countSuffix": "produk",
+      "empty": "Belum ada produk dalam kategori ini.",
+      "viewDetails": "Lihat Detail"
+    },
+    "oemCta": {
+      "title": "Mencari kemitraan OEM atau manufaktur kontrak?",
+      "button": "Hubungi tim kami"
+    },
+    "modal": {
+      "close": "Tutup",
+      "downloadBrochure": "Unduh Brosur",
+      "requestInquiry": "Ajukan Pertanyaan",
+      "blocks": {
+        "packagingVariants": "Varian Kemasan",
+        "availableSizes": "Ukuran Tersedia",
+        "applications": "Aplikasi",
+        "benefits": "Manfaat"
+      },
+      "composition": "Komposisi",
+      "fullTechnicalSheet": "Lembar Teknis Lengkap",
+      "table": {
+        "productCode": "Kode Produk",
+        "genericBranded": "Generik / Bermerek",
+        "category": "Kategori",
+        "manufacturingStandard": "Standar Manufaktur",
+        "storage": "Penyimpanan"
+      },
+      "relatedProducts": "Produk Terkait"
+    },
+    "detail": {
+      "breadcrumbHome": "Beranda",
+      "breadcrumbProducts": "Produk",
+      "notFound": "Produk tidak ditemukan.",
+      "backToCatalog": "Kembali ke katalog",
+      "downloadBrochure": "Unduh Brosur",
+      "requestInquiry": "Ajukan Pertanyaan",
+      "contactSales": "Hubungi Sales",
+      "overview": {
+        "eyebrow": "Ikhtisar Produk",
+        "title": "Karakter klinis."
+      },
+      "specifications": {
+        "eyebrow": "Spesifikasi",
+        "title": "Lembar teknis lengkap."
+      },
+      "table": {
+        "productCode": "Kode Produk",
+        "genericBranded": "Generik / Bermerek",
+        "category": "Kategori",
+        "indication": "Indikasi",
+        "composition": "Komposisi",
+        "osmolarity": "Osmolaritas",
+        "calorie": "Kalori",
+        "packaging": "Kemasan",
+        "availableSizes": "Ukuran Tersedia",
+        "nieBpom": "NIE (BPOM)",
+        "shelfLife": "Masa Simpan",
+        "storage": "Penyimpanan",
+        "manufacturingStandard": "Standar Manufaktur"
+      },
+      "manufacturingQuality": {
+        "eyebrow": "Kualitas Manufaktur",
+        "title": "Direkayasa untuk keunggulan steril."
+      },
+      "storageInfo": {
+        "eyebrow": "Informasi Penyimpanan",
+        "title": "Tangani dengan hati-hati."
+      },
+      "related": {
+        "eyebrow": "Produk Terkait",
+        "titlePrefix": "Lainnya di",
+        "cta": "Katalog Lengkap →",
+        "empty": "Belum ada produk lain dalam kategori ini."
+      }
+    }
+  },
+  "news": {
+    "hero": {
+      "eyebrow": "(Berita) Editorial",
+      "title": "Wawasan dari",
+      "italic": "cleanroom dan lainnya.",
+      "description": "Jurnalisme mendalam, pengumuman korporat, dan catatan lapangan dari garis depan manufaktur farmasi."
+    },
+    "featuredLabel": "Cerita Utama",
+    "readMore": "Baca Selengkapnya",
+    "allPrefix": "Semua",
+    "allHighlight": "berita.",
+    "categories": {
+      "all": "Semua",
+      "corporate": "Korporat",
+      "science": "Sains",
+      "sustainability": "Keberlanjutan",
+      "events": "Acara"
+    },
+    "empty": "Belum ada berita dalam kategori ini.",
+    "newsletter": {
+      "eyebrow": "Berlangganan",
+      "titlePrefix": "Kabar triwulanan dari",
+      "titleHighlight": "sang produsen resmi.",
+      "placeholder": "anda@email.com",
+      "button": "Berlangganan"
+    },
+    "modal": {
+      "close": "Tutup",
+      "topics": "Topik",
+      "gallery": "Galeri",
+      "relatedNews": "Berita Terkait"
+    }
+  },
+  "csr": {
+    "hero": {
+      "eyebrow": "(TJSL) Melampaui Botol",
+      "title": "Kepedulian yang",
+      "italic": "menjangkau lebih jauh.",
+      "description": "Tanggung jawab kami meluas dari ruang pengisian steril hingga ke komunitas, ekosistem, dan masa depan yang kami bagi bersama Indonesia."
+    },
+    "impactStats": [
+      {
+        "n": "20+",
+        "l": "Tahun Program Komunitas"
+      },
+      {
+        "n": "500+",
+        "l": "Relawan Donor Darah"
+      },
+      {
+        "n": "12",
+        "l": "Program Sekolah Tahunan"
+      },
+      {
+        "n": "ISO 14001",
+        "l": "Standar Lingkungan"
+      }
+    ],
+    "pillars": {
+      "eyebrow": "(01) Pilar TJSL Kami",
+      "titlePrefix": "Enam komitmen.",
+      "titleHighlight": "Satu janji.",
+      "items": [
+        {
+          "title": "Tanggung Jawab Lingkungan",
+          "desc": "Manajemen lingkungan bersertifikat ISO 14001, penggunaan kembali air, pengurangan emisi, dan model kampus hijau di Pandaan."
+        },
+        {
+          "title": "Pengembangan Komunitas",
+          "desc": "Perekrutan lokal, pendampingan UMKM, infrastruktur lingkungan, dan kemitraan dengan puskesmas setempat."
+        },
+        {
+          "title": "Program Pendidikan",
+          "desc": "Magang, beasiswa, kunjungan sekolah, dan pendampingan mahasiswa farmasi bersama universitas Indonesia."
+        },
+        {
+          "title": "Program Kesehatan",
+          "desc": "Pemeriksaan medis gratis, donor darah, dukungan imunisasi, dan donasi cairan parenteral penting."
+        },
+        {
+          "title": "Sukarelawan Karyawan",
+          "desc": "Hari sukarelawan berbayar, bersih pantai, donor darah, proyek renovasi sekolah di seluruh Jawa Timur."
+        },
+        {
+          "title": "Bantuan Bencana",
+          "desc": "Donasi cepat cairan IV dan perlengkapan medis saat bencana alam di Indonesia."
+        }
+      ]
+    },
+    "environment": {
+      "eyebrow": "(02) Tanggung Jawab Lingkungan",
+      "titlePrefix": "Perawatan farmasi,",
+      "titleHighlight": "perawatan ekologis.",
+      "description": "Kami mengoperasikan salah satu kampus manufaktur steril paling hijau di Jawa Timur — penggunaan kembali air loop tertutup, utilitas hemat energi, dan manajemen lingkungan ISO 14001 yang tertanam di setiap siklus produksi.",
+      "stats": [
+        {
+          "n": "—40%",
+          "l": "Pengurangan air proses sejak 2015"
+        },
+        {
+          "n": "100%",
+          "l": "Limbah berbahaya ditangani mitra berlisensi"
+        },
+        {
+          "n": "LED",
+          "l": "Retrofit pencahayaan seluruh pabrik selesai"
+        },
+        {
+          "n": "EMS",
+          "l": "Sistem pemantauan emisi berkelanjutan"
+        }
+      ]
+    },
+    "blocks": [
+      {
+        "eyebrow": "(03) Pengembangan Komunitas",
+        "title": "Bergandengan tangan dengan tetangga kami.",
+        "copy": "Dari infrastruktur kelurahan Pandaan hingga kemitraan UMKM lokal, program komunitas kami dirancang bersama — bukan untuk — orang-orang terdekat dengan gerbang kami."
+      },
+      {
+        "eyebrow": "(04) Program Pendidikan",
+        "title": "Membangun generasi perawatan ilmiah berikutnya.",
+        "copy": "Kemitraan universitas, magang, beasiswa, dan kunjungan pabrik terkurasi menjadikan Widatra kelas hidup bagi mahasiswa farmasi dan kedokteran Indonesia."
+      },
+      {
+        "eyebrow": "(05) Program Kesehatan",
+        "title": "Kepedulian yang tak berhenti di pengiriman.",
+        "copy": "Pemeriksaan medis gratis, imunisasi, penghargaan donor darah (BPOM 2018), dan donasi produk saat misi kemanusiaan."
+      },
+      {
+        "eyebrow": "(06) Kegiatan Sukarelawan Karyawan",
+        "title": "Menjadi sukarelawan adalah bagian dari pekerjaan.",
+        "copy": "Jam sukarelawan tahunan adalah waktu berbayar yang dilindungi. Baik itu bersih pantai di Pasuruan atau renovasi sekolah di Sidoarjo, tim kami selalu hadir."
+      }
+    ],
+    "disaster": {
+      "eyebrow": "(07) Bantuan Bencana",
+      "title": "Saat Indonesia butuh cairan IV, kami kirim dalam hitungan jam.",
+      "description": "Dari gempa Lombok 2018 hingga bencana Cianjur 2022, tim logistik kami menggerakkan cairan steril dan perlengkapan medis bersama PMI, BPBD, dan Kementerian Kesehatan."
+    },
+    "sustainability": {
+      "eyebrow": "(08) Inisiatif Keberlanjutan",
+      "title": "Pemikiran jangka panjang, di setiap shift.",
+      "items": [
+        "Studi kelayakan energi terbarukan sedang berlangsung",
+        "Riset kemasan pengurangan PVC bersama R&D",
+        "Pengungkapan karbon dimulai (Scope 1 + 2)",
+        "Kode etik pemasok berkelanjutan diluncurkan 2024"
+      ]
+    },
+    "successStories": {
+      "eyebrow": "(09) Kisah Sukses",
+      "title": "Kisah yang melampaui siaran pers.",
+      "countSuffix": "program",
+      "empty": "Belum ada program TJSL yang dipublikasikan.",
+      "readMore": "Baca Selengkapnya"
+    },
+    "gallery": {
+      "eyebrow": "(10) Galeri TJSL"
+    },
+    "partners": {
+      "eyebrow": "(11) Organisasi Mitra",
+      "title": "Lebih kuat bersama.",
+      "items": [
+        "Palang Merah Indonesia (PMI)",
+        "Kementerian Kesehatan RI",
+        "BPJS Kesehatan",
+        "Universitas Airlangga",
+        "Universitas Surabaya",
+        "Dinas Kesehatan Pasuruan",
+        "BPBD Jawa Timur",
+        "Otsuka Foundation"
+      ]
+    },
+    "awards": {
+      "eyebrow": "(12) Penghargaan & Pengakuan",
+      "title": "Diakui secara independen.",
+      "items": [
+        {
+          "year": "2025",
+          "name": "East Java 5R/5S Excellence Award"
+        },
+        {
+          "year": "2019",
+          "name": "Penghargaan LKTP — Industri Kepatuhan Pajak Terbaik"
+        },
+        {
+          "year": "2018",
+          "name": "Penghargaan Donor Darah — PMI Pasuruan"
+        },
+        {
+          "year": "2017–2018",
+          "name": "Pengakuan Wajib Pajak — DJP Jakarta Pusat"
+        },
+        {
+          "year": "2015",
+          "name": "Pengakuan Wajib Pajak"
+        }
+      ]
+    },
+    "annualReport": {
+      "eyebrow": "Laporan TJSL Tahunan",
+      "title": "Baca laporan keberlanjutan 2025 secara lengkap.",
+      "button": "Unduh Laporan TJSL (PDF)"
+    },
+    "modal": {
+      "close": "Tutup",
+      "gallery": "Galeri"
+    }
+  },
+  "factoryTour": {
+    "hero": {
+      "eyebrow": "(Kunjungan Pabrik) Pandaan, Jawa Timur",
+      "titlePrefix": "Melangkah ke dalam",
+      "titleHighlight": "Inti Sterilnya.",
+      "description": "Perjalanan terpandu 90 menit melalui kampus manufaktur kami — dari pemurnian air baku hingga sterilisasi terminal."
+    },
+    "intro": {
+      "eyebrow": "(01) Pengantar Pabrik",
+      "titlePrefix": "5+ hektare",
+      "titleHighlight": "perawatan ilmiah.",
+      "p1": "Fasilitas Pandaan kami memiliki lini pengisian parenteral khusus, pabrik WFI on-site, laboratorium mikrobiologi dalam proses, dan laboratorium QC terintegrasi — semua di bawah satu atap bersertifikat ISO.",
+      "p2": "Pengunjung meliputi mitra rumah sakit, mahasiswa kesehatan, regulator, distributor, dan jurnalis."
+    },
+    "whyVisit": {
+      "eyebrow": "(02) Mengapa Berkunjung ke Widatra",
+      "title": "Melihat adalah memahami.",
+      "items": [
+        {
+          "title": "Saksikan GMP dalam Praktik",
+          "desc": "Amati operasi aseptik selaras PIC/S melalui panel pemantauan cleanroom."
+        },
+        {
+          "title": "Temui Para Ilmuwan",
+          "desc": "Sesi tanya jawab dengan insinyur QA, QC, dan produksi."
+        },
+        {
+          "title": "Pahami Rantai Pasok",
+          "desc": "Dari air baku hingga palet pengiriman — perjalanan steril yang lengkap."
+        },
+        {
+          "title": "Bawa Pulang untuk Sekolah",
+          "desc": "Program edukasi yang dirancang untuk mahasiswa farmasi dan kedokteran."
+        }
+      ]
+    },
+    "visitorJourney": {
+      "eyebrow": "(03) Perjalanan Pengunjung",
+      "title": "90 menit Anda di dalam.",
+      "items": [
+        {
+          "time": "00:00",
+          "title": "Kedatangan & Registrasi",
+          "desc": "Meja penyambutan di Gerbang B, pemeriksaan ID, lencana pengunjung."
+        },
+        {
+          "time": "00:10",
+          "title": "Pengarahan Keselamatan",
+          "desc": "Ikhtisar EHS, demo gowning, alergen & pembatasan."
+        },
+        {
+          "time": "00:20",
+          "title": "Film Korporat",
+          "desc": "Pengenalan perusahaan 10 menit di auditorium kami."
+        },
+        {
+          "time": "00:35",
+          "title": "Penjelajahan Cleanroom",
+          "desc": "Koridor pemantauan di atas ruang pengisian Grade A/B."
+        },
+        {
+          "time": "01:10",
+          "title": "Lab QC",
+          "desc": "Penjelajahan ruang kimia, mikrobiologi, dan stabilitas."
+        },
+        {
+          "time": "01:25",
+          "title": "Tanya Jawab & Penutupan",
+          "desc": "Diskusi dengan tuan rumah, foto bersama, sertifikat."
+        }
+      ]
+    },
+    "schedule": {
+      "eyebrow": "(04) Jadwal Kunjungan",
+      "title": "Kapan kami membuka gerbang.",
+      "items": [
+        {
+          "k": "Selasa & Kamis",
+          "v": "Hari kunjungan publik"
+        },
+        {
+          "k": "09:00 – 10:30",
+          "v": "Slot pagi · maks 25 pengunjung"
+        },
+        {
+          "k": "13:30 – 15:00",
+          "v": "Slot siang · maks 25 pengunjung"
+        },
+        {
+          "k": "Jumat",
+          "v": "Khusus institusi pendidikan (perlu pemesanan)"
+        },
+        {
+          "k": "Senin & Rabu",
+          "v": "Fokus operasional pabrik · tanpa kunjungan publik"
+        }
+      ],
+      "galleryLabel": "Galeri Pabrik"
+    },
+    "virtualPreview": {
+      "eyebrow": "(05) Pratinjau Pabrik Virtual",
+      "title": "Tidak bisa berkunjung? Jelajahi dari meja Anda.",
+      "description": "Tur virtual kami membawa Anda melalui ruang pengisian, pabrik WFI, lini pengemasan, dan laboratorium mutu dalam film 8 menit yang dinarasikan oleh direktur manufaktur kami.",
+      "playButton": "▶ Putar Tur Virtual"
+    },
+    "requirements": {
+      "eyebrow": "(06) Persyaratan Pengunjung",
+      "title": "Sebelum Anda tiba.",
+      "safety": {
+        "title": "Persyaratan Keselamatan",
+        "items": [
+          "Sepatu tertutup wajib",
+          "Celana panjang & atasan berlengan",
+          "Dilarang makan, minum, atau mengunyah permen karet di area produksi",
+          "Fotografi hanya di zona yang disetujui",
+          "Pengunjung hamil sebaiknya konsultasi ke HR sebelum kunjungan"
+        ]
+      },
+      "dressCode": {
+        "title": "Aturan Berpakaian",
+        "items": [
+          "Busana bisnis smart-casual",
+          "Hindari aksesori longgar",
+          "Rambut panjang harus diikat",
+          "Gaun sekali pakai dan penutup sepatu disediakan"
+        ]
+      },
+      "regulations": {
+        "title": "Peraturan Pengunjung",
+        "items": [
+          "KTP yang berlaku wajib di gerbang",
+          "Pengunjung tetap bersama tuan rumah setiap saat",
+          "Ponsel dalam mode senyap",
+          "Anak di bawah 17 tahun harus didampingi"
+        ]
+      }
+    },
+    "meetingPoint": {
+      "eyebrow": "(07) Titik Kumpul",
+      "title": "Resepsi Pengunjung Gerbang B · Jl. Stadion No. 1, Pandaan, Pasuruan 67156",
+      "description": "Mohon tiba 15 menit sebelum slot terjadwal Anda untuk memberi waktu pemeriksaan keamanan dan penerbitan lencana."
+    },
+    "testimonials": {
+      "eyebrow": "(09) Testimoni Pengunjung",
+      "title": "Yang diingat para tamu.",
+      "items": [
+        {
+          "name": "dr. Andini Sutomo",
+          "role": "Apoteker Rumah Sakit",
+          "quote": "Melihat lini pengisian sistem tertutup beroperasi mengubah cara saya mengajarkan pencampuran IV kepada perawat."
+        },
+        {
+          "name": "Prof. Bambang Wirawan",
+          "role": "Fakultas Farmasi, UGM",
+          "quote": "Referensi industri yang tak tergantikan bagi mahasiswa kami. Kunjungan lab QC adalah sorotannya."
+        },
+        {
+          "name": "Linda P.",
+          "role": "Pengadaan, RS Premier Surabaya",
+          "quote": "Kami mengadakan dari Widatra dengan percaya diri selama bertahun-tahun. Berjalan di pabrik menegaskan setiap asumsi."
+        }
+      ]
+    },
+    "visitorGuide": {
+      "eyebrow": "(10) Panduan Pengunjung",
+      "title": "Unduh paket pengunjung.",
+      "description": "Pengarahan PDF meliputi peta, aturan keselamatan, aturan berpakaian, dan informasi kontak tim tuan rumah.",
+      "button": "Unduh Panduan Pengunjung (PDF)",
+      "faqLabel": "FAQ",
+      "faq": [
+        {
+          "q": "Apakah kunjungan ini gratis?",
+          "a": "Ya, kunjungan publik tidak dipungut biaya. Pemesanan grup (>15 orang) memerlukan konfirmasi lebih awal."
+        },
+        {
+          "q": "Bolehkah saya memotret di dalam pabrik?",
+          "a": "Fotografi hanya diperbolehkan di zona bertanda — auditorium dan resepsi pengunjung."
+        },
+        {
+          "q": "Apakah tersedia transportasi dari Surabaya?",
+          "a": "Kami dapat mengatur shuttle untuk grup 10+ dengan biaya tambahan. Sebutkan pada tahap pemesanan."
+        },
+        {
+          "q": "Apakah anak-anak diperbolehkan?",
+          "a": "Pengunjung harus berusia 17+ kecuali didampingi orang tua dan telah disetujui sebelumnya."
+        }
+      ]
+    },
+    "statusLabels": {
+      "pending": "Menunggu",
+      "reviewed": "Ditinjau",
+      "approved": "Disetujui",
+      "completed": "Selesai",
+      "rejected": "Ditolak"
+    },
+    "booking": {
+      "eyebrow": "(08) Pesan Kunjungan Pabrik",
+      "titlePrefix": "Enam langkah.",
+      "titleHighlight": "Satu kunjungan tak terlupakan.",
+      "signInRequired": {
+        "title": "Diperlukan masuk akun",
+        "description": "Buat akun pelamar gratis atau masuk untuk memesan kunjungan terpandu ke kampus Pandaan kami.",
+        "signIn": "Masuk",
+        "createAccount": "Buat akun"
+      },
+      "steps": [
+        "Tanggal",
+        "Waktu",
+        "Kuota",
+        "Info",
+        "Tinjau",
+        "Konfirmasi"
+      ],
+      "nav": {
+        "back": "← Kembali",
+        "continue": "Lanjutkan",
+        "submit": "Kirim Pemesanan"
+      },
+      "step1": {
+        "title": "Pilih tanggal",
+        "hint": "Hanya Selasa dan Kamis. Akhir pekan dan tanggal lampau dinonaktifkan.",
+        "selectedDateLabel": "Tanggal Terpilih",
+        "noDateSelected": "Belum ada tanggal dipilih",
+        "notice": "Kunjungan berlangsung hanya pada {{days}}. Maks 25 pengunjung per slot.",
+        "noticeDaysHighlight": "Sel & Kam",
+        "tueThu": "Sel · Kam"
+      },
+      "step2": {
+        "title": "Pilih slot waktu",
+        "hintPrefix": "Slot tersedia untuk",
+        "timeSlotLabel": "Slot waktu",
+        "spotsOpen": "{{quota}} dari 25 slot pengunjung tersedia"
+      },
+      "step3": {
+        "title": "Kuota pengunjung",
+        "hint": "Kuota langsung untuk slot yang Anda pilih.",
+        "remainingQuota": "Sisa Kuota",
+        "note": "Kunjungan bersifat siapa cepat dia dapat. Kuota diperbarui secara real-time."
+      },
+      "step4": {
+        "title": "Informasi pengunjung",
+        "hint": "Beri tahu kami siapa yang akan datang.",
+        "fields": {
+          "fullName": "Nama lengkap",
+          "organization": "Organisasi",
+          "email": "Email",
+          "phone": "Telepon",
+          "numberOfVisitors": "Jumlah pengunjung",
+          "purposeOfVisit": "Tujuan kunjungan"
+        }
+      },
+      "step5": {
+        "title": "Tinjau pemesanan Anda",
+        "hint": "Konfirmasi detail sebelum mengirimkan.",
+        "fields": {
+          "date": "Tanggal",
+          "timeSlot": "Slot waktu",
+          "visitor": "Pengunjung",
+          "organization": "Organisasi",
+          "email": "Email",
+          "phone": "Telepon",
+          "numberOfVisitors": "Jumlah pengunjung",
+          "purpose": "Tujuan"
+        }
+      },
+      "step6": {
+        "title": "Pemesanan dikonfirmasi.",
+        "referenceIs": "Referensi pemesanan Anda adalah",
+        "confirmationSentTo": "Email konfirmasi berisi panduan pengunjung dan instruksi gerbang sedang dikirim ke",
+        "hostReviewNote": "Tim tuan rumah kami akan meninjau pemesanan ini sebentar lagi.",
+        "viewDetails": "Lihat Detail Pemesanan",
+        "bookAnother": "Pesan Kunjungan Lain"
+      },
+      "roleBlocked": {
+        "title": "Tidak tersedia untuk Karyawan Internal",
+        "description": "Pemesanan Tur Pabrik hanya untuk Pengguna Eksternal. Sebagai Karyawan Internal, silakan gunakan modul Pengajuan Acara Komunitas.",
+        "backToDashboard": "Kembali ke dasbor"
+      }
+    },
+    "checkStatus": {
+      "eyebrow": "Sudah memesan?",
+      "title": "Periksa status pemesanan Anda.",
+      "descriptionPrefix": "Masukkan referensi pemesanan dan email yang Anda gunakan untuk memesan — Anda akan melihat apakah statusnya",
+      "descriptionStatuses": "Menunggu, Ditinjau, Disetujui, Selesai, atau Ditolak",
+      "descriptionSuffix": ", beserta riwayat lengkapnya.",
+      "referenceLabel": "Referensi Pemesanan",
+      "referencePlaceholder": "FT-260713-0001",
+      "emailLabel": "Email yang digunakan untuk memesan",
+      "emailPlaceholder": "anda@contoh.com",
+      "checkButton": "Periksa",
+      "errorNotFound": "Tidak ditemukan pemesanan untuk referensi dan email tersebut. Mohon periksa kembali dan coba lagi."
+    },
+    "confirmationModal": {
+      "eyebrow": "Pemesanan Terkirim",
+      "title": "Kunjungan pabrik Anda telah dipesan.",
+      "bodyMiddle": "telah diterima. Tim tuan rumah kami akan meninjau dan mengonfirmasi dalam 3 hari kerja. Email konfirmasi akan dikirim ke",
+      "referenceLabel": "Referensi Pemesanan",
+      "pendingLabel": "● Menunggu",
+      "close": "Tutup",
+      "viewStatus": "Lihat Status Pemesanan"
+    },
+    "statusModal": {
+      "title": "Pemesanan Kunjungan Pabrik",
+      "submittedLabel": "Dikirim",
+      "bookingDetails": "Detail Pemesanan",
+      "statusHistory": "Riwayat Status",
+      "adminNotes": "Catatan Admin",
+      "noNotes": "Belum ada catatan dari tim tuan rumah.",
+      "fields": {
+        "visitor": "Pengunjung",
+        "organization": "Organisasi",
+        "email": "Email",
+        "phone": "Telepon",
+        "numberOfVisitors": "Jumlah pengunjung",
+        "purpose": "Tujuan"
+      }
+    }
+  },
+  "careers": {
+    "hero": {
+      "eyebrow": "(Karier) Bergabung",
+      "title": "Buat obat yang",
+      "italic": "berarti.",
+      "description": "Dari ruang pengisian steril hingga strategi korporat, tim kami menjaga pasokan rumah sakit Indonesia. Temukan peran Anda dalam misi 40 tahun."
+    },
+    "branding": {
+      "eyebrow": "(01) Mengapa Widatra",
+      "titlePrefix": "Tempat kerja di mana",
+      "titleHighlight": "presisi bertemu tujuan.",
+      "description": "Kami adalah anggota Otsuka Group Indonesia — keluarga farmasi global yang percaya pada pertumbuhan yang mengutamakan manusia, pembelajaran lateral, dan menciptakan ide yang berkontribusi pada perawatan medis yang lebih baik. Nilai-nilai kami membentuk cara kami merekrut, mengembangkan, dan menghargai.",
+      "items": [
+        {
+          "title": "Integritas",
+          "desc": "Bekerja sesuai hukum, etika, dan kebenaran ilmiah."
+        },
+        {
+          "title": "Ko-kreasi",
+          "desc": "Membangun bersama komunitas dan mitra."
+        },
+        {
+          "title": "Organisasi Pembelajar",
+          "desc": "Pembelajaran, pemikiran, dan tindakan lateral."
+        },
+        {
+          "title": "Kemanusiaan",
+          "desc": "Peduli satu sama lain, pasien, dan masyarakat."
+        }
+      ]
+    },
+    "life": {
+      "eyebrow": "(02) Kehidupan di Widatra",
+      "titlePrefix": "Hari-hari di",
+      "titleHighlight": "kampus hijau."
+    },
+    "testimonials": {
+      "eyebrow": "(03) Kisah Karyawan",
+      "titlePrefix": "Dari",
+      "titleHighlight": "tim kami.",
+      "items": [
+        {
+          "name": "Dewi Anggraini",
+          "role": "QC Senior Analyst · 6 tahun",
+          "quote": "Saya bergabung sebagai fresh graduate. Kini saya menandatangani rilis produk yang sama yang menyelamatkan nyawa di rumah sakit tempat saya pernah berlatih."
+        },
+        {
+          "name": "Bayu Pratama",
+          "role": "Production Supervisor · 9 tahun",
+          "quote": "Yang saya sukai adalah disiplinnya — setiap batch adalah janji, dan tim memegang janji itu bersama."
+        },
+        {
+          "name": "Linda Kusuma",
+          "role": "R&D Scientist · 4 tahun",
+          "quote": "Kami cukup kecil untuk saling mengenal, cukup besar untuk mengirim dalam skala nasional. Lab ini terasa seperti startup dengan standar Otsuka."
+        }
+      ]
+    },
+    "benefits": {
+      "eyebrow": "(04) Tunjangan",
+      "title": "Lebih dari sekadar gaji.",
+      "items": [
+        {
+          "title": "BPJS Penuh",
+          "desc": "Kesehatan & Ketenagakerjaan, keluarga tercakup."
+        },
+        {
+          "title": "Bonus Kinerja",
+          "desc": "Bonus tahunan terkait KPI perusahaan & individu."
+        },
+        {
+          "title": "Kesehatan & Gigi",
+          "desc": "Asuransi kesehatan swasta untuk karyawan dan keluarga."
+        },
+        {
+          "title": "Anggaran Pelatihan",
+          "desc": "Pelatihan GMP internal dan pengembangan eksternal."
+        },
+        {
+          "title": "Mobilitas Karier",
+          "desc": "Rotasi lintas fungsi di seluruh Otsuka Group."
+        },
+        {
+          "title": "Tunjangan Shift",
+          "desc": "Premi yang diakui untuk shift malam dan akhir pekan."
+        },
+        {
+          "title": "Family Gathering",
+          "desc": "Perjalanan dan kumpul keluarga perusahaan tahunan."
+        },
+        {
+          "title": "Dukungan Apoteker",
+          "desc": "Dukungan perizinan bagi apoteker."
+        }
+      ]
+    },
+    "process": {
+      "eyebrow": "(05) Proses Rekrutmen",
+      "titlePrefix": "Dari lamaran hingga",
+      "titleHighlight": "hari pertama.",
+      "items": [
+        {
+          "title": "Lamar Online",
+          "desc": "Kirim CV dan dokumen pendukung melalui portal kami."
+        },
+        {
+          "title": "Seleksi",
+          "desc": "HR meninjau dan menghubungi kandidat terpilih."
+        },
+        {
+          "title": "Asesmen",
+          "desc": "Tes teknis dan asesmen psikometri."
+        },
+        {
+          "title": "Wawancara",
+          "desc": "Wawancara panel user dan HR — virtual atau tatap muka."
+        },
+        {
+          "title": "Penawaran & MCU",
+          "desc": "Surat penawaran, pemeriksaan kesehatan, dan onboarding."
+        }
+      ]
+    },
+    "departmentsSection": {
+      "eyebrow": "(06) Ikhtisar Departemen",
+      "title": "Tempat Anda mungkin bekerja.",
+      "items": [
+        {
+          "title": "Produksi",
+          "desc": "Pengisian steril, pengemasan, pengawasan lini."
+        },
+        {
+          "title": "Mutu",
+          "desc": "Analis QC, petugas QA, mikrobiologi."
+        },
+        {
+          "title": "R&D",
+          "desc": "Formulasi, kemasan, ilmu stabilitas."
+        },
+        {
+          "title": "Teknik",
+          "desc": "Utilitas, WFI, HVAC, otomasi."
+        },
+        {
+          "title": "Rantai Pasok",
+          "desc": "Perencanaan, pengadaan, gudang & logistik."
+        },
+        {
+          "title": "Penjualan & Pemasaran",
+          "desc": "Penjualan rumah sakit, manajemen distributor."
+        },
+        {
+          "title": "Korporat",
+          "desc": "Regulasi, HR, Keuangan, Legal, IT."
+        },
+        {
+          "title": "Magang",
+          "desc": "Program mahasiswa semester akhir."
+        }
+      ]
+    },
+    "departmentLabels": {
+      "All": "Semua",
+      "Production": "Produksi",
+      "Quality": "Mutu",
+      "R&D": "R&D",
+      "Engineering": "Teknik",
+      "Supply Chain": "Rantai Pasok",
+      "Corporate": "Korporat",
+      "Sales & Marketing": "Penjualan & Pemasaran"
+    },
+    "openings": {
+      "eyebrow": "(07) Posisi Terbuka",
+      "roleOpenSingular": "posisi terbuka.",
+      "roleOpenPlural": "posisi terbuka.",
+      "locationLabel": "Lokasi",
+      "typeLabel": "Tipe",
+      "deadlineLabel": "Batas Lamaran",
+      "viewDetails": "Lihat Detail",
+      "applyNow": "Lamar Sekarang",
+      "workModeLabel": "Mode Kerja",
+      "featuredBadge": "Unggulan"
+    },
+    "detail": {
+      "breadcrumbHome": "Beranda",
+      "breadcrumbCareers": "Karier",
+      "notFound": "Lowongan tidak ditemukan.",
+      "backToCareers": "Kembali ke karier",
+      "workingLocation": "Lokasi Kerja",
+      "employmentType": "Tipe Kerja",
+      "level": "Level",
+      "posted": "Diposting",
+      "deadline": "Batas Lamaran",
+      "applyForRole": "Lamar posisi ini",
+      "backToAllRoles": "Kembali ke semua posisi",
+      "jobDescription": "Deskripsi Pekerjaan",
+      "responsibilities": "Tanggung Jawab",
+      "qualifications": "Kualifikasi",
+      "requirements": "Persyaratan",
+      "whatWeOffer": "Yang Kami Tawarkan",
+      "allPositions": "← Semua Posisi",
+      "applyNow": "Lamar Sekarang",
+      "workMode": "Mode Kerja",
+      "salary": "Gaji"
+    }
+  },
+  "apply": {
+    "close": "Tutup",
+    "authRequired": {
+      "title": "Diperlukan masuk akun",
+      "defaultMessage": "Buat akun pelamar gratis atau masuk untuk mengirimkan lamaran Anda ke Widatra Bhakti.",
+      "applyMessage": "Buat akun pelamar gratis atau masuk untuk melamar posisi ini di Widatra Bhakti.",
+      "signIn": "Masuk",
+      "createAccount": "Buat akun"
+    },
+    "alreadyApplied": {
+      "title": "Anda sudah melamar",
+      "bodyPrefix": "Anda memiliki lamaran yang sudah tercatat untuk",
+      "bodySuffix": "Anda dapat melacak status dan detailnya dari dasbor Anda.",
+      "viewApplications": "Lihat Lamaran Saya",
+      "close": "Tutup"
+    },
+    "detailModal": {
+      "department": "Departemen",
+      "location": "Lokasi",
+      "employmentType": "Tipe Kerja",
+      "deadline": "Batas Waktu",
+      "jobDescription": "Deskripsi Pekerjaan",
+      "responsibilities": "Tanggung Jawab",
+      "qualifications": "Kualifikasi",
+      "benefits": "Manfaat",
+      "relatedJobs": "Lowongan Terkait",
+      "postedPrefix": "Diposting",
+      "close": "Tutup",
+      "applyNow": "Lamar Sekarang"
+    },
+    "steps": [
+      "Informasi Pribadi",
+      "Informasi Kontak",
+      "Pendidikan",
+      "Pengalaman",
+      "Keahlian",
+      "Portofolio / LinkedIn",
+      "CV & Surat Lamaran",
+      "Tinjau & Kirim"
+    ],
+    "form": {
+      "selectPlaceholder": "Pilih…",
+      "applyFor": "Melamar untuk",
+      "stepOfPrefix": "Langkah",
+      "stepOfMiddle": "dari",
+      "genderOptions": [
+        "Laki-laki",
+        "Perempuan",
+        "Tidak ingin menyebutkan"
+      ],
+      "step0": {
+        "intro": "Beri tahu kami siapa Anda.",
+        "fullName": "Nama lengkap",
+        "dob": "Tanggal lahir",
+        "gender": "Jenis kelamin"
+      },
+      "step1": {
+        "intro": "Bagaimana kami bisa menghubungi Anda?",
+        "email": "Email",
+        "phone": "Telepon",
+        "city": "Kota domisili",
+        "address": "Alamat lengkap"
+      },
+      "step2": {
+        "intro": "Latar belakang akademis Anda.",
+        "educationLabel": "Pendidikan",
+        "degree": "Jenjang",
+        "degreePlaceholder": "S1 / D3 / SMA",
+        "major": "Jurusan",
+        "institution": "Institusi",
+        "graduationYear": "Tahun lulus",
+        "remove": "Hapus",
+        "addAnother": "+ Tambah pendidikan lain"
+      },
+      "step3": {
+        "intro": "Peran paling relevan Anda.",
+        "noExperience": "Saya belum memiliki pengalaman kerja",
+        "experienceLabel": "Pengalaman",
+        "company": "Perusahaan",
+        "role": "Jabatan",
+        "period": "Periode",
+        "periodPlaceholder": "2022 – 2024",
+        "description": "Deskripsi",
+        "remove": "Hapus",
+        "addAnother": "+ Tambah pengalaman lain"
+      },
+      "step4": {
+        "intro": "Cantumkan keahlian relevan, dipisahkan dengan koma.",
+        "skills": "Keahlian",
+        "skillsPlaceholder": "mis. HPLC, dokumentasi GMP, analisis akar masalah"
+      },
+      "step5": {
+        "intro": "Opsional — bantu kami mengenal pekerjaan Anda lebih jauh.",
+        "linkedin": "Profil LinkedIn",
+        "linkedinPlaceholder": "https://linkedin.com/in/…",
+        "portfolio": "Portofolio / situs pribadi",
+        "portfolioPlaceholder": "https://…"
+      },
+      "step6": {
+        "uploadLabel": "Unggah CV (PDF, DOC, atau DOCX, maks 5MB)",
+        "clickToSelect": "Klik untuk memilih file",
+        "coverLetter": "Surat lamaran",
+        "coverLetterPlaceholder": "Ceritakan mengapa Anda cocok untuk posisi ini."
+      },
+      "step7": {
+        "title": "Tinjau & Kirim",
+        "intro": "Konfirmasi semuanya sudah benar sebelum mengirimkan.",
+        "fields": {
+          "position": "Posisi",
+          "fullName": "Nama lengkap",
+          "dob": "Tanggal lahir",
+          "email": "Email",
+          "phone": "Telepon",
+          "city": "Kota",
+          "education": "Pendidikan",
+          "experience": "Pengalaman",
+          "noExperienceValue": "Belum ada pengalaman",
+          "skills": "Keahlian",
+          "linkedin": "LinkedIn",
+          "cv": "CV",
+          "notUploaded": "Belum diunggah"
+        },
+        "consent": "Saya menyatakan informasi yang diberikan benar dan menyetujui PT Widatra Bhakti memproses data pribadi saya sesuai UU PDP Indonesia untuk tujuan rekrutmen. *"
+      },
+      "errors": {
+        "incompleteStep": "Mohon lengkapi kolom wajib sebelum melanjutkan.",
+        "cvType": "CV harus berupa file PDF, DOC, atau DOCX.",
+        "cvSize": "Ukuran file CV harus di bawah 5MB.",
+        "consentRequired": "Mohon setujui persyaratan sebelum mengirimkan.",
+        "generic": "Terjadi kesalahan saat mengirimkan. Silakan coba lagi."
+      },
+      "back": "← Kembali",
+      "continue": "Lanjutkan →",
+      "submitting": "Mengirimkan…",
+      "submit": "Kirim Lamaran"
+    },
+    "success": {
+      "eyebrow": "Lamaran Terkirim",
+      "title": "Terima kasih telah melamar.",
+      "bodyMiddle": "telah diterima. Tim rekrutmen kami akan meninjau dan menghubungi kandidat terpilih dalam 14 hari kerja.",
+      "applicationIdLabel": "ID Lamaran",
+      "submittedLabel": "● Terkirim",
+      "close": "Tutup",
+      "trackApplication": "Lacak Lamaran Saya"
+    },
+    "roleBlocked": {
+      "title": "Tidak tersedia untuk Karyawan Internal",
+      "internalMessage": "Karier (ATS) hanya untuk Pengguna Eksternal. Sebagai Karyawan Internal, Anda dapat mengajukan Acara Komunitas dari dasbor Anda."
+    }
+  },
+  "auth": {
+    "shell": {
+      "tagline": "Bhakti · Pharmaceuticals",
+      "iso": "ISO 27001",
+      "dataPrivacy": "Privasi Data",
+      "otsukaGroup": "Otsuka Group",
+      "copyright": "© {{year}} PT Widatra Bhakti. Hak cipta dilindungi.",
+      "visualEyebrow": "Manufaktur Farmasi",
+      "defaultQuote": "Dipercaya sejak 1973 · Anggota Otsuka Group",
+      "plantLabel": "Pabrik Pandaan · Jawa Timur · Indonesia",
+      "roleApplicant": "Pelamar",
+      "roleAdmin": "Admin / HR"
+    },
+    "login": {
+      "eyebrow": "Portal Pelamar",
+      "title": "Masuk ke akun Widatra Anda",
+      "subtitle": "Akses lamaran, dokumen, dan jadwal wawancara Anda.",
+      "email": "Alamat email",
+      "password": "Kata sandi",
+      "rememberMe": "Ingat saya",
+      "forgotPassword": "Lupa kata sandi?",
+      "signingIn": "Sedang masuk…",
+      "signIn": "Masuk",
+      "orContinueWith": "atau lanjutkan dengan",
+      "google": "Google",
+      "microsoft": "Microsoft",
+      "noAccount": "Belum punya akun?",
+      "registerAsApplicant": "Daftar sebagai Pelamar",
+      "demoAccount": "Akun demo: ayu.pratiwi@example.com · Password123!"
+    },
+    "register": {
+      "eyebrow": "Pendaftaran Pelamar",
+      "title": "Daftar untuk melamar posisi terbuka",
+      "subtitle": "Bergabunglah dengan Widatra Bhakti — membangun layanan kesehatan tepercaya sejak 1973.",
+      "fullName": "Nama lengkap",
+      "fullNamePlaceholder": "Nama resmi Anda",
+      "phone": "Telepon",
+      "phonePlaceholder": "+62 ...",
+      "email": "Alamat email",
+      "password": "Kata sandi",
+      "passwordPlaceholder": "Min 8 karakter",
+      "strengthLabels": [
+        "Terlalu pendek",
+        "Lemah",
+        "Cukup",
+        "Kuat",
+        "Sangat baik"
+      ],
+      "strengthPrefix": "Kekuatan:",
+      "confirmPassword": "Konfirmasi kata sandi",
+      "agreeTermsPrefix": "Saya menyetujui",
+      "termsOfService": "Syarat Layanan",
+      "and": "dan",
+      "privacyPolicy": "Kebijakan Privasi",
+      "updatesOptIn": "Kirimkan saya info lowongan baru di Widatra.",
+      "creatingAccount": "Membuat akun…",
+      "createAccount": "Buat akun",
+      "alreadyHaveAccount": "Sudah punya akun?",
+      "signIn": "Masuk",
+      "errors": {
+        "passwordMismatch": "Kata sandi tidak cocok."
+      },
+      "accountType": {
+        "label": "Saya mendaftar sebagai",
+        "internalTitle": "Karyawan Internal",
+        "internalDesc": "Staf & karyawan Widatra",
+        "externalTitle": "Pengguna Eksternal",
+        "externalDesc": "Pelamar & pengunjung"
+      },
+      "employeeId": "NIK Karyawan",
+      "employeeIdPlaceholder": "cth. WB-EMP-1042",
+      "department": "Departemen",
+      "departmentPlaceholder": "cth. Sumber Daya Manusia",
+      "position": "Jabatan",
+      "positionPlaceholder": "cth. Staf HR",
+      "companyEmail": "Email perusahaan"
+    },
+    "forgotPassword": {
+      "eyebrow": "Pemulihan kata sandi",
+      "title": "Lupa kata sandi Anda?",
+      "subtitle": "Masukkan email yang terkait dengan akun pelamar Anda dan kami akan mengirimkan tautan reset yang aman.",
+      "email": "Alamat email",
+      "sendResetLink": "Kirim tautan reset",
+      "rememberedPrefix": "Sudah ingat?",
+      "signIn": "Masuk",
+      "sentEyebrow": "Periksa kotak masuk Anda",
+      "sentTitle": "Tautan reset terkirim",
+      "sentSubtitle": "Jika akun untuk email tersebut ada, kami telah mengirimkan tautan reset kata sandi. Tautan berlaku selama 30 menit.",
+      "continueToReset": "Lanjutkan ke reset kata sandi (demo)",
+      "backToSignIn": "Kembali ke halaman masuk",
+      "demoNote": "Tidak ada pengiriman email di build pratinjau ini — gunakan \"Lanjutkan ke reset kata sandi\" untuk mensimulasikan klik tautan email."
+    },
+    "resetPassword": {
+      "eyebrow": "Pemulihan kata sandi",
+      "title": "Atur kata sandi baru",
+      "subtitle": "Pilih kata sandi kuat yang tidak Anda gunakan di tempat lain.",
+      "newPassword": "Kata sandi baru",
+      "confirmNewPassword": "Konfirmasi kata sandi baru",
+      "updating": "Memperbarui…",
+      "updatePassword": "Perbarui kata sandi",
+      "missingEmailPrefix": "Email akun tidak ditemukan —",
+      "startOver": "mulai ulang",
+      "doneEyebrow": "Berhasil",
+      "doneTitle": "Kata sandi Anda telah diperbarui",
+      "doneSubtitle": "Anda kini dapat masuk dengan kata sandi baru Anda.",
+      "continueToSignIn": "Lanjutkan ke halaman masuk",
+      "errors": {
+        "noAccount": "Kami tidak dapat mengidentifikasi akun Anda. Mohon mulai ulang proses reset kata sandi.",
+        "passwordMismatch": "Kata sandi tidak cocok."
+      }
+    },
+    "verifyEmail": {
+      "eyebrow": "Verifikasi email",
+      "title": "Masukkan kode 6 digit",
+      "subtitle": "Kami telah mengirimkan kode verifikasi ke email Anda. Berlaku selama 10 menit.",
+      "verify": "Verifikasi email",
+      "didntGetItPrefix": "Belum menerima kodenya?",
+      "resendAvailableIn": "Kirim ulang tersedia dalam {{seconds}}d",
+      "resendCode": "Kirim ulang kode",
+      "backToSignIn": "Kembali ke halaman masuk"
+    },
+    "error": {
+      "eyebrow": "Terjadi kesalahan",
+      "title": "Kami tidak dapat menyelesaikan permintaan itu",
+      "subtitle": "Tautan mungkin telah kedaluwarsa atau sudah digunakan. Silakan coba lagi atau hubungi dukungan.",
+      "backToSignIn": "Kembali ke halaman masuk",
+      "contactSupport": "Hubungi dukungan"
+    },
+    "success": {
+      "eyebrow": "Semua siap",
+      "title": "Anda telah terverifikasi",
+      "subtitle": "Akun Anda sudah siap. Lanjutkan ke dasbor pelamar Anda untuk melengkapi profil dan mulai melamar.",
+      "goToDashboard": "Ke dasbor",
+      "browseJobs": "Jelajahi lowongan"
+    }
+  },
+  "dashboard": {
+    "shell": {
+      "brandLabel": "Pelamar",
+      "nav": {
+        "overview": "Ikhtisar",
+        "myApplications": "Lamaran Saya",
+        "myTourBookings": "Pemesanan Kunjungan Saya",
+        "profile": "Profil",
+        "documents": "Dokumen",
+        "notifications": "Notifikasi",
+        "settings": "Pengaturan",
+        "dashboard": "Dasbor",
+        "myEventSubmissions": "Pengajuan Acara Saya",
+        "careerAts": "Karier (ATS)",
+        "factoryTourBooking": "Pemesanan Tur Pabrik",
+        "myBookings": "Pemesanan Saya"
+      },
+      "signOut": "Keluar",
+      "welcomeBackPrefix": "Selamat datang kembali,",
+      "roleApplicant": "Pelamar",
+      "eyebrow": "Dasbor Pelamar",
+      "roleInternal": "Karyawan Internal",
+      "roleExternal": "Pengguna Eksternal"
+    },
+    "statusLabels": {
+      "Submitted": "Terkirim",
+      "Screening": "Seleksi",
+      "Interview": "Wawancara",
+      "Offer": "Penawaran",
+      "Hired": "Diterima",
+      "Rejected": "Ditolak"
+    },
+    "overview": {
+      "welcomeBackPrefix": "Selamat datang kembali,",
+      "subtitle": "Lacak lamaran Anda, jaga profil tetap terkini, dan kelola dokumen Anda.",
+      "profileCompletion": "Kelengkapan Profil",
+      "completeProfile": "Lengkapi profil",
+      "checklist": [
+        "Info pribadi",
+        "Pendidikan",
+        "Sertifikasi",
+        "Tautan portofolio"
+      ],
+      "upcomingInterview": "Wawancara Mendatang",
+      "noUpcomingInterview": "Belum ada wawancara mendatang — periksa kembali setelah pembaruan status berikutnya.",
+      "stats": {
+        "submitted": "Terkirim",
+        "inReview": "Dalam Tinjauan",
+        "interviews": "Wawancara",
+        "offers": "Penawaran"
+      },
+      "recentApplications": "Lamaran terbaru",
+      "viewAll": "Lihat semua →",
+      "table": {
+        "position": "Posisi",
+        "department": "Departemen",
+        "applied": "Dilamar",
+        "status": "Status",
+        "timeline": "Linimasa",
+        "view": "Lihat"
+      },
+      "emptyPrefix": "Anda belum mengirimkan lamaran apa pun.",
+      "browseOpenRoles": "Jelajahi posisi terbuka →"
+    },
+    "applications": {
+      "title": "Lamaran Saya",
+      "subtitle": "Setiap posisi yang Anda lamar, dan posisinya dalam alur rekrutmen.",
+      "table": {
+        "id": "ID",
+        "position": "Posisi",
+        "department": "Departemen",
+        "applied": "Dilamar",
+        "status": "Status",
+        "timeline": "Linimasa",
+        "viewTimeline": "Lihat linimasa"
+      },
+      "empty": "Anda belum mengirimkan lamaran apa pun. Kunjungi halaman Karier untuk melamar posisi."
+    },
+    "profile": {
+      "title": "Profil",
+      "subtitle": "Selalu perbarui — perekrut meninjau ini saat seleksi.",
+      "personalInformation": "Informasi pribadi",
+      "fullName": "Nama lengkap",
+      "email": "Email",
+      "phone": "Telepon",
+      "location": "Lokasi",
+      "education": "Pendidikan",
+      "experience": "Pengalaman",
+      "changePhoto": "Ganti foto",
+      "editContactInfo": "Ubah info kontak"
+    },
+    "documents": {
+      "title": "Dokumen",
+      "subtitle": "CV, surat lamaran, dan dokumen pendukung yang Anda bagikan ke perekrut.",
+      "uploadDocument": "Unggah dokumen",
+      "uploadedPrefix": "diunggah",
+      "download": "Unduh"
+    },
+    "notifications": {
+      "title": "Notifikasi",
+      "subtitle": "Pesan perekrut, undangan wawancara, dan pembaruan status.",
+      "view": "Lihat"
+    },
+    "security": {
+      "title": "Pengaturan",
+      "subtitle": "Kelola informasi kontak, kata sandi, sesi, dan akun Anda.",
+      "contactInformation": "Informasi kontak",
+      "fullName": "Nama lengkap",
+      "email": "Email",
+      "phone": "Telepon",
+      "saving": "Menyimpan…",
+      "saveChanges": "Simpan perubahan",
+      "changePassword": "Ganti kata sandi",
+      "currentPassword": "Kata sandi saat ini",
+      "newPassword": "Kata sandi baru",
+      "confirmNewPassword": "Konfirmasi kata sandi baru",
+      "updating": "Memperbarui…",
+      "updatePassword": "Perbarui kata sandi",
+      "activeSessions": "Sesi aktif",
+      "thisBrowser": "Browser ini",
+      "currentSession": "Sesi saat ini",
+      "allOtherDevices": "Semua perangkat lain",
+      "signOutEverywhere": "Keluar dari semua perangkat",
+      "dangerZone": "Zona berbahaya",
+      "deleteAccount": "Hapus akun saya",
+      "messages": {
+        "contactUpdated": "Informasi kontak diperbarui.",
+        "passwordMismatch": "Kata sandi baru tidak cocok.",
+        "passwordUpdated": "Kata sandi berhasil diperbarui."
+      }
+    },
+    "tours": {
+      "title": "Pemesanan Kunjungan Pabrik Saya",
+      "subtitle": "Setiap kunjungan yang Anda ajukan, dan posisinya bersama tim tuan rumah kami.",
+      "table": {
+        "reference": "Referensi",
+        "visitDate": "Tanggal kunjungan",
+        "timeSlot": "Slot waktu",
+        "visitors": "Pengunjung",
+        "status": "Status",
+        "details": "Detail",
+        "viewDetails": "Lihat detail"
+      },
+      "emptyPrefix": "Anda belum memesan kunjungan pabrik.",
+      "bookAVisit": "Pesan kunjungan →"
+    },
+    "timelineModal": {
+      "appliedPrefix": "Dilamar",
+      "yourApplication": "Lamaran Anda",
+      "fullName": "Nama lengkap",
+      "email": "Email",
+      "phone": "Telepon",
+      "employmentType": "Tipe kerja",
+      "interviewDetails": "Detail Wawancara",
+      "uploadedCv": "CV yang Diunggah",
+      "noFileRecorded": "Tidak ada file tercatat",
+      "download": "Unduh",
+      "sampleRecordNote": "Data contoh — tidak ada file tersimpan",
+      "statusHistory": "Riwayat Status"
+    },
+    "interviewCard": {
+      "interview": "Wawancara",
+      "happeningNowOrPassed": "Sedang berlangsung atau sudah lewat",
+      "inLabel": "Dalam",
+      "daySingular": "hari",
+      "dayPlural": "hari",
+      "hourShort": "j",
+      "minuteShort": "m",
+      "minuteSingular": "menit",
+      "minutePlural": "menit"
+    },
+    "events": {
+      "title": "Pengajuan Acara Saya",
+      "subtitle": "Ajukan acara komunitas untuk dipublikasikan di halaman Berita & Acara.",
+      "newEvent": "Acara Baru",
+      "empty": "Anda belum mengajukan acara apa pun.",
+      "confirmDelete": "Hapus draf ini? Tindakan ini tidak dapat dibatalkan.",
+      "table": {
+        "title": "Judul Acara",
+        "community": "Komunitas",
+        "eventDate": "Tanggal Acara",
+        "status": "Status",
+        "actions": "Aksi"
+      },
+      "actions": {
+        "view": "Lihat",
+        "edit": "Ubah",
+        "submit": "Ajukan untuk Ditinjau",
+        "delete": "Hapus"
+      },
+      "statusLabels": {
+        "Draft": "Draf",
+        "Pending": "Menunggu Persetujuan",
+        "Revision Requested": "Revisi Diminta",
+        "Approved": "Disetujui",
+        "Rejected": "Ditolak",
+        "Published": "Dipublikasikan"
+      },
+      "toast": {
+        "draftSaved": "Acara disimpan sebagai draf.",
+        "draftUpdated": "Draf diperbarui.",
+        "submitted": "Acara diajukan untuk ditinjau.",
+        "deleted": "Draf dihapus."
+      },
+      "detail": {
+        "gallery": "Galeri",
+        "documents": "Dokumen Terkait",
+        "statusTimeline": "Riwayat Status"
+      },
+      "form": {
+        "newTitle": "Ajukan Acara Komunitas",
+        "editTitle": "Ubah Pengajuan Acara",
+        "subtitle": "Lengkapi detail di bawah ini. Simpan sebagai draf kapan saja, atau ajukan untuk ditinjau admin.",
+        "close": "Tutup",
+        "fields": {
+          "title": "Judul Acara",
+          "community": "Komunitas",
+          "category": "Kategori Acara",
+          "eventDate": "Tanggal Acara",
+          "location": "Lokasi",
+          "summary": "Ringkasan Singkat",
+          "description": "Deskripsi Lengkap",
+          "coverImage": "Gambar Sampul",
+          "gallery": "Galeri Gambar",
+          "documents": "Dokumen Terkait",
+          "tags": "Tag",
+          "contactPerson": "Kontak Person",
+          "contactPhone": "Telepon Kontak"
+        },
+        "placeholders": {
+          "title": "misalnya Pertandingan Persahabatan Basket Antar-Departemen",
+          "location": "misalnya Sports Hall Widatra, Pandaan",
+          "contactPerson": "misalnya Budi Santoso"
+        },
+        "summaryHint": "1-2 kalimat yang ditampilkan pada pratinjau.",
+        "descriptionHint": "Mendukung format sederhana: **judul** dan baris kosong antar paragraf.",
+        "onePerLine": "Satu per baris",
+        "galleryHint": "Pilih dari Media Library",
+        "attachDocument": "Lampirkan Dokumen",
+        "documentsHint": "Opsional — file PDF, Word, atau Excel",
+        "fileTooLarge": "terlalu besar (maks 10MB).",
+        "fileError": "Gagal melampirkan file tersebut.",
+        "agreementLabel": "Saya menyatakan informasi acara ini benar dan setuju dengan panduan pengajuan acara komunitas Widatra Bhakti.",
+        "cancel": "Batal",
+        "saveDraft": "Simpan sebagai Draf",
+        "submitForReview": "Ajukan untuk Ditinjau",
+        "validation": {
+          "title": "Judul acara wajib diisi.",
+          "date": "Tanggal acara wajib diisi.",
+          "location": "Lokasi wajib diisi.",
+          "summary": "Ringkasan singkat wajib diisi.",
+          "description": "Deskripsi lengkap wajib diisi.",
+          "contact": "Kontak person wajib diisi.",
+          "agreement": "Silakan setujui pernyataan sebelum mengajukan."
+        }
+      }
+    },
+    "roleGate": {
+      "title": "Tidak tersedia untuk jenis akun Anda",
+      "description": "Bagian ini bukan bagian dari dasbor Anda. Karyawan Internal dapat mengajukan Acara Komunitas; Pengguna Eksternal dapat mengakses Karier (ATS) dan Pemesanan Tur Pabrik.",
+      "backToDashboard": "Kembali ke dasbor"
+    }
+  },
+  "admin": {
+    "shell": {
+      "brandLabel": "Admin",
+      "nav": {
+        "overview": "Ikhtisar",
+        "products": "Produk",
+        "newsEvents": "Berita & Acara",
+        "csr": "TJSL",
+        "factoryTour": "Kunjungan Pabrik",
+        "careersAts": "Karier · ATS",
+        "contactInbox": "Kotak Masuk Kontak",
+        "companyCms": "CMS Perusahaan",
+        "mediaLibrary": "Pustaka Media",
+        "usersRoles": "Pengguna & Peran",
+        "analytics": "Analitik",
+        "settings": "Pengaturan",
+        "communityEvents": "Persetujuan Acara Komunitas"
+      },
+      "signOut": "Keluar",
+      "searchPlaceholder": "Cari produk, pelamar, artikel…",
+      "userRole": "HR Manager",
+      "eyebrow": "Konsol Admin"
+    },
+    "common": {
+      "cancel": "Batal",
+      "close": "Tutup",
+      "save": "Simpan",
+      "saveChanges": "Simpan perubahan",
+      "edit": "Ubah",
+      "delete": "Hapus",
+      "actions": "Aksi",
+      "status": "Status",
+      "view": "Lihat",
+      "all": "Semua",
+      "of": "dari",
+      "required": "Wajib diisi"
+    },
+    "statusLabels": {
+      "Published": "Diterbitkan",
+      "Draft": "Draf",
+      "Archived": "Diarsipkan",
+      "Active": "Aktif",
+      "Inactive": "Nonaktif",
+      "New": "Baru",
+      "Unread": "Belum Dibaca",
+      "Read": "Sudah Dibaca",
+      "In Progress": "Diproses",
+      "Replied": "Dibalas",
+      "Applied": "Terkirim",
+      "Screening": "Seleksi",
+      "Interview": "Wawancara",
+      "Offer": "Penawaran",
+      "Hired": "Diterima",
+      "Rejected": "Ditolak",
+      "Submitted": "Terkirim",
+      "Pending": "Menunggu",
+      "Reviewed": "Ditinjau",
+      "Approved": "Disetujui",
+      "Completed": "Selesai"
+    },
+    "index": {
+      "title": "Ikhtisar Dasbor",
+      "subtitle": "Ringkasan langsung kehadiran digital Widatra — lalu lintas, pertanyaan, pelamar, dan konten.",
+      "stats": {
+        "visitors": "Pengunjung bulan ini",
+        "visitorsDelta": "+12.4% dari bulan lalu",
+        "inquiries": "Pertanyaan produk",
+        "inquiriesDelta": "+18 baru",
+        "applicants": "Pelamar aktif",
+        "applicantsDelta": "+24 minggu ini",
+        "tours": "Pemesanan kunjungan",
+        "toursDelta": "30 hari ke depan"
+      },
+      "traffic": {
+        "eyebrow": "Lalu Lintas — 30 hari terakhir",
+        "title": "Performa situs web",
+        "sessions": "Sesi",
+        "avgSession": "Rata-rata sesi",
+        "bounce": "Pentalan",
+        "countries": "Negara"
+      },
+      "quickActions": {
+        "title": "Aksi cepat",
+        "publishProduct": "Terbitkan produk baru",
+        "postJob": "Pasang lowongan kerja",
+        "inviteTeamMember": "Undang anggota tim"
+      },
+      "recentApplicants": "Pelamar terbaru",
+      "latestInquiries": "Pertanyaan terbaru",
+      "table": {
+        "applicant": "Pelamar",
+        "position": "Posisi",
+        "stage": "Tahap",
+        "score": "Skor",
+        "from": "Dari",
+        "subject": "Subjek",
+        "status": "Status"
+      }
+    },
+    "ats": {
+      "title": "Karier & ATS",
+      "subtitle": "Pemasangan lowongan, pelacakan pelamar, dan pipeline rekrutmen untuk semua posisi terbuka Widatra.",
+      "postJob": "Pasang lowongan",
+      "tabs": {
+        "jobPosts": "Lowongan",
+        "applicants": "Pelamar",
+        "pipeline": "Pipeline"
+      },
+      "jobPosts": {
+        "heading": "Posisi terbuka",
+        "table": {
+          "title": "Judul",
+          "department": "Departemen",
+          "location": "Lokasi",
+          "applicants": "Pelamar",
+          "status": "Status",
+          "posted": "Diposting",
+          "actions": "Aksi"
+        },
+        "syncNoteSingular": "data pelamar langsung tersinkron otomatis dari halaman Karier publik.",
+        "syncNotePlural": "data pelamar langsung tersinkron otomatis dari halaman Karier publik.",
+        "featuredBadge": "Unggulan",
+        "empty": "Belum ada lowongan. Klik \"Pasang Lowongan\" untuk membuat satu.",
+        "toggleFeaturedAria": "Ubah status unggulan untuk",
+        "feature": "Jadikan unggulan",
+        "unfeature": "Hapus dari unggulan",
+        "toggleStatusAria": "Ubah status untuk",
+        "setToDraft": "Jadikan Draft",
+        "publish": "Publikasikan",
+        "editAria": "Edit",
+        "deleteAria": "Hapus",
+        "toast": {
+          "createdSuffix": "berhasil dibuat.",
+          "draftSuffix": "disimpan sebagai draft.",
+          "publishedSuffix": "berhasil dipublikasikan.",
+          "updatedSuffix": "berhasil diperbarui.",
+          "removedSuffix": "berhasil dihapus.",
+          "isNowPrefix": "sekarang",
+          "featuredOnSuffix": "dijadikan unggulan.",
+          "featuredOffSuffix": "dihapus dari unggulan."
+        },
+        "deleteDialog": {
+          "title": "Hapus lowongan ini?",
+          "bodyPrefix": "Tindakan ini akan menghapus",
+          "bodySuffix": "secara permanen dari Admin dan halaman Career publik. Tindakan ini tidak dapat dibatalkan.",
+          "cancel": "Batal",
+          "delete": "Hapus"
+        }
+      },
+      "applicants": {
+        "searchPlaceholder": "Cari nama, posisi, email, ID…",
+        "allStatuses": "Semua status",
+        "countSuffixSingular": "pelamar",
+        "countSuffixPlural": "pelamar",
+        "table": {
+          "applicant": "Pelamar",
+          "position": "Posisi",
+          "department": "Departemen",
+          "status": "Status",
+          "applied": "Dilamar",
+          "action": "Aksi"
+        },
+        "noMatch": "Tidak ada pelamar yang cocok dengan pencarian Anda."
+      },
+      "pipeline": {
+        "heading": "Pipeline rekrutmen",
+        "noApplicants": "Tidak ada pelamar"
+      },
+      "modal": {
+        "appliedForPrefix": "Melamar untuk",
+        "sections": {
+          "personalInfo": "Informasi Pribadi",
+          "contactInfo": "Informasi Kontak",
+          "education": "Pendidikan",
+          "experience": "Pengalaman",
+          "skills": "Keahlian",
+          "portfolioLinkedin": "Portofolio / LinkedIn",
+          "cvResume": "CV / Resume",
+          "coverLetter": "Surat Lamaran",
+          "recruitmentStatus": "Status Rekrutmen",
+          "timeline": "Linimasa",
+          "hrNotes": "Catatan HR"
+        },
+        "fields": {
+          "fullName": "Nama lengkap",
+          "dob": "Tanggal lahir",
+          "gender": "Jenis kelamin",
+          "submitted": "Dikirim",
+          "email": "Email",
+          "phone": "Telepon",
+          "city": "Kota",
+          "address": "Alamat",
+          "linkedin": "LinkedIn",
+          "portfolio": "Portofolio"
+        },
+        "noExperience": "Belum ada pengalaman kerja yang dicantumkan.",
+        "viewCv": "Lihat CV",
+        "download": "Unduh",
+        "sampleRecord": "Data contoh — tidak ada file tersimpan",
+        "statusNotePlaceholder": "Catatan opsional untuk perubahan status ini…",
+        "updateStatus": "Perbarui Status",
+        "editReschedule": "Ubah / Jadwal Ulang",
+        "reschedule": "Jadwal Ulang",
+        "cancel": "Batalkan",
+        "confirmCancelInterview": "Batalkan wawancara terjadwal ini? Kartu pelamar akan ditandai dibatalkan.",
+        "noNotesYet": "Belum ada catatan.",
+        "addNotePlaceholder": "Tambahkan catatan HR internal…",
+        "addNote": "Tambah Catatan"
+      },
+      "scheduling": {
+        "titleSchedule": "Jadwalkan Wawancara",
+        "titleReschedule": "Jadwal Ulang Wawancara",
+        "interviewDate": "Tanggal Wawancara",
+        "interviewTime": "Waktu Wawancara",
+        "interviewType": "Tipe Wawancara",
+        "meetingLink": "Tautan Rapat",
+        "location": "Lokasi",
+        "meetingLinkPlaceholder": "https://meet.google.com/...",
+        "locationPlaceholder": "mis. Widatra HQ, Ruang Rapat Lantai 3",
+        "interviewer": "Pewawancara",
+        "interviewerPlaceholder": "mis. Andi Wijaya — HR Manager",
+        "notes": "Catatan",
+        "notesPlaceholder": "Apa yang perlu dibawa, dress code, agenda, dll. (opsional)",
+        "errorRequired": "Mohon isi tanggal, waktu, lokasi/tautan, dan pewawancara.",
+        "cancel": "Batal",
+        "saveChanges": "Simpan Perubahan",
+        "scheduleInterview": "Jadwalkan Wawancara",
+        "online": "Daring",
+        "offline": "Tatap Muka"
+      },
+      "cvViewer": {
+        "zoomOut": "Perkecil",
+        "zoomIn": "Perbesar",
+        "resetZoom": "Atur ulang zoom",
+        "download": "Unduh",
+        "close": "Tutup penampil CV",
+        "noFileTitle": "Tidak ada file CV tersedia",
+        "noFileBody": "Ini adalah data contoh tanpa file resume tersimpan, jadi tidak ada yang bisa dipratinjau di sini.",
+        "previewNotAvailableTitle": "Pratinjau tidak tersedia",
+        "previewNotAvailableBodyPrefix": "File ini",
+        "previewNotAvailableBodySuffix": "tidak dapat dipratinjau di browser. Gunakan tombol unduh di atas untuk membukanya."
+      },
+      "jobForm": {
+        "newTitle": "Pasang Lowongan Baru",
+        "editTitle": "Edit Lowongan",
+        "newSubtitle": "Isi detail di bawah ini untuk mempublikasikan lowongan baru.",
+        "editingPrefix": "Mengedit",
+        "close": "Tutup",
+        "optional": "opsional",
+        "onePerLine": "satu per baris",
+        "fields": {
+          "title": "Judul Pekerjaan",
+          "department": "Departemen",
+          "employmentType": "Jenis Pekerjaan",
+          "workMode": "Mode Kerja",
+          "location": "Lokasi",
+          "experienceLevel": "Tingkat Pengalaman",
+          "salary": "Gaji",
+          "shortDescription": "Deskripsi Singkat",
+          "responsibilities": "Tanggung Jawab",
+          "requirements": "Persyaratan",
+          "benefits": "Benefit",
+          "deadline": "Batas Waktu Lamaran",
+          "status": "Status",
+          "featured": "Lowongan Unggulan",
+          "coverImage": "Gambar Sampul"
+        },
+        "featuredOn": "Unggulan",
+        "featuredOff": "Bukan Unggulan",
+        "errors": {
+          "required": "Kolom ini wajib diisi.",
+          "atLeastOne": "Tambahkan minimal satu item."
+        },
+        "cancel": "Batal",
+        "saveDraft": "Simpan Draft",
+        "saving": "Menyimpan…",
+        "publish": "Publikasikan",
+        "cancelConfirm": {
+          "title": "Batalkan perubahan?",
+          "body": "Anda memiliki perubahan yang belum disimpan pada lowongan ini. Jika keluar sekarang, perubahan akan hilang.",
+          "keepEditing": "Lanjutkan Edit",
+          "discard": "Buang Perubahan"
+        }
+      }
+    },
+    "factoryTour": {
+      "title": "Manajemen Kunjungan Pabrik",
+      "subtitle": "Tinjau, setujui, dan lacak pemesanan pengunjung untuk kunjungan Pabrik Pandaan. Perubahan status tersinkron langsung ke halaman Kunjungan Pabrik publik.",
+      "stats": {
+        "awaitingReview": "Menunggu tinjauan",
+        "approved": "Disetujui",
+        "completed": "Selesai",
+        "confirmedVisitors": "Pengunjung terkonfirmasi"
+      },
+      "searchPlaceholder": "Cari pengunjung, organisasi, email, ID…",
+      "allStatuses": "Semua status",
+      "countSuffixSingular": "pemesanan",
+      "countSuffixPlural": "pemesanan",
+      "table": {
+        "visitor": "Pengunjung",
+        "organization": "Organisasi",
+        "tourDate": "Tanggal kunjungan",
+        "timeSlot": "Slot waktu",
+        "pax": "Pax",
+        "status": "Status",
+        "action": "Aksi"
+      },
+      "noMatch": "Tidak ada pemesanan yang cocok dengan pencarian Anda.",
+      "modal": {
+        "individualVisitor": "Pengunjung perorangan",
+        "sections": {
+          "visitInfo": "Informasi Kunjungan",
+          "visitorInfo": "Informasi Pengunjung",
+          "purpose": "Tujuan Kunjungan",
+          "quickActions": "Aksi Cepat",
+          "bookingStatus": "Status Pemesanan",
+          "timeline": "Linimasa",
+          "internalNotes": "Catatan Internal"
+        },
+        "fields": {
+          "requestedDate": "Tanggal diminta",
+          "timeSlot": "Slot waktu",
+          "numberOfVisitors": "Jumlah pengunjung",
+          "submitted": "Dikirim",
+          "fullName": "Nama lengkap",
+          "organization": "Organisasi",
+          "email": "Email",
+          "phone": "Telepon"
+        },
+        "approve": "Setujui",
+        "reject": "Tolak",
+        "markCompleted": "Tandai Selesai",
+        "quickActionsNote": "Aksi cepat berlaku langsung menggunakan kolom catatan di sidebar, jika diisi.",
+        "statusNotePlaceholder": "Catatan opsional untuk perubahan status ini…",
+        "updateStatus": "Perbarui Status",
+        "noNotesYet": "Belum ada catatan.",
+        "addNotePlaceholder": "Tambahkan catatan internal (hanya terlihat oleh admin)…",
+        "addNote": "Tambah Catatan",
+        "toastMarkedPrefix": "Pemesanan",
+        "toastMarkedMiddle": "ditandai sebagai"
+      }
+    },
+    "products": {
+      "title": "Manajemen Produk",
+      "subtitle": "Terbitkan, ubah, dan arsipkan katalog produk farmasi bermerek dan generik Widatra. Perubahan langsung tercermin di halaman Produk publik.",
+      "newProduct": "Produk baru",
+      "filters": {
+        "all": "Semua",
+        "branded": "Bermerek",
+        "generic": "Generik"
+      },
+      "countSuffix": "produk",
+      "table": {
+        "code": "Kode",
+        "name": "Nama produk",
+        "category": "Kategori",
+        "package": "Kemasan",
+        "type": "Tipe",
+        "actions": "Aksi",
+        "empty": "Belum ada produk dalam kategori ini."
+      },
+      "editAriaPrefix": "Ubah",
+      "deleteAriaPrefix": "Hapus",
+      "deleteDialog": {
+        "title": "Hapus produk?",
+        "bodyPrefix": "Ini akan menghapus permanen",
+        "bodySuffix": "dari katalog dan halaman Produk publik. Tindakan ini tidak dapat dibatalkan.",
+        "cancel": "Batal",
+        "delete": "Hapus"
+      },
+      "toast": {
+        "updatedSuffix": "diperbarui",
+        "addedSuffix": "ditambahkan ke katalog",
+        "removedSuffix": "dihapus"
+      },
+      "form": {
+        "newTitle": "Produk baru",
+        "editTitle": "Ubah produk",
+        "editingPrefix": "Mengubah",
+        "newSubtitle": "Tambahkan produk ke katalog publik",
+        "close": "Tutup",
+        "fields": {
+          "name": "Nama produk",
+          "tagline": "Tagline",
+          "category": "Kategori",
+          "type": "Tipe",
+          "image": "Gambar produk",
+          "nie": "Nomor NIE / BPOM",
+          "osmolarity": "Osmolaritas",
+          "calorie": "Kalori",
+          "shelfLife": "Masa simpan",
+          "storage": "Penyimpanan",
+          "indication": "Indikasi",
+          "composition": "Komposisi",
+          "manufacturingNote": "Catatan manufaktur",
+          "packaging": "Varian kemasan",
+          "sizes": "Ukuran tersedia",
+          "benefits": "Manfaat",
+          "applications": "Aplikasi"
+        },
+        "onePerLine": "Satu per baris",
+        "cancel": "Batal",
+        "saveChanges": "Simpan perubahan",
+        "createProduct": "Buat produk"
+      }
+    },
+    "news": {
+      "title": "Manajemen Berita & Acara",
+      "subtitle": "Terbitkan berita perusahaan, siaran pers, dan pengumuman acara. Perubahan langsung tercermin — termasuk popup Baca Selengkapnya — di halaman Berita & Acara publik.",
+      "newArticle": "Artikel baru",
+      "publishedSuffix": "diterbitkan",
+      "articlesSuffix": "artikel",
+      "table": {
+        "title": "Judul",
+        "category": "Kategori",
+        "author": "Penulis",
+        "published": "Diterbitkan",
+        "status": "Status",
+        "actions": "Aksi",
+        "empty": "Belum ada artikel dalam kategori ini."
+      },
+      "toggleAriaPrefix": "Alihkan status untuk",
+      "setToDraft": "Jadikan Draf",
+      "publish": "Terbitkan",
+      "editAriaPrefix": "Ubah",
+      "deleteAriaPrefix": "Hapus",
+      "deleteDialog": {
+        "title": "Hapus artikel?",
+        "bodyPrefix": "Ini akan menghapus permanen",
+        "bodySuffix": "dari halaman Berita & Acara publik. Tindakan ini tidak dapat dibatalkan.",
+        "cancel": "Batal",
+        "delete": "Hapus"
+      },
+      "toast": {
+        "updatedSuffix": "diperbarui",
+        "createdSuffix": "dibuat",
+        "removedSuffix": "dihapus",
+        "isNowPrefix": "sekarang berstatus"
+      },
+      "form": {
+        "newTitle": "Artikel baru",
+        "editTitle": "Ubah artikel",
+        "editingPrefix": "Mengubah",
+        "newSubtitle": "Terbitkan artikel berita atau pengumuman acara",
+        "close": "Tutup",
+        "fields": {
+          "title": "Judul",
+          "category": "Kategori",
+          "date": "Tanggal",
+          "readTime": "Waktu baca",
+          "heroImage": "Gambar sampul",
+          "status": "Status",
+          "author": "Penulis",
+          "authorRole": "Peran penulis",
+          "excerpt": "Kutipan",
+          "fullContent": "Konten artikel lengkap",
+          "tags": "Tag",
+          "galleryImages": "Gambar galeri"
+        },
+        "contentHint": "Baris kosong antar paragraf. Gunakan **Judul** untuk subjudul.",
+        "onePerLine": "Satu per baris",
+        "galleryHint": "Menggunakan gambar sampul jika dikosongkan",
+        "cancel": "Batal",
+        "saveChanges": "Simpan perubahan",
+        "createArticle": "Buat artikel"
+      }
+    },
+    "csr": {
+      "title": "Manajemen TJSL",
+      "subtitle": "Kelola pilar keberlanjutan, kisah dampak, dan item galeri. Perubahan langsung tercermin — termasuk popup Baca Selengkapnya — di halaman TJSL publik.",
+      "newProgram": "Program baru",
+      "publishedProgramsSuffix": "program diterbitkan",
+      "publishedSuffix": "diterbitkan",
+      "programsSuffix": "program",
+      "table": {
+        "program": "Program",
+        "pillar": "Pilar",
+        "location": "Lokasi",
+        "date": "Tanggal",
+        "status": "Status",
+        "actions": "Aksi",
+        "empty": "Belum ada program dalam pilar ini."
+      },
+      "toggleAriaPrefix": "Alihkan status untuk",
+      "setToDraft": "Jadikan Draf",
+      "publish": "Terbitkan",
+      "editAriaPrefix": "Ubah",
+      "deleteAriaPrefix": "Hapus",
+      "deleteDialog": {
+        "title": "Hapus program TJSL?",
+        "bodyPrefix": "Ini akan menghapus permanen",
+        "bodySuffix": "dari halaman TJSL publik. Tindakan ini tidak dapat dibatalkan.",
+        "cancel": "Batal",
+        "delete": "Hapus"
+      },
+      "toast": {
+        "updatedSuffix": "diperbarui",
+        "createdSuffix": "dibuat",
+        "removedSuffix": "dihapus",
+        "isNowPrefix": "sekarang berstatus"
+      },
+      "form": {
+        "newTitle": "Program TJSL baru",
+        "editTitle": "Ubah program TJSL",
+        "editingPrefix": "Mengubah",
+        "newSubtitle": "Tambahkan program ke halaman TJSL publik",
+        "close": "Tutup",
+        "fields": {
+          "title": "Judul program",
+          "pillar": "Pilar",
+          "location": "Lokasi",
+          "date": "Tanggal",
+          "heroImage": "Gambar sampul",
+          "status": "Status",
+          "impactMetric": "Metrik dampak",
+          "excerpt": "Kutipan",
+          "fullDescription": "Deskripsi lengkap",
+          "galleryImages": "Gambar galeri"
+        },
+        "impactHint": "Ditampilkan sebagai lencana di popup",
+        "contentHint": "Baris kosong antar paragraf. Gunakan **Judul** untuk subjudul.",
+        "galleryHint": "Menggunakan gambar sampul jika dikosongkan",
+        "cancel": "Batal",
+        "saveChanges": "Simpan perubahan",
+        "createProgram": "Buat program"
+      }
+    },
+    "events": {
+      "title": "Persetujuan Acara Komunitas",
+      "subtitle": "Tinjau, setujui, dan publikasikan acara yang diajukan oleh anggota komunitas.",
+      "close": "Tutup",
+      "review": "Tinjau",
+      "empty": "Belum ada pengajuan pada filter ini.",
+      "gallery": "Galeri",
+      "documents": "Dokumen Terkait",
+      "notesHistory": "Riwayat Catatan",
+      "notePlaceholder": "Tambahkan catatan (wajib untuk Tolak / Minta Revisi)...",
+      "publishedNotice": "Dipublikasikan ke Berita & Acara:",
+      "filters": {
+        "all": "Semua"
+      },
+      "table": {
+        "id": "ID",
+        "title": "Judul Acara",
+        "community": "Komunitas",
+        "submittedBy": "Diajukan Oleh",
+        "eventDate": "Tanggal Acara",
+        "status": "Status",
+        "actions": "Aksi"
+      },
+      "statusLabels": {
+        "Pending": "Menunggu Persetujuan",
+        "Revision Requested": "Revisi Diminta",
+        "Approved": "Disetujui",
+        "Rejected": "Ditolak",
+        "Published": "Dipublikasikan"
+      },
+      "actions": {
+        "approve": "Setujui",
+        "reject": "Tolak",
+        "requestRevision": "Minta Revisi",
+        "publish": "Publikasikan",
+        "editBeforePublish": "Ubah"
+      },
+      "editForm": {
+        "title": "Judul Acara",
+        "community": "Komunitas",
+        "category": "Kategori Acara",
+        "eventDate": "Tanggal Acara",
+        "location": "Lokasi",
+        "coverImage": "Gambar Sampul",
+        "summary": "Ringkasan Singkat",
+        "description": "Deskripsi Lengkap",
+        "gallery": "Galeri Gambar",
+        "cancel": "Batal",
+        "save": "Simpan Perubahan"
+      },
+      "validation": {
+        "noteRequired": "Silakan tambahkan catatan sebelum melanjutkan."
+      },
+      "toast": {
+        "approved": "Acara disetujui.",
+        "rejected": "Acara ditolak.",
+        "revisionRequested": "Revisi diminta.",
+        "published": "Acara dipublikasikan ke Berita & Acara.",
+        "saved": "Perubahan disimpan."
+      }
+    }
+  }
+}

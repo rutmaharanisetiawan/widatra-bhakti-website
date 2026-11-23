@@ -1,0 +1,719 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model application_hr_notes {
+  id             BigInt       @id @default(autoincrement()) @db.UnsignedBigInt
+  application_id String       @db.VarChar(255)
+  author_id      BigInt?      @db.UnsignedBigInt
+  author_name    String       @db.VarChar(255)
+  note           String       @db.Text
+  created_at     DateTime?    @db.Timestamp(0)
+  updated_at     DateTime?    @db.Timestamp(0)
+  applications   applications @relation(fields: [application_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "application_hr_notes_application_id_foreign")
+  users          users?       @relation(fields: [author_id], references: [id], onUpdate: NoAction, map: "application_hr_notes_author_id_foreign")
+
+  @@index([application_id], map: "application_hr_notes_application_id_foreign")
+  @@index([author_id], map: "application_hr_notes_author_id_foreign")
+}
+
+model application_status_histories {
+  id             BigInt       @id @default(autoincrement()) @db.UnsignedBigInt
+  application_id String       @db.VarChar(255)
+  status         String       @db.VarChar(255)
+  note           String?      @db.Text
+  happened_at    DateTime     @db.Timestamp(0)
+  created_at     DateTime?    @db.Timestamp(0)
+  updated_at     DateTime?    @db.Timestamp(0)
+  applications   applications @relation(fields: [application_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "application_status_histories_application_id_foreign")
+
+  @@index([application_id], map: "application_status_histories_application_id_foreign")
+}
+
+model applications {
+  id                           String                         @id @db.VarChar(255)
+  user_id                      BigInt                         @db.UnsignedBigInt
+  job_slug                     String?                        @db.VarChar(255)
+  job_title                    String                         @db.VarChar(255)
+  department                   String                         @db.VarChar(255)
+  location                     String                         @db.VarChar(255)
+  employment_type              String                         @db.VarChar(255)
+  full_name                    String                         @db.VarChar(255)
+  dob                          DateTime                       @db.Date
+  gender                       String                         @db.VarChar(255)
+  email                        String                         @db.VarChar(255)
+  phone                        String                         @db.VarChar(255)
+  address                      String                         @db.VarChar(255)
+  city                         String                         @db.VarChar(255)
+  education                    Json
+  experience                   Json
+  has_no_experience            Boolean                        @default(false)
+  skills                       String                         @db.Text
+  linkedin                     String?                        @db.VarChar(255)
+  portfolio                    String?                        @db.VarChar(255)
+  cv_path                      String                         @db.VarChar(255)
+  cv_original_name             String                         @db.VarChar(255)
+  cv_mime                      String                         @db.VarChar(255)
+  cv_size                      BigInt                         @db.UnsignedBigInt
+  cover_letter                 String?                        @db.LongText
+  status                       applications_status            @default(Submitted)
+  submitted_at                 DateTime                       @db.Timestamp(0)
+  created_at                   DateTime?                      @db.Timestamp(0)
+  updated_at                   DateTime?                      @db.Timestamp(0)
+  application_hr_notes         application_hr_notes[]
+  application_status_histories application_status_histories[]
+  job_postings                 job_postings?                  @relation(fields: [job_slug], references: [slug], onUpdate: NoAction, map: "applications_job_slug_foreign")
+  users                        users                          @relation(fields: [user_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "applications_user_id_foreign")
+  interviews                   interviews?
+
+  @@unique([user_id, job_slug], map: "applications_user_id_job_slug_unique")
+  @@index([job_slug], map: "applications_job_slug_foreign")
+  @@index([status], map: "applications_status_index")
+}
+
+model articles {
+  slug             String             @id @db.VarChar(255)
+  cat              articles_cat
+  date             String             @db.VarChar(255)
+  published_on     DateTime?          @db.Date
+  read             String?            @db.VarChar(255)
+  title            String             @db.VarChar(255)
+  excerpt          String             @db.Text
+  img              String?            @db.VarChar(255)
+  content          String             @db.LongText
+  gallery          Json?
+  tags             Json?
+  author           String?            @db.VarChar(255)
+  author_role      String?            @db.VarChar(255)
+  status           articles_status    @default(Draft)
+  created_at       DateTime?          @db.Timestamp(0)
+  updated_at       DateTime?          @db.Timestamp(0)
+  community_events community_events[]
+
+  @@index([status, cat], map: "articles_status_cat_index")
+}
+
+model audit_logs {
+  id            BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  user_id       BigInt?   @db.UnsignedBigInt
+  user_name     String?   @db.VarChar(255)
+  action        String    @db.VarChar(255)
+  resource_type String    @db.VarChar(255)
+  resource_id   String?   @db.VarChar(255)
+  payload       String?   @db.Text
+  ip_address    String?   @db.VarChar(45)
+  user_agent    String?   @db.Text
+  created_at    DateTime? @db.Timestamp(0)
+  updated_at    DateTime? @db.Timestamp(0)
+  users         users?    @relation(fields: [user_id], references: [id], onUpdate: NoAction, map: "audit_logs_user_id_foreign")
+
+  @@index([user_id], map: "audit_logs_user_id_foreign")
+}
+
+model cache {
+  key        String @id @db.VarChar(255)
+  value      String @db.MediumText
+  expiration Int
+}
+
+model cache_locks {
+  key        String @id @db.VarChar(255)
+  owner      String @db.VarChar(255)
+  expiration Int
+}
+
+model community_event_documents {
+  id                 BigInt           @id @default(autoincrement()) @db.UnsignedBigInt
+  community_event_id String           @db.VarChar(255)
+  name               String           @db.VarChar(255)
+  path               String           @db.VarChar(255)
+  type               String           @db.VarChar(64)
+  size               BigInt           @default(0) @db.UnsignedBigInt
+  created_at         DateTime?        @db.Timestamp(0)
+  updated_at         DateTime?        @db.Timestamp(0)
+  community_events   community_events @relation(fields: [community_event_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "community_event_documents_community_event_id_foreign")
+
+  @@index([community_event_id], map: "community_event_documents_community_event_id_foreign")
+}
+
+model community_event_notes {
+  id                 BigInt           @id @default(autoincrement()) @db.UnsignedBigInt
+  community_event_id String           @db.VarChar(255)
+  author_id          BigInt?          @db.UnsignedBigInt
+  author_name        String           @db.VarChar(255)
+  note               String           @db.Text
+  created_at         DateTime?        @db.Timestamp(0)
+  updated_at         DateTime?        @db.Timestamp(0)
+  users              users?           @relation(fields: [author_id], references: [id], onUpdate: NoAction, map: "community_event_notes_author_id_foreign")
+  community_events   community_events @relation(fields: [community_event_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "community_event_notes_community_event_id_foreign")
+
+  @@index([author_id], map: "community_event_notes_author_id_foreign")
+  @@index([community_event_id], map: "community_event_notes_community_event_id_foreign")
+}
+
+model community_event_status_histories {
+  id                 BigInt           @id @default(autoincrement()) @db.UnsignedBigInt
+  community_event_id String           @db.VarChar(255)
+  status             String           @db.VarChar(255)
+  note               String?          @db.Text
+  happened_at        DateTime         @db.Timestamp(0)
+  created_at         DateTime?        @db.Timestamp(0)
+  updated_at         DateTime?        @db.Timestamp(0)
+  community_events   community_events @relation(fields: [community_event_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "community_event_status_histories_community_event_id_foreign")
+
+  @@index([community_event_id], map: "community_event_status_histories_community_event_id_foreign")
+}
+
+model community_events {
+  id                               String                             @id @db.VarChar(255)
+  user_id                          BigInt                             @db.UnsignedBigInt
+  submitter_name                   String                             @db.VarChar(255)
+  submitter_email                  String                             @db.VarChar(255)
+  title                            String                             @db.VarChar(255)
+  community                        String                             @db.VarChar(255)
+  category                         String                             @db.VarChar(255)
+  event_date                       DateTime                           @db.Date
+  location                         String                             @db.VarChar(255)
+  summary                          String                             @db.Text
+  description                      String                             @db.LongText
+  cover_image                      String?                            @db.VarChar(255)
+  gallery                          Json?
+  tags                             Json?
+  contact_person                   String?                            @db.VarChar(255)
+  contact_phone                    String?                            @db.VarChar(255)
+  agreement_accepted               Boolean                            @default(false)
+  status                           community_events_status            @default(Draft)
+  submitted_at                     DateTime?                          @db.Timestamp(0)
+  published_article_slug           String?                            @db.VarChar(255)
+  created_at                       DateTime?                          @db.Timestamp(0)
+  updated_at                       DateTime?                          @db.Timestamp(0)
+  community_event_documents        community_event_documents[]
+  community_event_notes            community_event_notes[]
+  community_event_status_histories community_event_status_histories[]
+  articles                         articles?                          @relation(fields: [published_article_slug], references: [slug], onUpdate: NoAction, map: "community_events_published_article_slug_foreign")
+  users                            users                              @relation(fields: [user_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "community_events_user_id_foreign")
+
+  @@index([published_article_slug], map: "community_events_published_article_slug_foreign")
+  @@index([status], map: "community_events_status_index")
+  @@index([user_id, status], map: "community_events_user_id_status_index")
+}
+
+model company_profile {
+  id                BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  hero_image        String?   @db.VarChar(255)
+  facility_gallery  Json?
+  leadership_photos Json?
+  created_at        DateTime? @db.Timestamp(0)
+  updated_at        DateTime? @db.Timestamp(0)
+}
+
+model contact_inquiries {
+  id              String            @id @db.VarChar(255)
+  name            String            @db.VarChar(255)
+  organization    String?           @db.VarChar(255)
+  email           String            @db.VarChar(255)
+  phone           String?           @db.VarChar(255)
+  subject         String            @db.VarChar(255)
+  message         String            @db.Text
+  source          String            @default("Contact Page") @db.VarChar(255)
+  received_at     DateTime          @db.Timestamp(0)
+  read            Boolean           @default(false)
+  archived        Boolean           @default(false)
+  created_at      DateTime?         @db.Timestamp(0)
+  updated_at      DateTime?         @db.Timestamp(0)
+  contact_replies contact_replies[]
+
+  @@index([archived, read], map: "contact_inquiries_archived_read_index")
+}
+
+model contact_replies {
+  id                 BigInt            @id @default(autoincrement()) @db.UnsignedBigInt
+  contact_inquiry_id String            @db.VarChar(255)
+  author_id          BigInt?           @db.UnsignedBigInt
+  message            String            @db.Text
+  sent_at            DateTime          @db.Timestamp(0)
+  created_at         DateTime?         @db.Timestamp(0)
+  updated_at         DateTime?         @db.Timestamp(0)
+  users              users?            @relation(fields: [author_id], references: [id], onUpdate: NoAction, map: "contact_replies_author_id_foreign")
+  contact_inquiries  contact_inquiries @relation(fields: [contact_inquiry_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "contact_replies_contact_inquiry_id_foreign")
+
+  @@index([author_id], map: "contact_replies_author_id_foreign")
+  @@index([contact_inquiry_id], map: "contact_replies_contact_inquiry_id_foreign")
+}
+
+model csr_programs {
+  slug         String              @id @db.VarChar(255)
+  pillar       String              @db.VarChar(255)
+  location     String              @db.VarChar(255)
+  date         String              @db.VarChar(255)
+  published_on DateTime?           @db.Date
+  title        String              @db.VarChar(255)
+  excerpt      String              @db.Text
+  img          String?             @db.VarChar(255)
+  content      String              @db.LongText
+  gallery      Json?
+  impact       String?             @db.VarChar(255)
+  status       csr_programs_status @default(Draft)
+  created_at   DateTime?           @db.Timestamp(0)
+  updated_at   DateTime?           @db.Timestamp(0)
+
+  @@index([status, pillar], map: "csr_programs_status_pillar_index")
+}
+
+model documents {
+  id         BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  user_id    BigInt    @db.UnsignedBigInt
+  name       String    @db.VarChar(255)
+  path       String    @db.VarChar(255)
+  type       String    @db.VarChar(64)
+  size       BigInt    @default(0) @db.UnsignedBigInt
+  created_at DateTime? @db.Timestamp(0)
+  updated_at DateTime? @db.Timestamp(0)
+  users      users     @relation(fields: [user_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "documents_user_id_foreign")
+
+  @@index([user_id], map: "documents_user_id_foreign")
+}
+
+model factory_tour_content {
+  id         BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  hero_image String?   @db.VarChar(255)
+  gallery    Json?
+  created_at DateTime? @db.Timestamp(0)
+  updated_at DateTime? @db.Timestamp(0)
+}
+
+model failed_jobs {
+  id         BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
+  uuid       String   @unique(map: "failed_jobs_uuid_unique") @db.VarChar(255)
+  connection String   @db.Text
+  queue      String   @db.Text
+  payload    String   @db.LongText
+  exception  String   @db.LongText
+  failed_at  DateTime @default(now()) @db.Timestamp(0)
+}
+
+model interviews {
+  id               BigInt            @id @default(autoincrement()) @db.UnsignedBigInt
+  application_id   String            @unique(map: "interviews_application_id_unique") @db.VarChar(255)
+  date             DateTime          @db.Date
+  time             DateTime          @db.Time(0)
+  type             interviews_type
+  location_or_link String            @db.VarChar(255)
+  interviewer      String            @db.VarChar(255)
+  notes            String?           @db.Text
+  status           interviews_status @default(Scheduled)
+  scheduled_at     DateTime          @db.Timestamp(0)
+  created_at       DateTime?         @db.Timestamp(0)
+  updated_at       DateTime?         @db.Timestamp(0)
+  applications     applications      @relation(fields: [application_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "interviews_application_id_foreign")
+}
+
+model job_batches {
+  id             String  @id @db.VarChar(255)
+  name           String  @db.VarChar(255)
+  total_jobs     Int
+  pending_jobs   Int
+  failed_jobs    Int
+  failed_job_ids String  @db.LongText
+  options        String? @db.MediumText
+  cancelled_at   Int?
+  created_at     Int
+  finished_at    Int?
+}
+
+model job_postings {
+  slug             String                       @id @db.VarChar(255)
+  title            String                       @db.VarChar(255)
+  department       job_postings_department
+  location         String                       @db.VarChar(255)
+  work_mode        job_postings_work_mode
+  employment_type  job_postings_employment_type
+  level            job_postings_level
+  salary           String?                      @db.VarChar(255)
+  deadline         DateTime                     @db.Date
+  posted           DateTime                     @db.Date
+  summary          String                       @db.Text
+  description      String                       @db.LongText
+  responsibilities Json
+  qualifications   Json
+  requirements     Json
+  benefits         Json
+  status           job_postings_status          @default(Draft)
+  featured         Boolean                      @default(false)
+  cover_image      String?                      @db.VarChar(255)
+  created_at       DateTime?                    @db.Timestamp(0)
+  updated_at       DateTime?                    @db.Timestamp(0)
+  applications     applications[]
+
+  @@index([status, department], map: "job_postings_status_department_index")
+}
+
+model jobs {
+  id           BigInt @id @default(autoincrement()) @db.UnsignedBigInt
+  queue        String @db.VarChar(255)
+  payload      String @db.LongText
+  attempts     Int    @db.UnsignedTinyInt
+  reserved_at  Int?   @db.UnsignedInt
+  available_at Int    @db.UnsignedInt
+  created_at   Int    @db.UnsignedInt
+
+  @@index([queue], map: "jobs_queue_index")
+}
+
+model media_assets {
+  id         String              @id @db.VarChar(255)
+  name       String              @db.VarChar(255)
+  path       String              @db.VarChar(255)
+  folder     media_assets_folder
+  type       String              @db.VarChar(64)
+  size       BigInt              @default(0) @db.UnsignedBigInt
+  created_at DateTime?           @db.Timestamp(0)
+  updated_at DateTime?           @db.Timestamp(0)
+
+  @@index([folder], map: "media_assets_folder_index")
+}
+
+model migrations {
+  id        Int    @id @default(autoincrement()) @db.UnsignedInt
+  migration String @db.VarChar(255)
+  batch     Int
+}
+
+model model_has_permissions {
+  permission_id BigInt      @db.UnsignedBigInt
+  model_type    String      @db.VarChar(255)
+  model_id      BigInt      @db.UnsignedBigInt
+  permissions   permissions @relation(fields: [permission_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "model_has_permissions_permission_id_foreign")
+
+  @@id([permission_id, model_id, model_type])
+  @@index([model_id, model_type], map: "model_has_permissions_model_id_model_type_index")
+}
+
+model model_has_roles {
+  role_id    BigInt @db.UnsignedBigInt
+  model_type String @db.VarChar(255)
+  model_id   BigInt @db.UnsignedBigInt
+  roles      roles  @relation(fields: [role_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "model_has_roles_role_id_foreign")
+
+  @@id([role_id, model_id, model_type])
+  @@index([model_id, model_type], map: "model_has_roles_model_id_model_type_index")
+}
+
+model notifications {
+  id         BigInt             @id @default(autoincrement()) @db.UnsignedBigInt
+  user_id    BigInt             @db.UnsignedBigInt
+  title      String             @db.VarChar(255)
+  body       String?            @db.VarChar(255)
+  tone       notifications_tone @default(info)
+  link       String?            @db.VarChar(255)
+  read_at    DateTime?          @db.Timestamp(0)
+  created_at DateTime?          @db.Timestamp(0)
+  updated_at DateTime?          @db.Timestamp(0)
+  users      users              @relation(fields: [user_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "notifications_user_id_foreign")
+
+  @@index([user_id, read_at], map: "notifications_user_id_read_at_index")
+}
+
+model password_reset_tokens {
+  email      String    @id @db.VarChar(255)
+  token      String    @db.VarChar(255)
+  created_at DateTime? @db.Timestamp(0)
+}
+
+model permissions {
+  id                    BigInt                  @id @default(autoincrement()) @db.UnsignedBigInt
+  name                  String                  @db.VarChar(255)
+  guard_name            String                  @db.VarChar(255)
+  created_at            DateTime?               @db.Timestamp(0)
+  updated_at            DateTime?               @db.Timestamp(0)
+  model_has_permissions model_has_permissions[]
+  role_has_permissions  role_has_permissions[]
+
+  @@unique([name, guard_name], map: "permissions_name_guard_name_unique")
+}
+
+model personal_access_tokens {
+  id             BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  tokenable_type String    @db.VarChar(255)
+  tokenable_id   BigInt    @db.UnsignedBigInt
+  name           String    @db.VarChar(255)
+  token          String    @unique(map: "personal_access_tokens_token_unique") @db.VarChar(64)
+  abilities      String?   @db.Text
+  last_used_at   DateTime? @db.Timestamp(0)
+  expires_at     DateTime? @db.Timestamp(0)
+  created_at     DateTime? @db.Timestamp(0)
+  updated_at     DateTime? @db.Timestamp(0)
+
+  @@index([tokenable_type, tokenable_id], map: "personal_access_tokens_tokenable_type_tokenable_id_index")
+}
+
+model products {
+  code               String            @id @db.VarChar(255)
+  name               String            @db.VarChar(255)
+  category           products_category
+  brand              products_brand
+  osmolarity         String?           @db.VarChar(255)
+  calorie            String?           @db.VarChar(255)
+  nie                String?           @db.VarChar(255)
+  packaging          Json
+  sizes              Json
+  indication         String            @db.Text
+  benefits           Json
+  applications       Json
+  storage            String            @db.Text
+  shelf_life         String            @db.VarChar(255)
+  composition        String            @db.Text
+  manufacturing_note String?           @db.Text
+  img                String?           @db.VarChar(255)
+  tagline            String?           @db.VarChar(255)
+  created_at         DateTime?         @db.Timestamp(0)
+  updated_at         DateTime?         @db.Timestamp(0)
+
+  @@index([category], map: "products_category_index")
+}
+
+model role_has_permissions {
+  permission_id BigInt      @db.UnsignedBigInt
+  role_id       BigInt      @db.UnsignedBigInt
+  permissions   permissions @relation(fields: [permission_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "role_has_permissions_permission_id_foreign")
+  roles         roles       @relation(fields: [role_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "role_has_permissions_role_id_foreign")
+
+  @@id([permission_id, role_id])
+  @@index([role_id], map: "role_has_permissions_role_id_foreign")
+}
+
+model roles {
+  id                   BigInt                 @id @default(autoincrement()) @db.UnsignedBigInt
+  name                 String                 @db.VarChar(255)
+  guard_name           String                 @db.VarChar(255)
+  created_at           DateTime?              @db.Timestamp(0)
+  updated_at           DateTime?              @db.Timestamp(0)
+  model_has_roles      model_has_roles[]
+  role_has_permissions role_has_permissions[]
+
+  @@unique([name, guard_name], map: "roles_name_guard_name_unique")
+}
+
+model sessions {
+  id            String  @id @db.VarChar(255)
+  user_id       BigInt? @db.UnsignedBigInt
+  ip_address    String? @db.VarChar(45)
+  user_agent    String? @db.Text
+  payload       String  @db.LongText
+  last_activity Int
+
+  @@index([last_activity], map: "sessions_last_activity_index")
+  @@index([user_id], map: "sessions_user_id_index")
+}
+
+model tour_bookings {
+  id                    String                  @id @db.VarChar(255)
+  user_id               BigInt?                 @db.UnsignedBigInt
+  tour_date             DateTime                @db.Date
+  time_slot             String                  @db.VarChar(255)
+  visitor_name          String                  @db.VarChar(255)
+  organization          String                  @db.VarChar(255)
+  email                 String                  @db.VarChar(255)
+  phone                 String                  @db.VarChar(255)
+  pax                   Int                     @db.UnsignedInt
+  purpose               String                  @db.Text
+  status                tour_bookings_status    @default(Pending)
+  submitted_at          DateTime                @db.Timestamp(0)
+  created_at            DateTime?               @db.Timestamp(0)
+  updated_at            DateTime?               @db.Timestamp(0)
+  users                 users?                  @relation(fields: [user_id], references: [id], onUpdate: NoAction, map: "tour_bookings_user_id_foreign")
+  tour_notes            tour_notes[]
+  tour_status_histories tour_status_histories[]
+
+  @@index([email, id], map: "tour_bookings_email_id_index")
+  @@index([status], map: "tour_bookings_status_index")
+  @@index([user_id], map: "tour_bookings_user_id_foreign")
+}
+
+model tour_notes {
+  id              BigInt        @id @default(autoincrement()) @db.UnsignedBigInt
+  tour_booking_id String        @db.VarChar(255)
+  author_id       BigInt?       @db.UnsignedBigInt
+  author_name     String        @db.VarChar(255)
+  note            String        @db.Text
+  created_at      DateTime?     @db.Timestamp(0)
+  updated_at      DateTime?     @db.Timestamp(0)
+  users           users?        @relation(fields: [author_id], references: [id], onUpdate: NoAction, map: "tour_notes_author_id_foreign")
+  tour_bookings   tour_bookings @relation(fields: [tour_booking_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "tour_notes_tour_booking_id_foreign")
+
+  @@index([author_id], map: "tour_notes_author_id_foreign")
+  @@index([tour_booking_id], map: "tour_notes_tour_booking_id_foreign")
+}
+
+model tour_status_histories {
+  id              BigInt        @id @default(autoincrement()) @db.UnsignedBigInt
+  tour_booking_id String        @db.VarChar(255)
+  status          String        @db.VarChar(255)
+  note            String?       @db.Text
+  happened_at     DateTime      @db.Timestamp(0)
+  created_at      DateTime?     @db.Timestamp(0)
+  updated_at      DateTime?     @db.Timestamp(0)
+  tour_bookings   tour_bookings @relation(fields: [tour_booking_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "tour_status_histories_tour_booking_id_foreign")
+
+  @@index([tour_booking_id], map: "tour_status_histories_tour_booking_id_foreign")
+}
+
+model users {
+  id                    BigInt                  @id @default(autoincrement()) @db.UnsignedBigInt
+  public_id             String                  @unique(map: "users_public_id_unique") @db.VarChar(255)
+  account_type          users_account_type      @default(external)
+  role                  String                  @default("External User") @db.VarChar(255)
+  status                users_status            @default(Active)
+  name                  String                  @db.VarChar(255)
+  email                 String                  @unique(map: "users_email_unique") @db.VarChar(255)
+  phone                 String?                 @db.VarChar(255)
+  email_verified_at     DateTime?               @db.Timestamp(0)
+  password              String                  @db.VarChar(255)
+  employee_id           String?                 @unique(map: "users_employee_id_unique") @db.VarChar(255)
+  department            String?                 @db.VarChar(255)
+  position              String?                 @db.VarChar(255)
+  remember_token        String?                 @db.VarChar(100)
+  created_at            DateTime?               @db.Timestamp(0)
+  updated_at            DateTime?               @db.Timestamp(0)
+  application_hr_notes  application_hr_notes[]
+  applications          applications[]
+  audit_logs            audit_logs[]
+  community_event_notes community_event_notes[]
+  community_events      community_events[]
+  contact_replies       contact_replies[]
+  documents             documents[]
+  notifications         notifications[]
+  tour_bookings         tour_bookings[]
+  tour_notes            tour_notes[]
+}
+
+enum articles_cat {
+  Corporate
+  People
+  Sustainability
+  Events
+}
+
+enum job_postings_department {
+  Production
+  Quality
+  R_D               @map("R&D")
+  Engineering
+  Supply_Chain      @map("Supply Chain")
+  Corporate
+  Sales___Marketing @map("Sales & Marketing")
+}
+
+enum products_category {
+  Basic_Intravenous  @map("Basic Intravenous")
+  Specialty_Solution @map("Specialty Solution")
+  Irrigation
+  Medical_Device     @map("Medical Device")
+}
+
+enum users_account_type {
+  internal
+  external
+}
+
+enum media_assets_folder {
+  Products
+  News___Event    @map("News & Event")
+  CSR
+  Factory_Tour    @map("Factory Tour")
+  Company_Profile @map("Company Profile")
+  Gallery
+  Others
+}
+
+enum products_brand {
+  Generic
+  Branded
+}
+
+enum interviews_type {
+  Online
+  Offline
+}
+
+enum job_postings_work_mode {
+  On_site @map("On-site")
+  Hybrid
+  Remote
+}
+
+enum notifications_tone {
+  info
+  success
+  warning
+  danger
+}
+
+enum users_status {
+  Active
+  Disabled
+}
+
+enum job_postings_employment_type {
+  Full_time  @map("Full-time")
+  Contract
+  Internship
+}
+
+enum job_postings_level {
+  Entry
+  Mid
+  Senior
+  Lead
+}
+
+enum interviews_status {
+  Scheduled
+  Cancelled
+}
+
+enum tour_bookings_status {
+  Pending
+  Reviewed
+  Approved
+  Rejected
+  Completed
+}
+
+enum csr_programs_status {
+  Published
+  Draft
+}
+
+enum articles_status {
+  Published
+  Draft
+}
+
+enum job_postings_status {
+  Draft
+  Published
+}
+
+enum community_events_status {
+  Draft
+  Pending
+  Revision_Requested @map("Revision Requested")
+  Approved
+  Rejected
+  Published
+}
+
+enum applications_status {
+  Submitted
+  Screening
+  Interview
+  Offer
+  Hired
+  Rejected
+}

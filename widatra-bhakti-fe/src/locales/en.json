@@ -1,0 +1,2661 @@
+{
+  "nav": {
+    "home": "Home",
+    "aboutUs": "About Us",
+    "companyProfile": "Company Profile",
+    "management": "Management",
+    "visionMission": "Vision & Mission",
+    "companyValues": "Company Values",
+    "videoProfile": "Video Profile",
+    "awards": "Awards",
+    "ourProducts": "Our Products",
+    "factoryTour": "Factory Tour",
+    "newsEvent": "News & Event",
+    "csr": "CSR",
+    "careers": "Careers",
+    "contact": "Contact",
+    "joinUs": "Join Us",
+    "signIn": "Sign In",
+    "signInRegister": "Sign in / Register",
+    "myAccount": "My Account"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Otsuka Group Indonesia · Est. 1986",
+      "titleLine1": "Reliable Partner",
+      "titleLine2": "for Better Health.",
+      "description": "Today, WIDATRA is the largest manufacturer of basic intravenous solution products and a market leader in Indonesia — poised to become the biggest intravenous solution company in Southeast Asia.",
+      "ctaExplore": "Explore Our Solutions",
+      "ctaTour": "Tour the Factory",
+      "scroll": "Scroll"
+    },
+    "stats": {
+      "years": "Years of Excellence",
+      "units": "Units Produced Annually",
+      "productLines": "Registered Product Lines",
+      "cleanroom": "Cleanroom Certification"
+    },
+    "intro": {
+      "eyebrow": "(01) Who We Are",
+      "titlePrefix": "The largest manufacturer of",
+      "titleHighlight": "basic parenteral solutions",
+      "titleSuffix": "in Indonesia.",
+      "p1": "PT Widatra Bhakti is a pharmaceutical company and a member of the Otsuka Group in Indonesia. We strive relentlessly to contribute to public health by producing high-quality products at competitive prices, playing a strategic role in Indonesia's National Health System.",
+      "p2": "Our Pandaan campus is surrounded by a green environment, providing a pleasant and healthy working atmosphere for the people who keep Indonesia's hospitals supplied — every day.",
+      "ctaStory": "Our Story",
+      "ctaLeadership": "Leadership",
+      "otsukaLabel": "Otsuka Group",
+      "quote": "Quality is vital in the factory, and so is packaging — we manufacture and market by putting ourselves in the consumer's position.",
+      "quoteAuthor": "— Busaburo Otsuka, Founder, Otsuka Group"
+    },
+    "manufacturing": {
+      "eyebrow": "(02) Manufacturing Excellence",
+      "titlePrefix": "Sterile by design.",
+      "titleHighlight": "Reliable",
+      "titleSuffix": "by discipline.",
+      "description": "We combine Japanese engineering with Indonesian craftsmanship to produce life-saving IV solutions that meet international pharmacopeia standards — from raw water to final pallet.",
+      "highlight": {
+        "number": "01",
+        "title": "Closed-System Sterile Filling",
+        "desc": "Closed-system filling under Grade A laminar airflow ensures zero contamination from formulation to terminal sterilization."
+      },
+      "items": [
+        {
+          "title": "Water for Injection",
+          "desc": "On-site WFI loop continuously monitored for TOC, conductivity and endotoxin."
+        },
+        {
+          "title": "Terminal Autoclave",
+          "desc": "Every batch terminally sterilized and 100% leak-tested before release."
+        },
+        {
+          "title": "In-Process Vision",
+          "desc": "Automated optical inspection rejects micro-particulates invisible to the eye."
+        }
+      ]
+    },
+    "facilities": {
+      "eyebrow": "(03) Our Production Facilities",
+      "titlePrefix": "Pandaan, East Java —",
+      "titleHighlight": "our manufacturing home.",
+      "description": "Set in 5+ hectares of green industrial campus along Jl. Stadion, our Pandaan facility houses dedicated parenteral lines, an in-house WFI plant, microbiology and chemistry laboratories, and an environmental management system certified to ISO 14001.",
+      "items": [
+        {
+          "title": "Sterile Filling Halls",
+          "desc": "Grade A/B closed-system bottle-pack lines"
+        },
+        {
+          "title": "Utility Plant",
+          "desc": "WFI, clean steam, HVAC under continuous EMS monitoring"
+        },
+        {
+          "title": "QC Laboratories",
+          "desc": "HPLC, UV-Vis, endotoxin (LAL), sterility, bioburden"
+        },
+        {
+          "title": "Warehouse & Logistics",
+          "desc": "GDP-compliant 25°C-controlled storage and dispatch"
+        }
+      ],
+      "cta": "Book a Factory Tour"
+    },
+    "whyChoose": {
+      "eyebrow": "(04) Why Choose Widatra",
+      "titlePrefix": "Six reasons hospitals trust us",
+      "titleHighlight": "every single shift.",
+      "items": [
+        {
+          "title": "38 Years Track Record",
+          "desc": "Operating reliably since 1986, supplying Indonesia's largest hospital networks."
+        },
+        {
+          "title": "Otsuka Group Member",
+          "desc": "Backed by global Otsuka know-how and pharmaceutical heritage."
+        },
+        {
+          "title": "PIC/S GMP Certified",
+          "desc": "BPOM-licensed and audited to PIC/S Good Manufacturing Practice."
+        },
+        {
+          "title": "Vertically Integrated",
+          "desc": "From raw materials through WFI, filling, sterilization and distribution."
+        },
+        {
+          "title": "Stable National Supply",
+          "desc": "Resilient capacity that protects critical IV fluid availability nationwide."
+        },
+        {
+          "title": "Patient-First Quality",
+          "desc": "Zero compromise on sterility, identity, potency and apyrogenicity."
+        }
+      ]
+    },
+    "process": {
+      "eyebrow": "(05) Manufacturing Process",
+      "titlePrefix": "From",
+      "titleHighlight": "molecule",
+      "titleSuffix": "to patient.",
+      "stepLabel": "STEP",
+      "items": [
+        {
+          "title": "WFI Generation",
+          "desc": "Multi-stage water purification under continuous monitoring."
+        },
+        {
+          "title": "Compounding",
+          "desc": "Precision weighing & validated dissolution in sealed tanks."
+        },
+        {
+          "title": "Sterile Filling",
+          "desc": "Closed-system bottle-pack lines, Grade A under HEPA."
+        },
+        {
+          "title": "Terminal Sterilization",
+          "desc": "Validated steam autoclave cycle for every batch."
+        },
+        {
+          "title": "Inspection",
+          "desc": "Automated vision + manual final visual inspection."
+        },
+        {
+          "title": "Release & Dispatch",
+          "desc": "QC release, GDP-compliant cold-chain free dispatch."
+        }
+      ]
+    },
+    "certifications": {
+      "eyebrow": "(06) International Certifications",
+      "titlePrefix": "Audited, certified,",
+      "titleHighlight": "trusted.",
+      "description": "We operate under the highest standards of quality, environment, and occupational health & safety — verified by independent third-party certification bodies.",
+      "items": [
+        "ISO 9001:2015",
+        "ISO 14001:2015",
+        "ISO 45001:2018",
+        "PIC/S GMP",
+        "BPOM Licensed",
+        "Halal Certified",
+        "5R/5S East Java 2025",
+        "LKTP Award 2019",
+        "Tax Compliance 2015-2018",
+        "Blood Donor Award 2018",
+        "Otsuka Group QMS",
+        "BPJS Partner"
+      ]
+    },
+    "qa": {
+      "eyebrow": "(07) Quality Assurance",
+      "titlePrefix": "Every batch,",
+      "titleHighlight": "every test.",
+      "description": "Quality is engineered upstream and verified downstream. Our QA framework covers raw material identification, in-process control, microbiological monitoring, container closure integrity, and stability under tropical conditions — fully aligned with PIC/S Annex 1.",
+      "stats": [
+        {
+          "k": "100%",
+          "v": "Batch release with QC sign-off"
+        },
+        {
+          "k": "24 mo.",
+          "v": "Validated stability program"
+        },
+        {
+          "k": "ALCOA+",
+          "v": "Data-integrity compliant records"
+        },
+        {
+          "k": "Annex 1",
+          "v": "Aseptic process aligned"
+        }
+      ]
+    },
+    "products": {
+      "eyebrow": "(08) Our Products",
+      "titlePrefix": "Purity in",
+      "titleHighlight": "every drop.",
+      "cta": "View Full Catalog →",
+      "items": [
+        {
+          "title": "Basic Intravenous",
+          "desc": "Sodium Chloride, Ringer Lactate, WIDA NS, WIDA RL — the everyday backbone of hospital care."
+        },
+        {
+          "title": "Specialty Solutions",
+          "desc": "WIDA D5-NS, D5-½NS, D5-¼NS, 2A, RD, KN-2 — clinically tuned for specific therapeutic needs."
+        },
+        {
+          "title": "Irrigation & Devices",
+          "desc": "WIDA WI Unicap and WidaSet — sterile irrigation and precision delivery systems."
+        }
+      ]
+    },
+    "rnd": {
+      "eyebrow": "(09) Research & Innovation",
+      "titlePrefix": "Innovation that",
+      "titleHighlight": "starts in the lab.",
+      "description": "Our R&D team partners with universities and clinicians to develop new sterile formulations, optimize delivery systems, and continuously raise the bar on packaging, sterility assurance, and environmental performance.",
+      "items": [
+        {
+          "title": "Formulation Development",
+          "desc": "Bench-to-pilot scale-up with statistical design of experiments."
+        },
+        {
+          "title": "Packaging Innovation",
+          "desc": "Recyclable medical-grade polymers and Unicap closure systems."
+        },
+        {
+          "title": "Stability Science",
+          "desc": "Long-term tropical-zone protocols validating 24-month shelf life."
+        },
+        {
+          "title": "Process Engineering",
+          "desc": "Continuous yield, OEE and right-first-time improvement programs."
+        }
+      ]
+    },
+    "partners": {
+      "eyebrow": "(10) Business Partners",
+      "titlePrefix": "Working alongside leaders",
+      "titleHighlight": "in healthcare.",
+      "items": [
+        "Otsuka Pharmaceutical",
+        "Amerta Indah Otsuka",
+        "Kemenkes RI",
+        "RS Cipto Mangunkusumo",
+        "RSUP Dr. Sardjito",
+        "RSUD Dr. Soetomo",
+        "BPJS Kesehatan",
+        "PT Kimia Farma",
+        "PT Bio Farma",
+        "Apotek Kimia Farma",
+        "Apotek Century",
+        "Distributor Network"
+      ]
+    },
+    "timeline": {
+      "eyebrow": "(11) Company Timeline",
+      "titlePrefix": "Forty years of",
+      "titleHighlight": "scientific care.",
+      "items": [
+        {
+          "year": "1986",
+          "title": "Founded",
+          "desc": "PT Widatra Bhakti established in Pandaan, East Java."
+        },
+        {
+          "year": "1992",
+          "title": "Otsuka Partnership",
+          "desc": "Joined Otsuka Group Indonesia as a strategic member."
+        },
+        {
+          "year": "2003",
+          "title": "Capacity Expansion",
+          "desc": "Doubled sterile filling capacity to meet national demand."
+        },
+        {
+          "year": "2015",
+          "title": "ISO 9001 & 14001",
+          "desc": "Achieved global quality & environment certifications."
+        },
+        {
+          "year": "2018",
+          "title": "ISO 45001",
+          "desc": "Certified occupational health & safety management system."
+        },
+        {
+          "year": "2025",
+          "title": "5R/5S Award",
+          "desc": "Honored with East Java 5R/5S Excellence Award."
+        }
+      ]
+    },
+    "news": {
+      "eyebrow": "(12) Latest News",
+      "title": "Insights & Updates",
+      "cta": "All News →",
+      "featured": {
+        "category": "Corporate · 08 November 2023",
+        "title": "PT Widatra Bhakti opens new Head Office at Pondok Indah Office Tower 1",
+        "desc": "After 21 years at Wisma Tugu Raden Saleh in Cikini, our Head Office relocated to Pondok Indah Office Tower 1, Jakarta Selatan — now sharing a building with fellow Otsuka Group Indonesia companies."
+      },
+      "items": [
+        {
+          "category": "People · 22 January 2024",
+          "title": "Widatra Academy 2024: growing the “Otsuka DNA” in every employee"
+        },
+        {
+          "category": "People · 24 December 2024",
+          "title": "Family Gathering 2024 — Widatra Bhakti Goes to Jogja"
+        },
+        {
+          "category": "Corporate · 21 August 2024",
+          "title": "Celebrating PT Widatra Bhakti's 38th anniversary"
+        }
+      ]
+    },
+    "csr": {
+      "eyebrow": "(13) CSR Highlights",
+      "titlePrefix": "Care that",
+      "titleHighlight": "extends beyond the bottle.",
+      "community": {
+        "label": "Community",
+        "title": "Community development around our Pandaan campus"
+      },
+      "environment": {
+        "label": "Environment",
+        "title": "ISO 14001 environmental stewardship & green campus"
+      },
+      "cta": "See CSR Programs →"
+    },
+    "factoryTour": {
+      "eyebrow": "(14) Factory Tour",
+      "titlePrefix": "Witness the",
+      "titleHighlight": "Sterile Core.",
+      "description": "Experience our world-class manufacturing facility through a 6-step guided booking — from interactive calendar to visitor briefing at the gate.",
+      "cta": "Book a Factory Tour",
+      "stats": [
+        {
+          "n": "24/7",
+          "l": "Real-time Monitoring"
+        },
+        {
+          "n": "Class A",
+          "l": "Cleanroom Grade"
+        },
+        {
+          "n": "6 Steps",
+          "l": "Booking Flow"
+        },
+        {
+          "n": "ISO 14001",
+          "l": "Environment"
+        }
+      ]
+    },
+    "careers": {
+      "eyebrow": "(15) Careers at Widatra",
+      "titlePrefix": "Build your career inside a",
+      "titleHighlight": "life-saving",
+      "titleSuffix": "mission.",
+      "description": "We hire pharmacists, engineers, scientists and business professionals who care deeply about quality, safety, and patient outcomes. Discover open positions and our recruitment process.",
+      "stats": [
+        {
+          "n": "8+",
+          "l": "Open Roles"
+        },
+        {
+          "n": "7",
+          "l": "Departments"
+        },
+        {
+          "n": "1k+",
+          "l": "Team Members"
+        }
+      ],
+      "cta": "View Open Positions"
+    },
+    "contact": {
+      "eyebrow": "(16) Talk to Widatra",
+      "titlePrefix": "Distribution, OEM, partnerships, or a quiet hello —",
+      "titleHighlight": "every message reaches a human being.",
+      "jakartaLabel": "Jakarta HQ",
+      "jakartaAddress": "Pondok Indah Office Tower 1, Suite 902 · +62-21-7592-3057",
+      "pandaanLabel": "Pandaan Plant",
+      "pandaanAddress": "Jl. Stadion No. 1, Pandaan, Pasuruan · +62-343-631575",
+      "cta": "Open Contact Center"
+    }
+  },
+  "footer": {
+    "tagline": "Reliable Partner for Better Health. A member of the Otsuka Group Indonesia since 1995.",
+    "address1": "Jl. Stadion No. 1, Pandaan",
+    "address2": "Pasuruan 67156, Jawa Timur, Indonesia",
+    "phone": "+62-343-631575",
+    "columns": {
+      "company": {
+        "title": "Company",
+        "items": {
+          "aboutUs": "About Us",
+          "management": "Management",
+          "factoryTour": "Factory Tour",
+          "careers": "Careers"
+        }
+      },
+      "solutions": {
+        "title": "Solutions",
+        "items": {
+          "ourProduct": "Our Product",
+          "infusionFluids": "Infusion Fluids",
+          "specialty": "Specialty",
+          "medicalDevices": "Medical Devices"
+        }
+      },
+      "transparency": {
+        "title": "Transparency",
+        "items": {
+          "newsEvent": "News & Event",
+          "csrReport": "CSR Report",
+          "certificates": "Certificates",
+          "governance": "Governance"
+        }
+      },
+      "support": {
+        "title": "Support",
+        "items": {
+          "contact": "Contact",
+          "locations": "Locations",
+          "pharmacovigilance": "Pharmacovigilance"
+        }
+      }
+    },
+    "copyright": "© {{year}} PT Widatra Bhakti. All Rights Reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "legalNotice": "Legal Notice",
+    "cookies": "Cookies"
+  },
+  "about": {
+    "sectionsNav": {
+      "profile": "Company Profile",
+      "management": "Management",
+      "visionMission": "Vision & Mission",
+      "values": "Company Values",
+      "video": "Company Video Profile",
+      "certifications": "Awards & Certifications"
+    },
+    "hero": {
+      "eyebrow": "(About) Our Story",
+      "title": "Four decades of",
+      "italic": "quiet precision.",
+      "description": "Widatra Bhakti has been engineering Indonesia's most trusted sterile infusion solutions since 1986 — a story written one validated batch at a time."
+    },
+    "profile": {
+      "eyebrow": "(01) Company Profile",
+      "titlePrefix": "PT Widatra Bhakti —",
+      "titleHighlight": "Indonesia's manufacturer of trust.",
+      "p1": "PT Widatra Bhakti was licensed to manufacture basic intravenous solution products in 1986 under a manufacturing license and technical guidance from a leading German company, based in Pandaan, East Java.",
+      "p2": "In 1995, Otsuka Pharmaceutical Co., Ltd., Japan acquired PT Widatra Bhakti. Today WIDATRA is the largest manufacturer of basic intravenous solution products and a market leader in Indonesia, supplying hospitals and health institutions across the country.",
+      "stats": [
+        {
+          "n": "1986",
+          "l": "Founded"
+        },
+        {
+          "n": "1000+",
+          "l": "Employees"
+        },
+        {
+          "n": "50+",
+          "l": "SKUs"
+        }
+      ]
+    },
+    "management": {
+      "eyebrow": "(02) Management",
+      "titlePrefix": "Leadership rooted in",
+      "titleHighlight": "science and service.",
+      "leaders": [
+        {
+          "name": "Suhari Mukti",
+          "role": "President Director"
+        },
+        {
+          "name": "Kazushi Nagaya",
+          "role": "President Commissioner"
+        },
+        {
+          "name": "Betty Zubaida",
+          "role": "Factory Director"
+        },
+        {
+          "name": "Evalin K. Jayakusli",
+          "role": "Director of Finance & Administration"
+        },
+        {
+          "name": "Kimitaka Naito",
+          "role": "Commissioner"
+        }
+      ],
+      "cta": "Full Management Structure →"
+    },
+    "visionMission": {
+      "eyebrow": "(03) Vision & Mission",
+      "titlePrefix": "What we work",
+      "titleHighlight": "toward.",
+      "visionLabel": "Vision",
+      "visionText": "To become a leading pharmaceutical company in Indonesia and play an important role in the Asian region.",
+      "missionLabel": "Mission",
+      "missionItems": [
+        "Contribute relentlessly to public health by producing high-quality products at competitive prices.",
+        "Play a strategic role in Indonesia's National Health System as a reliable partner for better health.",
+        "Uphold the 5+1S pillars — Speed, Synergy, Share, Simplify, Smart and Sincere — in everything we do.",
+        "Develop our people as our most valuable asset, with good attitude, knowledge, skill and experience."
+      ]
+    },
+    "values": {
+      "eyebrow": "(04) Company Values",
+      "titlePrefix": "Principles we",
+      "titleHighlight": "refuse to compromise.",
+      "items": [
+        {
+          "index": "01",
+          "title": "Patient First",
+          "desc": "Every batch is measured against the well-being of one human being."
+        },
+        {
+          "index": "02",
+          "title": "Engineered Precision",
+          "desc": "Closed systems, validated processes, audited every shift."
+        },
+        {
+          "index": "03",
+          "title": "Quiet Stewardship",
+          "desc": "Long-term investment in people, environment, and partners."
+        },
+        {
+          "index": "04",
+          "title": "Open Quality",
+          "desc": "Transparent reporting, third-party auditable, regulator-ready."
+        }
+      ]
+    },
+    "video": {
+      "eyebrow": "(05) Company Video Profile",
+      "titlePrefix": "A five-minute walk through",
+      "titleHighlight": "Widatra.",
+      "filmLabel": "Corporate Film · 05:12",
+      "filmTitle": "Widatra Bhakti — Care, Engineered",
+      "badge": "HD 1080p"
+    },
+    "awards": {
+      "eyebrow": "(06) Awards & Certifications",
+      "titlePrefix": "Audited.",
+      "titleHighlight": "Recognized.",
+      "titleSuffix": "Trusted.",
+      "description": "Our manufacturing systems are independently certified against international standards spanning pharmaceutical quality, environmental management and occupational safety.",
+      "items": [
+        {
+          "year": "2025",
+          "title": "East Java 5R/5S Excellence Award",
+          "body": "Provincial Government of East Java"
+        },
+        {
+          "year": "2019",
+          "title": "LKTP Award",
+          "body": "Recognition for occupational health & safety reporting"
+        },
+        {
+          "year": "2018",
+          "title": "Blood Donor Award",
+          "body": "PMI Pasuruan"
+        }
+      ],
+      "certifications": [
+        {
+          "name": "CPOB",
+          "label": "BPOM Indonesia"
+        },
+        {
+          "name": "PIC/S GMP",
+          "label": "International Scheme"
+        },
+        {
+          "name": "ISO 9001",
+          "label": "Quality Management"
+        },
+        {
+          "name": "ISO 14001",
+          "label": "Environmental"
+        },
+        {
+          "name": "ISO 45001",
+          "label": "Occupational Safety"
+        },
+        {
+          "name": "Halal MUI",
+          "label": "Indonesian Certification"
+        }
+      ]
+    },
+    "aerialCta": {
+      "titlePrefix": "See the place where",
+      "titleHighlight": "care is engineered.",
+      "cta": "Book the Factory Tour"
+    }
+  },
+  "management": {
+    "hero": {
+      "eyebrow": "(Management) Leadership",
+      "title": "Management Structure",
+      "italic": "PT Widatra Bhakti",
+      "description": "Board of Commissioners and Board of Directors dedicated to advancing trusted, international-standard IV solutions across Indonesia and Asia (Otsuka Group)."
+    },
+    "letter": {
+      "eyebrow": "Message from the President Director",
+      "presidentName": "Suhari Mukti",
+      "presidentRole": "President Director",
+      "quote": "We continuously strive to contribute to public health by manufacturing high-quality products at competitive prices.",
+      "p1": "PT Widatra Bhakti is a pharmaceutical company and a member of the Otsuka Group in Indonesia. We continuously strive to contribute to public health by manufacturing high-quality products at competitive prices.",
+      "p2": "Through hard work and high dedication, all Management and employees are aligned with the Company's Vision to become a leading pharmaceutical company in Indonesia and play an important role in the Asian region. We extend our sincere gratitude to Shareholders for their trust and to Management who have performed admirably for the advancement of PT Widatra Bhakti.",
+      "p3": "We stand ready to cooperate in enhancing and developing the quality of life of the Indonesian people. Thank you for visiting our official website."
+    },
+    "executive": {
+      "eyebrow": "Leadership Structure",
+      "titlePrefix": "Board of Commissioners &",
+      "titleHighlight": "Board of Directors",
+      "description": "Executive leadership and commissioners safeguarding CPOB, WHO GMP standards, and Otsuka Group philosophical values.",
+      "filterAll": "All",
+      "filterCommissioners": "Board of Commissioners",
+      "filterDirectors": "Board of Directors"
+    },
+    "governance": {
+      "eyebrow": "(03) Governance",
+      "titlePrefix": "Built on",
+      "titleHighlight": "integrity & compliance.",
+      "description": "Our corporate governance framework combines independent oversight by the Board of Commissioners and operational excellence by the Board of Directors aligned with Otsuka Global standards.",
+      "items": [
+        {
+          "title": "Board of Commissioners",
+          "desc": "Independent oversight on corporate strategy, legal compliance, and risk management."
+        },
+        {
+          "title": "Board of Directors",
+          "desc": "Operational execution of sterile manufacturing, closed-system technology, and financial administration."
+        },
+        {
+          "title": "Pharmaceutical Quality (GMP)",
+          "desc": "Ensuring 100% pyrogen-free sterile compliance across every production batch in Pandaan."
+        },
+        {
+          "title": "Safety & Environment (ISO 14001)",
+          "desc": "Sustainable green campus stewardship across 5+ hectares of modern facilities in Pandaan."
+        }
+      ]
+    }
+  },
+  "products": {
+    "hero": {
+      "eyebrow": "(Products) Catalog",
+      "title": "Purity in",
+      "italic": "every drop.",
+      "description": "An expanding portfolio of basic intravenous, specialty, and irrigation solutions — built to international pharmacopeia standards and trusted across Indonesia."
+    },
+    "filters": {
+      "all": "All",
+      "generic": "Generic",
+      "branded": "Branded",
+      "productsSuffix": "products"
+    },
+    "brandLabels": {
+      "generic": "Generic",
+      "branded": "Branded"
+    },
+    "flagship": {
+      "label": "Flagship Product",
+      "cta": "View Full Specification"
+    },
+    "specLabels": {
+      "osmolarity": "Osmolarity",
+      "calorie": "Calorie",
+      "nie": "NIE",
+      "shelfLife": "Shelf Life",
+      "packaging": "Packaging"
+    },
+    "cardSpecLabels": {
+      "osm": "Osm.",
+      "cal": "Cal.",
+      "pack": "Pack"
+    },
+    "grid": {
+      "titleAllPrefix": "The full",
+      "titleAllHighlight": "portfolio.",
+      "titleGenericHighlight": "Generic",
+      "titleGenericSuffix": "products.",
+      "titleBrandedHighlight": "Branded",
+      "titleBrandedSuffix": "products.",
+      "countOf": "of",
+      "countSuffix": "products",
+      "empty": "No products in this category yet.",
+      "viewDetails": "View Details"
+    },
+    "oemCta": {
+      "title": "Looking for OEM or contract manufacturing partnership?",
+      "button": "Talk to our team"
+    },
+    "modal": {
+      "close": "Close",
+      "downloadBrochure": "Download Brochure",
+      "requestInquiry": "Request Inquiry",
+      "blocks": {
+        "packagingVariants": "Packaging Variants",
+        "availableSizes": "Available Sizes",
+        "applications": "Applications",
+        "benefits": "Benefits"
+      },
+      "composition": "Composition",
+      "fullTechnicalSheet": "Full Technical Sheet",
+      "table": {
+        "productCode": "Product Code",
+        "genericBranded": "Generic / Branded",
+        "category": "Category",
+        "manufacturingStandard": "Manufacturing Standard",
+        "storage": "Storage"
+      },
+      "relatedProducts": "Related Products"
+    },
+    "detail": {
+      "breadcrumbHome": "Home",
+      "breadcrumbProducts": "Products",
+      "notFound": "Product not found.",
+      "backToCatalog": "Back to catalog",
+      "downloadBrochure": "Download Brochure",
+      "requestInquiry": "Request Inquiry",
+      "contactSales": "Contact Sales",
+      "overview": {
+        "eyebrow": "Product Overview",
+        "title": "Clinical character."
+      },
+      "specifications": {
+        "eyebrow": "Specifications",
+        "title": "Full technical sheet."
+      },
+      "table": {
+        "productCode": "Product Code",
+        "genericBranded": "Generic / Branded",
+        "category": "Category",
+        "indication": "Indication",
+        "composition": "Composition",
+        "osmolarity": "Osmolarity",
+        "calorie": "Calorie",
+        "packaging": "Packaging",
+        "availableSizes": "Available Sizes",
+        "nieBpom": "NIE (BPOM)",
+        "shelfLife": "Shelf Life",
+        "storage": "Storage",
+        "manufacturingStandard": "Manufacturing Standard"
+      },
+      "manufacturingQuality": {
+        "eyebrow": "Manufacturing Quality",
+        "title": "Engineered for sterile excellence."
+      },
+      "storageInfo": {
+        "eyebrow": "Storage Information",
+        "title": "Handle with care."
+      },
+      "related": {
+        "eyebrow": "Related Products",
+        "titlePrefix": "More in",
+        "cta": "Full Catalog →",
+        "empty": "No other products in this category yet."
+      }
+    }
+  },
+  "news": {
+    "hero": {
+      "eyebrow": "(News) Editorial",
+      "title": "Insights from the",
+      "italic": "cleanroom and beyond.",
+      "description": "Long-form journalism, corporate announcements, and field notes from the frontline of pharmaceutical manufacturing."
+    },
+    "featuredLabel": "Featured Story",
+    "readMore": "Read More",
+    "allPrefix": "All",
+    "allHighlight": "dispatches.",
+    "categories": {
+      "all": "All",
+      "corporate": "Corporate",
+      "science": "Science",
+      "sustainability": "Sustainability",
+      "events": "Events"
+    },
+    "empty": "No dispatches in this category yet.",
+    "newsletter": {
+      "eyebrow": "Subscribe",
+      "titlePrefix": "A quarterly dispatch from",
+      "titleHighlight": "the manufacturer of record.",
+      "placeholder": "your@email.com",
+      "button": "Subscribe"
+    },
+    "modal": {
+      "close": "Close",
+      "topics": "Topics",
+      "gallery": "Gallery",
+      "relatedNews": "Related News"
+    }
+  },
+  "csr": {
+    "hero": {
+      "eyebrow": "(CSR) Beyond the Bottle",
+      "title": "Care that",
+      "italic": "reaches further.",
+      "description": "Our responsibility extends from sterile filling halls into the communities, ecosystems and futures we share with Indonesia."
+    },
+    "impactStats": [
+      {
+        "n": "20+",
+        "l": "Years of Community Programs"
+      },
+      {
+        "n": "500+",
+        "l": "Blood Donor Volunteers"
+      },
+      {
+        "n": "12",
+        "l": "Annual School Programs"
+      },
+      {
+        "n": "ISO 14001",
+        "l": "Environmental Standard"
+      }
+    ],
+    "pillars": {
+      "eyebrow": "(01) Our CSR Pillars",
+      "titlePrefix": "Six commitments.",
+      "titleHighlight": "One promise.",
+      "items": [
+        {
+          "title": "Environmental Responsibility",
+          "desc": "ISO 14001 certified environmental management, water reuse, emissions reduction, and a green campus model in Pandaan."
+        },
+        {
+          "title": "Community Development",
+          "desc": "Local hiring, MSME mentorship, neighborhood infrastructure, and partnerships with district health centers."
+        },
+        {
+          "title": "Education Programs",
+          "desc": "Internships, scholarships, school visits, and pharmacy student mentoring with Indonesian universities."
+        },
+        {
+          "title": "Healthcare Programs",
+          "desc": "Free medical check-ups, blood donor drives, immunization support, and donation of essential parenterals."
+        },
+        {
+          "title": "Employee Volunteering",
+          "desc": "Paid volunteer days, beach clean-ups, blood drives, school renovation projects across East Java."
+        },
+        {
+          "title": "Disaster Relief",
+          "desc": "Rapid donation of IV fluids and medical supplies during natural disasters in Indonesia."
+        }
+      ]
+    },
+    "environment": {
+      "eyebrow": "(02) Environmental Responsibility",
+      "titlePrefix": "Pharmaceutical care,",
+      "titleHighlight": "ecological care.",
+      "description": "We operate one of the greenest sterile manufacturing campuses in East Java — closed-loop water reuse, energy-efficient utilities, and ISO 14001 environmental management embedded in every production cycle.",
+      "stats": [
+        {
+          "n": "—40%",
+          "l": "Process water reduction since 2015"
+        },
+        {
+          "n": "100%",
+          "l": "Hazardous waste handled by licensed partner"
+        },
+        {
+          "n": "LED",
+          "l": "Plant-wide lighting retrofit complete"
+        },
+        {
+          "n": "EMS",
+          "l": "Continuous emission monitoring system"
+        }
+      ]
+    },
+    "blocks": [
+      {
+        "eyebrow": "(03) Community Development",
+        "title": "Hand in hand with our neighbors.",
+        "copy": "From Pandaan kelurahan infrastructure to local MSME partnerships, our community programs are designed with — not for — the people closest to our gates."
+      },
+      {
+        "eyebrow": "(04) Education Programs",
+        "title": "Building the next generation of scientific care.",
+        "copy": "University partnerships, internships, scholarships, and curated factory visits make Widatra a living classroom for Indonesia's pharmacy and medical students."
+      },
+      {
+        "eyebrow": "(05) Healthcare Programs",
+        "title": "Care that doesn't end at dispatch.",
+        "copy": "Free medical screenings, immunization drives, blood donor awards (BPOM 2018), and product donations during humanitarian missions."
+      },
+      {
+        "eyebrow": "(06) Employee Volunteer Activities",
+        "title": "Volunteering is part of the job.",
+        "copy": "Annual volunteer hours are protected paid time. Whether it's a beach clean-up in Pasuruan or a school renovation in Sidoarjo, our team shows up."
+      }
+    ],
+    "disaster": {
+      "eyebrow": "(07) Disaster Relief",
+      "title": "When Indonesia needs IV fluids, we ship within hours.",
+      "description": "From the 2018 Lombok earthquake to the 2022 Cianjur disaster, our logistics team mobilises sterile fluids and medical supplies in partnership with PMI, BPBD, and Kementerian Kesehatan."
+    },
+    "sustainability": {
+      "eyebrow": "(08) Sustainability Initiatives",
+      "title": "Long-term thinking, every shift.",
+      "items": [
+        "Renewable-energy feasibility study underway",
+        "PVC-reduction packaging research with R&D",
+        "Carbon disclosure initiated (Scope 1 + 2)",
+        "Sustainable supplier code rolled out 2024"
+      ]
+    },
+    "successStories": {
+      "eyebrow": "(09) Success Stories",
+      "title": "Stories that travel beyond the press release.",
+      "countSuffix": "programs",
+      "empty": "No CSR programs published yet.",
+      "readMore": "Read More"
+    },
+    "gallery": {
+      "eyebrow": "(10) CSR Gallery"
+    },
+    "partners": {
+      "eyebrow": "(11) Partner Organizations",
+      "title": "Stronger together.",
+      "items": [
+        "Palang Merah Indonesia (PMI)",
+        "Kementerian Kesehatan RI",
+        "BPJS Kesehatan",
+        "Universitas Airlangga",
+        "Universitas Surabaya",
+        "Dinas Kesehatan Pasuruan",
+        "BPBD East Java",
+        "Otsuka Foundation"
+      ]
+    },
+    "awards": {
+      "eyebrow": "(12) Awards & Recognition",
+      "title": "Independently recognized.",
+      "items": [
+        {
+          "year": "2025",
+          "name": "East Java 5R/5S Excellence Award"
+        },
+        {
+          "year": "2019",
+          "name": "LKTP Award — Best Tax Compliance Industry"
+        },
+        {
+          "year": "2018",
+          "name": "Blood Donor Award — PMI Pasuruan"
+        },
+        {
+          "year": "2017–2018",
+          "name": "Wajib Pajak Recognition — DJP Jakarta Pusat"
+        },
+        {
+          "year": "2015",
+          "name": "Wajib Pajak Recognition"
+        }
+      ]
+    },
+    "annualReport": {
+      "eyebrow": "Annual CSR Report",
+      "title": "Read the full 2025 sustainability report.",
+      "button": "Download CSR Report (PDF)"
+    },
+    "modal": {
+      "close": "Close",
+      "gallery": "Gallery"
+    }
+  },
+  "factoryTour": {
+    "hero": {
+      "eyebrow": "(Factory Tour) Pandaan, East Java",
+      "titlePrefix": "Step inside the",
+      "titleHighlight": "Sterile Core.",
+      "description": "A guided 90-minute walkthrough of our manufacturing campus — from raw water purification to terminal sterilization."
+    },
+    "intro": {
+      "eyebrow": "(01) Factory Introduction",
+      "titlePrefix": "5+ hectares of",
+      "titleHighlight": "scientific care.",
+      "p1": "Our Pandaan facility houses dedicated parenteral filling lines, an on-site WFI plant, in-process microbiology labs, and an integrated QC laboratory — all under one ISO-certified roof.",
+      "p2": "Visitors include hospital partners, healthcare students, regulators, distributors, and journalists."
+    },
+    "whyVisit": {
+      "eyebrow": "(02) Why Visit Widatra",
+      "title": "Seeing is understanding.",
+      "items": [
+        {
+          "title": "Witness GMP in Practice",
+          "desc": "Observe PIC/S-aligned aseptic operations through cleanroom viewing panels."
+        },
+        {
+          "title": "Meet the Scientists",
+          "desc": "Q&A session with QA, QC, and production engineers."
+        },
+        {
+          "title": "Understand the Supply Chain",
+          "desc": "From raw water to dispatch pallet — the full sterile journey."
+        },
+        {
+          "title": "Take it Back to School",
+          "desc": "Educational program designed for pharmacy and medical students."
+        }
+      ]
+    },
+    "visitorJourney": {
+      "eyebrow": "(03) Visitor Journey",
+      "title": "Your 90 minutes inside.",
+      "items": [
+        {
+          "time": "00:00",
+          "title": "Arrival & Registration",
+          "desc": "Welcome desk at Gate B, ID check, visitor badge."
+        },
+        {
+          "time": "00:10",
+          "title": "Safety Briefing",
+          "desc": "EHS overview, gowning demo, allergens & restrictions."
+        },
+        {
+          "time": "00:20",
+          "title": "Corporate Film",
+          "desc": "10-minute company introduction in our auditorium."
+        },
+        {
+          "time": "00:35",
+          "title": "Cleanroom Walk",
+          "desc": "Viewing corridors over Grade A/B filling halls."
+        },
+        {
+          "time": "01:10",
+          "title": "QC Lab",
+          "desc": "Walk-through chemistry, microbiology and stability rooms."
+        },
+        {
+          "time": "01:25",
+          "title": "Q&A & Closing",
+          "desc": "Discussion with hosts, group photo, certificate."
+        }
+      ]
+    },
+    "schedule": {
+      "eyebrow": "(04) Tour Schedule",
+      "title": "When we open the gates.",
+      "items": [
+        {
+          "k": "Tuesday & Thursday",
+          "v": "Public tour days"
+        },
+        {
+          "k": "09:00 – 10:30",
+          "v": "Morning slot · max 25 visitors"
+        },
+        {
+          "k": "13:30 – 15:00",
+          "v": "Afternoon slot · max 25 visitors"
+        },
+        {
+          "k": "Friday",
+          "v": "Educational institutions only (booking required)"
+        },
+        {
+          "k": "Monday & Wednesday",
+          "v": "Plant operations focus · no public tours"
+        }
+      ],
+      "galleryLabel": "Factory Gallery"
+    },
+    "virtualPreview": {
+      "eyebrow": "(05) Virtual Factory Preview",
+      "title": "Can't visit? Tour from your desk.",
+      "description": "Our virtual tour walks you through filling halls, the WFI plant, packaging lines, and quality labs in a curated 8-minute film, narrated by our manufacturing director.",
+      "playButton": "▶ Play Virtual Tour"
+    },
+    "requirements": {
+      "eyebrow": "(06) Visitor Requirements",
+      "title": "Before you arrive.",
+      "safety": {
+        "title": "Safety Requirements",
+        "items": [
+          "Closed-toe shoes mandatory",
+          "Long pants & sleeved tops",
+          "No food, drink or chewing gum in production area",
+          "Photography only in approved zones",
+          "Pregnant visitors should consult HR before tour"
+        ]
+      },
+      "dressCode": {
+        "title": "Dress Code",
+        "items": [
+          "Smart-casual business attire",
+          "Avoid loose accessories",
+          "Long hair must be tied back",
+          "Disposable gowns and shoe covers provided"
+        ]
+      },
+      "regulations": {
+        "title": "Visitor Regulations",
+        "items": [
+          "Valid government ID required at gate",
+          "Visitors stay with the host at all times",
+          "Mobile phones in silent mode",
+          "Minors below 17 must be accompanied"
+        ]
+      }
+    },
+    "meetingPoint": {
+      "eyebrow": "(07) Meeting Point",
+      "title": "Gate B Visitor Reception · Jl. Stadion No. 1, Pandaan, Pasuruan 67156",
+      "description": "Please arrive 15 minutes before your scheduled slot to allow time for security check and badge issuance."
+    },
+    "testimonials": {
+      "eyebrow": "(09) Visitor Testimonials",
+      "title": "What guests remember.",
+      "items": [
+        {
+          "name": "dr. Andini Sutomo",
+          "role": "Hospital Pharmacist",
+          "quote": "Seeing the closed-system filling line in motion changed how I teach IV admixture to nurses."
+        },
+        {
+          "name": "Prof. Bambang Wirawan",
+          "role": "Faculty of Pharmacy, UGM",
+          "quote": "An indispensable industrial reference for our students. The QC lab visit was the highlight."
+        },
+        {
+          "name": "Linda P.",
+          "role": "Procurement, RS Premier Surabaya",
+          "quote": "We sourced confidently from Widatra for years. Walking the plant confirmed every assumption."
+        }
+      ]
+    },
+    "visitorGuide": {
+      "eyebrow": "(10) Visitor Guide",
+      "title": "Download the visitor pack.",
+      "description": "PDF briefing including map, safety rules, dress code, and contact information for the host team.",
+      "button": "Download Visitor Guide (PDF)",
+      "faqLabel": "FAQ",
+      "faq": [
+        {
+          "q": "Is the tour free of charge?",
+          "a": "Yes, public tours are complimentary. Group bookings (>15 pax) require advance confirmation."
+        },
+        {
+          "q": "Can I take photos inside the plant?",
+          "a": "Photography is allowed only in marked zones — the auditorium and visitor reception."
+        },
+        {
+          "q": "Do you provide transport from Surabaya?",
+          "a": "We can arrange shuttle for groups of 10+ at cost. Mention in the booking step."
+        },
+        {
+          "q": "Are children allowed?",
+          "a": "Visitors must be 17+ unless accompanied by a parent and pre-approved."
+        }
+      ]
+    },
+    "statusLabels": {
+      "pending": "Pending",
+      "reviewed": "Reviewed",
+      "approved": "Approved",
+      "completed": "Completed",
+      "rejected": "Rejected"
+    },
+    "booking": {
+      "eyebrow": "(08) Book a Factory Tour",
+      "titlePrefix": "Six steps.",
+      "titleHighlight": "One unforgettable visit.",
+      "signInRequired": {
+        "title": "Sign in required",
+        "description": "Create a free applicant account or sign in to book a guided visit to our Pandaan campus.",
+        "signIn": "Sign in",
+        "createAccount": "Create an account"
+      },
+      "steps": [
+        "Date",
+        "Time",
+        "Quota",
+        "Info",
+        "Review",
+        "Confirm"
+      ],
+      "nav": {
+        "back": "← Back",
+        "continue": "Continue",
+        "submit": "Submit Booking"
+      },
+      "step1": {
+        "title": "Select a date",
+        "hint": "Tuesday and Thursday only. Weekends and past dates are disabled.",
+        "selectedDateLabel": "Selected Date",
+        "noDateSelected": "No date selected",
+        "notice": "Tours run on {{days}} only. Max 25 visitors per slot.",
+        "noticeDaysHighlight": "Tue & Thu",
+        "tueThu": "Tue · Thu"
+      },
+      "step2": {
+        "title": "Select a time slot",
+        "hintPrefix": "Available slots for",
+        "timeSlotLabel": "Time slot",
+        "spotsOpen": "{{quota}} of 25 visitor spots open"
+      },
+      "step3": {
+        "title": "Visitor quota",
+        "hint": "Live quota for your selected slot.",
+        "remainingQuota": "Remaining Quota",
+        "note": "Visits are first-come, first-served. Quota updates in real time."
+      },
+      "step4": {
+        "title": "Visitor information",
+        "hint": "Tell us who's coming.",
+        "fields": {
+          "fullName": "Full name",
+          "organization": "Organization",
+          "email": "Email",
+          "phone": "Phone",
+          "numberOfVisitors": "Number of visitors",
+          "purposeOfVisit": "Purpose of visit"
+        }
+      },
+      "step5": {
+        "title": "Review your booking",
+        "hint": "Confirm details before submitting.",
+        "fields": {
+          "date": "Date",
+          "timeSlot": "Time slot",
+          "visitor": "Visitor",
+          "organization": "Organization",
+          "email": "Email",
+          "phone": "Phone",
+          "numberOfVisitors": "Number of visitors",
+          "purpose": "Purpose"
+        }
+      },
+      "step6": {
+        "title": "Booking confirmed.",
+        "referenceIs": "Your booking reference is",
+        "confirmationSentTo": "A confirmation email with visitor guide and gate instructions is on its way to",
+        "hostReviewNote": "Your host team will review this booking shortly.",
+        "viewDetails": "View Booking Details",
+        "bookAnother": "Book Another Visit"
+      },
+      "roleBlocked": {
+        "title": "Not available for Internal Employees",
+        "description": "Factory Tour Booking is reserved for External Users. As an Internal Employee, please use the Community Event Submission module instead.",
+        "backToDashboard": "Back to dashboard"
+      }
+    },
+    "checkStatus": {
+      "eyebrow": "Already booked?",
+      "title": "Check your booking status.",
+      "descriptionPrefix": "Enter your booking reference and the email you used to book — you'll see whether it's",
+      "descriptionStatuses": "Pending, Reviewed, Approved, Completed or Rejected",
+      "descriptionSuffix": ", plus the full history.",
+      "referenceLabel": "Booking Reference",
+      "referencePlaceholder": "FT-260713-0001",
+      "emailLabel": "Email used to book",
+      "emailPlaceholder": "you@example.com",
+      "checkButton": "Check",
+      "errorNotFound": "No booking found for that reference and email. Please double-check and try again."
+    },
+    "confirmationModal": {
+      "eyebrow": "Booking Submitted",
+      "title": "Your factory tour is booked.",
+      "bodyMiddle": "has been received. Our host team will review it and confirm within 3 working days. A confirmation email will be sent to",
+      "referenceLabel": "Booking Reference",
+      "pendingLabel": "● Pending",
+      "close": "Close",
+      "viewStatus": "View Booking Status"
+    },
+    "statusModal": {
+      "title": "Factory Tour Booking",
+      "submittedLabel": "Submitted",
+      "bookingDetails": "Booking Details",
+      "statusHistory": "Status History",
+      "adminNotes": "Admin Notes",
+      "noNotes": "No notes from the host team yet.",
+      "fields": {
+        "visitor": "Visitor",
+        "organization": "Organization",
+        "email": "Email",
+        "phone": "Phone",
+        "numberOfVisitors": "Number of visitors",
+        "purpose": "Purpose"
+      }
+    }
+  },
+  "careers": {
+    "hero": {
+      "eyebrow": "(Careers) Join Us",
+      "title": "Make medicine that",
+      "italic": "matters.",
+      "description": "From sterile filling halls to corporate strategy, our people keep Indonesia's hospitals supplied. Find your role inside a 40-year mission."
+    },
+    "branding": {
+      "eyebrow": "(01) Why Widatra",
+      "titlePrefix": "A workplace where",
+      "titleHighlight": "precision meets purpose.",
+      "description": "We are a member of the Otsuka Group Indonesia — a global pharmaceutical family that believes in people-first growth, lateral learning, and creating ideas that contribute to better medical care. Our values shape how we hire, develop, and reward.",
+      "items": [
+        {
+          "title": "Integrity",
+          "desc": "Work by law, ethics, and scientific truth."
+        },
+        {
+          "title": "Co-creation",
+          "desc": "Build together with community and partners."
+        },
+        {
+          "title": "Learning Organization",
+          "desc": "Lateral learning, thinking and action."
+        },
+        {
+          "title": "Humanity",
+          "desc": "Care for one another, for patients, for society."
+        }
+      ]
+    },
+    "life": {
+      "eyebrow": "(02) Life at Widatra",
+      "titlePrefix": "Days in the",
+      "titleHighlight": "green campus."
+    },
+    "testimonials": {
+      "eyebrow": "(03) Employee Stories",
+      "titlePrefix": "From our",
+      "titleHighlight": "people.",
+      "items": [
+        {
+          "name": "Dewi Anggraini",
+          "role": "QC Senior Analyst · 6 years",
+          "quote": "I joined as a fresh graduate. Today I sign release on the same products that save lives in hospitals I once trained in."
+        },
+        {
+          "name": "Bayu Pratama",
+          "role": "Production Supervisor · 9 years",
+          "quote": "What I love is the discipline — every batch is a promise, and the team owns that promise together."
+        },
+        {
+          "name": "Linda Kusuma",
+          "role": "R&D Scientist · 4 years",
+          "quote": "We are small enough to know everyone, big enough to ship at national scale. The lab feels like a startup with Otsuka standards."
+        }
+      ]
+    },
+    "benefits": {
+      "eyebrow": "(04) Benefits",
+      "title": "More than a paycheck.",
+      "items": [
+        {
+          "title": "BPJS Full",
+          "desc": "Kesehatan & Ketenagakerjaan, family covered."
+        },
+        {
+          "title": "Performance Bonus",
+          "desc": "Annual bonus linked to company & individual KPIs."
+        },
+        {
+          "title": "Health & Dental",
+          "desc": "Private health insurance for employee and family."
+        },
+        {
+          "title": "Training Budget",
+          "desc": "Internal GMP training and external development."
+        },
+        {
+          "title": "Career Mobility",
+          "desc": "Cross-function rotation across Otsuka Group."
+        },
+        {
+          "title": "Shift Allowance",
+          "desc": "Recognised premium for night and weekend shifts."
+        },
+        {
+          "title": "Family Gathering",
+          "desc": "Annual company family trip and gathering."
+        },
+        {
+          "title": "Apoteker Support",
+          "desc": "Licensing support for pharmacists."
+        }
+      ]
+    },
+    "process": {
+      "eyebrow": "(05) Recruitment Process",
+      "titlePrefix": "From application to",
+      "titleHighlight": "first day.",
+      "items": [
+        {
+          "title": "Apply Online",
+          "desc": "Submit CV and supporting documents via our portal."
+        },
+        {
+          "title": "Screening",
+          "desc": "HR reviews and contacts shortlisted candidates."
+        },
+        {
+          "title": "Assessment",
+          "desc": "Technical test and psychometric assessment."
+        },
+        {
+          "title": "Interview",
+          "desc": "User and HR panel interview — virtual or onsite."
+        },
+        {
+          "title": "Offer & MCU",
+          "desc": "Offer letter, medical check-up, and onboarding."
+        }
+      ]
+    },
+    "departmentsSection": {
+      "eyebrow": "(06) Department Overview",
+      "title": "Where you might work.",
+      "items": [
+        {
+          "title": "Production",
+          "desc": "Sterile filling, packaging, line supervision."
+        },
+        {
+          "title": "Quality",
+          "desc": "QC analysts, QA officers, microbiology."
+        },
+        {
+          "title": "R&D",
+          "desc": "Formulation, packaging, stability science."
+        },
+        {
+          "title": "Engineering",
+          "desc": "Utilities, WFI, HVAC, automation."
+        },
+        {
+          "title": "Supply Chain",
+          "desc": "Planning, procurement, warehouse & logistics."
+        },
+        {
+          "title": "Sales & Marketing",
+          "desc": "Hospital sales, distributor management."
+        },
+        {
+          "title": "Corporate",
+          "desc": "Regulatory, HR, Finance, Legal, IT."
+        },
+        {
+          "title": "Internship",
+          "desc": "Final-semester student programs."
+        }
+      ]
+    },
+    "departmentLabels": {
+      "All": "All",
+      "Production": "Production",
+      "Quality": "Quality",
+      "R&D": "R&D",
+      "Engineering": "Engineering",
+      "Supply Chain": "Supply Chain",
+      "Corporate": "Corporate",
+      "Sales & Marketing": "Sales & Marketing"
+    },
+    "openings": {
+      "eyebrow": "(07) Open Positions",
+      "roleOpenSingular": "role open.",
+      "roleOpenPlural": "roles open.",
+      "locationLabel": "Location",
+      "typeLabel": "Type",
+      "deadlineLabel": "Application Deadline",
+      "viewDetails": "View Details",
+      "applyNow": "Apply Now",
+      "workModeLabel": "Work Mode",
+      "featuredBadge": "Featured"
+    },
+    "detail": {
+      "breadcrumbHome": "Home",
+      "breadcrumbCareers": "Careers",
+      "notFound": "Job not found.",
+      "backToCareers": "Back to careers",
+      "workingLocation": "Working Location",
+      "employmentType": "Employment Type",
+      "level": "Level",
+      "posted": "Posted",
+      "deadline": "Application Deadline",
+      "applyForRole": "Apply for this role",
+      "backToAllRoles": "Back to all roles",
+      "jobDescription": "Job Description",
+      "responsibilities": "Responsibilities",
+      "qualifications": "Qualifications",
+      "requirements": "Requirements",
+      "whatWeOffer": "What We Offer",
+      "allPositions": "← All Positions",
+      "applyNow": "Apply Now",
+      "workMode": "Work Mode",
+      "salary": "Salary"
+    }
+  },
+  "apply": {
+    "close": "Close",
+    "authRequired": {
+      "title": "Sign in required",
+      "defaultMessage": "Create a free applicant account or sign in to submit your application to Widatra Bhakti.",
+      "applyMessage": "Create a free applicant account or sign in to apply for this role at Widatra Bhakti.",
+      "signIn": "Sign in",
+      "createAccount": "Create an account"
+    },
+    "alreadyApplied": {
+      "title": "You've already applied",
+      "bodyPrefix": "You have an existing application on file for",
+      "bodySuffix": "You can track its status and details from your dashboard.",
+      "viewApplications": "View My Applications",
+      "close": "Close"
+    },
+    "detailModal": {
+      "department": "Department",
+      "location": "Location",
+      "employmentType": "Employment Type",
+      "deadline": "Deadline",
+      "jobDescription": "Job Description",
+      "responsibilities": "Responsibilities",
+      "qualifications": "Qualifications",
+      "benefits": "Benefits",
+      "relatedJobs": "Related Jobs",
+      "postedPrefix": "Posted",
+      "close": "Close",
+      "applyNow": "Apply Now"
+    },
+    "steps": [
+      "Personal Information",
+      "Contact Information",
+      "Education",
+      "Experience",
+      "Skills",
+      "Portfolio / LinkedIn",
+      "CV & Cover Letter",
+      "Review & Submit"
+    ],
+    "form": {
+      "selectPlaceholder": "Select…",
+      "applyFor": "Apply for",
+      "stepOfPrefix": "Step",
+      "stepOfMiddle": "of",
+      "genderOptions": [
+        "Male",
+        "Female",
+        "Prefer not to say"
+      ],
+      "step0": {
+        "intro": "Tell us who you are.",
+        "fullName": "Full name",
+        "dob": "Date of birth",
+        "gender": "Gender"
+      },
+      "step1": {
+        "intro": "How should we reach you?",
+        "email": "Email",
+        "phone": "Phone",
+        "city": "City of residence",
+        "address": "Full address"
+      },
+      "step2": {
+        "intro": "Your academic background.",
+        "educationLabel": "Education",
+        "degree": "Degree",
+        "degreePlaceholder": "S1 / D3 / SMA",
+        "major": "Major",
+        "institution": "Institution",
+        "graduationYear": "Graduation year",
+        "remove": "Remove",
+        "addAnother": "+ Add another education"
+      },
+      "step3": {
+        "intro": "Your most relevant roles.",
+        "noExperience": "I have no work experience",
+        "experienceLabel": "Experience",
+        "company": "Company",
+        "role": "Role",
+        "period": "Period",
+        "periodPlaceholder": "2022 – 2024",
+        "description": "Description",
+        "remove": "Remove",
+        "addAnother": "+ Add another experience"
+      },
+      "step4": {
+        "intro": "List relevant skills, separated by commas.",
+        "skills": "Skills",
+        "skillsPlaceholder": "e.g. HPLC, GMP documentation, root cause analysis"
+      },
+      "step5": {
+        "intro": "Optional — help us learn more about your work.",
+        "linkedin": "LinkedIn profile",
+        "linkedinPlaceholder": "https://linkedin.com/in/…",
+        "portfolio": "Portfolio / personal website",
+        "portfolioPlaceholder": "https://…"
+      },
+      "step6": {
+        "uploadLabel": "Upload CV (PDF, DOC or DOCX, max 5MB)",
+        "clickToSelect": "Click to select a file",
+        "coverLetter": "Cover letter",
+        "coverLetterPlaceholder": "Tell us why you're a great fit for this role."
+      },
+      "step7": {
+        "title": "Review & Submit",
+        "intro": "Confirm everything looks right before submitting.",
+        "fields": {
+          "position": "Position",
+          "fullName": "Full name",
+          "dob": "Date of birth",
+          "email": "Email",
+          "phone": "Phone",
+          "city": "City",
+          "education": "Education",
+          "experience": "Experience",
+          "noExperienceValue": "No prior experience",
+          "skills": "Skills",
+          "linkedin": "LinkedIn",
+          "cv": "CV",
+          "notUploaded": "Not uploaded"
+        },
+        "consent": "I confirm the information provided is true and consent to PT Widatra Bhakti processing my personal data under Indonesian PDP Law for recruitment purposes. *"
+      },
+      "errors": {
+        "incompleteStep": "Please complete the required fields before continuing.",
+        "cvType": "CV must be a PDF, DOC or DOCX file.",
+        "cvSize": "CV file must be under 5MB.",
+        "consentRequired": "Please accept the terms before submitting.",
+        "generic": "Something went wrong while submitting. Please try again."
+      },
+      "back": "← Back",
+      "continue": "Continue →",
+      "submitting": "Submitting…",
+      "submit": "Submit Application"
+    },
+    "success": {
+      "eyebrow": "Application Submitted",
+      "title": "Thank you for applying.",
+      "bodyMiddle": "has been received. Our recruitment team will review it and contact shortlisted candidates within 14 working days.",
+      "applicationIdLabel": "Application ID",
+      "submittedLabel": "● Submitted",
+      "close": "Close",
+      "trackApplication": "Track My Application"
+    },
+    "roleBlocked": {
+      "title": "Not available for Internal Employees",
+      "internalMessage": "Career ATS is reserved for External Users. As an Internal Employee, you can submit Community Events from your dashboard instead."
+    }
+  },
+  "auth": {
+    "shell": {
+      "tagline": "Bhakti · Pharmaceuticals",
+      "iso": "ISO 27001",
+      "dataPrivacy": "Data Privacy",
+      "otsukaGroup": "Otsuka Group",
+      "copyright": "© {{year}} PT Widatra Bhakti. All rights reserved.",
+      "visualEyebrow": "Pharmaceutical Manufacturing",
+      "defaultQuote": "Trusted since 1973 · Member of the Otsuka Group",
+      "plantLabel": "Pandaan Plant · East Java · Indonesia",
+      "roleApplicant": "Applicant",
+      "roleAdmin": "Admin / HR"
+    },
+    "login": {
+      "eyebrow": "Applicant Portal",
+      "title": "Sign in to your Widatra account",
+      "subtitle": "Access your applications, documents, and interview schedule.",
+      "email": "Email address",
+      "password": "Password",
+      "rememberMe": "Remember me",
+      "forgotPassword": "Forgot password?",
+      "signingIn": "Signing in…",
+      "signIn": "Sign in",
+      "orContinueWith": "or continue with",
+      "google": "Google",
+      "microsoft": "Microsoft",
+      "noAccount": "Don't have an account?",
+      "registerAsApplicant": "Register as Applicant",
+      "demoAccount": "Demo account: ayu.pratiwi@example.com · Password123!"
+    },
+    "register": {
+      "eyebrow": "Applicant Registration",
+      "title": "Register to apply for open positions",
+      "subtitle": "Join Widatra Bhakti — building trusted healthcare since 1973.",
+      "fullName": "Full name",
+      "fullNamePlaceholder": "Your legal name",
+      "phone": "Phone",
+      "phonePlaceholder": "+62 ...",
+      "email": "Email address",
+      "password": "Password",
+      "passwordPlaceholder": "Min 8 characters",
+      "strengthLabels": [
+        "Too short",
+        "Weak",
+        "Fair",
+        "Strong",
+        "Excellent"
+      ],
+      "strengthPrefix": "Strength:",
+      "confirmPassword": "Confirm password",
+      "agreeTermsPrefix": "I agree to the",
+      "termsOfService": "Terms of Service",
+      "and": "and",
+      "privacyPolicy": "Privacy Policy",
+      "updatesOptIn": "Send me updates about new job openings at Widatra.",
+      "creatingAccount": "Creating account…",
+      "createAccount": "Create account",
+      "alreadyHaveAccount": "Already have an account?",
+      "signIn": "Sign in",
+      "errors": {
+        "passwordMismatch": "Passwords do not match."
+      },
+      "accountType": {
+        "label": "I am registering as",
+        "internalTitle": "Internal Employee",
+        "internalDesc": "Widatra staff & employees",
+        "externalTitle": "External User",
+        "externalDesc": "Applicants & visitors"
+      },
+      "employeeId": "Employee ID (NIK)",
+      "employeeIdPlaceholder": "e.g. WB-EMP-1042",
+      "department": "Department",
+      "departmentPlaceholder": "e.g. Human Resources",
+      "position": "Position",
+      "positionPlaceholder": "e.g. HR Staff",
+      "companyEmail": "Company email"
+    },
+    "forgotPassword": {
+      "eyebrow": "Password recovery",
+      "title": "Forgot your password?",
+      "subtitle": "Enter the email tied to your applicant account and we'll send a secure reset link.",
+      "email": "Email address",
+      "sendResetLink": "Send reset link",
+      "rememberedPrefix": "Remembered it?",
+      "signIn": "Sign in",
+      "sentEyebrow": "Check your inbox",
+      "sentTitle": "Reset link sent",
+      "sentSubtitle": "If an account exists for that email, we've sent a password reset link. The link expires in 30 minutes.",
+      "continueToReset": "Continue to reset password (demo)",
+      "backToSignIn": "Back to sign in",
+      "demoNote": "No email delivery in this preview build — use \"Continue to reset password\" to simulate clicking the emailed link."
+    },
+    "resetPassword": {
+      "eyebrow": "Password recovery",
+      "title": "Set a new password",
+      "subtitle": "Choose a strong password you don't reuse elsewhere.",
+      "newPassword": "New password",
+      "confirmNewPassword": "Confirm new password",
+      "updating": "Updating…",
+      "updatePassword": "Update password",
+      "missingEmailPrefix": "Missing account email —",
+      "startOver": "start over",
+      "doneEyebrow": "Success",
+      "doneTitle": "Your password has been updated",
+      "doneSubtitle": "You can now sign in with your new password.",
+      "continueToSignIn": "Continue to sign in",
+      "errors": {
+        "noAccount": "We couldn't identify your account. Please restart the password reset process.",
+        "passwordMismatch": "Passwords do not match."
+      }
+    },
+    "verifyEmail": {
+      "eyebrow": "Email verification",
+      "title": "Enter the 6-digit code",
+      "subtitle": "We sent a verification code to your email. It expires in 10 minutes.",
+      "verify": "Verify email",
+      "didntGetItPrefix": "Didn't get it?",
+      "resendAvailableIn": "Resend available in {{seconds}}s",
+      "resendCode": "Resend code",
+      "backToSignIn": "Back to sign in"
+    },
+    "error": {
+      "eyebrow": "Something went wrong",
+      "title": "We couldn't complete that request",
+      "subtitle": "The link may have expired or already been used. Please try again or contact support.",
+      "backToSignIn": "Back to sign in",
+      "contactSupport": "Contact support"
+    },
+    "success": {
+      "eyebrow": "All set",
+      "title": "You're verified",
+      "subtitle": "Your account is ready. Continue to your applicant dashboard to complete your profile and start applying.",
+      "goToDashboard": "Go to dashboard",
+      "browseJobs": "Browse jobs"
+    }
+  },
+  "dashboard": {
+    "shell": {
+      "brandLabel": "Applicant",
+      "nav": {
+        "overview": "Overview",
+        "myApplications": "My Applications",
+        "myTourBookings": "My Tour Bookings",
+        "profile": "Profile",
+        "documents": "Documents",
+        "notifications": "Notifications",
+        "settings": "Settings",
+        "dashboard": "Dashboard",
+        "myEventSubmissions": "My Event Submissions",
+        "careerAts": "Career ATS",
+        "factoryTourBooking": "Factory Tour Booking",
+        "myBookings": "My Bookings"
+      },
+      "signOut": "Sign out",
+      "welcomeBackPrefix": "Welcome back,",
+      "roleApplicant": "Applicant",
+      "eyebrow": "Applicant Dashboard",
+      "roleInternal": "Internal Employee",
+      "roleExternal": "External User"
+    },
+    "statusLabels": {
+      "Submitted": "Submitted",
+      "Screening": "Screening",
+      "Interview": "Interview",
+      "Offer": "Offer",
+      "Hired": "Hired",
+      "Rejected": "Rejected"
+    },
+    "overview": {
+      "welcomeBackPrefix": "Welcome back,",
+      "subtitle": "Track your applications, keep your profile up to date, and manage your documents.",
+      "profileCompletion": "Profile Completion",
+      "completeProfile": "Complete profile",
+      "checklist": [
+        "Personal info",
+        "Education",
+        "Certifications",
+        "Portfolio link"
+      ],
+      "upcomingInterview": "Upcoming Interview",
+      "noUpcomingInterview": "No upcoming interviews right now — check back after your next status update.",
+      "stats": {
+        "submitted": "Submitted",
+        "inReview": "In Review",
+        "interviews": "Interviews",
+        "offers": "Offers"
+      },
+      "recentApplications": "Recent applications",
+      "viewAll": "View all →",
+      "table": {
+        "position": "Position",
+        "department": "Department",
+        "applied": "Applied",
+        "status": "Status",
+        "timeline": "Timeline",
+        "view": "View"
+      },
+      "emptyPrefix": "You haven't submitted any applications yet.",
+      "browseOpenRoles": "Browse open roles →"
+    },
+    "applications": {
+      "title": "My Applications",
+      "subtitle": "Every position you've applied to, and where each one stands in the recruitment pipeline.",
+      "table": {
+        "id": "ID",
+        "position": "Position",
+        "department": "Department",
+        "applied": "Applied",
+        "status": "Status",
+        "timeline": "Timeline",
+        "viewTimeline": "View timeline"
+      },
+      "empty": "You haven't submitted any applications yet. Visit the Careers page to apply for a role."
+    },
+    "profile": {
+      "title": "Profile",
+      "subtitle": "Keep this current — recruiters review it during screening.",
+      "personalInformation": "Personal information",
+      "fullName": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location",
+      "education": "Education",
+      "experience": "Experience",
+      "changePhoto": "Change photo",
+      "editContactInfo": "Edit contact info"
+    },
+    "documents": {
+      "title": "Documents",
+      "subtitle": "CV, cover letters and supporting documents you share with recruiters.",
+      "uploadDocument": "Upload document",
+      "uploadedPrefix": "uploaded",
+      "download": "Download"
+    },
+    "notifications": {
+      "title": "Notifications",
+      "subtitle": "Recruiter messages, interview invites and status updates.",
+      "view": "View"
+    },
+    "security": {
+      "title": "Settings",
+      "subtitle": "Manage your contact information, password, sessions and account.",
+      "contactInformation": "Contact information",
+      "fullName": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "saving": "Saving…",
+      "saveChanges": "Save changes",
+      "changePassword": "Change password",
+      "currentPassword": "Current password",
+      "newPassword": "New password",
+      "confirmNewPassword": "Confirm new password",
+      "updating": "Updating…",
+      "updatePassword": "Update password",
+      "activeSessions": "Active sessions",
+      "thisBrowser": "This browser",
+      "currentSession": "Current session",
+      "allOtherDevices": "All other devices",
+      "signOutEverywhere": "Sign out everywhere",
+      "dangerZone": "Danger zone",
+      "deleteAccount": "Delete my account",
+      "messages": {
+        "contactUpdated": "Contact information updated.",
+        "passwordMismatch": "New passwords do not match.",
+        "passwordUpdated": "Password updated successfully."
+      }
+    },
+    "tours": {
+      "title": "My Factory Tour Bookings",
+      "subtitle": "Every visit you've requested, and where each one stands with our host team.",
+      "table": {
+        "reference": "Reference",
+        "visitDate": "Visit date",
+        "timeSlot": "Time slot",
+        "visitors": "Visitors",
+        "status": "Status",
+        "details": "Details",
+        "viewDetails": "View details"
+      },
+      "emptyPrefix": "You haven't booked a factory tour yet.",
+      "bookAVisit": "Book a visit →"
+    },
+    "timelineModal": {
+      "appliedPrefix": "Applied",
+      "yourApplication": "Your Application",
+      "fullName": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "employmentType": "Employment type",
+      "interviewDetails": "Interview Details",
+      "uploadedCv": "Uploaded CV",
+      "noFileRecorded": "No file recorded",
+      "download": "Download",
+      "sampleRecordNote": "Sample record — no file stored",
+      "statusHistory": "Status History"
+    },
+    "interviewCard": {
+      "interview": "Interview",
+      "happeningNowOrPassed": "Happening now or already passed",
+      "inLabel": "In",
+      "daySingular": "day",
+      "dayPlural": "days",
+      "hourShort": "h",
+      "minuteShort": "m",
+      "minuteSingular": "minute",
+      "minutePlural": "minutes"
+    },
+    "events": {
+      "title": "My Event Submissions",
+      "subtitle": "Submit a community event to be published on the News & Event page.",
+      "newEvent": "New Event",
+      "empty": "You haven't submitted any events yet.",
+      "confirmDelete": "Delete this draft? This cannot be undone.",
+      "table": {
+        "title": "Event Title",
+        "community": "Community",
+        "eventDate": "Event Date",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "actions": {
+        "view": "View",
+        "edit": "Edit",
+        "submit": "Submit for Review",
+        "delete": "Delete"
+      },
+      "statusLabels": {
+        "Draft": "Draft",
+        "Pending": "Pending Approval",
+        "Revision Requested": "Revision Requested",
+        "Approved": "Approved",
+        "Rejected": "Rejected",
+        "Published": "Published"
+      },
+      "toast": {
+        "draftSaved": "Event saved as draft.",
+        "draftUpdated": "Draft updated.",
+        "submitted": "Event submitted for review.",
+        "deleted": "Draft deleted."
+      },
+      "detail": {
+        "gallery": "Gallery",
+        "documents": "Related Documents",
+        "statusTimeline": "Status Timeline"
+      },
+      "form": {
+        "newTitle": "Submit a Community Event",
+        "editTitle": "Edit Event Submission",
+        "subtitle": "Fill in the details below. Save as a draft any time, or submit it for admin review.",
+        "close": "Close",
+        "fields": {
+          "title": "Event Title",
+          "community": "Community",
+          "category": "Event Category",
+          "eventDate": "Event Date",
+          "location": "Location",
+          "summary": "Short Summary",
+          "description": "Full Description",
+          "coverImage": "Cover Image",
+          "gallery": "Gallery Images",
+          "documents": "Related Documents",
+          "tags": "Tags",
+          "contactPerson": "Contact Person",
+          "contactPhone": "Contact Phone"
+        },
+        "placeholders": {
+          "title": "e.g. Inter-Department Basketball Friendly Match",
+          "location": "e.g. Widatra Sports Hall, Pandaan",
+          "contactPerson": "e.g. Budi Santoso"
+        },
+        "summaryHint": "1-2 sentences shown in previews.",
+        "descriptionHint": "Supports simple formatting: **headings** and blank lines between paragraphs.",
+        "onePerLine": "One per line",
+        "galleryHint": "Select from Media Library",
+        "attachDocument": "Attach Document",
+        "documentsHint": "Optional — PDF, Word, or Excel files",
+        "fileTooLarge": "is too large (max 10MB).",
+        "fileError": "Couldn't attach that file.",
+        "agreementLabel": "I confirm this event information is accurate and I agree to Widatra Bhakti's community event submission guidelines.",
+        "cancel": "Cancel",
+        "saveDraft": "Save as Draft",
+        "submitForReview": "Submit for Review",
+        "validation": {
+          "title": "Event title is required.",
+          "date": "Event date is required.",
+          "location": "Location is required.",
+          "summary": "Short summary is required.",
+          "description": "Full description is required.",
+          "contact": "Contact person is required.",
+          "agreement": "Please accept the agreement before submitting."
+        }
+      }
+    },
+    "roleGate": {
+      "title": "Not available for your account type",
+      "description": "This section isn't part of your dashboard. Internal Employees can submit Community Events; External Users can access Career ATS and Factory Tour Booking.",
+      "backToDashboard": "Back to dashboard"
+    }
+  },
+  "admin": {
+    "shell": {
+      "brandLabel": "Admin",
+      "nav": {
+        "overview": "Overview",
+        "products": "Products",
+        "newsEvents": "News & Events",
+        "csr": "CSR",
+        "factoryTour": "Factory Tour",
+        "careersAts": "Careers · ATS",
+        "contactInbox": "Contact Inbox",
+        "companyCms": "Company CMS",
+        "mediaLibrary": "Media Library",
+        "usersRoles": "Users & Roles",
+        "analytics": "Analytics",
+        "settings": "Settings",
+        "communityEvents": "Community Event Approval"
+      },
+      "signOut": "Sign out",
+      "searchPlaceholder": "Search products, applicants, articles…",
+      "userRole": "HR Manager",
+      "eyebrow": "Admin Console"
+    },
+    "common": {
+      "cancel": "Cancel",
+      "close": "Close",
+      "save": "Save",
+      "saveChanges": "Save changes",
+      "edit": "Edit",
+      "delete": "Delete",
+      "actions": "Actions",
+      "status": "Status",
+      "view": "View",
+      "all": "All",
+      "of": "of",
+      "required": "Required"
+    },
+    "statusLabels": {
+      "Published": "Published",
+      "Draft": "Draft",
+      "Archived": "Archived",
+      "Active": "Active",
+      "Inactive": "Inactive",
+      "New": "New",
+      "Unread": "Unread",
+      "Read": "Read",
+      "In Progress": "In Progress",
+      "Replied": "Replied",
+      "Applied": "Applied",
+      "Screening": "Screening",
+      "Interview": "Interview",
+      "Offer": "Offer",
+      "Hired": "Hired",
+      "Rejected": "Rejected",
+      "Submitted": "Submitted",
+      "Pending": "Pending",
+      "Reviewed": "Reviewed",
+      "Approved": "Approved",
+      "Completed": "Completed"
+    },
+    "index": {
+      "title": "Dashboard Overview",
+      "subtitle": "Live snapshot of the Widatra digital presence — traffic, inquiries, applicants and content.",
+      "stats": {
+        "visitors": "Visitors this month",
+        "visitorsDelta": "+12.4% vs last month",
+        "inquiries": "Product inquiries",
+        "inquiriesDelta": "+18 new",
+        "applicants": "Active applicants",
+        "applicantsDelta": "+24 this week",
+        "tours": "Tour bookings",
+        "toursDelta": "Next 30 days"
+      },
+      "traffic": {
+        "eyebrow": "Traffic — last 30 days",
+        "title": "Website performance",
+        "sessions": "Sessions",
+        "avgSession": "Avg. session",
+        "bounce": "Bounce",
+        "countries": "Countries"
+      },
+      "quickActions": {
+        "title": "Quick actions",
+        "publishProduct": "Publish new product",
+        "postJob": "Post job opening",
+        "inviteTeamMember": "Invite team member"
+      },
+      "recentApplicants": "Recent applicants",
+      "latestInquiries": "Latest inquiries",
+      "table": {
+        "applicant": "Applicant",
+        "position": "Position",
+        "stage": "Stage",
+        "score": "Score",
+        "from": "From",
+        "subject": "Subject",
+        "status": "Status"
+      }
+    },
+    "ats": {
+      "title": "Careers & ATS",
+      "subtitle": "Job postings, applicant tracking and recruitment pipeline for all Widatra open positions.",
+      "postJob": "Post job",
+      "tabs": {
+        "jobPosts": "Job posts",
+        "applicants": "Applicants",
+        "pipeline": "Pipeline"
+      },
+      "jobPosts": {
+        "heading": "Open positions",
+        "table": {
+          "title": "Title",
+          "department": "Department",
+          "location": "Location",
+          "applicants": "Applicants",
+          "status": "Status",
+          "posted": "Posted",
+          "actions": "Actions"
+        },
+        "syncNoteSingular": "live applicant record synced automatically from the public Careers page.",
+        "syncNotePlural": "live applicant records synced automatically from the public Careers page.",
+        "featuredBadge": "Featured",
+        "empty": "No job postings yet. Click \"Post job\" to create one.",
+        "toggleFeaturedAria": "Toggle featured for",
+        "feature": "Mark as featured",
+        "unfeature": "Remove from featured",
+        "toggleStatusAria": "Toggle status for",
+        "setToDraft": "Set to Draft",
+        "publish": "Publish",
+        "editAria": "Edit",
+        "deleteAria": "Delete",
+        "toast": {
+          "createdSuffix": "created.",
+          "draftSuffix": "saved as draft.",
+          "publishedSuffix": "published.",
+          "updatedSuffix": "updated.",
+          "removedSuffix": "removed.",
+          "isNowPrefix": "is now",
+          "featuredOnSuffix": "marked as featured.",
+          "featuredOffSuffix": "removed from featured."
+        },
+        "deleteDialog": {
+          "title": "Delete this job posting?",
+          "bodyPrefix": "This will permanently remove",
+          "bodySuffix": "from both the Admin and the public Careers page. This action cannot be undone.",
+          "cancel": "Cancel",
+          "delete": "Delete"
+        }
+      },
+      "applicants": {
+        "searchPlaceholder": "Search name, position, email, ID…",
+        "allStatuses": "All statuses",
+        "countSuffixSingular": "applicant",
+        "countSuffixPlural": "applicants",
+        "table": {
+          "applicant": "Applicant",
+          "position": "Position",
+          "department": "Department",
+          "status": "Status",
+          "applied": "Applied",
+          "action": "Action"
+        },
+        "noMatch": "No applicants match your search."
+      },
+      "pipeline": {
+        "heading": "Recruitment pipeline",
+        "noApplicants": "No applicants"
+      },
+      "modal": {
+        "appliedForPrefix": "Applied for",
+        "sections": {
+          "personalInfo": "Personal Information",
+          "contactInfo": "Contact Information",
+          "education": "Education",
+          "experience": "Experience",
+          "skills": "Skills",
+          "portfolioLinkedin": "Portfolio / LinkedIn",
+          "cvResume": "CV / Resume",
+          "coverLetter": "Cover Letter",
+          "recruitmentStatus": "Recruitment Status",
+          "timeline": "Timeline",
+          "hrNotes": "HR Notes"
+        },
+        "fields": {
+          "fullName": "Full name",
+          "dob": "Date of birth",
+          "gender": "Gender",
+          "submitted": "Submitted",
+          "email": "Email",
+          "phone": "Phone",
+          "city": "City",
+          "address": "Address",
+          "linkedin": "LinkedIn",
+          "portfolio": "Portfolio"
+        },
+        "noExperience": "No prior work experience listed.",
+        "viewCv": "View CV",
+        "download": "Download",
+        "sampleRecord": "Sample record — no file stored",
+        "statusNotePlaceholder": "Optional note for this status change…",
+        "updateStatus": "Update Status",
+        "editReschedule": "Edit / Reschedule",
+        "reschedule": "Reschedule",
+        "cancel": "Cancel",
+        "confirmCancelInterview": "Cancel this scheduled interview? The applicant's card will be marked as cancelled.",
+        "noNotesYet": "No notes yet.",
+        "addNotePlaceholder": "Add an internal HR note…",
+        "addNote": "Add Note"
+      },
+      "scheduling": {
+        "titleSchedule": "Schedule Interview",
+        "titleReschedule": "Reschedule Interview",
+        "interviewDate": "Interview Date",
+        "interviewTime": "Interview Time",
+        "interviewType": "Interview Type",
+        "meetingLink": "Meeting Link",
+        "location": "Location",
+        "meetingLinkPlaceholder": "https://meet.google.com/...",
+        "locationPlaceholder": "e.g. Widatra HQ, 3rd Floor Meeting Room",
+        "interviewer": "Interviewer",
+        "interviewerPlaceholder": "e.g. Andi Wijaya — HR Manager",
+        "notes": "Notes",
+        "notesPlaceholder": "What to bring, dress code, agenda, etc. (optional)",
+        "errorRequired": "Please fill in date, time, location/link, and interviewer.",
+        "cancel": "Cancel",
+        "saveChanges": "Save Changes",
+        "scheduleInterview": "Schedule Interview",
+        "online": "Online",
+        "offline": "Offline"
+      },
+      "cvViewer": {
+        "zoomOut": "Zoom out",
+        "zoomIn": "Zoom in",
+        "resetZoom": "Reset zoom",
+        "download": "Download",
+        "close": "Close CV viewer",
+        "noFileTitle": "No CV file available",
+        "noFileBody": "This is a sample record with no stored resume file, so there's nothing to preview here.",
+        "previewNotAvailableTitle": "Preview not available",
+        "previewNotAvailableBodyPrefix": "This file",
+        "previewNotAvailableBodySuffix": "can't be previewed in-browser. Use the download button above to open it."
+      },
+      "jobForm": {
+        "newTitle": "Post a New Job",
+        "editTitle": "Edit Job Posting",
+        "newSubtitle": "Fill in the details below to publish a new opening.",
+        "editingPrefix": "Editing",
+        "close": "Close",
+        "optional": "optional",
+        "onePerLine": "one per line",
+        "fields": {
+          "title": "Job Title",
+          "department": "Department",
+          "employmentType": "Employment Type",
+          "workMode": "Work Mode",
+          "location": "Location",
+          "experienceLevel": "Experience Level",
+          "salary": "Salary",
+          "shortDescription": "Short Description",
+          "responsibilities": "Responsibilities",
+          "requirements": "Requirements",
+          "benefits": "Benefits",
+          "deadline": "Application Deadline",
+          "status": "Status",
+          "featured": "Featured Job",
+          "coverImage": "Cover Image"
+        },
+        "featuredOn": "Featured",
+        "featuredOff": "Not Featured",
+        "errors": {
+          "required": "This field is required.",
+          "atLeastOne": "Add at least one item."
+        },
+        "cancel": "Cancel",
+        "saveDraft": "Save Draft",
+        "saving": "Saving…",
+        "publish": "Publish",
+        "cancelConfirm": {
+          "title": "Discard changes?",
+          "body": "You have unsaved changes to this job posting. If you leave now, your changes will be lost.",
+          "keepEditing": "Keep Editing",
+          "discard": "Discard"
+        }
+      }
+    },
+    "factoryTour": {
+      "title": "Factory Tour Management",
+      "subtitle": "Review, approve, and track visitor bookings for the Pandaan Plant tour. Status changes sync instantly to the public Factory Tour page.",
+      "stats": {
+        "awaitingReview": "Awaiting review",
+        "approved": "Approved",
+        "completed": "Completed",
+        "confirmedVisitors": "Confirmed visitors"
+      },
+      "searchPlaceholder": "Search visitor, organization, email, ID…",
+      "allStatuses": "All statuses",
+      "countSuffixSingular": "booking",
+      "countSuffixPlural": "bookings",
+      "table": {
+        "visitor": "Visitor",
+        "organization": "Organization",
+        "tourDate": "Tour date",
+        "timeSlot": "Time slot",
+        "pax": "Pax",
+        "status": "Status",
+        "action": "Action"
+      },
+      "noMatch": "No bookings match your search.",
+      "modal": {
+        "individualVisitor": "Individual visitor",
+        "sections": {
+          "visitInfo": "Visit Information",
+          "visitorInfo": "Visitor Information",
+          "purpose": "Purpose of Visit",
+          "quickActions": "Quick Actions",
+          "bookingStatus": "Booking Status",
+          "timeline": "Timeline",
+          "internalNotes": "Internal Notes"
+        },
+        "fields": {
+          "requestedDate": "Requested date",
+          "timeSlot": "Time slot",
+          "numberOfVisitors": "Number of visitors",
+          "submitted": "Submitted",
+          "fullName": "Full name",
+          "organization": "Organization",
+          "email": "Email",
+          "phone": "Phone"
+        },
+        "approve": "Approve",
+        "reject": "Reject",
+        "markCompleted": "Mark Completed",
+        "quickActionsNote": "Quick actions apply immediately using the note field in the sidebar, if filled in.",
+        "statusNotePlaceholder": "Optional note for this status change…",
+        "updateStatus": "Update Status",
+        "noNotesYet": "No notes yet.",
+        "addNotePlaceholder": "Add an internal note (visible to admin only)…",
+        "addNote": "Add Note",
+        "toastMarkedPrefix": "Booking",
+        "toastMarkedMiddle": "marked as"
+      }
+    },
+    "products": {
+      "title": "Products Management",
+      "subtitle": "Publish, edit and archive Widatra's branded and generic pharmaceutical product catalog. Changes reflect instantly on the public Product page.",
+      "newProduct": "New product",
+      "filters": {
+        "all": "All",
+        "branded": "Branded",
+        "generic": "Generic"
+      },
+      "countSuffix": "products",
+      "table": {
+        "code": "Code",
+        "name": "Product name",
+        "category": "Category",
+        "package": "Package",
+        "type": "Type",
+        "actions": "Actions",
+        "empty": "No products in this category yet."
+      },
+      "editAriaPrefix": "Edit",
+      "deleteAriaPrefix": "Delete",
+      "deleteDialog": {
+        "title": "Delete product?",
+        "bodyPrefix": "This will permanently remove",
+        "bodySuffix": "from the catalog and the public Product page. This action cannot be undone.",
+        "cancel": "Cancel",
+        "delete": "Delete"
+      },
+      "toast": {
+        "updatedSuffix": "updated",
+        "addedSuffix": "added to catalog",
+        "removedSuffix": "removed"
+      },
+      "form": {
+        "newTitle": "New product",
+        "editTitle": "Edit product",
+        "editingPrefix": "Editing",
+        "newSubtitle": "Add a product to the public catalog",
+        "close": "Close",
+        "fields": {
+          "name": "Product name",
+          "tagline": "Tagline",
+          "category": "Category",
+          "type": "Type",
+          "image": "Product image",
+          "nie": "NIE / BPOM number",
+          "osmolarity": "Osmolarity",
+          "calorie": "Calorie",
+          "shelfLife": "Shelf life",
+          "storage": "Storage",
+          "indication": "Indication",
+          "composition": "Composition",
+          "manufacturingNote": "Manufacturing note",
+          "packaging": "Packaging variants",
+          "sizes": "Available sizes",
+          "benefits": "Benefits",
+          "applications": "Applications"
+        },
+        "onePerLine": "One per line",
+        "cancel": "Cancel",
+        "saveChanges": "Save changes",
+        "createProduct": "Create product"
+      }
+    },
+    "news": {
+      "title": "News & Events Management",
+      "subtitle": "Publish company news, press releases and event announcements. Changes reflect instantly — including the Read More modal — on the public News & Event page.",
+      "newArticle": "New article",
+      "publishedSuffix": "published",
+      "articlesSuffix": "articles",
+      "table": {
+        "title": "Title",
+        "category": "Category",
+        "author": "Author",
+        "published": "Published",
+        "status": "Status",
+        "actions": "Actions",
+        "empty": "No articles in this category yet."
+      },
+      "toggleAriaPrefix": "Toggle status for",
+      "setToDraft": "Set to Draft",
+      "publish": "Publish",
+      "editAriaPrefix": "Edit",
+      "deleteAriaPrefix": "Delete",
+      "deleteDialog": {
+        "title": "Delete article?",
+        "bodyPrefix": "This will permanently remove",
+        "bodySuffix": "from the public News & Event page. This action cannot be undone.",
+        "cancel": "Cancel",
+        "delete": "Delete"
+      },
+      "toast": {
+        "updatedSuffix": "updated",
+        "createdSuffix": "created",
+        "removedSuffix": "removed",
+        "isNowPrefix": "is now"
+      },
+      "form": {
+        "newTitle": "New article",
+        "editTitle": "Edit article",
+        "editingPrefix": "Editing",
+        "newSubtitle": "Publish a news article or event announcement",
+        "close": "Close",
+        "fields": {
+          "title": "Title",
+          "category": "Category",
+          "date": "Date",
+          "readTime": "Read time",
+          "heroImage": "Hero / cover image",
+          "status": "Status",
+          "author": "Author",
+          "authorRole": "Author role",
+          "excerpt": "Excerpt",
+          "fullContent": "Full article content",
+          "tags": "Tags",
+          "galleryImages": "Gallery images"
+        },
+        "contentHint": "Blank line between paragraphs. Use **Heading** for subheads.",
+        "onePerLine": "One per line",
+        "galleryHint": "Reuses hero image if left blank",
+        "cancel": "Cancel",
+        "saveChanges": "Save changes",
+        "createArticle": "Create article"
+      }
+    },
+    "csr": {
+      "title": "CSR Management",
+      "subtitle": "Manage sustainability pillars, impact stories, and gallery items. Changes reflect instantly — including the Read More modal — on the public CSR page.",
+      "newProgram": "New program",
+      "publishedProgramsSuffix": "published programs",
+      "publishedSuffix": "published",
+      "programsSuffix": "programs",
+      "table": {
+        "program": "Program",
+        "pillar": "Pillar",
+        "location": "Location",
+        "date": "Date",
+        "status": "Status",
+        "actions": "Actions",
+        "empty": "No programs in this pillar yet."
+      },
+      "toggleAriaPrefix": "Toggle status for",
+      "setToDraft": "Set to Draft",
+      "publish": "Publish",
+      "editAriaPrefix": "Edit",
+      "deleteAriaPrefix": "Delete",
+      "deleteDialog": {
+        "title": "Delete CSR program?",
+        "bodyPrefix": "This will permanently remove",
+        "bodySuffix": "from the public CSR page. This action cannot be undone.",
+        "cancel": "Cancel",
+        "delete": "Delete"
+      },
+      "toast": {
+        "updatedSuffix": "updated",
+        "createdSuffix": "created",
+        "removedSuffix": "removed",
+        "isNowPrefix": "is now"
+      },
+      "form": {
+        "newTitle": "New CSR program",
+        "editTitle": "Edit CSR program",
+        "editingPrefix": "Editing",
+        "newSubtitle": "Add a program to the public CSR page",
+        "close": "Close",
+        "fields": {
+          "title": "Program title",
+          "pillar": "Pillar",
+          "location": "Location",
+          "date": "Date",
+          "heroImage": "Hero / cover image",
+          "status": "Status",
+          "impactMetric": "Impact metric",
+          "excerpt": "Excerpt",
+          "fullDescription": "Complete description",
+          "galleryImages": "Gallery images"
+        },
+        "impactHint": "Shown as a badge in the modal",
+        "contentHint": "Blank line between paragraphs. Use **Heading** for subheads.",
+        "galleryHint": "Reuses hero image if left blank",
+        "cancel": "Cancel",
+        "saveChanges": "Save changes",
+        "createProgram": "Create program"
+      }
+    },
+    "events": {
+      "title": "Community Event Approval",
+      "subtitle": "Review, approve, and publish events submitted by community members.",
+      "close": "Close",
+      "review": "Review",
+      "empty": "No submissions in this filter yet.",
+      "gallery": "Gallery",
+      "documents": "Related Documents",
+      "notesHistory": "Notes History",
+      "notePlaceholder": "Add a note (required for Reject / Request Revision)...",
+      "publishedNotice": "Published to News & Event:",
+      "filters": {
+        "all": "All"
+      },
+      "table": {
+        "id": "ID",
+        "title": "Event Title",
+        "community": "Community",
+        "submittedBy": "Submitted By",
+        "eventDate": "Event Date",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "statusLabels": {
+        "Pending": "Pending Approval",
+        "Revision Requested": "Revision Requested",
+        "Approved": "Approved",
+        "Rejected": "Rejected",
+        "Published": "Published"
+      },
+      "actions": {
+        "approve": "Approve",
+        "reject": "Reject",
+        "requestRevision": "Request Revision",
+        "publish": "Publish",
+        "editBeforePublish": "Edit"
+      },
+      "editForm": {
+        "title": "Event Title",
+        "community": "Community",
+        "category": "Event Category",
+        "eventDate": "Event Date",
+        "location": "Location",
+        "coverImage": "Cover Image",
+        "summary": "Short Summary",
+        "description": "Full Description",
+        "gallery": "Gallery Images",
+        "cancel": "Cancel",
+        "save": "Save Changes"
+      },
+      "validation": {
+        "noteRequired": "Please add a note before continuing."
+      },
+      "toast": {
+        "approved": "Event approved.",
+        "rejected": "Event rejected.",
+        "revisionRequested": "Revision requested.",
+        "published": "Event published to News & Event.",
+        "saved": "Changes saved."
+      }
+    }
+  }
+}

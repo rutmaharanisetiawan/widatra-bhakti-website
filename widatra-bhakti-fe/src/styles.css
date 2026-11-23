@@ -1,0 +1,435 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 8px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-brand: var(--brand);
+  --color-brand-deep: var(--brand-deep);
+  --color-brand-ink: var(--brand-ink);
+  --color-brand-tint: var(--brand-tint);
+  --color-brand-soft: var(--brand-soft);
+  --color-corporate-black: var(--corporate-black);
+  --color-corporate-gray: var(--corporate-gray);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-hairline: var(--hairline);
+
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Hanken Grotesk', 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Instrument Serif', ui-serif, Georgia, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --shadow-card: 0 4px 20px rgba(14, 49, 146, 0.06);
+  --shadow-float: 0 12px 32px rgba(9, 42, 125, 0.10);
+  --shadow-elegant: 0 30px 80px -30px rgba(9, 42, 125, 0.35);
+  --gradient-navy: linear-gradient(135deg, #0E3192 0%, #092A7D 55%, #05174A 100%);
+  --gradient-veil: linear-gradient(90deg, oklch(1 0 0) 0%, oklch(1 0 0 / 0.6) 40%, transparent 80%);
+  --gradient-brand: linear-gradient(135deg, #092A7D 0%, #0E3192 60%, #1B48C4 100%);
+}
+
+:root {
+  --radius: 0.5rem;
+
+  /* Brand — Trusted Pharmaceutical Manufacturing */
+  --brand: #0E3192;
+  --brand-deep: #092A7D;
+  --brand-ink: #05174A;
+  --brand-tint: #EEF2FB;
+  --brand-soft: #F7F8FB;
+  --accent: #FF0000;
+  --accent-foreground: #ffffff;
+
+  --corporate-black: #0A0A0A;
+  --corporate-gray: #7F7F7F;
+  --hairline: #E6EAF2;
+
+  --background: #ffffff;
+  --foreground: var(--corporate-black);
+  --surface: var(--brand-soft);
+  --surface-2: var(--brand-tint);
+
+  --card: #ffffff;
+  --card-foreground: var(--corporate-black);
+  --popover: #ffffff;
+  --popover-foreground: var(--corporate-black);
+
+  --primary: var(--brand);
+  --primary-foreground: #ffffff;
+  --secondary: var(--surface);
+  --secondary-foreground: var(--corporate-black);
+  --muted: var(--surface);
+  --muted-foreground: var(--corporate-gray);
+  --destructive: var(--accent);
+  --destructive-foreground: #ffffff;
+  --border: var(--hairline);
+  --input: var(--hairline);
+  --ring: var(--brand);
+}
+
+.dark {
+  /* ---------------------------------------------------------------
+     Refined dark palette — premium pharmaceutical corporate identity.
+     Desaturated slate-navy hierarchy (never pure black), soft
+     off-white text, and a slightly brightened Widatra blue so the
+     brand accent still pops on dark surfaces.
+  --------------------------------------------------------------- */
+
+  /* Background hierarchy: base → section surface → elevated surface */
+  --background: #0a1220;   /* page base, deep slate-navy */
+  --surface: #101b30;      /* alternate section background */
+  --surface-2: #16233c;    /* elevated tint / hover surface */
+
+  --foreground: #e9edf5;   /* soft off-white body text, easy on the eyes */
+
+  --card: #121d34;         /* card / panel background */
+  --card-foreground: #e9edf5;
+  --popover: #142239;      /* modals, dropdowns, nav-on-scroll */
+  --popover-foreground: #e9edf5;
+
+  --border: rgba(233,237,245,0.09);
+  --input: rgba(233,237,245,0.14);
+  --hairline: rgba(233,237,245,0.08);
+
+  --muted: #16233c;
+  --muted-foreground: #9fb0cc; /* comfortable secondary text */
+
+  /* Interactive: same Widatra blue family, lifted slightly for
+     legibility against dark navy surfaces. */
+  --primary: #3f6bf0;
+  --primary-foreground: #ffffff;
+  --brand-deep: #2c4fcb;   /* hover/active shade of primary in dark mode */
+  --ring: #3f6bf0;
+
+  --secondary: var(--surface-2);
+  --secondary-foreground: #e9edf5;
+
+  --destructive: #ff6161;  /* softened, less saturated red for dark bg */
+  --destructive-foreground: #ffffff;
+
+  /* Legacy brand tokens re-mapped so existing markup (bg-brand-soft,
+     bg-brand-tint, text-corporate-gray, popover) goes dark automatically
+     without needing every usage site to be touched individually. */
+  --brand-soft: #101b30;
+  --brand-tint: #1b2d54;
+  --corporate-gray: #9fb0cc;
+
+  /* Softer, black-based elevation shadows instead of navy-tinted ones,
+     which read as a subtle glow rather than a light-mode drop shadow. */
+  --shadow-card: 0 4px 20px rgba(0,0,0,0.35);
+  --shadow-float: 0 12px 32px rgba(0,0,0,0.45);
+  --shadow-elegant: 0 30px 80px -30px rgba(0,0,0,0.65);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+  }
+  ::selection {
+    background: var(--brand);
+    color: white;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .font-display { font-family: var(--font-display); }
+  .font-serif-italic {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+  }
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+  .eyebrow {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+  }
+  .hairline {
+    height: 1px;
+    background: var(--hairline);
+  }
+  .gradient-navy {
+    background: var(--gradient-navy);
+  }
+  .card-elevated {
+    background: var(--card);
+    border: 1px solid var(--hairline);
+    box-shadow: var(--shadow-card);
+    border-radius: var(--radius);
+  }
+  .animate-reveal {
+    animation: reveal-up 0.8s cubic-bezier(0.19, 1, 0.22, 1) both;
+  }
+  .animate-line {
+    animation: line-grow 1.2s cubic-bezier(0.19, 1, 0.22, 1) both;
+  }
+  .admin-input {
+    width: 100%;
+    height: 2.5rem;
+    padding: 0 0.75rem;
+    border-radius: 0.375rem;
+    border: 1px solid var(--hairline);
+    background: var(--card);
+    font-size: 13px;
+    color: var(--color-foreground);
+    transition: border-color 0.15s ease, background-color 0.3s ease;
+  }
+  .admin-input:focus {
+    outline: none;
+    border-color: var(--brand);
+  }
+  textarea.admin-input {
+    height: auto;
+    padding: 0.6rem 0.75rem;
+    line-height: 1.5;
+  }
+}
+
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes line-grow {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+@keyframes marquee-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes marquee-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+@layer utilities {
+  .grid-lines {
+    background-image:
+      linear-gradient(to right, rgba(255,255,255,0.15) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.15) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+  .animate-marquee-left {
+    display: flex;
+    width: max-content;
+    animation: marquee-left 34s linear infinite;
+  }
+  .animate-marquee-right {
+    display: flex;
+    width: max-content;
+    animation: marquee-right 36s linear infinite;
+  }
+  .animate-marquee-left:hover,
+  .animate-marquee-right:hover {
+    animation-play-state: paused;
+  }
+  .animate-float-slow {
+    animation: float-slow 4.5s ease-in-out infinite;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .text-gradient-brand {
+    background: linear-gradient(95deg, #0E3192 0%, #1B48C4 55%, #FF0000 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .dark .text-gradient-brand {
+    background: linear-gradient(95deg, #6b93ff 0%, #9cb8ff 60%, #ff6b6b 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+/* ---------------------------------------------------------------------
+   Dark / Light mode: smooth, colors-only global transition.
+   Scoped to color-related properties so layout, transforms and
+   scroll-driven navbar animations are never affected.
+--------------------------------------------------------------------- */
+.theme-transition,
+.theme-transition *,
+.theme-transition *::before,
+.theme-transition *::after {
+  transition-property: background-color, border-color, color, fill, stroke, box-shadow, opacity !important;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition-duration: 400ms !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-transition,
+  .theme-transition *,
+  .theme-transition *::before,
+  .theme-transition *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Theme toggle: animated sun / moon */
+.theme-toggle-icon {
+  position: relative;
+  width: 1rem;
+  height: 1rem;
+}
+.theme-toggle-icon svg {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease;
+}
+.theme-toggle-icon .icon-sun {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+.theme-toggle-icon .icon-moon {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.4);
+}
+.dark .theme-toggle-icon .icon-sun {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.4);
+}
+.dark .theme-toggle-icon .icon-moon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+/* ==========================================================================
+   Hero Bottom Feathering Scrim (Silky Non-Linear Gradient to Surface)
+   Eliminates Mach banding, milky haze, and hard cuts ("patah/putus").
+   ========================================================================== */
+.hero-bottom-scrim {
+  background: linear-gradient(
+    to bottom,
+    rgba(247, 248, 251, 0) 0%,
+    rgba(247, 248, 251, 0.01) 20%,
+    rgba(247, 248, 251, 0.035) 35%,
+    rgba(247, 248, 251, 0.08) 48%,
+    rgba(247, 248, 251, 0.16) 60%,
+    rgba(247, 248, 251, 0.28) 70%,
+    rgba(247, 248, 251, 0.45) 80%,
+    rgba(247, 248, 251, 0.66) 88%,
+    rgba(247, 248, 251, 0.85) 94%,
+    rgba(247, 248, 251, 0.96) 98%,
+    #F7F8FB 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    color-mix(in srgb, var(--surface) 1%, transparent) 20%,
+    color-mix(in srgb, var(--surface) 3.5%, transparent) 35%,
+    color-mix(in srgb, var(--surface) 8%, transparent) 48%,
+    color-mix(in srgb, var(--surface) 16%, transparent) 60%,
+    color-mix(in srgb, var(--surface) 28%, transparent) 70%,
+    color-mix(in srgb, var(--surface) 45%, transparent) 80%,
+    color-mix(in srgb, var(--surface) 66%, transparent) 88%,
+    color-mix(in srgb, var(--surface) 85%, transparent) 94%,
+    color-mix(in srgb, var(--surface) 96%, transparent) 98%,
+    var(--surface) 100%
+  );
+}
+
+/* Widatra Logo Accent Light Sweep Animation (Inspired by official reference video) */
+@keyframes widatra-sweep {
+  0% {
+    left: -40%;
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  50% {
+    left: 130%;
+    opacity: 1;
+  }
+  51%, 100% {
+    left: 130%;
+    opacity: 0;
+  }
+}
+
+@keyframes widatra-sweep-fast {
+  0% {
+    left: -40%;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    left: 130%;
+    opacity: 1;
+  }
+}
+
+.animate-widatra-sweep {
+  animation: widatra-sweep 3.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.animate-widatra-sweep-fast {
+  animation: widatra-sweep-fast 0.9s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Wida-Bot Peeking Mascot Idle Floating */
+@keyframes wida-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-wida-float {
+  animation: wida-float 3.2s ease-in-out infinite;
+}
+
