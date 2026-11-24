@@ -97,8 +97,8 @@ export function SiteNav() {
       >
         <div className="h-full px-3.5 sm:px-5 flex items-center justify-between gap-2.5 xl:gap-3 2xl:gap-5">
           {/* Brand Logo */}
-          <Link to="/" className="flex items-center group flex-shrink-0 min-w-0" aria-label="PT Widatra Bhakti Home">
-            <WidatraLogo variant="horizontal" size="md" subtitle={slogan} subtitleClassName="hidden 2xl:block" showAccentAnimation={true} />
+          <Link to="/" className="flex items-center group flex-shrink-0 mr-1 xl:mr-2" aria-label="PT Widatra Bhakti Home">
+            <WidatraLogo variant="horizontal" size="md" subtitle={slogan} showAccentAnimation={true} />
           </Link>
 
           {/* Desktop Centered Nav Links */}
@@ -217,12 +217,9 @@ export function SiteNav() {
           </div>
 
           {/* Desktop Utility Cluster */}
-          <div className="hidden xl:flex items-center gap-1 2xl:gap-2 flex-shrink-0">
-            <div className="hidden 2xl:flex items-center mr-1.5">
-              <OtsukaLogo variant="badge" size="md" href="https://www.otsuka.com/en/company/group/#asia" />
-            </div>
-            <div className="hidden xl:flex 2xl:hidden items-center mr-0.5">
-              <OtsukaLogo variant="badge" size="sm" href="https://www.otsuka.com/en/company/group/#asia" />
+          <div className="hidden xl:flex items-center gap-1.5 2xl:gap-2 flex-shrink-0 ml-1 xl:ml-2">
+            <div className="flex items-center mr-1">
+              <OtsukaLogo variant="horizontal" size="md" href="https://www.otsuka.com/en/company/group/#asia" />
             </div>
             <LanguageSwitcher />
             <ThemeToggle />
