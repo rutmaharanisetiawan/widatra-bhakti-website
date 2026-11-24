@@ -261,16 +261,21 @@ export function OrbitProductsSection({
     if (!el) return;
 
     const onNativeWheel = (e: WheelEvent) => {
-      // Cegah default scroll container agar tidak bentrok dengan gesture trackpad
+      // Hanya tangani jika gestur sengaja horizontal (swipe 2 jari kiri-kanan atau tahan Shift)
+      const isHorizontal = Math.abs(e.deltaX) > Math.abs(e.deltaY);
+      if (!isHorizontal && !e.shiftKey) {
+        // Scroll vertikal murni: biarkan halaman bergulir normal tanpa tersendat/bergetar
+        return;
+      }
+
+      // Cegah scroll browser hanya saat swipe horizontal di area carousel
       e.preventDefault();
 
-      // Deteksi delta dominan (mendukung swipe 2 jari horizontal & scroll vertikal)
-      const isHorizontal = Math.abs(e.deltaX) > Math.abs(e.deltaY);
       const rawDelta = isHorizontal ? e.deltaX : e.deltaY;
 
       // Normalisasi akselerasi: responsif untuk micro-delta trackpad Mac & mouse notch
       const sign = rawDelta > 0 ? 1 : -1;
-      const mag = Math.min(Math.abs(rawDelta), 100);
+      const mag = Math.min(Math.abs(rawDelta), 60);
       const impulse = -sign * Math.pow(mag, 0.94) * 0.0006;
 
       isWheelingRef.current = true;

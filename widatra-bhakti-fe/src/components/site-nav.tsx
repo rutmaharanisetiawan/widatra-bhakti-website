@@ -47,36 +47,62 @@ export function SiteNav() {
 
   useEffect(() => {
     lastScrollY.current = typeof window !== "undefined" ? window.scrollY : 0;
+    let ticking = false;
 
     const onScroll = () => {
-      const currentScrollY = window.scrollY;
-      setScrolled(currentScrollY > 24);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY;
+          setScrolled(currentScrollY > 24);
 
-      // Keep navbar visible if mobile drawer or desktop dropdown is open
-      if (open || activeDropdown) {
-        setVisible(true);
-        lastScrollY.current = currentScrollY;
-        return;
-      }
+          // Keep navbar visible if mobile drawer or desktop dropdown is open
+          if (open || activeDropdown) {
+            setVisible(true);
+            lastScrollY.current = currentScrollY;
+            ticking = false;
+            return;
+          }
 
-      // Always visible near top of the page
-      if (currentScrollY <= 50) {
-        setVisible(true);
-        lastScrollY.current = currentScrollY;
-        return;
-      }
+          // Always visible near top of the page
+          if (currentScrollY <= 60) {
+            setVisible(true);
+            lastScrollY.current = currentScrollY;
+            ticking = false;
+            return;
+          }
 
-      const diff = currentScrollY - lastScrollY.current;
+          // Prevent jitter when near the bottom of the page (footer rubber-banding)
+          const docHeight = document.documentElement.scrollHeight;
+          const winHeight = window.innerHeight;
+          if (currentScrollY + winHeight >= docHeight - 80) {
+            // Stay in current state, do not toggle or jitter
+            ticking = false;
+            return;
+          }
 
-      // Threshold to prevent micro-scroll jitter
-      if (diff > 8) {
-        // Scrolling DOWN -> smoothly hide
-        setVisible(false);
-        lastScrollY.current = currentScrollY;
-      } else if (diff < -8) {
-        // Scrolling UP -> smoothly show
-        setVisible(true);
-        lastScrollY.current = currentScrollY;
+          // Negative overscroll prevention
+          if (currentScrollY < 0) {
+            setVisible(true);
+            ticking = false;
+            return;
+          }
+
+          const diff = currentScrollY - lastScrollY.current;
+
+          // Stable threshold to prevent micro-scroll jitter (requires intentional movement)
+          if (diff > 24) {
+            // Scrolling DOWN -> smoothly hide
+            setVisible(false);
+            lastScrollY.current = currentScrollY;
+          } else if (diff < -16) {
+            // Scrolling UP -> smoothly show
+            setVisible(true);
+            lastScrollY.current = currentScrollY;
+          }
+
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 

@@ -34,15 +34,17 @@ export function WavyMarqueeRibbon({
   const repeatedText = `${unitText}${unitText}${unitText}${unitText}`;
 
   if (variant === "crossed") {
+    const loopItems = [...items, ...items];
     return (
       <div
         className={`relative py-6 sm:py-8 overflow-hidden select-none bg-surface dark:bg-background ${className}`}
         aria-hidden="true"
+        style={{ willChange: "transform", transform: "translate3d(0, 0, 0)" }}
       >
         {/* Back Ribbon (Tilted +1.6deg, Accent/Deep Navy) */}
-        <div className="relative -mx-8 transform rotate-[1.6deg] bg-gradient-to-r from-brand-ink via-primary to-accent py-2.5 opacity-90 shadow-md">
+        <div className="relative -mx-8 transform rotate-[1.6deg] bg-gradient-to-r from-brand-ink via-primary to-accent py-2.5 opacity-90 shadow-md will-change-transform [backface-visibility:hidden]">
           <div className="animate-marquee-right flex items-center gap-8">
-            {[...items, ...items, ...items].map((badge, idx) => (
+            {loopItems.map((badge, idx) => (
               <div key={`back-${idx}`} className="flex items-center gap-8 whitespace-nowrap">
                 <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.24em] text-white/90">
                   {badge}
@@ -54,9 +56,9 @@ export function WavyMarqueeRibbon({
         </div>
 
         {/* Front Ribbon (Tilted -1.6deg, Primary Widatra Navy) */}
-        <div className="relative -mx-8 -mt-9 sm:-mt-10 transform -rotate-[1.6deg] bg-gradient-to-r from-primary via-brand-deep to-primary py-3 shadow-[0_14px_32px_-8px_rgba(9,42,125,0.45)] border-y border-white/15">
+        <div className="relative -mx-8 -mt-9 sm:-mt-10 transform -rotate-[1.6deg] bg-gradient-to-r from-primary via-brand-deep to-primary py-3 shadow-[0_14px_32px_-8px_rgba(9,42,125,0.45)] border-y border-white/15 will-change-transform [backface-visibility:hidden]">
           <div className="animate-marquee-left flex items-center gap-8">
-            {[...items, ...items, ...items].map((badge, idx) => (
+            {loopItems.map((badge, idx) => (
               <div key={`front-${idx}`} className="flex items-center gap-8 whitespace-nowrap">
                 <span className="text-[11px] sm:text-xs font-bold uppercase tracking-[0.24em] text-white">
                   {badge}
@@ -74,6 +76,7 @@ export function WavyMarqueeRibbon({
     <div
       className={`relative w-full overflow-hidden select-none bg-transparent -mt-20 sm:-mt-24 lg:-mt-28 z-20 pointer-events-none ${className}`}
       aria-hidden="true"
+      style={{ willChange: "transform", transform: "translate3d(0, 0, 0)" }}
     >
       <svg
         viewBox="0 0 1440 144"
@@ -81,6 +84,7 @@ export function WavyMarqueeRibbon({
         xmlns="http://www.w3.org/2000/svg"
         className="w-full h-[82px] sm:h-[104px] lg:h-[126px] block overflow-visible drop-shadow-[0_14px_28px_rgba(9,42,125,0.22)]"
         preserveAspectRatio="none"
+        shapeRendering="geometricPrecision"
       >
         <defs>
           <linearGradient id={gradId} x1="0%" y1="0%" x2="100%" y2="0%">
@@ -151,7 +155,8 @@ export function WavyMarqueeRibbon({
           letterSpacing="0.24em"
           dominantBaseline="middle"
           dy="1"
-          className="font-display uppercase"
+          textRendering="geometricPrecision"
+          className="font-display uppercase select-none"
         >
           <textPath href={`#${wavePathId}`} startOffset="0%">
             {repeatedText}
@@ -159,7 +164,7 @@ export function WavyMarqueeRibbon({
               attributeName="startOffset"
               from="0%"
               to="-50%"
-              dur="28s"
+              dur="34s"
               repeatCount="indefinite"
             />
           </textPath>
