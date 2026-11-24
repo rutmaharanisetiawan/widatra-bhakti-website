@@ -109,7 +109,7 @@ function AboutPage() {
           Foundational story from 1986 to Otsuka Group integration
       ================================================================= */}
       <section id="profile" className="py-16 sm:py-24 bg-white dark:bg-card scroll-mt-32">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <ScrollReveal animation="fade-up" className="mb-10 sm:mb-12">
             <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em] mb-4">
               {t("about.profile.eyebrow")}
@@ -209,7 +209,7 @@ function AboutPage() {
           Featuring Message from President Director & All 5 Board Members
       ================================================================= */}
       <section id="management" className="py-16 sm:py-24 bg-surface scroll-mt-32 border-t border-black/[0.04] dark:border-white/[0.04]">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <ScrollReveal animation="fade-up" className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-12">
             <div>
               <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em] mb-4">
@@ -340,7 +340,7 @@ function AboutPage() {
           Seamlessly integrated into one coherent narrative ecosystem
       ================================================================= */}
       <section id="vision-mission" className="py-16 sm:py-24 bg-white dark:bg-card scroll-mt-32">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           {/* Header Row */}
           <ScrollReveal animation="fade-up" className="mb-10 sm:mb-12">
             <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em] mb-4">
@@ -482,7 +482,7 @@ function AboutPage() {
           Using Cleanroom Visual (NO REPEATING AERIAL PHOTO)
       ================================================================= */}
       <section id="video" className="py-16 sm:py-24 bg-surface scroll-mt-32 border-t border-black/[0.04] dark:border-white/[0.04]">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <ScrollReveal animation="fade-up" className="mb-10 max-w-2xl">
             <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em] mb-4">
               {t("about.video.eyebrow")}
@@ -582,7 +582,7 @@ function AboutPage() {
           CHAPTER 05: GLOBAL CERTIFICATIONS & INDEPENDENT RECOGNITION
       ================================================================= */}
       <section id="certifications" className="py-16 sm:py-24 bg-white dark:bg-card scroll-mt-32">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           <ScrollReveal animation="fade-right" className="lg:col-span-5">
             <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em] mb-4">
               {t("about.awards.eyebrow")}
@@ -657,7 +657,7 @@ function AboutPage() {
           Using Corporate Headquarters / Architectural Visual (NO AERIAL REPETITION)
       ================================================================= */}
       <section className="py-16 sm:py-20 bg-surface border-t border-black/[0.04] dark:border-white/[0.04]">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <ScrollReveal animation="zoom-in">
             <div className="relative rounded-[28px] sm:rounded-[36px] overflow-hidden min-h-[340px] flex items-center justify-center text-center p-8 sm:p-14 shadow-xl">
               <img

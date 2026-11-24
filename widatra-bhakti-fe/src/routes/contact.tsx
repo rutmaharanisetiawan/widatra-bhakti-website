@@ -90,7 +90,7 @@ function ContactPage() {
 
       {/* Quick contact strip — Interactive Rounded Cards */}
       <section className="py-10 sm:py-14 bg-surface border-b border-black/5 dark:border-white/5">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-5">
             {QUICK_CONTACTS.map(([title, email, desc], idx) => (
               <ScrollReveal key={title} animation="fade-up" delay={idx * 70}>
@@ -122,7 +122,7 @@ function ContactPage() {
 
       {/* OFFICES + PLANTS — Header + SubNavbar matching Screenshot */}
       <section id="contact-offices" className="py-16 sm:py-24 bg-white dark:bg-card scroll-mt-32">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <ScrollReveal animation="fade-up" className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-12">
             <div>
               <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em] mb-4">
@@ -182,7 +182,7 @@ function ContactPage() {
         id="contact-departments"
         className="py-16 sm:py-24 bg-surface scroll-mt-32"
       >
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           <ScrollReveal animation="fade-right" className="lg:col-span-4">
             <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em] mb-4">
               (02) Department Directory
@@ -232,7 +232,7 @@ function ContactPage() {
 
       {/* EMERGENCY / PHARMACOVIGILANCE */}
       <section id="contact-pv" className="py-12 sm:py-16 bg-white dark:bg-card scroll-mt-32">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <ScrollReveal animation="zoom-in">
             <div className="rounded-[28px] sm:rounded-[32px] bg-gradient-to-r from-accent to-[#c90000] text-white p-7 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center shadow-xl">
               <div className="lg:col-span-8">
@@ -271,7 +271,7 @@ function ContactPage() {
 
       {/* MAP */}
       <section className="py-16 sm:py-24 bg-surface">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <ScrollReveal animation="fade-right" className="lg:col-span-4">
             <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em] mb-4">
               (03) Visit Us
@@ -313,7 +313,7 @@ function ContactPage() {
 
       {/* FAQ */}
       <section id="contact-faq" className="py-16 sm:py-24 bg-surface scroll-mt-32">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-12 gap-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 grid grid-cols-1 lg:grid-cols-12 gap-10">
           <ScrollReveal animation="fade-right" className="lg:col-span-5">
             <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em] mb-4">
               (05) Frequently Asked Questions
@@ -492,7 +492,7 @@ function ContactForm() {
 
   return (
     <section className="py-16 sm:py-24 bg-white dark:bg-card">
-      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+      <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
         <div className="lg:col-span-5">
           <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em] mb-4">
             (04) Send a Message

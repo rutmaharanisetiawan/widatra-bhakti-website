@@ -71,7 +71,7 @@ function CareersPage() {
 
       {/* EMPLOYER BRANDING — Interactive Rounded Cards */}
       <section className="py-16 sm:py-24 bg-white dark:bg-card">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           <ScrollReveal animation="fade-right" className="lg:col-span-5">
             <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em] mb-4">
               {t("careers.branding.eyebrow")}
@@ -118,7 +118,7 @@ function CareersPage() {
 
       {/* LIFE AT WIDATRA */}
       <section className="py-16 sm:py-24 bg-surface">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <ScrollReveal animation="fade-up" className="mb-10 max-w-2xl">
             <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em] mb-4">
               {t("careers.life.eyebrow")}
@@ -160,7 +160,7 @@ function CareersPage() {
 
       {/* TESTIMONIALS */}
       <section className="py-16 sm:py-24 bg-white dark:bg-card">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <ScrollReveal animation="fade-up" className="mb-10">
             <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em] mb-4">
               {t("careers.testimonials.eyebrow")}
@@ -199,7 +199,7 @@ function CareersPage() {
 
       {/* BENEFITS — 2-Col Mobile / 4-Col Desktop Rounded Cards */}
       <section className="py-16 sm:py-24 bg-surface">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <ScrollReveal animation="fade-up" className="mb-10 max-w-2xl">
             <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em] mb-4">
               {t("careers.benefits.eyebrow")}
@@ -235,7 +235,7 @@ function CareersPage() {
 
       {/* RECRUITMENT PROCESS — Header + SubNavbar matching Screenshot */}
       <section className="py-16 sm:py-24 bg-white dark:bg-card">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <ScrollReveal animation="fade-up" className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-12">
             <div>
               <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em] mb-4">
@@ -308,7 +308,7 @@ function CareersPage() {
 
       {/* DEPARTMENTS */}
       <section className="py-16 sm:py-24 bg-surface">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <ScrollReveal animation="fade-up" className="mb-10 max-w-2xl">
             <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em] mb-4">
               {t("careers.departmentsSection.eyebrow")}
@@ -339,7 +339,7 @@ function CareersPage() {
 
       {/* OPEN POSITIONS — Header + SubNavbar matching Screenshot */}
       <section id="openings" className="py-16 sm:py-24 bg-white dark:bg-card scroll-mt-32">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <ScrollReveal animation="fade-up" className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-12">
             <div>
               <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em] mb-4">

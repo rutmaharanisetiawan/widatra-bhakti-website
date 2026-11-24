@@ -27,7 +27,7 @@ export function SiteFooter() {
     <>
       <WavyMarqueeRibbon variant="crossed" />
       <footer className="bg-surface dark:bg-[#070e1e] pt-16 sm:pt-20 pb-12 border-t border-black/5 dark:border-white/[0.06] text-corporate-black dark:text-white transition-colors duration-300">
-        <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1240px] 2xl:max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
           {/* Main Footer Directory */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8 mb-16">
             {/* Col 1: Brand & Contact Info (3.5 cols) */}

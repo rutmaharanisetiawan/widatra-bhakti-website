@@ -71,7 +71,7 @@ const PRODUCTS: ProductItem[] = [
 // ==========================================
 // 2. KOMPONEN UTAMA CAROUSEL 3D ORBIT WHEEL
 // ==========================================
-export function OrbitWheelCarouselDemo() {
+function OrbitWheelCarouselDemo() {
   const containerRef = useRef<HTMLDivElement>(null);
   const cardElementsRef = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -473,4 +473,4 @@ export function OrbitWheelCarouselDemo() {
   );
 }
 
-export default OrbitWheelCarouselDemo;
+

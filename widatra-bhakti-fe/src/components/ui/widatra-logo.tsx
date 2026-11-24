@@ -16,6 +16,8 @@ export interface WidatraLogoProps {
   size?: "sm" | "md" | "lg";
   /** Optional custom subtitle (defaults to "Mitra Terpercaya untuk Kesehatan yang Lebih Baik") */
   subtitle?: string;
+  /** Optional custom className for subtitle (e.g. "hidden 2xl:block" for responsive nav) */
+  subtitleClassName?: string;
   /** Whether to show the animated accent ribbon inspired by the reference video */
   showAccentAnimation?: boolean;
   /** Show the subtitle text */
@@ -33,6 +35,7 @@ export function WidatraLogo({
   className,
   size = "md",
   subtitle = "Mitra Terpercaya untuk Kesehatan yang Lebih Baik",
+  subtitleClassName,
   showAccentAnimation = true,
   showSubtitle = true,
 }: WidatraLogoProps) {
@@ -155,7 +158,8 @@ export function WidatraLogo({
               "font-medium tracking-[0.04em] text-corporate-gray dark:text-slate-400 block mt-1",
               size === "sm" && "text-[7.5px] sm:text-[8px] whitespace-nowrap truncate max-w-[150px]",
               size === "md" && "text-[8px] sm:text-[8.5px] whitespace-nowrap",
-              size === "lg" && "text-[10.5px] sm:text-[11px] leading-snug whitespace-normal"
+              size === "lg" && "text-[10.5px] sm:text-[11px] leading-snug whitespace-normal",
+              subtitleClassName
             )}
           >
             {subtitle}

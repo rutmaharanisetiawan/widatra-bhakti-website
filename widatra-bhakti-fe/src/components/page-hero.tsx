@@ -71,7 +71,7 @@ export function PageHero({
   return (
     <>
       <section
-        className={`relative ${minHeight} w-full -mt-20 pt-28 sm:pt-32 lg:pt-36 pb-28 sm:pb-36 lg:pb-40 flex items-center overflow-hidden bg-[#061844] text-white`}
+        className={`relative ${minHeight} w-full -mt-20 pt-24 sm:pt-28 lg:pt-28 xl:pt-32 2xl:pt-36 pb-20 sm:pb-24 lg:pb-24 xl:pb-28 2xl:pb-36 flex items-center overflow-hidden bg-[#061844] text-white`}
       >
         {/* Full-bleed background — cleanroom image smoothly dissolves into cleanroom navy */}
         <div className="absolute inset-0 z-0">
@@ -102,8 +102,8 @@ export function PageHero({
         />
 
         {/* Standardized 2-Column Hero Content Container */}
-        <div className="container mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-10 relative z-10 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+        <div className="container mx-auto max-w-[1240px] 2xl:max-w-[1360px] px-4 sm:px-6 lg:px-8 xl:px-10 relative z-10 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 xl:gap-8 2xl:gap-10 items-center">
             {/* Left Copy Column */}
             <div
               className={`lg:col-span-7 animate-reveal order-2 lg:order-1 ${
@@ -111,7 +111,7 @@ export function PageHero({
               }`}
             >
               {/* Unified Pill Eyebrow Badge */}
-              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/25 mb-6 shadow-sm">
+              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/25 mb-4 sm:mb-6 shadow-sm">
                 <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                 <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.22em] text-white">
                   {eyebrow}
@@ -119,7 +119,7 @@ export function PageHero({
               </div>
 
               {/* Unified Hero H1 Size & Layout */}
-              <h1 className="text-[34px] sm:text-[50px] lg:text-[64px] font-semibold leading-[1.06] tracking-[-0.03em] mb-6 text-balance text-white drop-shadow-[0_4px_24px_rgba(5,18,53,0.45)]">
+              <h1 className="text-[32px] sm:text-[44px] lg:text-[48px] xl:text-[54px] 2xl:text-[64px] font-semibold leading-[1.08] 2xl:leading-[1.06] tracking-[-0.03em] mb-4 sm:mb-6 text-balance text-white drop-shadow-[0_4px_24px_rgba(5,18,53,0.45)]">
                 {title}{" "}
                 {italic && (
                   <span className="font-serif-italic font-normal bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent block sm:inline">
@@ -129,7 +129,7 @@ export function PageHero({
               </h1>
 
               {description && (
-                <p className="text-sm sm:text-base lg:text-lg text-white/85 max-w-xl mx-auto lg:mx-0 leading-relaxed mb-8 sm:mb-10 text-pretty drop-shadow-[0_2px_12px_rgba(5,18,53,0.4)]">
+                <p className="text-sm sm:text-base 2xl:text-lg text-white/85 max-w-xl mx-auto lg:mx-0 leading-relaxed mb-6 sm:mb-8 2xl:mb-10 text-pretty drop-shadow-[0_2px_12px_rgba(5,18,53,0.4)]">
                   {description}
                 </p>
               )}

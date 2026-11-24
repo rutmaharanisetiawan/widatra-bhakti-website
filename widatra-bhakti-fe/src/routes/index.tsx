@@ -232,7 +232,7 @@ function HomePage() {
       {/* =================================================================
           TAHAP 1: INTERACTIVE HERO + CAPSULE COLLAGE + MARQUEE RIBBON
       ================================================================= */}
-      <section className="relative min-h-[95vh] -mt-20 pt-28 sm:pt-32 lg:pt-36 pb-28 sm:pb-36 lg:pb-40 flex items-center overflow-hidden bg-[#061844] text-white">
+      <section className="relative min-h-[90vh] 2xl:min-h-[95vh] -mt-20 pt-24 sm:pt-28 lg:pt-28 xl:pt-32 2xl:pt-36 pb-20 sm:pb-24 lg:pb-24 xl:pb-28 2xl:pb-36 flex items-center overflow-hidden bg-[#061844] text-white">
         {/* Rich Layered Background — Cleanroom image smoothly dissolves into cleanroom navy */}
         <div className="absolute inset-0 z-0">
           <img
@@ -258,8 +258,8 @@ function HomePage() {
           className="pointer-events-none absolute inset-x-0 bottom-0 h-48 sm:h-64 lg:h-72 z-[5] hero-bottom-scrim"
         />
 
-        <div className="container mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-10 relative z-10 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+        <div className="container mx-auto max-w-[1240px] 2xl:max-w-[1360px] px-4 sm:px-6 lg:px-8 xl:px-10 relative z-10 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 xl:gap-8 2xl:gap-10 items-center">
             {/* Left Copy Column */}
             <div className="lg:col-span-7 text-center lg:text-left animate-reveal order-2 lg:order-1">
               {/* Pill Eyebrow Badge */}
@@ -271,7 +271,7 @@ function HomePage() {
               </div>
 
               {/* Responsive Display Heading */}
-              <h1 className="text-[34px] sm:text-[50px] lg:text-[64px] font-semibold leading-[1.06] tracking-[-0.03em] mb-6 text-balance text-white">
+              <h1 className="text-[32px] sm:text-[44px] lg:text-[50px] xl:text-[56px] 2xl:text-[64px] font-semibold leading-[1.08] tracking-[-0.03em] mb-6 text-balance text-white">
                 {t("home.hero.titleLine1")}{" "}
                 <span className="font-serif-italic font-normal bg-gradient-to-r from-white via-blue-200 to-blue-300 bg-clip-text text-transparent block sm:inline">
                   {t("home.hero.titleLine2")}
@@ -308,7 +308,7 @@ function HomePage() {
 
             {/* Right Interactive Capsule Collage */}
             <div className="lg:col-span-5 order-1 lg:order-2">
-              <div className="relative mx-auto max-w-[340px] sm:max-w-[420px] lg:max-w-none">
+              <div className="relative mx-auto max-w-[340px] sm:max-w-[420px] lg:max-w-[460px] xl:max-w-[500px] 2xl:max-w-none">
                 {/* Main Capsule Visual Grid */}
                 <div className="grid grid-cols-12 gap-3 sm:gap-4 items-center">
                   <div className="col-span-7">
@@ -355,7 +355,7 @@ function HomePage() {
                 </div>
 
                 {/* Floating Glass Badge */}
-                <div className="hidden sm:flex items-center gap-3 absolute -bottom-5 -left-5 px-4 py-3 rounded-2xl bg-white dark:bg-card text-corporate-black dark:text-white shadow-[0_20px_50px_rgba(0,0,0,0.35)] border border-black/5 animate-float-slow">
+                <div className="hidden sm:flex items-center gap-3 absolute -bottom-4 lg:-bottom-4 xl:-bottom-5 left-0 sm:-left-3 lg:left-0 xl:-left-5 px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-2xl bg-white dark:bg-card text-corporate-black dark:text-white shadow-[0_20px_50px_rgba(0,0,0,0.35)] border border-black/5 animate-float-slow">
                   <div className="w-10 h-10 rounded-xl bg-brand-tint text-primary flex items-center justify-center flex-shrink-0">
                     <ShieldCheck className="w-5 h-5" />
                   </div>
@@ -377,7 +377,7 @@ function HomePage() {
           CORPORATE STATS BAND — 2-Col Mobile / 4-Col Desktop Rounded Cards
       ================================================================= */}
       <section className="py-10 sm:py-14 bg-surface border-b border-black/5 dark:border-white/5">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
             <StatCard value={38} suffix="+" label={t("home.stats.years")} index={0} />
             <StatCard value={150} suffix="M+" label={t("home.stats.units")} index={1} />
@@ -391,7 +391,7 @@ function HomePage() {
           (01) COMPANY INTRODUCTION — Editorial Collage & Floating Quote Pill
       ================================================================= */}
       <section className="py-16 sm:py-24 lg:py-28 bg-white dark:bg-card">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Left Copy */}
           <div className="lg:col-span-5">
             <ScrollReveal animation="fade-right">
@@ -480,7 +480,7 @@ function HomePage() {
           with Left-Edge Vertical Brand Accent Tab
       ================================================================= */}
       <section className="py-16 sm:py-24 lg:py-28 bg-surface">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <ScrollReveal animation="fade-up">
             <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
               <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em] mb-4">
@@ -545,7 +545,7 @@ function HomePage() {
           (02) & (05) MANUFACTURING EXCELLENCE + INTERACTIVE 6-STEP PROCESS TABS
       ================================================================= */}
       <section className="py-16 sm:py-24 lg:py-28 bg-white dark:bg-card">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <ScrollReveal animation="fade-up">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-end mb-10 sm:mb-14">
               <div className="lg:col-span-6">
@@ -696,7 +696,7 @@ function HomePage() {
           (08) OUR PRODUCTS — Segmented Pill Tab Switcher + Interactive Cards
       ================================================================= */}
       <section className="py-16 sm:py-24 lg:py-28 bg-surface">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <ScrollReveal animation="fade-up">
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-12">
               <div>
@@ -787,7 +787,7 @@ function HomePage() {
         <div className="absolute inset-0 opacity-20">
           <img src={aerialImg} alt="" className="w-full h-full object-cover" />
         </div>
-        <div className="relative max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="relative max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-6">
               <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-white/80 text-[10px] font-bold uppercase tracking-[0.22em] mb-5">
@@ -871,7 +871,7 @@ function HomePage() {
           (07) QUALITY ASSURANCE & (09) R&D — Responsive 2-Col Bento
       ================================================================= */}
       <section className="py-16 sm:py-24 lg:py-28 bg-white dark:bg-card">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10 space-y-20">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-20">
           {/* Quality Assurance */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-5">
@@ -975,7 +975,7 @@ function HomePage() {
           Dual-Row Infinite Marquee Tracks (Moving in Opposite Directions)
       ================================================================= */}
       <section className="py-16 sm:py-24 bg-surface overflow-hidden">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10 mb-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 mb-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end">
             <div className="lg:col-span-7">
               <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em] mb-4">
@@ -1037,7 +1037,7 @@ function HomePage() {
           (11) INTERACTIVE COMPANY TIMELINE (1986 - 2025)
       ================================================================= */}
       <section className="py-16 sm:py-24 lg:py-28 bg-white dark:bg-card">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <ScrollReveal animation="fade-up">
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-14">
               <div>
@@ -1111,7 +1111,7 @@ function HomePage() {
           (14) INTERACTIVE FACTORY TOUR HUB (with Floating Feature Pills)
       ================================================================= */}
       <section className="relative py-20 sm:py-28 overflow-hidden bg-gradient-to-br from-[#061539] via-[#092A7D] to-[#051235] text-white">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 relative z-10">
           <ScrollReveal animation="fade-up" className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white/90 text-[10px] font-bold uppercase tracking-[0.22em] mb-4">
               <Compass className="w-3.5 h-3.5 text-accent" />
@@ -1183,7 +1183,7 @@ function HomePage() {
           (12) LATEST NEWS & ARTICLES (CHEVRON INTERACTIVE STYLE)
       ================================================================= */}
       <section className="py-16 sm:py-24 lg:py-28 bg-surface dark:bg-[#070e1e]/60 transition-colors">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           {/* Centered Section Header */}
           <ScrollReveal animation="fade-up" className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
             <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em] mb-4">
@@ -1403,7 +1403,7 @@ function HomePage() {
 
       {/* CSR HIGHLIGHTS */}
       <section className="py-16 sm:py-24 bg-white dark:bg-card">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 sm:mb-12">
             <div>
               <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em] mb-4">
@@ -1473,7 +1473,7 @@ function HomePage() {
 
       {/* CAREERS PREVIEW */}
       <section className="py-16 sm:py-24 bg-surface">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           <div className="lg:col-span-6">
             <ScrollReveal animation="fade-right">
               <div className="rounded-[28px] overflow-hidden shadow-lg">
@@ -1530,7 +1530,7 @@ function HomePage() {
 
       {/* CONTACT CTA */}
       <section className="py-16 sm:py-20 bg-white dark:bg-card">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <div className="rounded-[28px] sm:rounded-[36px] bg-gradient-to-br from-primary via-brand-deep to-brand-ink text-primary-foreground p-7 sm:p-12 lg:p-14 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center shadow-xl">
             <div className="lg:col-span-7">
               <span className="inline-block px-3.5 py-1.5 rounded-full bg-white/15 text-[10px] font-bold uppercase tracking-[0.22em] mb-4">

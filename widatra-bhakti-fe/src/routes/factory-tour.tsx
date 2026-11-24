@@ -81,7 +81,7 @@ function FactoryTourPage() {
 
       {/* INTRO */}
       <section id="tour-intro" className="py-16 sm:py-24 bg-white dark:bg-card scroll-mt-32">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           <ScrollReveal animation="fade-right" className="lg:col-span-5">
             <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em] mb-4">
               {t("factoryTour.intro.eyebrow")}
@@ -127,7 +127,7 @@ function FactoryTourPage() {
 
       {/* WHY VISIT — 2-Col Mobile / 4-Col Desktop Rounded Cards */}
       <section id="tour-why" className="py-16 sm:py-24 bg-surface scroll-mt-32">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <ScrollReveal animation="fade-up" className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-12">
             <div>
               <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em] mb-4">
@@ -167,7 +167,7 @@ function FactoryTourPage() {
 
       {/* VISITOR JOURNEY — Header + SubNavbar matching Screenshot */}
       <section id="tour-journey" className="py-16 sm:py-24 bg-white dark:bg-card scroll-mt-32">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <ScrollReveal animation="fade-up" className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-12">
             <div>
               <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em] mb-4">
@@ -232,7 +232,7 @@ function FactoryTourPage() {
 
       {/* SCHEDULE & GALLERY */}
       <section className="py-16 sm:py-24 bg-surface">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           <ScrollReveal animation="fade-right" className="lg:col-span-5">
             <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em] mb-4">
               {t("factoryTour.schedule.eyebrow")}
@@ -280,7 +280,7 @@ function FactoryTourPage() {
 
       {/* VIRTUAL PREVIEW */}
       <section className="py-16 sm:py-24 bg-corporate-black text-white">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <ScrollReveal animation="fade-right" className="lg:col-span-5">
             <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-white/80 text-[10px] font-bold uppercase tracking-[0.22em] mb-4">
               {t("factoryTour.virtualPreview.eyebrow")}
@@ -310,7 +310,7 @@ function FactoryTourPage() {
 
       {/* SAFETY / DRESS / RULES — Header + SubNavbar matching Screenshot */}
       <section className="py-16 sm:py-24 bg-white dark:bg-card">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <ScrollReveal animation="fade-up" className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-12">
             <div>
               <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em] mb-4">
@@ -363,7 +363,7 @@ function FactoryTourPage() {
 
       {/* MEETING POINT */}
       <section className="py-16 bg-surface">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <ScrollReveal animation="fade-right" className="lg:col-span-7">
             <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em] mb-3">
               {t("factoryTour.meetingPoint.eyebrow")}
@@ -398,7 +398,7 @@ function FactoryTourPage() {
 
       {/* TESTIMONIALS */}
       <section className="py-16 sm:py-24 bg-white dark:bg-card">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <ScrollReveal animation="fade-up" className="mb-10 max-w-2xl">
             <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em] mb-4">
               {t("factoryTour.testimonials.eyebrow")}
@@ -434,7 +434,7 @@ function FactoryTourPage() {
 
       {/* DOWNLOAD + FAQ */}
       <section id="tour-faq" className="py-16 sm:py-24 bg-surface scroll-mt-32">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-12 gap-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 grid grid-cols-1 lg:grid-cols-12 gap-10">
           <ScrollReveal animation="fade-right" className="lg:col-span-5">
             <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em] mb-4">
               {t("factoryTour.visitorGuide.eyebrow")}

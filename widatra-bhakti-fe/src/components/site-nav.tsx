@@ -98,7 +98,7 @@ export function SiteNav() {
         <div className="h-full px-3.5 sm:px-5 flex items-center justify-between gap-2.5 xl:gap-3 2xl:gap-5">
           {/* Brand Logo */}
           <Link to="/" className="flex items-center group flex-shrink-0 min-w-0" aria-label="PT Widatra Bhakti Home">
-            <WidatraLogo variant="horizontal" size="md" subtitle={slogan} showAccentAnimation={true} />
+            <WidatraLogo variant="horizontal" size="md" subtitle={slogan} subtitleClassName="hidden 2xl:block" showAccentAnimation={true} />
           </Link>
 
           {/* Desktop Centered Nav Links */}
@@ -127,7 +127,7 @@ export function SiteNav() {
                       }
                       onFocus={() => openDropdown(item.labelKey)}
                       aria-expanded={isOpen}
-                      className={`group/nav relative flex items-center gap-1 px-2.5 2xl:px-3.5 py-1.5 text-[11.5px] 2xl:text-[12.5px] font-semibold tracking-[-0.01em] whitespace-nowrap rounded-full transition-all duration-200 outline-none focus-visible:ring-2 focus-visible:ring-primary/40 ${
+                      className={`group/nav relative flex items-center gap-1 px-2 2xl:px-3.5 py-1.5 text-[11px] 2xl:text-[12.5px] font-semibold tracking-[-0.01em] whitespace-nowrap rounded-full transition-all duration-200 outline-none focus-visible:ring-2 focus-visible:ring-primary/40 ${
                         isActive
                           ? "text-primary bg-brand-tint/70 dark:bg-white/[0.08]"
                           : "text-corporate-black/75 dark:text-white/80 hover:text-primary hover:bg-brand-soft dark:hover:bg-white/[0.05]"
@@ -196,7 +196,7 @@ export function SiteNav() {
                 <Link
                   key={item.to}
                   to={item.to}
-                  className={`group/nav relative px-2.5 2xl:px-3.5 py-1.5 text-[11.5px] 2xl:text-[12.5px] font-semibold tracking-[-0.01em] whitespace-nowrap rounded-full transition-all duration-200 outline-none focus-visible:ring-2 focus-visible:ring-primary/40 ${
+                  className={`group/nav relative px-2 2xl:px-3.5 py-1.5 text-[11px] 2xl:text-[12.5px] font-semibold tracking-[-0.01em] whitespace-nowrap rounded-full transition-all duration-200 outline-none focus-visible:ring-2 focus-visible:ring-primary/40 ${
                     isActive
                       ? "text-primary bg-brand-tint/70 dark:bg-white/[0.08]"
                       : "text-corporate-black/75 dark:text-white/80 hover:text-primary hover:bg-brand-soft dark:hover:bg-white/[0.05]"
@@ -217,12 +217,12 @@ export function SiteNav() {
           </div>
 
           {/* Desktop Utility Cluster */}
-          <div className="hidden xl:flex items-center gap-1.5 2xl:gap-2 flex-shrink-0">
+          <div className="hidden xl:flex items-center gap-1 2xl:gap-2 flex-shrink-0">
             <div className="hidden 2xl:flex items-center mr-1.5">
               <OtsukaLogo variant="badge" size="md" href="https://www.otsuka.com/en/company/group/#asia" />
             </div>
-            <div className="hidden xl:flex 2xl:hidden items-center mr-1">
-              <OtsukaLogo variant="horizontal" size="md" href="https://www.otsuka.com/en/company/group/#asia" />
+            <div className="hidden xl:flex 2xl:hidden items-center mr-0.5">
+              <OtsukaLogo variant="badge" size="sm" href="https://www.otsuka.com/en/company/group/#asia" />
             </div>
             <LanguageSwitcher />
             <ThemeToggle />
@@ -230,7 +230,7 @@ export function SiteNav() {
               to={isAuthenticated ? "/applicant" : "/auth/login"}
               aria-label={isAuthenticated ? t("nav.myAccount") : t("nav.signInRegister")}
               title={isAuthenticated ? t("nav.myAccount") : t("nav.signInRegister")}
-              className="relative inline-flex items-center justify-center w-9 h-9 rounded-full border border-black/[0.08] dark:border-white/[0.12] text-corporate-black/65 dark:text-white/75 hover:text-primary hover:border-primary/40 hover:bg-brand-tint dark:hover:bg-white/[0.06] transition-all duration-200 hover:scale-105"
+              className="relative inline-flex items-center justify-center w-8 h-8 2xl:w-9 2xl:h-9 rounded-full border border-black/[0.08] dark:border-white/[0.12] text-corporate-black/65 dark:text-white/75 hover:text-primary hover:border-primary/40 hover:bg-brand-tint dark:hover:bg-white/[0.06] transition-all duration-200 hover:scale-105"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -248,7 +248,7 @@ export function SiteNav() {
             </Link>
             <Link
               to="/careers"
-              className="inline-flex items-center gap-2 px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.14em] whitespace-nowrap rounded-full bg-gradient-to-r from-primary via-brand-deep to-primary text-primary-foreground shadow-[0_8px_20px_-6px_rgba(14,49,146,0.5)] hover:shadow-[0_12px_24px_-6px_rgba(14,49,146,0.65)] hover:scale-[1.03] active:scale-[0.98] transition-all duration-200"
+              className="inline-flex items-center gap-1.5 2xl:gap-2 px-3.5 2xl:px-5 py-2 2xl:py-2.5 text-[10px] 2xl:text-[11px] font-bold uppercase tracking-[0.12em] 2xl:tracking-[0.14em] whitespace-nowrap rounded-full bg-gradient-to-r from-primary via-brand-deep to-primary text-primary-foreground shadow-[0_8px_20px_-6px_rgba(14,49,146,0.5)] hover:shadow-[0_12px_24px_-6px_rgba(14,49,146,0.65)] hover:scale-[1.03] active:scale-[0.98] transition-all duration-200"
             >
               {t("nav.joinUs")}
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none">

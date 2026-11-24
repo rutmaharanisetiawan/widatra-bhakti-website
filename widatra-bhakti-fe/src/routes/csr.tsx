@@ -110,7 +110,7 @@ function CsrPage() {
 
       {/* IMPACT STATS — Unified Rounded Stat Cards */}
       <section className="py-10 sm:py-14 bg-surface border-b border-black/5 dark:border-white/5">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-5">
             {IMPACT_STATS.map((i) => {
               const n = t(`csr.impactStats.${i}.n`);
@@ -142,7 +142,7 @@ function CsrPage() {
 
       {/* PILLARS — 2-Col Mobile / 3-Col Desktop Interactive Cards */}
       <section id="csr-pillars" className="py-16 sm:py-24 bg-white dark:bg-card scroll-mt-32">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <ScrollReveal animation="fade-up" className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-14">
             <div>
               <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em] mb-4">
@@ -201,7 +201,7 @@ function CsrPage() {
         <div className="absolute inset-0 opacity-25">
           <img src={csrEnvironment} alt="" className="w-full h-full object-cover" />
         </div>
-        <div className="relative max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div className="relative max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <ScrollReveal animation="fade-right" className="lg:col-span-5">
             <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-white/85 text-[10px] font-bold uppercase tracking-[0.22em] mb-4">
               {t("csr.environment.eyebrow")}
@@ -236,7 +236,7 @@ function CsrPage() {
 
       {/* COMMUNITY + EDUCATION + HEALTH + VOLUNTEERING (Interactive SubNavbar Showcase) */}
       <section className="py-16 sm:py-24 bg-surface">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <ScrollReveal animation="fade-up" className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-12">
             <div>
               <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em] mb-4">
@@ -283,7 +283,7 @@ function CsrPage() {
 
       {/* SUCCESS STORIES / CSR PROGRAMS — Header + SubNavbar matching Screenshot */}
       <section id="csr-programs" className="py-16 sm:py-24 bg-white dark:bg-card scroll-mt-32">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <ScrollReveal animation="fade-up" className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-12">
             <div>
               <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em] mb-4">
@@ -369,7 +369,7 @@ function CsrPage() {
 
       {/* CSR GALLERY + PARTNERS & AWARDS */}
       <section className="py-16 sm:py-24 bg-surface">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10 space-y-16">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-16">
           <ScrollReveal animation="fade-up">
             <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em] mb-5">
               {t("csr.gallery.eyebrow")}
@@ -440,7 +440,7 @@ function CsrPage() {
 
       {/* ANNUAL REPORT CTA */}
       <section className="py-16 sm:py-20 bg-white dark:bg-card">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <ScrollReveal animation="zoom-in">
             <div className="rounded-[28px] sm:rounded-[36px] bg-gradient-to-br from-primary via-brand-deep to-brand-ink text-white p-8 sm:p-12 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 shadow-xl">
               <div>

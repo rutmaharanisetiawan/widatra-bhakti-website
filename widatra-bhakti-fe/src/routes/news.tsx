@@ -88,7 +88,7 @@ function NewsPage() {
       {/* Featured Article Card */}
       {feature && (
         <section className="py-16 sm:py-24 bg-white dark:bg-card">
-          <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+          <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
             <ScrollReveal animation="fade-up" className="mb-8 flex items-center justify-between">
               <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em]">
                 {t("news.featuredLabel")}
@@ -130,7 +130,7 @@ function NewsPage() {
 
       {/* Articles Grid — Header + SubNavbar matching Screenshot */}
       <section id="news-grid" className="py-16 sm:py-24 bg-surface scroll-mt-32">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <ScrollReveal animation="fade-up" className="flex flex-col md:flex-row md:justify-between md:items-end gap-6 mb-10 sm:mb-12">
             <div>
               <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em] mb-4">
@@ -213,7 +213,7 @@ function NewsPage() {
 
       {/* Newsletter */}
       <section className="py-16 sm:py-20 bg-white dark:bg-card">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <ScrollReveal animation="zoom-in">
             <div className="rounded-[28px] sm:rounded-[36px] bg-gradient-to-br from-primary via-brand-deep to-brand-ink text-white p-7 sm:p-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center shadow-xl">
               <div className="lg:col-span-7">

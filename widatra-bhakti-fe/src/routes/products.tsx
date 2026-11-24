@@ -89,7 +89,7 @@ function ProductsPage() {
       {/* Featured flagship */}
       {flagship && (
         <section className="bg-surface py-16 sm:py-24">
-          <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <ScrollReveal animation="fade-right" className="lg:col-span-6">
               <Floating3DImageStage
                 src={resolveMediaUrl(flagship.img) || ivBagCutout}
@@ -165,7 +165,7 @@ function ProductsPage() {
 
       {/* 3D Drag-to-Orbit Product Showcase (Split Layout: Orbit on Left, Detail Card on Right) */}
       <section id="product-catalog" className="py-16 sm:py-24 bg-white dark:bg-card scroll-mt-32">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <ScrollReveal animation="fade-up">
             <OrbitProductsSection
               products={products}
@@ -179,7 +179,7 @@ function ProductsPage() {
 
       {/* OEM CTA */}
       <section className="py-16 sm:py-20 bg-surface">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <ScrollReveal animation="zoom-in">
             <div className="rounded-[28px] sm:rounded-[36px] bg-gradient-to-br from-primary via-brand-deep to-brand-ink text-white p-8 sm:p-12 flex flex-col lg:flex-row items-start lg:items-center gap-6 justify-between shadow-xl">
               <h2 className="text-[28px] sm:text-[36px] lg:text-[44px] font-semibold leading-[1.12] tracking-[-0.025em] max-w-2xl text-balance">

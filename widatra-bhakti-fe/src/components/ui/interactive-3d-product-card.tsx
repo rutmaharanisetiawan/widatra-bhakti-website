@@ -137,7 +137,7 @@ export function Interactive3DProductCard({
   const productShadowY = 8 - coords.y * 6;
 
   return (
-    <div className="relative mx-auto max-w-[360px] sm:max-w-[440px] lg:max-w-none w-full select-none">
+    <div className="relative mx-auto max-w-[360px] sm:max-w-[440px] lg:max-w-[460px] xl:max-w-[490px] 2xl:max-w-none w-full select-none">
       {/* 
         OUTER CARD CONTAINER (Frame)
         STAYS STRICTLY FLAT & STILL ("frame ya gausa")
