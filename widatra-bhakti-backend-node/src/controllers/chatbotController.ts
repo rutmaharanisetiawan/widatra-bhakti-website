@@ -217,7 +217,11 @@ async function callGeminiApi(
     },
   };
 
-  const candidateModels = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash"];
+  const candidateModels = [
+    "gemini-flash-lite-latest",
+    "gemini-flash-latest",
+    "gemini-3.1-flash-lite",
+  ];
 
   for (const model of candidateModels) {
     try {

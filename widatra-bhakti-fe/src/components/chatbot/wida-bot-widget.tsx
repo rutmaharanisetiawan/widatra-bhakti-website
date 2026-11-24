@@ -8,6 +8,8 @@ import {
   Bot,
   ShieldAlert,
   ChevronDown,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { API_BASE_URL } from "@/lib/api-client";
@@ -122,6 +124,12 @@ function NaturalChatText({ text }: { text: string }) {
  */
 export function WidaBotWidget() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDocked, setIsDocked] = useState<boolean>(() => {
+    if (typeof window !== "undefined") {
+      return localStorage.getItem("wida-bot-docked") === "true";
+    }
+    return false;
+  });
   const [isPeekingHovered, setIsPeekingHovered] = useState(false);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -236,25 +244,54 @@ export function WidaBotWidget() {
   return (
     <>
       {/* =========================================================
+          DOCKED SIDE TAB (MENGINTIP DI TEPI KANAN LAYAR)
+          Tampil saat pengguna memilih 'sembunyikan ke samping'
+      ========================================================= */}
+      <div
+        className={cn(
+          "wida-bot-launcher fixed bottom-24 sm:bottom-28 right-0 z-[999] select-none transition-all duration-300 ease-out",
+          isOpen || !isDocked
+            ? "pointer-events-none opacity-0 translate-x-full"
+            : "pointer-events-auto opacity-100 translate-x-0"
+        )}
+      >
+        <button
+          type="button"
+          onClick={() => {
+            setIsDocked(false);
+            localStorage.setItem("wida-bot-docked", "false");
+          }}
+          className="group flex items-center gap-2 pl-3.5 pr-2.5 py-2 rounded-l-full bg-gradient-to-l from-[#0E3192] via-[#0284c7] to-[#0369a1] text-white shadow-[0_8px_24px_-4px_rgba(2,132,199,0.5)] border-y border-l border-white/20 hover:pl-4 transition-all duration-200 cursor-pointer"
+          aria-label="Tampilkan Chatbot Coby"
+          title="Tampilkan Asisten Coby"
+        >
+          <div className="relative w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/20 p-0.5 flex-shrink-0 flex items-center justify-center group-hover:scale-105 transition-transform">
+            <img src={mascotAvatar} alt="Coby Avatar" className="w-full h-full object-contain" />
+            <span className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-emerald-400 border-2 border-[#0E3192]" />
+          </div>
+          <span className="text-[12px] sm:text-[13px] font-bold tracking-tight whitespace-nowrap hidden sm:inline">
+            Tanya Coby
+          </span>
+          <ChevronLeft className="w-4 h-4 text-white/80 group-hover:text-white transition-colors" />
+        </button>
+      </div>
+
+      {/* =========================================================
           WIDGET TRIGGER: PEEKING MASCOT (MENGINTIP DI SUDUT KANAN BAWAH)
           Position: Fixed bottom: 24px; right: 24px; z-index: 999
       ========================================================= */}
       <div
         className={cn(
-          "wida-bot-launcher fixed bottom-5 sm:bottom-6 right-5 sm:right-6 z-[999] select-none",
-          isOpen ? "pointer-events-none opacity-0 scale-90" : "pointer-events-auto opacity-100 scale-100",
-          "transition-all duration-300 ease-out"
+          "wida-bot-launcher fixed bottom-5 sm:bottom-6 right-5 sm:right-6 z-[999] select-none transition-all duration-300 ease-out",
+          isOpen || isDocked
+            ? "pointer-events-none opacity-0 translate-y-6 scale-90"
+            : "pointer-events-auto opacity-100 translate-y-0 scale-100"
         )}
       >
         <div
           onMouseEnter={() => setIsPeekingHovered(true)}
           onMouseLeave={() => setIsPeekingHovered(false)}
-          onClick={() => setIsOpen(true)}
-          className="relative cursor-pointer group flex items-end justify-end"
-          role="button"
-          tabIndex={0}
-          aria-label="Buka Chatbot Asisten Coby"
-          onKeyDown={(e) => e.key === "Enter" && setIsOpen(true)}
+          className="relative group flex items-end justify-end"
         >
           {/* 
             LAYER 1 (z-index: 10): MASCOT BOTOL INFUS WIDATRA
@@ -262,8 +299,9 @@ export function WidaBotWidget() {
             mata ceria, dan tangan melambai yang tampak mengintip keluar.
           */}
           <div
+            onClick={() => setIsOpen(true)}
             className={cn(
-              "absolute -top-[76px] sm:-top-[82px] right-12 sm:right-14 z-10 w-[90px] sm:w-[102px] pointer-events-none transition-transform duration-300 ease-out",
+              "absolute -top-[76px] sm:-top-[82px] right-12 sm:right-14 z-10 w-[90px] sm:w-[102px] cursor-pointer transition-transform duration-300 ease-out",
               isPeekingHovered
                 ? "-translate-y-4 rotate-2 scale-105"
                 : "animate-wida-float"
@@ -279,22 +317,52 @@ export function WidaBotWidget() {
           </div>
 
           {/* 
-            LAYER 2 (z-index: 20): KAPSUL TEKS "Butuh bantuan ?" + TOMBOL LINGKARAN BIRU MEDIS (#0284c7)
+            LAYER 2 (z-index: 20): KAPSUL TEKS "Butuh bantuan ?" + TOMBOL TUTUP + TOMBOL CHAT
           */}
           <div className="relative z-20 flex items-center gap-2">
             {/* Kapsul Teks Interaktif */}
-            <div className="flex items-center gap-2 pl-4 pr-3.5 py-2.5 rounded-full bg-white dark:bg-slate-900 border-2 border-sky-200/80 dark:border-sky-700/80 shadow-[0_12px_32px_-6px_rgba(2,132,199,0.35)] dark:shadow-[0_12px_32px_-6px_rgba(0,0,0,0.7)] group-hover:border-[#0284c7] transition-all duration-300">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
-              </span>
-              <span className="text-[12.5px] sm:text-[13px] font-bold text-slate-800 dark:text-slate-100 group-hover:text-[#0284c7] transition-colors whitespace-nowrap">
-                Butuh bantuan ?
-              </span>
+            <div className="flex items-center gap-2 pl-4 pr-2 py-2.5 rounded-full bg-white dark:bg-slate-900 border-2 border-sky-200/80 dark:border-sky-700/80 shadow-[0_12px_32px_-6px_rgba(2,132,199,0.35)] dark:shadow-[0_12px_32px_-6px_rgba(0,0,0,0.7)] group-hover:border-[#0284c7] transition-all duration-300">
+              <div
+                onClick={() => setIsOpen(true)}
+                className="flex items-center gap-2 cursor-pointer"
+                role="button"
+                tabIndex={0}
+                aria-label="Buka Chatbot Asisten Coby"
+                onKeyDown={(e) => e.key === "Enter" && setIsOpen(true)}
+              >
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+                </span>
+                <span className="text-[12.5px] sm:text-[13px] font-bold text-slate-800 dark:text-slate-100 group-hover:text-[#0284c7] transition-colors whitespace-nowrap">
+                  Butuh bantuan ?
+                </span>
+              </div>
+
+              {/* Tombol Minimize / Sembunyikan ke Samping */}
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setIsDocked(true);
+                  localStorage.setItem("wida-bot-docked", "true");
+                }}
+                className="w-6 h-6 rounded-full flex items-center justify-center text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors ml-0.5 cursor-pointer"
+                title="Sembunyikan Coby ke samping layar"
+                aria-label="Sembunyikan Coby ke samping layar"
+              >
+                <ChevronRight className="w-3.5 h-3.5" />
+              </button>
             </div>
 
             {/* Tombol Aksi Lingkaran Biru Medis (#0284c7) dengan Ikon Chat Balon */}
-            <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-gradient-to-tr from-[#0284c7] to-[#38bdf8] text-white flex items-center justify-center shadow-[0_10px_28px_rgba(2,132,199,0.48)] group-hover:scale-108 group-hover:shadow-[0_14px_34px_rgba(2,132,199,0.65)] active:scale-95 transition-all duration-300">
+            <div
+              onClick={() => setIsOpen(true)}
+              role="button"
+              tabIndex={0}
+              aria-label="Buka Chatbot Asisten Coby"
+              className="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-gradient-to-tr from-[#0284c7] to-[#38bdf8] text-white flex items-center justify-center shadow-[0_10px_28px_rgba(2,132,199,0.48)] group-hover:scale-108 group-hover:shadow-[0_14px_34px_rgba(2,132,199,0.65)] active:scale-95 transition-all duration-300 cursor-pointer"
+            >
               <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7 stroke-[2.2] animate-pulse" />
             </div>
           </div>
