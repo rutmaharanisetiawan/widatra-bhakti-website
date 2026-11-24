@@ -73,7 +73,7 @@ export function SiteFooter() {
                   <div className="flex items-start gap-2.5">
                     <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                     <span className="leading-snug">
-                      Jl. Raya Pandaan - Bangil KM 1.5, Pandaan, Pasuruan 67156, Jawa Timur, Indonesia
+                      Jl. Stadion No. 1, Pandaan, Pasuruan 67156, Jawa Timur, Indonesia
                     </span>
                   </div>
                 </div>
