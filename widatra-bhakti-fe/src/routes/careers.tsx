@@ -86,28 +86,30 @@ function CareersPage() {
               {t("careers.branding.description")}
             </p>
           </ScrollReveal>
-          <div className="lg:col-span-7 grid grid-cols-2 gap-3.5 sm:gap-5">
+          <div className="lg:col-span-7 grid grid-cols-2 gap-3.5 sm:gap-5 items-stretch">
             {BRANDING_ITEMS.map((i) => {
               const Icon = BRANDING_ICONS[i];
               return (
-                <ScrollReveal key={i} animation="fade-up" delay={i * 80}>
+                <ScrollReveal key={i} animation="fade-up" delay={i * 80} className="h-full">
                   <div
-                    className="group relative rounded-[20px] sm:rounded-[22px] bg-surface border-2 border-black/[0.06] dark:border-white/[0.08] p-5 sm:p-6 hover:bg-white dark:hover:bg-card hover:border-primary/40 hover:shadow-[0_18px_36px_-12px_rgba(9,42,125,0.18)] hover:-translate-y-1 transition-all duration-300"
+                    className="group relative rounded-[20px] sm:rounded-[22px] bg-surface border-2 border-black/[0.06] dark:border-white/[0.08] p-5 sm:p-6 hover:bg-white dark:hover:bg-card hover:border-primary/40 hover:shadow-[0_18px_36px_-12px_rgba(9,42,125,0.18)] hover:-translate-y-1 transition-all duration-300 h-full flex flex-col justify-between"
                   >
                     <span
                       className={`absolute -left-[2px] top-5 h-7 w-[4px] rounded-r-full transition-all group-hover:h-11 ${
                         i % 2 === 0 ? "bg-primary" : "bg-accent"
                       }`}
                     />
-                    <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-brand-tint dark:bg-white/[0.08] text-primary flex items-center justify-center mb-3.5 group-hover:bg-primary group-hover:text-white transition-colors">
-                      <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
+                    <div className="flex flex-col flex-1">
+                      <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-brand-tint dark:bg-white/[0.08] text-primary flex items-center justify-center mb-3.5 group-hover:bg-primary group-hover:text-white transition-colors shrink-0">
+                        <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
+                      </div>
+                      <h4 className="text-sm sm:text-base font-semibold mb-1.5 group-hover:text-primary transition-colors min-h-[2.5rem] line-clamp-2">
+                        {t(`careers.branding.items.${i}.title`)}
+                      </h4>
+                      <p className="text-xs text-corporate-gray leading-relaxed line-clamp-3">
+                        {t(`careers.branding.items.${i}.desc`)}
+                      </p>
                     </div>
-                    <h4 className="text-sm sm:text-base font-semibold mb-1.5 group-hover:text-primary transition-colors">
-                      {t(`careers.branding.items.${i}.title`)}
-                    </h4>
-                    <p className="text-xs text-corporate-gray leading-relaxed">
-                      {t(`careers.branding.items.${i}.desc`)}
-                    </p>
                   </div>
                 </ScrollReveal>
               );
@@ -172,17 +174,17 @@ function CareersPage() {
               </span>
             </h2>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 items-stretch">
             {TESTIMONIAL_ITEMS.map((i) => (
-              <ScrollReveal key={i} animation="fade-up" delay={i * 90}>
+              <ScrollReveal key={i} animation="fade-up" delay={i * 90} className="h-full">
                 <article
-                  className="group relative rounded-[24px] bg-surface border-2 border-black/[0.06] dark:border-white/[0.08] p-6 sm:p-8 flex flex-col justify-between hover:border-primary/40 hover:-translate-y-1 transition-all duration-300"
+                  className="group relative rounded-[24px] bg-surface border-2 border-black/[0.06] dark:border-white/[0.08] p-6 sm:p-8 flex flex-col justify-between hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 h-full"
                 >
                   <span className="absolute -left-[2px] top-6 h-8 w-[4px] rounded-r-full bg-primary group-hover:h-12 transition-all" />
-                  <p className="text-base sm:text-lg font-serif-italic text-primary leading-relaxed mb-6">
+                  <p className="text-base sm:text-lg font-serif-italic text-primary leading-relaxed mb-6 min-h-[4.5rem] line-clamp-4">
                     "{t(`careers.testimonials.items.${i}.quote`)}"
                   </p>
-                  <div>
+                  <div className="pt-4 border-t border-black/[0.05] dark:border-white/[0.06]">
                     <div className="text-sm font-semibold">
                       {t(`careers.testimonials.items.${i}.name`)}
                     </div>
@@ -208,24 +210,26 @@ function CareersPage() {
               {t("careers.benefits.title")}
             </h2>
           </ScrollReveal>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-5 items-stretch">
             {BENEFIT_ITEMS.map((i) => (
-              <ScrollReveal key={i} animation="fade-up" delay={i * 70}>
+              <ScrollReveal key={i} animation="fade-up" delay={i * 70} className="h-full">
                 <div
-                  className="group relative rounded-[20px] bg-white dark:bg-card border-2 border-black/[0.06] dark:border-white/[0.08] p-5 sm:p-6 hover:border-primary/40 hover:shadow-[0_18px_36px_-12px_rgba(9,42,125,0.16)] hover:-translate-y-1 transition-all duration-300"
+                  className="group relative rounded-[20px] bg-white dark:bg-card border-2 border-black/[0.06] dark:border-white/[0.08] p-5 sm:p-6 hover:border-primary/40 hover:shadow-[0_18px_36px_-12px_rgba(9,42,125,0.16)] hover:-translate-y-1 transition-all duration-300 h-full flex flex-col justify-between"
                 >
                   <span
                     className={`absolute -left-[2px] top-5 h-7 w-[4px] rounded-r-full transition-all group-hover:h-11 ${
                       i % 2 === 0 ? "bg-primary" : "bg-accent"
                     }`}
                   />
-                  <div className="text-xs font-mono font-bold text-primary mb-2.5">0{i + 1}</div>
-                  <h4 className="text-sm sm:text-base font-semibold mb-1.5 group-hover:text-primary transition-colors">
-                    {t(`careers.benefits.items.${i}.title`)}
-                  </h4>
-                  <p className="text-xs text-corporate-gray leading-relaxed">
-                    {t(`careers.benefits.items.${i}.desc`)}
-                  </p>
+                  <div className="flex flex-col flex-1">
+                    <div className="text-xs font-mono font-bold text-primary mb-2.5">0{i + 1}</div>
+                    <h4 className="text-sm sm:text-base font-semibold mb-1.5 group-hover:text-primary transition-colors min-h-[2.5rem] line-clamp-2">
+                      {t(`careers.benefits.items.${i}.title`)}
+                    </h4>
+                    <p className="text-xs text-corporate-gray leading-relaxed line-clamp-3">
+                      {t(`careers.benefits.items.${i}.desc`)}
+                    </p>
+                  </div>
                 </div>
               </ScrollReveal>
             ))}
@@ -317,19 +321,21 @@ function CareersPage() {
               {t("careers.departmentsSection.title")}
             </h2>
           </ScrollReveal>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-5 items-stretch">
             {DEPT_ITEMS.map((i) => (
-              <ScrollReveal key={i} animation="fade-up" delay={i * 70}>
+              <ScrollReveal key={i} animation="fade-up" delay={i * 70} className="h-full">
                 <div
-                  className="group relative rounded-[20px] bg-white dark:bg-card border-2 border-black/[0.06] dark:border-white/[0.08] p-5 sm:p-6 hover:border-primary/40 hover:-translate-y-1 transition-all duration-300"
+                  className="group relative rounded-[20px] bg-white dark:bg-card border-2 border-black/[0.06] dark:border-white/[0.08] p-5 sm:p-6 hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 h-full flex flex-col justify-between"
                 >
                   <span className="absolute -left-[2px] top-5 h-7 w-[4px] rounded-r-full bg-primary group-hover:h-11 transition-all" />
-                  <h4 className="text-sm sm:text-base font-semibold mb-1.5 group-hover:text-primary transition-colors">
-                    {t(`careers.departmentsSection.items.${i}.title`)}
-                  </h4>
-                  <p className="text-xs text-corporate-gray leading-relaxed">
-                    {t(`careers.departmentsSection.items.${i}.desc`)}
-                  </p>
+                  <div className="flex flex-col flex-1">
+                    <h4 className="text-sm sm:text-base font-semibold mb-1.5 group-hover:text-primary transition-colors min-h-[2.5rem] line-clamp-2">
+                      {t(`careers.departmentsSection.items.${i}.title`)}
+                    </h4>
+                    <p className="text-xs text-corporate-gray leading-relaxed line-clamp-3">
+                      {t(`careers.departmentsSection.items.${i}.desc`)}
+                    </p>
+                  </div>
                 </div>
               </ScrollReveal>
             ))}
@@ -362,11 +368,11 @@ function CareersPage() {
             />
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 sm:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 sm:gap-6 items-stretch">
             {filtered.map((j, idx) => (
-              <ScrollReveal key={j.slug} animation="fade-up" delay={idx * 80}>
+              <ScrollReveal key={j.slug} animation="fade-up" delay={idx * 80} className="h-full">
                 <article
-                  className="group relative flex flex-col bg-white dark:bg-card border-2 border-black/[0.06] dark:border-white/[0.08] rounded-[24px] p-5 sm:p-6 shadow-[0_6px_24px_-12px_rgba(9,42,125,0.08)] hover:shadow-[0_22px_44px_-14px_rgba(9,42,125,0.22)] hover:border-primary/40 hover:-translate-y-1.5 transition-all duration-300"
+                  className="group relative flex flex-col justify-between h-full bg-white dark:bg-card border-2 border-black/[0.06] dark:border-white/[0.08] rounded-[24px] p-5 sm:p-6 shadow-[0_6px_24px_-12px_rgba(9,42,125,0.08)] hover:shadow-[0_22px_44px_-14px_rgba(9,42,125,0.22)] hover:border-primary/40 hover:-translate-y-1.5 transition-all duration-300"
                 >
                   <span
                     className={`absolute -left-[2px] top-6 h-8 w-[4px] rounded-r-full transition-all duration-300 group-hover:h-14 ${
@@ -374,22 +380,22 @@ function CareersPage() {
                     }`}
                   />
 
-                  <div className="relative aspect-[16/9] rounded-[18px] overflow-hidden mb-5">
-                    <MediaImage
-                      src={j.coverImage}
-                      alt={j.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      loading="lazy"
-                    />
-                    {j.featured && (
-                      <span className="absolute top-3 right-3 inline-flex items-center px-3 py-1 rounded-full bg-primary text-white text-[10px] font-bold uppercase tracking-wider shadow">
-                        {t("careers.openings.featuredBadge")}
-                      </span>
-                    )}
-                  </div>
-
                   <div className="flex flex-col flex-1">
-                    <div className="flex items-center justify-between mb-3">
+                    <div className="relative aspect-[16/9] rounded-[18px] overflow-hidden mb-5 bg-brand-soft shrink-0">
+                      <MediaImage
+                        src={j.coverImage}
+                        alt={j.title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        loading="lazy"
+                      />
+                      {j.featured && (
+                        <span className="absolute top-3 right-3 inline-flex items-center px-3 py-1 rounded-full bg-primary text-white text-[10px] font-bold uppercase tracking-wider shadow">
+                          {t("careers.openings.featuredBadge")}
+                        </span>
+                      )}
+                    </div>
+
+                    <div className="flex items-center justify-between mb-3 h-6">
                       <span className="inline-flex items-center px-3 py-1 rounded-full bg-brand-tint dark:bg-white/[0.08] text-primary text-[10px] font-bold uppercase tracking-wider">
                         {j.department}
                       </span>
@@ -398,10 +404,10 @@ function CareersPage() {
                       </span>
                     </div>
 
-                    <h3 className="text-lg sm:text-xl font-semibold tracking-tight text-corporate-black dark:text-foreground group-hover:text-primary transition-colors leading-snug mb-2">
+                    <h3 className="text-lg sm:text-xl font-semibold tracking-tight text-corporate-black dark:text-foreground group-hover:text-primary transition-colors leading-snug mb-2 line-clamp-2 min-h-[3.25rem] sm:min-h-[3.5rem]">
                       {j.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-corporate-gray leading-relaxed line-clamp-3 mb-5">
+                    <p className="text-xs sm:text-sm text-corporate-gray leading-relaxed line-clamp-3 min-h-[3.6rem] sm:min-h-[3.9rem] mb-5">
                       {j.summary}
                     </p>
 
@@ -410,42 +416,42 @@ function CareersPage() {
                         <dt className="text-[9px] font-bold uppercase tracking-wider text-corporate-gray/70 mb-0.5">
                           {t("careers.openings.locationLabel")}
                         </dt>
-                        <dd className="font-semibold">{j.location}</dd>
+                        <dd className="font-semibold truncate">{j.location}</dd>
                       </div>
                       <div>
                         <dt className="text-[9px] font-bold uppercase tracking-wider text-corporate-gray/70 mb-0.5">
                           {t("careers.openings.typeLabel")}
                         </dt>
-                        <dd className="font-semibold">{j.employmentType}</dd>
+                        <dd className="font-semibold truncate">{j.employmentType}</dd>
                       </div>
                       <div>
                         <dt className="text-[9px] font-bold uppercase tracking-wider text-corporate-gray/70 mb-0.5">
                           {t("careers.openings.workModeLabel")}
                         </dt>
-                        <dd className="font-semibold">{j.workMode}</dd>
+                        <dd className="font-semibold truncate">{j.workMode}</dd>
                       </div>
                       <div>
                         <dt className="text-[9px] font-bold uppercase tracking-wider text-corporate-gray/70 mb-0.5">
                           {t("careers.openings.deadlineLabel")}
                         </dt>
-                        <dd className="font-mono text-[11px]">{formatJobDate(j.deadline)}</dd>
+                        <dd className="font-mono text-[11px] truncate">{formatJobDate(j.deadline)}</dd>
                       </div>
                     </dl>
+                  </div>
 
-                    <div className="mt-auto flex gap-2.5">
-                      <button
-                        onClick={() => openJob(j, "detail")}
-                        className="flex-1 inline-flex items-center justify-center h-11 rounded-full border-2 border-primary/20 text-primary text-xs font-bold hover:bg-brand-tint hover:border-primary transition-all cursor-pointer"
-                      >
-                        {t("careers.openings.viewDetails")}
-                      </button>
-                      <button
-                        onClick={() => openJob(j, "apply")}
-                        className="flex-1 inline-flex items-center justify-center h-11 rounded-full bg-gradient-to-r from-primary to-brand-deep text-white text-xs font-bold hover:opacity-95 shadow-[0_6px_16px_-4px_rgba(14,49,146,0.5)] transition-all cursor-pointer"
-                      >
-                        {t("careers.openings.applyNow")}
-                      </button>
-                    </div>
+                  <div className="mt-auto flex gap-2.5 pt-2">
+                    <button
+                      onClick={() => openJob(j, "detail")}
+                      className="flex-1 inline-flex items-center justify-center h-11 rounded-full border-2 border-primary/20 text-primary text-xs font-bold hover:bg-brand-tint hover:border-primary transition-all cursor-pointer"
+                    >
+                      {t("careers.openings.viewDetails")}
+                    </button>
+                    <button
+                      onClick={() => openJob(j, "apply")}
+                      className="flex-1 inline-flex items-center justify-center h-11 rounded-full bg-gradient-to-r from-primary to-brand-deep text-white text-xs font-bold hover:opacity-95 shadow-[0_6px_16px_-4px_rgba(14,49,146,0.5)] transition-all cursor-pointer"
+                    >
+                      {t("careers.openings.applyNow")}
+                    </button>
                   </div>
                 </article>
               </ScrollReveal>

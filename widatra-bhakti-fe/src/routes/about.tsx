@@ -299,13 +299,13 @@ function AboutPage() {
             <div className="text-xs font-bold uppercase tracking-[0.2em] text-corporate-gray mb-4">
               {isId ? "Dewan Komisaris & Dewan Direksi" : "Board of Commissioners & Directors"}
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5 items-stretch">
               {ALL_MANAGEMENT_LEADERS.map((leader, idx) => (
-                <ScrollReveal key={leader.id} animation="fade-up" delay={idx * 70}>
+                <ScrollReveal key={leader.id} animation="fade-up" delay={idx * 70} className="h-full">
                   <article
-                    className="group bg-white dark:bg-card border-2 border-black/[0.06] dark:border-white/[0.08] rounded-[20px] overflow-hidden shadow-sm hover:shadow-[0_16px_36px_-12px_rgba(9,42,125,0.18)] hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 flex flex-col h-full"
+                    className="group bg-white dark:bg-card border-2 border-black/[0.06] dark:border-white/[0.08] rounded-[20px] overflow-hidden shadow-sm hover:shadow-[0_16px_36px_-12px_rgba(9,42,125,0.18)] hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full"
                   >
-                    <div className="overflow-hidden aspect-[4/4.5] relative bg-slate-100 dark:bg-slate-800">
+                    <div className="overflow-hidden aspect-[4/4.5] relative bg-slate-100 dark:bg-slate-800 shrink-0">
                       <img
                         src={leader.photo}
                         alt={leader.name}
@@ -319,10 +319,10 @@ function AboutPage() {
                     </div>
                     <div className="p-4 flex-1 flex flex-col justify-between">
                       <div>
-                        <span className="block text-[10px] font-bold uppercase tracking-wider text-primary mb-1">
+                        <span className="block text-[10px] font-bold uppercase tracking-wider text-primary mb-1 min-h-[1.5rem] line-clamp-2">
                           {isId ? leader.role : leader.roleEn}
                         </span>
-                        <h4 className="text-sm font-semibold text-corporate-black dark:text-foreground group-hover:text-primary transition-colors leading-snug">
+                        <h4 className="text-sm font-semibold text-corporate-black dark:text-foreground group-hover:text-primary transition-colors leading-snug line-clamp-2 min-h-[2.5rem]">
                           {leader.name}
                         </h4>
                       </div>
@@ -432,14 +432,14 @@ function AboutPage() {
               />
             </div>
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-5">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-5 items-stretch">
               {VALUE_ITEMS.map((i) => {
                 const isSelected = activeValueIdx === i;
                 return (
-                  <ScrollReveal key={i} animation="fade-up" delay={i * 80}>
+                  <ScrollReveal key={i} animation="fade-up" delay={i * 80} className="h-full">
                     <div
                       onClick={() => setActiveValueIdx(i)}
-                      className={`cursor-pointer group relative rounded-[22px] p-5 sm:p-7 transition-all duration-300 border-2 ${
+                      className={`cursor-pointer group relative rounded-[22px] p-5 sm:p-7 transition-all duration-300 border-2 h-full flex flex-col justify-between ${
                         isSelected
                           ? "bg-gradient-to-br from-primary to-brand-deep text-white border-primary shadow-[0_20px_44px_-14px_rgba(14,49,146,0.5)] -translate-y-1.5"
                           : "bg-surface dark:bg-card border-black/[0.06] dark:border-white/[0.08] hover:border-primary/40 hover:-translate-y-1"
@@ -450,27 +450,29 @@ function AboutPage() {
                           isSelected ? "bg-accent h-12" : "bg-primary group-hover:h-12"
                         }`}
                       />
-                      <div
-                        className={`font-mono text-xs font-bold mb-4 ${
-                          isSelected ? "text-white/80" : "text-primary"
-                        }`}
-                      >
-                        {t(`about.values.items.${i}.index`)}
+                      <div className="flex flex-col flex-1">
+                        <div
+                          className={`font-mono text-xs font-bold mb-4 ${
+                            isSelected ? "text-white/80" : "text-primary"
+                          }`}
+                        >
+                          {t(`about.values.items.${i}.index`)}
+                        </div>
+                        <h4
+                          className={`text-base sm:text-xl font-semibold mb-2 min-h-[2.5rem] line-clamp-2 ${
+                            isSelected ? "text-white" : ""
+                          }`}
+                        >
+                          {t(`about.values.items.${i}.title`)}
+                        </h4>
+                        <p
+                          className={`text-xs sm:text-sm leading-relaxed line-clamp-4 ${
+                            isSelected ? "text-white/85" : "text-corporate-gray"
+                          }`}
+                        >
+                          {t(`about.values.items.${i}.desc`)}
+                        </p>
                       </div>
-                      <h4
-                        className={`text-base sm:text-xl font-semibold mb-2 ${
-                          isSelected ? "text-white" : ""
-                        }`}
-                      >
-                        {t(`about.values.items.${i}.title`)}
-                      </h4>
-                      <p
-                        className={`text-xs sm:text-sm leading-relaxed ${
-                          isSelected ? "text-white/85" : "text-corporate-gray"
-                        }`}
-                      >
-                        {t(`about.values.items.${i}.desc`)}
-                      </p>
                     </div>
                   </ScrollReveal>
                 );

@@ -94,56 +94,54 @@
 
 .dark {
   /* ---------------------------------------------------------------
-     Refined dark palette — premium pharmaceutical corporate identity.
-     Desaturated slate-navy hierarchy (never pure black), soft
-     off-white text, and a slightly brightened Widatra blue so the
-     brand accent still pops on dark surfaces.
+     High-contrast dark palette — premium pharmaceutical corporate identity.
+     Clear 4-tier surface hierarchy (base → canvas → elevated card → hover),
+     crisp off-white typography, visible borders, and vibrant luminous
+     blue accents that meet WCAG AA/AAA contrast on dark surfaces.
   --------------------------------------------------------------- */
 
-  /* Background hierarchy: base → section surface → elevated surface */
-  --background: #0a1220;   /* page base, deep slate-navy */
-  --surface: #101b30;      /* alternate section background */
-  --surface-2: #16233c;    /* elevated tint / hover surface */
+  /* Background hierarchy: base → section surface → elevated card → hover surface */
+  --background: #070d19;   /* page base, deep obsidian-navy */
+  --surface: #0b1426;      /* dashboard & alternate section canvas */
+  --surface-2: #1c2e4f;    /* elevated tint / hover surface / table header */
 
-  --foreground: #e9edf5;   /* soft off-white body text, easy on the eyes */
+  --foreground: #f8fafc;   /* crisp high-contrast off-white text */
 
-  --card: #121d34;         /* card / panel background */
-  --card-foreground: #e9edf5;
-  --popover: #142239;      /* modals, dropdowns, nav-on-scroll */
-  --popover-foreground: #e9edf5;
+  --card: #13213a;         /* distinctly elevated card / panel surface */
+  --card-foreground: #f8fafc;
+  --popover: #162642;      /* modals, dropdowns, floating bars */
+  --popover-foreground: #f8fafc;
 
-  --border: rgba(233,237,245,0.09);
-  --input: rgba(233,237,245,0.14);
-  --hairline: rgba(233,237,245,0.08);
+  --border: rgba(148, 163, 184, 0.20);
+  --input: rgba(148, 163, 184, 0.26);
+  --hairline: rgba(148, 163, 184, 0.18);
 
-  --muted: #16233c;
-  --muted-foreground: #9fb0cc; /* comfortable secondary text */
+  --muted: #182946;
+  --muted-foreground: #b0c0d8; /* high-legibility secondary text */
 
-  /* Interactive: same Widatra blue family, lifted slightly for
-     legibility against dark navy surfaces. */
-  --primary: #3f6bf0;
+  /* Interactive brand blue lifted for strong contrast on dark navy cards */
+  --primary: #4f83ff;
   --primary-foreground: #ffffff;
-  --brand-deep: #2c4fcb;   /* hover/active shade of primary in dark mode */
-  --ring: #3f6bf0;
+  --brand: #3b72f6;
+  --brand-deep: #2563eb;
+  --ring: #60a5fa;
 
   --secondary: var(--surface-2);
-  --secondary-foreground: #e9edf5;
+  --secondary-foreground: #f8fafc;
 
-  --destructive: #ff6161;  /* softened, less saturated red for dark bg */
+  --destructive: #ff6b6b;
   --destructive-foreground: #ffffff;
 
-  /* Legacy brand tokens re-mapped so existing markup (bg-brand-soft,
-     bg-brand-tint, text-corporate-gray, popover) goes dark automatically
-     without needing every usage site to be touched individually. */
-  --brand-soft: #101b30;
-  --brand-tint: #1b2d54;
-  --corporate-gray: #9fb0cc;
+  /* Re-mapped legacy brand tokens so all components get proper dark contrast */
+  --corporate-black: #0a0a0a;
+  --corporate-gray: #a8b9d4;
+  --brand-soft: #0b1426;
+  --brand-tint: rgba(79, 131, 255, 0.18);
 
-  /* Softer, black-based elevation shadows instead of navy-tinted ones,
-     which read as a subtle glow rather than a light-mode drop shadow. */
-  --shadow-card: 0 4px 20px rgba(0,0,0,0.35);
-  --shadow-float: 0 12px 32px rgba(0,0,0,0.45);
-  --shadow-elegant: 0 30px 80px -30px rgba(0,0,0,0.65);
+  /* Crisp dark elevation shadows with subtle top-border highlight */
+  --shadow-card: 0 8px 28px -4px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.04);
+  --shadow-float: 0 16px 40px -6px rgba(0, 0, 0, 0.65);
+  --shadow-elegant: 0 30px 80px -30px rgba(0, 0, 0, 0.80);
 }
 
 @layer base {

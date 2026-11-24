@@ -363,10 +363,12 @@ export function AdminShell({ title, subtitle, actions, children }: {
 
 export function StatCard({ label, value, delta }: { label: string; value: string; delta?: string }) {
   return (
-    <div className="card-elevated p-5">
-      <div className="text-[11px] uppercase tracking-[0.2em] text-corporate-gray">{label}</div>
-      <div className="mt-2 text-3xl font-semibold font-display text-corporate-black dark:text-foreground">{value}</div>
-      {delta && <div className="mt-1 text-[12px] text-emerald-600 dark:text-emerald-400">{delta}</div>}
+    <div className="card-elevated p-5 h-full flex flex-col justify-between min-h-[110px]">
+      <div className="text-[11px] uppercase tracking-[0.2em] text-corporate-gray font-semibold">{label}</div>
+      <div>
+        <div className="mt-2 text-3xl font-semibold font-display text-corporate-black dark:text-foreground">{value}</div>
+        {delta && <div className="mt-1 text-[12px] text-emerald-600 dark:text-emerald-400 font-medium">{delta}</div>}
+      </div>
     </div>
   );
 }

@@ -80,10 +80,10 @@ function StatCard({
 }) {
   const { ref, value: animated } = useCountUp(value ?? 0);
   return (
-    <ScrollReveal animation="fade-up" delay={index * 110} duration={650}>
+    <ScrollReveal animation="fade-up" delay={index * 110} duration={650} className="h-full">
       <div
         ref={ref}
-        className="group relative rounded-[20px] sm:rounded-[24px] bg-white dark:bg-card border border-black/[0.06] dark:border-white/[0.08] p-5 sm:p-7 lg:p-8 shadow-[0_8px_30px_-12px_rgba(9,42,125,0.08)] hover:shadow-[0_18px_40px_-12px_rgba(9,42,125,0.18)] hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+        className="group relative rounded-[20px] sm:rounded-[24px] bg-white dark:bg-card border border-black/[0.06] dark:border-white/[0.08] p-5 sm:p-7 lg:p-8 shadow-[0_8px_30px_-12px_rgba(9,42,125,0.08)] hover:shadow-[0_18px_40px_-12px_rgba(9,42,125,0.18)] hover:-translate-y-1 transition-all duration-300 overflow-hidden h-full flex flex-col justify-between"
       >
         {/* Left accent bar */}
         <span
@@ -496,11 +496,11 @@ function HomePage() {
           </ScrollReveal>
 
           {/* 2 Columns on Mobile (390px) & Tablet, 3 Columns on Desktop */}
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5 lg:gap-7">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5 lg:gap-7 items-stretch">
             {whyChooseItems.map((i) => {
               const Icon = WHY_ICONS[i];
               return (
-                <ScrollReveal key={i} animation="fade-up" delay={i * 70}>
+                <ScrollReveal key={i} animation="fade-up" delay={i * 70} className="h-full">
                   <div
                     className="group relative rounded-[18px] sm:rounded-[22px] border-2 border-black/[0.06] dark:border-white/[0.08] bg-white dark:bg-card p-4 sm:p-6 lg:p-7 flex flex-col justify-between shadow-[0_6px_24px_-12px_rgba(9,42,125,0.08)] hover:shadow-[0_20px_40px_-14px_rgba(9,42,125,0.18)] hover:border-primary/35 hover:-translate-y-1 transition-all duration-300 h-full"
                   >
@@ -521,10 +521,10 @@ function HomePage() {
                         </span>
                       </div>
 
-                      <h3 className="text-[14px] sm:text-lg font-semibold leading-snug mb-1.5 sm:mb-2 group-hover:text-primary transition-colors">
+                      <h3 className="text-[14px] sm:text-lg font-semibold leading-snug mb-1.5 sm:mb-2 group-hover:text-primary transition-colors line-clamp-2 min-h-[2.6rem] sm:min-h-[3.2rem]">
                         {t(`home.whyChoose.items.${i}.title`)}
                       </h3>
-                      <p className="text-[11.5px] sm:text-sm text-corporate-gray leading-relaxed line-clamp-3 sm:line-clamp-none">
+                      <p className="text-[11.5px] sm:text-sm text-corporate-gray leading-relaxed line-clamp-3 min-h-[3rem] sm:min-h-[3.6rem]">
                         {t(`home.whyChoose.items.${i}.desc`)}
                       </p>
                     </div>
@@ -724,11 +724,11 @@ function HomePage() {
           </ScrollReveal>
 
           {/* Interactive Product Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 items-stretch">
             {productItems.map((p) => {
               const isHighlighted = activeProductTab === p.index;
               return (
-                <ScrollReveal key={p.index} animation="fade-up" delay={p.index * 110}>
+                <ScrollReveal key={p.index} animation="fade-up" delay={p.index * 110} className="h-full">
                   <div
                     onClick={() => setActiveProductTab(p.index)}
                     className={`group cursor-pointer rounded-[24px] sm:rounded-[28px] bg-white dark:bg-card p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 border-2 h-full ${
@@ -737,15 +737,15 @@ function HomePage() {
                         : "border-black/[0.06] dark:border-white/[0.08] hover:border-primary/40 hover:-translate-y-1"
                     }`}
                   >
-                    <div>
-                      <div className="flex items-center justify-between gap-2 mb-4">
+                    <div className="flex flex-col flex-1">
+                      <div className="flex items-center justify-between gap-2 mb-4 h-6">
                         <span className="px-3 py-1 rounded-full bg-brand-tint dark:bg-white/[0.08] text-primary text-[10px] font-bold uppercase tracking-wider">
                           {p.badge}
                         </span>
                         <span className="text-xs font-mono text-corporate-gray">{p.code}</span>
                       </div>
 
-                      <div className="h-52 sm:h-60 my-4 rounded-2xl bg-brand-soft/70 dark:bg-white/[0.03] p-6 flex items-center justify-center overflow-hidden">
+                      <div className="h-52 sm:h-60 my-4 rounded-2xl bg-brand-soft/70 dark:bg-white/[0.03] p-6 flex items-center justify-center overflow-hidden shrink-0">
                         <img
                           src={p.img}
                           alt={t(`home.products.items.${p.index}.title`)}
@@ -753,15 +753,15 @@ function HomePage() {
                         />
                       </div>
 
-                      <h3 className="text-xl sm:text-2xl font-semibold mb-2 group-hover:text-primary transition-colors">
+                      <h3 className="text-xl sm:text-2xl font-semibold mb-2 group-hover:text-primary transition-colors line-clamp-2 min-h-[3.25rem] sm:min-h-[3.5rem]">
                         {t(`home.products.items.${p.index}.title`)}
                       </h3>
-                      <p className="text-xs sm:text-sm text-corporate-gray leading-relaxed">
+                      <p className="text-xs sm:text-sm text-corporate-gray leading-relaxed line-clamp-3 min-h-[3rem] sm:min-h-[3.6rem]">
                         {t(`home.products.items.${p.index}.desc`)}
                       </p>
                     </div>
 
-                    <div className="mt-6 pt-4 border-t border-black/[0.06] dark:border-white/[0.08] flex items-center justify-between">
+                    <div className="mt-6 pt-4 border-t border-black/[0.06] dark:border-white/[0.08] flex items-center justify-between shrink-0">
                       <Link
                         to="/products"
                         className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-primary hover:underline"
@@ -1300,9 +1300,9 @@ function HomePage() {
                   </button>
                 </div>
               ) : (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 items-stretch">
                   {paginatedNewsArticles.map((article, idx) => (
-                    <ScrollReveal key={article.slug} animation="fade-up" delay={idx * 70}>
+                    <ScrollReveal key={article.slug} animation="fade-up" delay={idx * 70} className="h-full">
                       <div
                         onClick={() => {
                           setSelectedNewsArticle(article);
@@ -1325,10 +1325,10 @@ function HomePage() {
                             <span className="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-rose-50 text-rose-600 dark:bg-rose-950/40 dark:text-rose-400">
                               {article.cat}
                             </span>
-                            <h4 className="font-bold text-sm sm:text-[15px] leading-snug line-clamp-2 mt-2 text-corporate-black dark:text-white group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors">
+                            <h4 className="font-bold text-sm sm:text-[15px] leading-snug line-clamp-2 min-h-[2.6rem] mt-2 text-corporate-black dark:text-white group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors">
                               {article.title}
                             </h4>
-                            <p className="text-xs text-corporate-gray dark:text-gray-400 line-clamp-2 mt-1.5 leading-relaxed">
+                            <p className="text-xs text-corporate-gray dark:text-gray-400 line-clamp-2 min-h-[2.3rem] mt-1.5 leading-relaxed">
                               {article.excerpt}
                             </p>
                           </div>

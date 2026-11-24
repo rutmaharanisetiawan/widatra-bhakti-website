@@ -244,36 +244,61 @@ export function WidaBotWidget() {
   return (
     <>
       {/* =========================================================
-          DOCKED SIDE TAB (MENGINTIP DI TEPI KANAN LAYAR)
-          Tampil saat pengguna memilih 'sembunyikan ke samping'
+          DOCKED VERTICAL SIDE TAB + PEEKING MASCOT (MENGINTIP DI TEPI KANAN LAYAR)
+          Tampil vertikal ringkas & mundur ke kanan agar tidak mengganggu bacaan di mobile/desktop
       ========================================================= */}
       <div
         className={cn(
-          "wida-bot-launcher fixed bottom-24 sm:bottom-28 right-0 z-[999] select-none transition-all duration-300 ease-out",
+          "wida-bot-launcher fixed bottom-20 sm:bottom-24 right-0 z-[999] select-none transition-all duration-300 ease-out",
           isOpen || !isDocked
             ? "pointer-events-none opacity-0 translate-x-full"
-            : "pointer-events-auto opacity-100 translate-x-0"
+            : "pointer-events-auto opacity-95 hover:opacity-100 translate-x-0"
         )}
       >
-        <button
-          type="button"
+        <div
           onClick={() => {
             setIsDocked(false);
             localStorage.setItem("wida-bot-docked", "false");
           }}
-          className="group flex items-center gap-2 pl-3.5 pr-2.5 py-2 rounded-l-full bg-gradient-to-l from-[#0E3192] via-[#0284c7] to-[#0369a1] text-white shadow-[0_8px_24px_-4px_rgba(2,132,199,0.5)] border-y border-l border-white/20 hover:pl-4 transition-all duration-200 cursor-pointer"
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              setIsDocked(false);
+              localStorage.setItem("wida-bot-docked", "false");
+            }
+          }}
           aria-label="Tampilkan Chatbot Coby"
           title="Tampilkan Asisten Coby"
+          className="relative group flex items-center cursor-pointer"
         >
-          <div className="relative w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/20 p-0.5 flex-shrink-0 flex items-center justify-center group-hover:scale-105 transition-transform">
-            <img src={mascotAvatar} alt="Coby Avatar" className="w-full h-full object-contain" />
-            <span className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-emerald-400 border-2 border-[#0E3192]" />
+          {/* LAYER 1 (z-10): Mascot Coby Mengintip Ringkas dari Balik Sisi Kiri Tab Vertikal */}
+          <div
+            className="absolute -left-[20px] sm:-left-[28px] top-1/2 -translate-y-1/2 z-10 w-[38px] sm:w-[50px] -rotate-[22deg] group-hover:-translate-x-1.5 group-hover:-rotate-[28deg] group-hover:scale-105 transition-all duration-300 ease-out pointer-events-none"
+            style={{ willChange: "transform" }}
+          >
+            <img
+              src={mascotImg}
+              alt="Coby Maskot Mengintip di Samping"
+              className="w-full h-auto object-contain drop-shadow-[-4px_6px_10px_rgba(2,132,199,0.32)]"
+              draggable={false}
+            />
           </div>
-          <span className="text-[12px] sm:text-[13px] font-bold tracking-tight whitespace-nowrap hidden sm:inline">
-            Tanya Coby
-          </span>
-          <ChevronLeft className="w-4 h-4 text-white/80 group-hover:text-white transition-colors" />
-        </button>
+
+          {/* LAYER 2 (z-20): Slim Vertical Pill Bar Docked Flush on Right Edge */}
+          <div className="relative z-20 flex flex-col items-center justify-between py-2 sm:py-2.5 px-1 sm:px-1.5 min-h-[125px] sm:min-h-[155px] rounded-l-[14px] sm:rounded-l-[18px] bg-gradient-to-b from-[#0E3192] via-[#0284c7] to-[#0E3192] text-white shadow-[-6px_8px_20px_-4px_rgba(14,49,146,0.45)] border-y border-l border-white/25 translate-x-[1px] group-hover:translate-x-0 group-hover:pr-2 transition-all duration-300">
+            <ChevronLeft className="w-3 h-3 sm:w-3.5 sm:h-3.5 stroke-[2.6] text-white/90 group-hover:text-white group-hover:-translate-x-0.5 transition-all" />
+
+            <span
+              className="my-1.5 sm:my-2 text-[9px] sm:text-[10.5px] font-extrabold tracking-[0.03em] text-white whitespace-nowrap leading-none"
+              style={{ writingMode: "vertical-rl" }}
+            >
+              Coby AI Assistant
+            </span>
+
+            <ChevronLeft className="w-3 h-3 sm:w-3.5 sm:h-3.5 stroke-[2.6] text-white/90 group-hover:text-white group-hover:-translate-x-0.5 transition-all" />
+          </div>
+        </div>
       </div>
 
       {/* =========================================================

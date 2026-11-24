@@ -67,10 +67,10 @@ function AdminHome() {
 
   const statGridClass =
     statCards.length === 2
-      ? "grid sm:grid-cols-2 gap-4 mb-6"
+      ? "grid sm:grid-cols-2 gap-4 mb-6 items-stretch"
       : statCards.length === 3
-        ? "grid sm:grid-cols-3 gap-4 mb-6"
-        : "grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6";
+        ? "grid sm:grid-cols-3 gap-4 mb-6 items-stretch"
+        : "grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6 items-stretch";
 
   const showHRTable = canManageHR;
   const showContentTable = canManageContent;

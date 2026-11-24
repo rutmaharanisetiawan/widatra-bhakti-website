@@ -140,24 +140,26 @@ function FactoryTourPage() {
             <SubNavbar scrollSpy items={tourNavItems.slice(0, 3)} />
           </ScrollReveal>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-5 items-stretch">
             {WHY_VISIT_ITEMS.map((i) => (
-              <ScrollReveal key={i} animation="fade-up" delay={i * 80}>
+              <ScrollReveal key={i} animation="fade-up" delay={i * 80} className="h-full">
                 <div
-                  className="group relative rounded-[20px] sm:rounded-[22px] bg-white dark:bg-card border-2 border-black/[0.06] dark:border-white/[0.08] p-5 sm:p-6 shadow-sm hover:border-primary/40 hover:shadow-[0_18px_36px_-12px_rgba(9,42,125,0.18)] hover:-translate-y-1 transition-all duration-300"
+                  className="group relative rounded-[20px] sm:rounded-[22px] bg-white dark:bg-card border-2 border-black/[0.06] dark:border-white/[0.08] p-5 sm:p-6 shadow-sm hover:border-primary/40 hover:shadow-[0_18px_36px_-12px_rgba(9,42,125,0.18)] hover:-translate-y-1 transition-all duration-300 h-full flex flex-col justify-between"
                 >
                   <span
                     className={`absolute -left-[2px] top-5 h-7 w-[4px] rounded-r-full transition-all group-hover:h-11 ${
                       i % 2 === 0 ? "bg-primary" : "bg-accent"
                     }`}
                   />
-                  <div className="text-xs font-mono font-bold text-primary mb-3">0{i + 1}</div>
-                  <h4 className="text-sm sm:text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
-                    {t(`factoryTour.whyVisit.items.${i}.title`)}
-                  </h4>
-                  <p className="text-xs sm:text-sm text-corporate-gray leading-relaxed">
-                    {t(`factoryTour.whyVisit.items.${i}.desc`)}
-                  </p>
+                  <div className="flex flex-col flex-1">
+                    <div className="text-xs font-mono font-bold text-primary mb-3 shrink-0">0{i + 1}</div>
+                    <h4 className="text-sm sm:text-lg font-semibold mb-2 group-hover:text-primary transition-colors min-h-[2.75rem] line-clamp-2">
+                      {t(`factoryTour.whyVisit.items.${i}.title`)}
+                    </h4>
+                    <p className="text-xs sm:text-sm text-corporate-gray leading-relaxed line-clamp-3">
+                      {t(`factoryTour.whyVisit.items.${i}.desc`)}
+                    </p>
+                  </div>
                 </div>
               </ScrollReveal>
             ))}
@@ -188,40 +190,42 @@ function FactoryTourPage() {
             />
           </ScrollReveal>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3.5 sm:gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3.5 sm:gap-4 items-stretch">
             {JOURNEY_ITEMS.map((i) => {
               const isSelected = activeJourneyIdx === i;
               return (
-                <ScrollReveal key={i} animation="fade-up" delay={i * 70}>
+                <ScrollReveal key={i} animation="fade-up" delay={i * 70} className="h-full">
                   <div
                     onClick={() => setActiveJourneyIdx(i)}
-                    className={`cursor-pointer rounded-[20px] p-5 transition-all duration-300 border-2 ${
+                    className={`cursor-pointer rounded-[20px] p-5 transition-all duration-300 border-2 h-full flex flex-col justify-between ${
                       isSelected
                         ? "bg-gradient-to-br from-primary to-brand-deep text-white border-primary shadow-xl -translate-y-1"
                         : "bg-surface border-black/[0.05] dark:border-white/[0.07] hover:border-primary/40"
                     }`}
                   >
-                    <span
-                      className={`inline-block px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold mb-3 ${
-                        isSelected ? "bg-white/20 text-white" : "bg-brand-tint text-primary"
-                      }`}
-                    >
-                      {t(`factoryTour.visitorJourney.items.${i}.time`)}
-                    </span>
-                    <h4
-                      className={`text-sm sm:text-base font-semibold mb-1.5 ${
-                        isSelected ? "text-white" : ""
-                      }`}
-                    >
-                      {t(`factoryTour.visitorJourney.items.${i}.title`)}
-                    </h4>
-                    <p
-                      className={`text-xs leading-relaxed ${
-                        isSelected ? "text-white/85" : "text-corporate-gray"
-                      }`}
-                    >
-                      {t(`factoryTour.visitorJourney.items.${i}.desc`)}
-                    </p>
+                    <div>
+                      <span
+                        className={`inline-block px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold mb-3 ${
+                          isSelected ? "bg-white/20 text-white" : "bg-brand-tint text-primary"
+                        }`}
+                      >
+                        {t(`factoryTour.visitorJourney.items.${i}.time`)}
+                      </span>
+                      <h4
+                        className={`text-sm sm:text-base font-semibold mb-1.5 min-h-[2.5rem] line-clamp-2 ${
+                          isSelected ? "text-white" : ""
+                        }`}
+                      >
+                        {t(`factoryTour.visitorJourney.items.${i}.title`)}
+                      </h4>
+                      <p
+                        className={`text-xs leading-relaxed line-clamp-3 ${
+                          isSelected ? "text-white/85" : "text-corporate-gray"
+                        }`}
+                      >
+                        {t(`factoryTour.visitorJourney.items.${i}.desc`)}
+                      </p>
+                    </div>
                   </div>
                 </ScrollReveal>
               );
@@ -332,8 +336,8 @@ function FactoryTourPage() {
             />
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
-            <ScrollReveal animation="fade-up" delay={0}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 items-stretch">
+            <ScrollReveal animation="fade-up" delay={0} className="h-full">
               <ListCard
                 active={activeReqTab === 0}
                 onClick={() => setActiveReqTab(0)}
@@ -341,7 +345,7 @@ function FactoryTourPage() {
                 items={[0, 1, 2, 3, 4].map((i) => t(`factoryTour.requirements.safety.items.${i}`))}
               />
             </ScrollReveal>
-            <ScrollReveal animation="fade-up" delay={100}>
+            <ScrollReveal animation="fade-up" delay={100} className="h-full">
               <ListCard
                 active={activeReqTab === 1}
                 onClick={() => setActiveReqTab(1)}
@@ -349,7 +353,7 @@ function FactoryTourPage() {
                 items={[0, 1, 2, 3].map((i) => t(`factoryTour.requirements.dressCode.items.${i}`))}
               />
             </ScrollReveal>
-            <ScrollReveal animation="fade-up" delay={200}>
+            <ScrollReveal animation="fade-up" delay={200} className="h-full">
               <ListCard
                 active={activeReqTab === 2}
                 onClick={() => setActiveReqTab(2)}
@@ -407,17 +411,17 @@ function FactoryTourPage() {
               {t("factoryTour.testimonials.title")}
             </h2>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 items-stretch">
             {TESTIMONIAL_ITEMS.map((i) => (
-              <ScrollReveal key={i} animation="fade-up" delay={i * 90}>
+              <ScrollReveal key={i} animation="fade-up" delay={i * 90} className="h-full">
                 <article
-                  className="group relative rounded-[24px] bg-surface border-2 border-black/[0.06] dark:border-white/[0.08] p-6 sm:p-8 flex flex-col justify-between hover:border-primary/40 hover:-translate-y-1 transition-all duration-300"
+                  className="group relative rounded-[24px] bg-surface border-2 border-black/[0.06] dark:border-white/[0.08] p-6 sm:p-8 flex flex-col justify-between hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 h-full"
                 >
                   <span className="absolute -left-[2px] top-6 h-8 w-[4px] rounded-r-full bg-primary group-hover:h-12 transition-all" />
-                  <p className="text-base sm:text-lg font-serif-italic text-primary leading-relaxed mb-6">
+                  <p className="text-base sm:text-lg font-serif-italic text-primary leading-relaxed mb-6 min-h-[4.5rem] line-clamp-4">
                     "{t(`factoryTour.testimonials.items.${i}.quote`)}"
                   </p>
-                  <div>
+                  <div className="pt-4 border-t border-black/[0.05] dark:border-white/[0.06]">
                     <div className="text-sm font-semibold">
                       {t(`factoryTour.testimonials.items.${i}.name`)}
                     </div>

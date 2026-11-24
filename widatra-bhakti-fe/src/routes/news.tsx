@@ -35,22 +35,35 @@ function NewsPage() {
   const [selectedSlug, setSelectedSlug] = useState<string | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
 
-  const feature: Article | undefined = articles[0];
+  const cleanArticles = useMemo(
+    () =>
+      articles.filter(
+        (a) => a.title.toLowerCase() !== "test" && a.excerpt.toLowerCase() !== "test"
+      ),
+    [articles]
+  );
+
+  const feature: Article | undefined = cleanArticles[0];
   const filtered = useMemo(
-    () => (cat === "All" ? articles : articles.filter((a) => a.cat === cat)),
-    [cat, articles]
+    () =>
+      cat === "All"
+        ? cleanArticles
+        : cat === "Events"
+          ? cleanArticles.filter((a) => a.cat === "Events" || a.cat === "People")
+          : cleanArticles.filter((a) => a.cat === cat),
+    [cat, cleanArticles]
   );
 
   const selectedArticle = useMemo(
-    () => articles.find((a) => a.slug === selectedSlug) ?? null,
-    [articles, selectedSlug]
+    () => cleanArticles.find((a) => a.slug === selectedSlug) ?? null,
+    [cleanArticles, selectedSlug]
   );
   const related = useMemo(() => {
     if (!selectedArticle) return [];
-    return articles
+    return cleanArticles
       .filter((a) => a.cat === selectedArticle.cat && a.slug !== selectedArticle.slug)
       .slice(0, 3);
-  }, [articles, selectedArticle]);
+  }, [cleanArticles, selectedArticle]);
 
   function openArticle(slug: string) {
     setSelectedSlug(slug);
@@ -71,7 +84,12 @@ function NewsPage() {
   const categoryNavItems = CATEGORIES.map((c) => ({
     id: c,
     label: categoryLabel(c),
-    count: c === "All" ? articles.length : articles.filter((a) => a.cat === c).length,
+    count:
+      c === "All"
+        ? cleanArticles.length
+        : c === "Events"
+          ? cleanArticles.filter((a) => a.cat === "Events" || a.cat === "People").length
+          : cleanArticles.filter((a) => a.cat === c).length,
   }));
 
   return (
@@ -156,12 +174,12 @@ function NewsPage() {
               <p className="text-corporate-gray">{t("news.empty")}</p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 items-stretch">
               {filtered.map((a, idx) => (
-                <ScrollReveal key={a.slug} animation="fade-up" delay={idx * 80}>
+                <ScrollReveal key={a.slug} animation="fade-up" delay={idx * 80} className="h-full">
                   <article
                     onClick={() => openArticle(a.slug)}
-                    className="group cursor-pointer relative bg-white dark:bg-card border-2 border-black/[0.06] dark:border-white/[0.08] rounded-[24px] p-5 sm:p-6 shadow-[0_6px_24px_-12px_rgba(9,42,125,0.08)] hover:shadow-[0_22px_44px_-14px_rgba(9,42,125,0.22)] hover:border-primary/40 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between"
+                    className="group cursor-pointer relative h-full bg-white dark:bg-card border-2 border-black/[0.06] dark:border-white/[0.08] rounded-[24px] p-5 sm:p-6 shadow-[0_6px_24px_-12px_rgba(9,42,125,0.08)] hover:shadow-[0_22px_44px_-14px_rgba(9,42,125,0.22)] hover:border-primary/40 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between"
                   >
                     {/* Protruding Left-Edge Vertical Brand Tab */}
                     <span
@@ -170,8 +188,8 @@ function NewsPage() {
                       }`}
                     />
 
-                    <div>
-                      <div className="overflow-hidden mb-5 rounded-[18px] aspect-[16/10]">
+                    <div className="flex flex-col flex-1">
+                      <div className="overflow-hidden mb-5 rounded-[18px] aspect-[16/10] w-full bg-brand-soft shrink-0">
                         <MediaImage
                           src={a.img}
                           alt={a.title}
@@ -179,23 +197,23 @@ function NewsPage() {
                           loading="lazy"
                         />
                       </div>
-                      <div className="flex items-center justify-between gap-2 mb-3">
-                        <span className="px-3 py-1 rounded-full bg-brand-tint dark:bg-white/[0.08] text-primary text-[10px] font-bold uppercase tracking-wider">
+                      <div className="flex items-center justify-between gap-2 mb-3 h-6">
+                        <span className="px-3 py-1 rounded-full bg-brand-tint dark:bg-white/[0.08] text-primary text-[10px] font-bold uppercase tracking-wider whitespace-nowrap">
                           {a.cat}
                         </span>
-                        <span className="font-mono text-xs text-corporate-gray">{a.date}</span>
+                        <span className="font-mono text-xs text-corporate-gray whitespace-nowrap truncate">
+                          {a.date}
+                        </span>
                       </div>
-                      <h3 className="text-lg sm:text-xl font-semibold text-balance leading-snug group-hover:text-primary transition-colors mb-2">
+                      <h3 className="text-lg sm:text-xl font-semibold leading-snug group-hover:text-primary transition-colors mb-2.5 line-clamp-2 min-h-[3.1rem] sm:min-h-[3.5rem]">
                         {a.title}
                       </h3>
-                      {a.excerpt && (
-                        <p className="text-xs sm:text-sm text-corporate-gray leading-relaxed line-clamp-2">
-                          {a.excerpt}
-                        </p>
-                      )}
+                      <p className="text-xs sm:text-sm text-corporate-gray leading-relaxed line-clamp-2 min-h-[2.5rem] sm:min-h-[2.75rem]">
+                        {a.excerpt || ""}
+                      </p>
                     </div>
 
-                    <div className="mt-5 pt-4 border-t border-black/[0.05] dark:border-white/[0.06] flex items-center justify-between">
+                    <div className="mt-5 pt-4 border-t border-black/[0.05] dark:border-white/[0.06] flex items-center justify-between shrink-0">
                       <span className="text-xs font-bold uppercase tracking-wider text-primary">
                         {t("news.readMore")}
                       </span>

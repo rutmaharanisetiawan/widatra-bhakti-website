@@ -111,12 +111,12 @@ function CsrPage() {
       {/* IMPACT STATS — Unified Rounded Stat Cards */}
       <section className="py-10 sm:py-14 bg-surface border-b border-black/5 dark:border-white/5">
         <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-5 items-stretch">
             {IMPACT_STATS.map((i) => {
               const n = t(`csr.impactStats.${i}.n`);
               return (
-                <ScrollReveal key={i} animation="fade-up" delay={i * 80}>
-                  <div className="group relative rounded-[20px] sm:rounded-[24px] bg-white dark:bg-card border border-black/[0.06] dark:border-white/[0.08] p-5 sm:p-7 shadow-[0_8px_30px_-12px_rgba(9,42,125,0.08)] hover:shadow-[0_18px_40px_-12px_rgba(9,42,125,0.18)] hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+                <ScrollReveal key={i} animation="fade-up" delay={i * 80} className="h-full">
+                  <div className="group relative rounded-[20px] sm:rounded-[24px] bg-white dark:bg-card border border-black/[0.06] dark:border-white/[0.08] p-5 sm:p-7 shadow-[0_8px_30px_-12px_rgba(9,42,125,0.08)] hover:shadow-[0_18px_40px_-12px_rgba(9,42,125,0.18)] hover:-translate-y-1 transition-all duration-300 overflow-hidden h-full flex flex-col justify-between">
                     <span
                       className={`absolute left-0 top-5 bottom-5 w-1 rounded-r-full transition-all duration-300 group-hover:top-3 group-hover:bottom-3 ${
                         n === "ISO 14001" ? "bg-accent" : "bg-primary"
@@ -158,30 +158,30 @@ function CsrPage() {
             <SubNavbar scrollSpy items={sectionNavItems} />
           </ScrollReveal>
 
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5 lg:gap-7">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-5 lg:gap-7 items-stretch">
             {PILLAR_ITEMS.map((i) => {
               const Icon = PILLAR_ICONS[i];
               return (
-                <ScrollReveal key={i} animation="fade-up" delay={i * 80}>
-                  <div className="group relative rounded-[18px] sm:rounded-[22px] border-2 border-black/[0.06] dark:border-white/[0.08] bg-surface hover:bg-white dark:hover:bg-card p-4 sm:p-6 lg:p-7 flex flex-col justify-between shadow-sm hover:shadow-[0_20px_40px_-14px_rgba(9,42,125,0.18)] hover:border-primary/35 hover:-translate-y-1 transition-all duration-300">
+                <ScrollReveal key={i} animation="fade-up" delay={i * 80} className="h-full">
+                  <div className="group relative rounded-[18px] sm:rounded-[22px] border-2 border-black/[0.06] dark:border-white/[0.08] bg-surface hover:bg-white dark:hover:bg-card p-5 sm:p-6 lg:p-7 flex flex-col justify-between h-full shadow-sm hover:shadow-[0_20px_40px_-14px_rgba(9,42,125,0.18)] hover:border-primary/35 hover:-translate-y-1 transition-all duration-300">
                     <span
                       className={`absolute -left-[2px] top-5 sm:top-6 h-8 sm:h-10 w-[4px] rounded-r-full transition-all duration-300 group-hover:h-14 ${
                         i % 2 === 0 ? "bg-primary" : "bg-accent"
                       }`}
                     />
-                    <div>
+                    <div className="flex flex-col flex-1">
                       <div className="flex items-center justify-between gap-2 mb-3.5 sm:mb-4">
-                        <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-brand-tint dark:bg-white/[0.08] text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                        <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-brand-tint dark:bg-white/[0.08] text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300 shrink-0">
                           <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
                         </div>
                         <span className="text-xs font-mono font-bold text-corporate-gray/50">
                           0{i + 1}
                         </span>
                       </div>
-                      <h3 className="text-sm sm:text-lg font-semibold mb-1.5 sm:mb-2 group-hover:text-primary transition-colors">
+                      <h3 className="text-base sm:text-lg font-semibold mb-2 group-hover:text-primary transition-colors min-h-[3rem] line-clamp-2">
                         {t(`csr.pillars.items.${i}.title`)}
                       </h3>
-                      <p className="text-xs sm:text-sm text-corporate-gray leading-relaxed">
+                      <p className="text-xs sm:text-sm text-corporate-gray leading-relaxed line-clamp-3">
                         {t(`csr.pillars.items.${i}.desc`)}
                       </p>
                     </div>
@@ -313,12 +313,12 @@ function CsrPage() {
               <p>{t("csr.successStories.empty")}</p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 items-stretch">
               {filteredPrograms.map((p, idx) => (
-                <ScrollReveal key={p.slug} animation="fade-up" delay={idx * 80}>
+                <ScrollReveal key={p.slug} animation="fade-up" delay={idx * 80} className="h-full">
                   <article
                     onClick={() => openProgram(p.slug)}
-                    className="group cursor-pointer relative bg-white dark:bg-card border-2 border-black/[0.06] dark:border-white/[0.08] rounded-[24px] p-5 sm:p-6 shadow-[0_6px_24px_-12px_rgba(9,42,125,0.08)] hover:shadow-[0_22px_44px_-14px_rgba(9,42,125,0.22)] hover:border-primary/40 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between"
+                    className="group cursor-pointer relative bg-white dark:bg-card border-2 border-black/[0.06] dark:border-white/[0.08] rounded-[24px] p-5 sm:p-6 shadow-[0_6px_24px_-12px_rgba(9,42,125,0.08)] hover:shadow-[0_22px_44px_-14px_rgba(9,42,125,0.22)] hover:border-primary/40 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between h-full"
                   >
                     <span
                       className={`absolute -left-[2px] top-6 h-8 w-[4px] rounded-r-full transition-all duration-300 group-hover:h-14 ${
@@ -326,8 +326,8 @@ function CsrPage() {
                       }`}
                     />
 
-                    <div>
-                      <div className="relative aspect-[16/10] rounded-[18px] overflow-hidden mb-5">
+                    <div className="flex flex-col flex-1">
+                      <div className="relative aspect-[16/10] rounded-[18px] overflow-hidden mb-5 bg-brand-soft shrink-0">
                         <MediaImage
                           src={p.img}
                           alt={p.title}
@@ -339,19 +339,19 @@ function CsrPage() {
                         </span>
                       </div>
 
-                      <div className="flex items-center justify-between mb-2.5 text-xs text-corporate-gray">
-                        <span>{p.location}</span>
-                        <span className="font-mono">{p.date}</span>
+                      <div className="flex items-center justify-between mb-2.5 text-xs text-corporate-gray h-5">
+                        <span className="truncate mr-2">{p.location}</span>
+                        <span className="font-mono shrink-0">{p.date}</span>
                       </div>
-                      <h3 className="text-lg sm:text-xl font-semibold mb-2.5 leading-snug group-hover:text-primary transition-colors">
+                      <h3 className="text-lg sm:text-xl font-semibold mb-2.5 leading-snug group-hover:text-primary transition-colors line-clamp-2 min-h-[3.25rem] sm:min-h-[3.5rem]">
                         {p.title}
                       </h3>
-                      <p className="text-xs sm:text-sm text-corporate-gray leading-relaxed line-clamp-3">
+                      <p className="text-xs sm:text-sm text-corporate-gray leading-relaxed line-clamp-3 min-h-[3.6rem] sm:min-h-[3.9rem]">
                         {p.excerpt}
                       </p>
                     </div>
 
-                    <div className="mt-5 pt-4 border-t border-black/[0.05] dark:border-white/[0.06] flex items-center justify-between">
+                    <div className="mt-5 pt-4 border-t border-black/[0.05] dark:border-white/[0.06] flex items-center justify-between shrink-0">
                       <span className="text-xs font-bold uppercase tracking-wider text-primary">
                         {t("csr.successStories.readMore")}
                       </span>

@@ -17,7 +17,7 @@ router.post("/", optionalAuthenticateToken, submitTourBooking);
 router.get("/lookup", lookupTourBooking);
 
 // Protected admin / visitor detail routes
-router.get("/", authenticateToken, requireAccess("tours"), listTourBookings);
+router.get("/", authenticateToken, listTourBookings);
 router.get("/:id", authenticateToken, getTourBooking);
 router.patch("/:id/status", authenticateToken, requireAccess("tours"), updateTourStatus);
 router.post("/:id/status", authenticateToken, requireAccess("tours"), updateTourStatus);

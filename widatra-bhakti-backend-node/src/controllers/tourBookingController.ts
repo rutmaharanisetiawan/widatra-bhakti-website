@@ -67,8 +67,21 @@ export function serializeTourBooking(b: any) {
   };
 }
 
-export async function listTourBookings(_req: Request, res: Response) {
+export async function listTourBookings(req: Request, res: Response) {
+  const isTourAdmin = can(req.user, "tours");
+  const whereClause = isTourAdmin
+    ? undefined
+    : req.user
+      ? {
+          OR: [
+            { user_id: req.user.id },
+            { email: req.user.email },
+          ],
+        }
+      : { id: "__none__" };
+
   const list = await prisma.tour_bookings.findMany({
+    where: whereClause,
     include: {
       tour_status_histories: { orderBy: { happened_at: "asc" } },
       tour_notes: { orderBy: { created_at: "desc" } },

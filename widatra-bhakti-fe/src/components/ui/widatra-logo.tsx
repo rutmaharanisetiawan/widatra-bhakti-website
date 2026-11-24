@@ -115,18 +115,18 @@ export function WidatraLogo({
       {/* Typography + Animated Accent Lockup */}
       <div className="leading-none min-w-0 flex flex-col justify-center">
         {/* Main Wordmark */}
-        <div className="flex items-baseline gap-1.5 overflow-hidden">
+        <div className="flex items-baseline gap-1.5 overflow-visible pr-1">
           <span
             className={cn(
-              "font-extrabold italic tracking-tight text-[#1E2574] dark:text-white uppercase transition-colors relative",
+              "font-extrabold italic tracking-tight text-[#1E2574] dark:text-white uppercase transition-colors relative whitespace-nowrap pr-0.5",
               size === "sm" && "text-[14px] sm:text-[15px] tracking-[-0.02em]",
-              size === "md" && "text-[16px] sm:text-[18px] tracking-[-0.025em]",
+              size === "md" && "text-[15px] sm:text-[18px] tracking-[-0.025em]",
               size === "lg" && "text-[21px] sm:text-[24px] tracking-[-0.03em]"
             )}
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
             WIDATRA
-            <span className="font-bold italic text-slate-500 dark:text-slate-400 text-[11px] sm:text-[12px] ml-1.5 uppercase font-sans tracking-normal hidden sm:inline">
+            <span className="font-bold italic text-slate-500 dark:text-slate-400 text-[10px] sm:text-[12px] ml-1.5 pr-1 uppercase font-sans tracking-normal inline">
               BHAKTI
             </span>
           </span>
@@ -137,7 +137,7 @@ export function WidatraLogo({
           A sleek slanted parallelogram with Otsuka Red & Navy gradient + periodic light-sweep!
         */}
         {showAccentAnimation && (
-          <div className="relative mt-1 h-[2.5px] w-full max-w-[130px] sm:max-w-[160px] overflow-hidden rounded-full bg-slate-200/80 dark:bg-slate-700/60">
+          <div className="relative mt-1 h-[2.5px] w-full overflow-hidden rounded-full bg-slate-200/80 dark:bg-slate-700/60">
             {/* Base dual-tone line (Blue -> Red) */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#1E2574] via-[#0E3192] to-[#D81920]" />
 
@@ -155,10 +155,10 @@ export function WidatraLogo({
         {showSubtitle && subtitle && (
           <span
             className={cn(
-              "font-medium tracking-[0.04em] text-corporate-gray dark:text-slate-400 mt-1",
-              size === "sm" && "text-[7.5px] sm:text-[8px] whitespace-nowrap truncate max-w-[150px] hidden sm:block",
-              size === "md" && "text-[8px] sm:text-[8.5px] whitespace-nowrap hidden 2xl:block",
-              size === "lg" && "text-[10.5px] sm:text-[11px] leading-snug whitespace-normal block",
+              "font-medium text-corporate-gray dark:text-slate-400 mt-1 block",
+              size === "sm" && "text-[7.5px] sm:text-[8px] tracking-tight whitespace-nowrap",
+              size === "md" && "text-[7.5px] sm:text-[8px] 2xl:text-[9px] tracking-[-0.005em] 2xl:tracking-[0.015em] leading-tight whitespace-nowrap",
+              size === "lg" && "text-[10.5px] sm:text-[11px] tracking-[0.04em] leading-snug whitespace-normal",
               subtitleClassName
             )}
           >
