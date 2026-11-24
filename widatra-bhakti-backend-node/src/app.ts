@@ -1,3 +1,5 @@
+import path from "path";
+import fs from "fs";
 import express from "express";
 import cors from "cors";
 import helmet from "helmet";
@@ -63,6 +65,16 @@ if (process.env.NODE_ENV !== "test") {
 
 // Serve shared public uploads statically (identical to Laravel public disk)
 app.use("/storage", express.static(STORAGE_ROOT));
+
+// Fallback for seed assets from frontend src/assets
+const feAssetsCandidate = path.resolve(STORAGE_ROOT, "../../../../widatra-bhakti-fe/src/assets");
+const feAssetsFallback = fs.existsSync(feAssetsCandidate)
+  ? feAssetsCandidate
+  : path.resolve(process.cwd(), "../widatra-bhakti-fe/src/assets");
+
+if (fs.existsSync(feAssetsFallback)) {
+  app.use("/storage/seed", express.static(feAssetsFallback));
+}
 
 // Health check endpoint
 app.get("/health", (_req, res) => {
