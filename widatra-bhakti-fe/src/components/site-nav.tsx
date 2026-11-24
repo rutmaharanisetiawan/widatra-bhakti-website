@@ -33,7 +33,9 @@ export function SiteNav() {
   const [open, setOpen] = useState(false);
   const [mobileAccordion, setMobileAccordion] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
+  const [visible, setVisible] = useState(true);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const lastScrollY = useRef(0);
   const closeTimer = useRef<number | null>(null);
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const { isAuthenticated } = useAuth();
@@ -44,16 +46,50 @@ export function SiteNav() {
     : "Reliable Partner for Better Health";
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    lastScrollY.current = typeof window !== "undefined" ? window.scrollY : 0;
+
+    const onScroll = () => {
+      const currentScrollY = window.scrollY;
+      setScrolled(currentScrollY > 24);
+
+      // Keep navbar visible if mobile drawer or desktop dropdown is open
+      if (open || activeDropdown) {
+        setVisible(true);
+        lastScrollY.current = currentScrollY;
+        return;
+      }
+
+      // Always visible near top of the page
+      if (currentScrollY <= 50) {
+        setVisible(true);
+        lastScrollY.current = currentScrollY;
+        return;
+      }
+
+      const diff = currentScrollY - lastScrollY.current;
+
+      // Threshold to prevent micro-scroll jitter
+      if (diff > 8) {
+        // Scrolling DOWN -> smoothly hide
+        setVisible(false);
+        lastScrollY.current = currentScrollY;
+      } else if (diff < -8) {
+        // Scrolling UP -> smoothly show
+        setVisible(true);
+        lastScrollY.current = currentScrollY;
+      }
+    };
+
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [open, activeDropdown]);
 
   useEffect(() => {
     setOpen(false);
     setActiveDropdown(null);
     setMobileAccordion(null);
+    setVisible(true);
   }, [pathname]);
 
   useEffect(() => {
@@ -85,7 +121,11 @@ export function SiteNav() {
   };
 
   return (
-    <header className="fixed top-3 sm:top-5 inset-x-0 z-50 px-3 sm:px-5 pointer-events-none">
+    <header
+      className={`fixed top-3 sm:top-5 inset-x-0 z-50 px-3 sm:px-5 pointer-events-none transition-all duration-300 ease-in-out ${
+        visible ? "translate-y-0 opacity-100" : "-translate-y-28 opacity-0"
+      }`}
+    >
       {/* Floating Pill Navbar */}
       <nav
         aria-label="Main navigation"
