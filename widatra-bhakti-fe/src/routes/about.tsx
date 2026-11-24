@@ -76,7 +76,7 @@ const SECTION_KEYS = [
 ] as const;
 
 const PROFILE_STATS = [0, 1, 2] as const;
-const MISSION_ITEMS = [0, 1, 2, 3] as const;
+const MISSION_ITEMS = [0, 1, 2, 3, 4] as const;
 const VALUE_ITEMS = [0, 1, 2, 3] as const;
 const AWARD_ITEMS = [0, 1, 2] as const;
 const CERT_ITEMS = [0, 1, 2, 3, 4, 5] as const;
@@ -381,9 +381,12 @@ function AboutPage() {
             {/* Strategic Mission 4-Pack */}
             <ScrollReveal animation="fade-left" className="lg:col-span-5 p-7 sm:p-8 rounded-[26px] bg-surface border-2 border-black/[0.06] dark:border-white/[0.08] shadow-sm flex flex-col justify-between">
               <div>
-                <span className="inline-block px-3.5 py-1 rounded-full bg-brand-tint dark:bg-white/[0.08] text-[10px] font-bold uppercase tracking-[0.22em] text-primary mb-5">
+                <span className="inline-block px-3.5 py-1 rounded-full bg-brand-tint dark:bg-white/[0.08] text-[10px] font-bold uppercase tracking-[0.22em] text-primary mb-3">
                   {t("about.visionMission.missionLabel")}
                 </span>
+                <p className="text-xs font-semibold text-corporate-black/90 dark:text-foreground/90 mb-3.5">
+                  {t("about.visionMission.missionIntro")}
+                </p>
                 <div className="space-y-3.5">
                   {MISSION_ITEMS.map((i) => (
                     <div key={i} className="flex items-start gap-3">

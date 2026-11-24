@@ -155,10 +155,10 @@ export function WidatraLogo({
         {showSubtitle && subtitle && (
           <span
             className={cn(
-              "font-medium tracking-[0.04em] text-corporate-gray dark:text-slate-400 block mt-1",
-              size === "sm" && "text-[7.5px] sm:text-[8px] whitespace-nowrap truncate max-w-[150px]",
-              size === "md" && "text-[8px] sm:text-[8.5px] whitespace-nowrap",
-              size === "lg" && "text-[10.5px] sm:text-[11px] leading-snug whitespace-normal",
+              "font-medium tracking-[0.04em] text-corporate-gray dark:text-slate-400 mt-1",
+              size === "sm" && "text-[7.5px] sm:text-[8px] whitespace-nowrap truncate max-w-[150px] hidden sm:block",
+              size === "md" && "text-[8px] sm:text-[8.5px] whitespace-nowrap hidden 2xl:block",
+              size === "lg" && "text-[10.5px] sm:text-[11px] leading-snug whitespace-normal block",
               subtitleClassName
             )}
           >

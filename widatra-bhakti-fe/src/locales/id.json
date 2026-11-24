@@ -469,8 +469,8 @@
       "eyebrow": "(01) Profil Perusahaan",
       "titlePrefix": "PT Widatra Bhakti —",
       "titleHighlight": "produsen kepercayaan Indonesia.",
-      "p1": "PT Widatra Bhakti mendapatkan lisensi memproduksi produk larutan intravena dasar pada tahun 1986 di bawah lisensi manufaktur dan arahan teknis dari sebuah perusahaan Jerman terkemuka, berbasis di Pandaan, Jawa Timur.",
-      "p2": "Pada tahun 1995, Otsuka Pharmaceutical Co., Ltd., Jepang mengakuisisi PT Widatra Bhakti. Kini WIDATRA adalah produsen produk larutan intravena dasar terbesar dan pemimpin pasar di Indonesia, memasok rumah sakit dan institusi kesehatan di seluruh negeri.",
+      "p1": "PT Widatra Bhakti didirikan pada tanggal 25 Juni 1973 dan mulai memproduksi produk larutan intravena dasar (cairan infus) pada tahun 1986 di bawah lisensi manufaktur dan arahan teknis dari perusahaan Jerman terkemuka, berbasis di Pandaan, Pasuruan, Jawa Timur.",
+      "p2": "Pada bulan Oktober 1995, Otsuka Pharmaceutical Co., Ltd. (Jepang) mengakuisisi PT Widatra Bhakti. Kini WIDATRA adalah produsen sediaan parenteral larutan dasar terbesar dan pemimpin pasar di Indonesia dengan komitmen \"Reliable Partner for Better Health\".",
       "stats": [
         {
           "n": "1986",
@@ -519,13 +519,15 @@
       "titlePrefix": "Apa yang kami",
       "titleHighlight": "perjuangkan.",
       "visionLabel": "Visi",
-      "visionText": "Menjadi perusahaan farmasi terkemuka di Indonesia dan berperan penting di kawasan Asia.",
+      "visionText": "Menjadi mitra manufaktur sediaan parenteral larutan dasar yang unggul dan terpercaya di Indonesia serta menyediakan solusi untuk pemberian obat suntik.",
       "missionLabel": "Misi",
+      "missionIntro": "Memproduksi larutan intravena dan pemberian obat yang:",
       "missionItems": [
-        "Berkontribusi tanpa henti bagi kesehatan masyarakat dengan memproduksi produk berkualitas tinggi dengan harga kompetitif.",
-        "Berperan strategis dalam Sistem Kesehatan Nasional Indonesia sebagai mitra terpercaya untuk kesehatan yang lebih baik.",
-        "Menjunjung pilar 5+1S — Speed, Synergy, Share, Simplify, Smart dan Sincere — dalam setiap pekerjaan kami.",
-        "Mengembangkan sumber daya manusia sebagai aset terpenting kami, dengan sikap, pengetahuan, keterampilan, dan pengalaman yang baik."
+        "Lingkungannya dapat mendukung karyawan untuk bekerja dengan kemampuan terbaik mereka dengan bahagia.",
+        "Integritasnya terhadap komunitas dan masyarakat dapat memperoleh kepercayaan dari semua pemangku kepentingan.",
+        "Produk-produknya diproduksi dengan cermat dan pasokannya yang stabil dapat menjaga biaya yang terukur.",
+        "Penciptaan teknologi dan ide baru dapat berkontribusi pada peningkatan perawatan medis.",
+        "Dampaknya terhadap lingkungan diupayakan agar tidak menimbulkan beban."
       ]
     },
     "values": {

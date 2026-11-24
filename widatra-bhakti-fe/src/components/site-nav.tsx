@@ -180,7 +180,7 @@ export function SiteNav() {
                       }
                       onFocus={() => openDropdown(item.labelKey)}
                       aria-expanded={isOpen}
-                      className={`group/nav relative flex items-center gap-1 px-2 2xl:px-3.5 py-1.5 text-[11px] 2xl:text-[12.5px] font-semibold tracking-[-0.01em] whitespace-nowrap rounded-full transition-all duration-200 outline-none focus-visible:ring-2 focus-visible:ring-primary/40 ${
+                      className={`group/nav relative flex items-center gap-1 px-2 2xl:px-3 py-1.5 text-[11px] 2xl:text-[12.5px] font-semibold tracking-[-0.01em] whitespace-nowrap rounded-full transition-all duration-200 outline-none focus-visible:ring-2 focus-visible:ring-primary/40 ${
                         isActive
                           ? "text-primary bg-brand-tint/70 dark:bg-white/[0.08]"
                           : "text-corporate-black/75 dark:text-white/80 hover:text-primary hover:bg-brand-soft dark:hover:bg-white/[0.05]"
@@ -249,7 +249,7 @@ export function SiteNav() {
                 <Link
                   key={item.to}
                   to={item.to}
-                  className={`group/nav relative px-2 2xl:px-3.5 py-1.5 text-[11px] 2xl:text-[12.5px] font-semibold tracking-[-0.01em] whitespace-nowrap rounded-full transition-all duration-200 outline-none focus-visible:ring-2 focus-visible:ring-primary/40 ${
+                  className={`group/nav relative px-2 2xl:px-3 py-1.5 text-[11px] 2xl:text-[12.5px] font-semibold tracking-[-0.01em] whitespace-nowrap rounded-full transition-all duration-200 outline-none focus-visible:ring-2 focus-visible:ring-primary/40 ${
                     isActive
                       ? "text-primary bg-brand-tint/70 dark:bg-white/[0.08]"
                       : "text-corporate-black/75 dark:text-white/80 hover:text-primary hover:bg-brand-soft dark:hover:bg-white/[0.05]"

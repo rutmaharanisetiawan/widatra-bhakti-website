@@ -469,8 +469,8 @@
       "eyebrow": "(01) Company Profile",
       "titlePrefix": "PT Widatra Bhakti —",
       "titleHighlight": "Indonesia's manufacturer of trust.",
-      "p1": "PT Widatra Bhakti was licensed to manufacture basic intravenous solution products in 1986 under a manufacturing license and technical guidance from a leading German company, based in Pandaan, East Java.",
-      "p2": "In 1995, Otsuka Pharmaceutical Co., Ltd., Japan acquired PT Widatra Bhakti. Today WIDATRA is the largest manufacturer of basic intravenous solution products and a market leader in Indonesia, supplying hospitals and health institutions across the country.",
+      "p1": "PT Widatra Bhakti was established on June 25, 1973, and began manufacturing basic intravenous solution products in 1986 under a manufacturing license and technical guidance from a leading German company, based in Pandaan, Pasuruan, East Java.",
+      "p2": "In October 1995, Otsuka Pharmaceutical Co., Ltd., Japan acquired PT Widatra Bhakti. Today WIDATRA is the largest manufacturer of basic intravenous solution products and a market leader in Indonesia, with the motto \"Reliable Partner for Better Health\".",
       "stats": [
         {
           "n": "1986",
@@ -519,13 +519,15 @@
       "titlePrefix": "What we work",
       "titleHighlight": "toward.",
       "visionLabel": "Vision",
-      "visionText": "To become a leading pharmaceutical company in Indonesia and play an important role in the Asian region.",
+      "visionText": "To be an excellent and reliable manufacturing partner for basic parenteral solution in Indonesia and providing solutions for injectable drug delivery.",
       "missionLabel": "Mission",
+      "missionIntro": "Manufacture intravenous solutions and drug delivery that:",
       "missionItems": [
-        "Contribute relentlessly to public health by producing high-quality products at competitive prices.",
-        "Play a strategic role in Indonesia's National Health System as a reliable partner for better health.",
-        "Uphold the 5+1S pillars — Speed, Synergy, Share, Simplify, Smart and Sincere — in everything we do.",
-        "Develop our people as our most valuable asset, with good attitude, knowledge, skill and experience."
+        "Provides an environment that supports employees to work with their best abilities happily.",
+        "Has integrity toward the community and society to earn the trust of all stakeholders.",
+        "Ensures carefully manufactured products with stable supply to maintain measurable costs.",
+        "Drives the creation of new technologies and ideas to contribute to the improvement of medical care.",
+        "Strives to manage environmental impacts so as not to impose an ecological burden."
       ]
     },
     "values": {
