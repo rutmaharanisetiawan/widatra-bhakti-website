@@ -241,7 +241,7 @@ export function WidaBotWidget() {
       ========================================================= */}
       <div
         className={cn(
-          "fixed bottom-5 sm:bottom-6 right-5 sm:right-6 z-[999] select-none",
+          "wida-bot-launcher fixed bottom-5 sm:bottom-6 right-5 sm:right-6 z-[999] select-none",
           isOpen ? "pointer-events-none opacity-0 scale-90" : "pointer-events-auto opacity-100 scale-100",
           "transition-all duration-300 ease-out"
         )}

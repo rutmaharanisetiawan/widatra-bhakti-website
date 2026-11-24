@@ -85,7 +85,17 @@ export function SiteNav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, [open, activeDropdown]);
 
+  const handleCloseMenu = () => {
+    if (typeof document !== "undefined" && document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
+    setOpen(false);
+  };
+
   useEffect(() => {
+    if (typeof document !== "undefined" && document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
     setOpen(false);
     setActiveDropdown(null);
     setMobileAccordion(null);
@@ -96,15 +106,17 @@ export function SiteNav() {
     if (!open) return;
     const original = document.body.style.overflow;
     document.body.style.overflow = "hidden";
+    document.body.classList.add("mobile-nav-open");
     return () => {
       document.body.style.overflow = original;
+      document.body.classList.remove("mobile-nav-open");
     };
   }, [open]);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key !== "Escape") return;
-      setOpen(false);
+      handleCloseMenu();
       setActiveDropdown(null);
     };
     window.addEventListener("keydown", onKey);
@@ -122,19 +134,20 @@ export function SiteNav() {
 
   return (
     <header
-      className={`fixed top-3 sm:top-5 inset-x-0 z-50 px-3 sm:px-5 pointer-events-none transition-all duration-300 ease-in-out ${
-        visible ? "translate-y-0 opacity-100" : "-translate-y-28 opacity-0"
-      }`}
+      className={`fixed top-0 inset-x-0 ${open ? "z-[1050]" : "z-50"} pointer-events-none`}
     >
-      {/* Floating Pill Navbar */}
-      <nav
-        aria-label="Main navigation"
-        className={`pointer-events-auto mx-auto w-[calc(100%-1.5rem)] sm:w-[calc(100%-2.5rem)] max-w-[1420px] rounded-[50px] bg-white/95 dark:bg-popover/95 backdrop-blur-xl ring-1 ring-black/[0.06] dark:ring-white/[0.10] transition-all duration-300 ${
-          scrolled
-            ? "h-[54px] sm:h-[60px] shadow-[0_14px_44px_-10px_rgba(9,42,125,0.22)] dark:shadow-[0_14px_44px_-10px_rgba(0,0,0,0.65)]"
-            : "h-[58px] sm:h-[64px] shadow-[0_8px_36px_0_rgba(9,42,125,0.14)] dark:shadow-[0_8px_36px_0_rgba(0,0,0,0.55)]"
-        }`}
-      >
+      {/* Floating Pill Navbar Wrapper */}
+      <div className="pt-3 sm:pt-5 px-3 sm:px-5">
+        <nav
+          aria-label="Main navigation"
+          className={`pointer-events-auto mx-auto w-[calc(100%-1.5rem)] sm:w-[calc(100%-2.5rem)] max-w-[1420px] rounded-[50px] bg-white/95 dark:bg-popover/95 backdrop-blur-xl ring-1 ring-black/[0.06] dark:ring-white/[0.10] transition-all duration-300 ease-in-out ${
+            visible ? "translate-y-0 opacity-100" : "-translate-y-28 opacity-0 pointer-events-none"
+          } ${
+            scrolled
+              ? "h-[54px] sm:h-[60px] shadow-[0_14px_44px_-10px_rgba(9,42,125,0.22)] dark:shadow-[0_14px_44px_-10px_rgba(0,0,0,0.65)]"
+              : "h-[58px] sm:h-[64px] shadow-[0_8px_36px_0_rgba(9,42,125,0.14)] dark:shadow-[0_8px_36px_0_rgba(0,0,0,0.55)]"
+          }`}
+        >
         <div className="h-full px-3.5 sm:px-5 flex items-center justify-between gap-2.5 xl:gap-3 2xl:gap-5">
           {/* Brand Logo */}
           <Link to="/" className="flex items-center group flex-shrink-0 mr-1 xl:mr-2" aria-label="PT Widatra Bhakti Home">
@@ -308,7 +321,13 @@ export function SiteNav() {
             <ThemeToggle />
             <button
               type="button"
-              onClick={() => setOpen((prev) => !prev)}
+              onClick={() => {
+                if (open) {
+                  handleCloseMenu();
+                } else {
+                  setOpen(true);
+                }
+              }}
               aria-label={open ? "Close menu" : "Open menu"}
               aria-expanded={open}
               className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-brand-tint/80 dark:bg-white/[0.08] text-primary dark:text-white border border-primary/15 dark:border-white/15 hover:bg-primary hover:text-white transition-all duration-200"
@@ -333,18 +352,19 @@ export function SiteNav() {
           </div>
         </div>
       </nav>
+      </div>
 
       {/* Mobile / Tablet Floating Card Menu with Blurred Backdrop */}
       <div
-        className={`xl:hidden fixed inset-0 z-[-1] transition-all duration-300 ${
-          open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        className={`xl:hidden fixed inset-0 z-40 transition-all duration-300 ${
+          open ? "opacity-100 pointer-events-auto visible" : "opacity-0 pointer-events-none invisible"
         }`}
-        aria-hidden={!open}
+        inert={!open ? true : undefined}
       >
         {/* Full-viewport Blurred Backdrop */}
         <div
-          className="absolute inset-0 bg-corporate-black/45 backdrop-blur-md"
-          onClick={() => setOpen(false)}
+          className="absolute inset-0 bg-corporate-black/50 backdrop-blur-md"
+          onClick={handleCloseMenu}
         />
 
         {/* Floating Rounded Card below the Pill Navbar */}
@@ -352,7 +372,7 @@ export function SiteNav() {
           role="dialog"
           aria-modal="true"
           aria-label="Site menu"
-          className={`absolute top-[74px] sm:top-[86px] inset-x-3 sm:inset-x-5 mx-auto max-w-[540px] max-h-[calc(100vh-96px)] bg-white dark:bg-popover rounded-[28px] shadow-[0_28px_70px_-12px_rgba(9,42,125,0.38)] dark:shadow-[0_28px_70px_-12px_rgba(0,0,0,0.75)] ring-1 ring-black/[0.06] dark:ring-white/[0.10] flex flex-col overflow-hidden transition-all duration-300 ease-out ${
+          className={`absolute top-[72px] sm:top-[84px] inset-x-3 sm:inset-x-5 mx-auto max-w-[540px] max-h-[calc(100dvh-88px)] bg-white dark:bg-popover rounded-[28px] shadow-[0_28px_70px_-12px_rgba(9,42,125,0.38)] dark:shadow-[0_28px_70px_-12px_rgba(0,0,0,0.75)] ring-1 ring-black/[0.06] dark:ring-white/[0.10] flex flex-col overflow-hidden transition-all duration-300 ease-out z-50 ${
             open ? "translate-y-0 scale-100 opacity-100" : "-translate-y-4 scale-95 opacity-0"
           }`}
         >
@@ -411,7 +431,7 @@ export function SiteNav() {
                               key={child.labelKey}
                               to={child.to}
                               hash={"hash" in child ? child.hash : undefined}
-                              onClick={() => setOpen(false)}
+                              onClick={handleCloseMenu}
                               className="flex items-center gap-2.5 rounded-xl px-3 py-2 text-[13px] font-medium text-corporate-black/75 dark:text-white/75 hover:bg-brand-tint dark:hover:bg-white/[0.06] hover:text-primary transition-colors duration-200"
                             >
                               <span className="w-1.5 h-1.5 rounded-full bg-primary/40 flex-shrink-0" />
@@ -429,7 +449,7 @@ export function SiteNav() {
                 <Link
                   key={item.to}
                   to={item.to}
-                  onClick={() => setOpen(false)}
+                  onClick={handleCloseMenu}
                   className="flex items-center justify-between py-3.5 text-[14.5px] font-semibold text-corporate-black/85 dark:text-white/90 hover:text-primary transition-colors duration-200"
                   activeProps={{ className: "!text-primary" }}
                   activeOptions={{ exact: item.to === "/" }}
@@ -461,7 +481,7 @@ export function SiteNav() {
               <LanguageSwitcher />
               <Link
                 to={isAuthenticated ? "/applicant" : "/auth/login"}
-                onClick={() => setOpen(false)}
+                onClick={handleCloseMenu}
                 className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full border border-black/15 dark:border-white/20 text-[11px] font-bold uppercase tracking-[0.12em] text-corporate-black dark:text-white hover:border-primary hover:text-primary transition-all"
               >
                 {isAuthenticated ? t("nav.myAccount") : t("nav.signIn")}
@@ -469,7 +489,7 @@ export function SiteNav() {
             </div>
             <Link
               to="/careers"
-              onClick={() => setOpen(false)}
+              onClick={handleCloseMenu}
               className="w-full inline-flex items-center justify-center gap-2 h-11 rounded-full bg-gradient-to-r from-primary via-brand-deep to-primary text-primary-foreground text-[12px] font-bold uppercase tracking-[0.16em] shadow-[0_8px_20px_-6px_rgba(14,49,146,0.5)] hover:opacity-95 transition-all"
             >
               {t("nav.joinUs")}

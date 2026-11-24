@@ -433,3 +433,10 @@
   animation: wida-float 3.2s ease-in-out infinite;
 }
 
+/* Hide chatbot launcher when mobile navigation drawer is open to prevent overlap */
+body.mobile-nav-open .wida-bot-launcher {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: scale(0.9) !important;
+}
+
