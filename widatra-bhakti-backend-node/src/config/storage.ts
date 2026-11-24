@@ -3,15 +3,24 @@ import fs from "fs";
 import crypto from "crypto";
 
 /**
- * Shares Laravel's `public` disk (storage/app/public) so every file uploaded by either
- * backend resolves to the same `/storage/<path>` URL during the side-by-side migration.
+ * Standalone storage public disk (storage/app/public) for uploaded files.
+ * Supports being run from either repo root or widatra-bhakti-backend-node directory.
  */
+const defaultStoragePath = fs.existsSync(path.join(process.cwd(), "widatra-bhakti-backend-node"))
+  ? path.join(process.cwd(), "widatra-bhakti-backend-node", "storage", "app", "public")
+  : path.join(process.cwd(), "storage", "app", "public");
+
 export const STORAGE_ROOT = path.resolve(
-  process.env.STORAGE_PATH || path.join(process.cwd(), "..", "widatra-bhakti-backend", "storage", "app", "public")
+  process.env.STORAGE_PATH || defaultStoragePath
 );
 
-/** Matches Laravel `APP_URL` so generated URLs are identical to the PHP backend. */
-export const APP_URL = (process.env.APP_URL || "http://localhost:8000").replace(/\/$/, "");
+// Ensure the storage root directory exists
+ensureDir(STORAGE_ROOT);
+
+/** Matches application backend URL so generated URLs point to the active Node.js server. */
+export const APP_URL = (
+  process.env.APP_URL || `http://localhost:${process.env.PORT || 8001}`
+).replace(/\/$/, "");
 
 /** Laravel `Storage::disk('public')->url($path)` equivalent. */
 export function storageUrl(relPath: string | null | undefined): string | null {

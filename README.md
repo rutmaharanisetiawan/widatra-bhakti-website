@@ -9,8 +9,7 @@ Repository monorepo resmi untuk pengembangan dan pembaruan sistem informasi PT W
 ```text
 widatra-bhakti-fix/
 ├── widatra-bhakti-fe/             # Frontend (React 19 + TanStack Router + Tailwind CSS)
-├── widatra-bhakti-backend-node/   # Backend Utama Baru (Node.js + Express 5 + TypeScript + Prisma) [Port 8001]
-└── widatra-bhakti-backend/        # Backend Referensi (Laravel 11 + Sanctum + Spatie Permission) [Port 8000]
+└── widatra-bhakti-backend-node/   # Backend Utama (Node.js + Express 5 + TypeScript + Prisma) [Port 8001]
 ```
 
 ---
@@ -18,9 +17,8 @@ widatra-bhakti-fix/
 ## 🚀 Panduan Menjalankan Proyek (Setup Guide)
 
 ### 1. Prasyarat Sistem
-- **Node.js**: v20+ atau v22+ (Direkomendasikan v22 / v26)
+- **Node.js**: v20+ atau v22+ (Direkomendasikan v22 / v24)
 - **MySQL**: v8.0+ (atau MariaDB 10.4+)
-- **PHP & Composer**: (Opsional, hanya jika ingin menjalankan Laravel sebagai pembanding)
 
 ### 2. Setup Database MySQL
 1. Buat database baru di MySQL:
@@ -127,4 +125,4 @@ Semua akun terdaftar menggunakan kata sandi standar berikut untuk pengujian loka
 
 ### 🚀 Kesiapan Deployment
 
-Seluruh sistem telah **100% selesai dimigrasikan ke Node.js Backend**, teruji lintas 8 role, dan siap dideploy untuk peluncuran hari Rabu. Arsitektur tetap mendukung fallback ke Laravel (port 8000) jika diperlukan kapan saja tanpa risiko *downtime*.
+Seluruh sistem telah **100% selesai dimigrasikan ke Node.js Backend**, teruji lintas 8 role, dan siap dideploy untuk peluncuran. Backend Laravel lama telah resmi dihapus dan digantikan sepenuhnya oleh Node.js Express + TypeScript backend.
