@@ -51,9 +51,10 @@ export function PageHero({
   image,
   align = "left",
   children,
-  minHeight = "min-h-[95vh]",
+  minHeight = "min-h-[95vh] lg:min-h-[calc(100vh-12px)] 2xl:min-h-screen",
   showRibbon = true,
   variant = "home",
+  ribbonFillColor,
 }: {
   eyebrow: string;
   title: string;
@@ -65,13 +66,14 @@ export function PageHero({
   minHeight?: string;
   showRibbon?: boolean;
   variant?: HeroVariant;
+  ribbonFillColor?: string;
 }) {
   const { t } = useLanguage();
 
   return (
     <>
       <section
-        className={`relative ${minHeight} w-full -mt-20 pt-24 sm:pt-28 lg:pt-28 xl:pt-32 2xl:pt-36 pb-20 sm:pb-24 lg:pb-24 xl:pb-28 2xl:pb-36 flex items-center overflow-hidden bg-[#061844] text-white`}
+        className={`relative ${minHeight} w-full -mt-20 pt-24 sm:pt-26 lg:pt-28 xl:pt-30 2xl:pt-34 pb-20 sm:pb-24 lg:pb-24 xl:pb-28 2xl:pb-32 flex items-center overflow-hidden bg-[#061844] text-white`}
       >
         {/* Full-bleed background — cleanroom image smoothly dissolves into cleanroom navy */}
         <div className="absolute inset-0 z-0">
@@ -170,7 +172,7 @@ export function PageHero({
       </section>
 
       {/* Wavy Moving Ribbon seamlessly bridging the gradient into page content */}
-      {showRibbon && <WavyMarqueeRibbon variant="wave" />}
+      {showRibbon && <WavyMarqueeRibbon variant="wave" fillColor={ribbonFillColor} />}
     </>
   );
 }

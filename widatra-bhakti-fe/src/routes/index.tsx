@@ -232,7 +232,7 @@ function HomePage() {
       {/* =================================================================
           TAHAP 1: INTERACTIVE HERO + CAPSULE COLLAGE + MARQUEE RIBBON
       ================================================================= */}
-      <section className="relative min-h-[90vh] 2xl:min-h-[95vh] -mt-20 pt-24 sm:pt-28 lg:pt-28 xl:pt-32 2xl:pt-36 pb-20 sm:pb-24 lg:pb-24 xl:pb-28 2xl:pb-36 flex items-center overflow-hidden bg-[#061844] text-white">
+      <section className="relative min-h-[95vh] lg:min-h-[calc(100vh-12px)] 2xl:min-h-screen -mt-20 pt-24 sm:pt-26 lg:pt-28 xl:pt-30 2xl:pt-34 pb-20 sm:pb-24 lg:pb-24 xl:pb-28 2xl:pb-32 flex items-center overflow-hidden bg-[#061844] text-white">
         {/* Rich Layered Background — Cleanroom image smoothly dissolves into cleanroom navy */}
         <div className="absolute inset-0 z-0">
           <img
@@ -371,7 +371,7 @@ function HomePage() {
       </section>
 
       {/* CONTINUOUS WAVY MARQUEE RIBBON DIVIDER */}
-      <WavyMarqueeRibbon variant="wave" items={marqueeBadges} />
+      <WavyMarqueeRibbon variant="wave" />
 
       {/* =================================================================
           CORPORATE STATS BAND — 2-Col Mobile / 4-Col Desktop Rounded Cards

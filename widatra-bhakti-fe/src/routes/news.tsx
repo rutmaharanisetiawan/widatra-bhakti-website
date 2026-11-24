@@ -105,7 +105,7 @@ function NewsPage() {
 
       {/* Featured Article Card */}
       {feature && (
-        <section className="py-16 sm:py-24 bg-white dark:bg-card">
+        <section className="py-16 sm:py-24 bg-surface">
           <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
             <ScrollReveal animation="fade-up" className="mb-8 flex items-center justify-between">
               <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em]">

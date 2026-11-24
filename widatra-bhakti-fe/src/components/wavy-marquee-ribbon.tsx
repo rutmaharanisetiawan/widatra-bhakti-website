@@ -1,9 +1,11 @@
 import { useId } from "react";
 
-const DEFAULT_ITEMS = [
+export const DEFAULT_MARQUEE_ITEMS = [
   "OTSUKA GROUP INDONESIA",
   "PIC/S GMP CERTIFIED",
-  "ISO 9001 · 14001 · 45001",
+  "ISO 9001 : 2015",
+  "ISO 14001 : 2015",
+  "ISO 45001 : 2018",
   "BPOM LICENSED",
   "HALAL CERTIFIED",
   "A-GRADE STERILE CLEANROOM",
@@ -12,14 +14,16 @@ const DEFAULT_ITEMS = [
 ];
 
 export function WavyMarqueeRibbon({
-  items = DEFAULT_ITEMS,
+  items = DEFAULT_MARQUEE_ITEMS,
   variant = "wave",
   className = "",
+  fillColor = "var(--surface)",
 }: {
   items?: string[];
   /** "wave" renders the curved undulating SVG wave ribbon; "crossed" renders an angled dual-ribbon band. */
   variant?: "wave" | "crossed";
   className?: string;
+  fillColor?: string;
 }) {
   const uid = useId().replace(/:/g, "");
   const wavePathId = `widatra-wave-path-${uid}`;
@@ -103,8 +107,8 @@ export function WavyMarqueeRibbon({
         {/* Seamless Under-Wave Surface Fill — bridges the hero navy directly into the page surface following the natural wave curve */}
         <use
           href={`#${wavePathId}-fill`}
-          fill="var(--surface)"
-          className="fill-surface"
+          fill={fillColor}
+          style={{ fill: fillColor }}
         />
 
         {/* Outer Accent Rim / Shadow Wave */}

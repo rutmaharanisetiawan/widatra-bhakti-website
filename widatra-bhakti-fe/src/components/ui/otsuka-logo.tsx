@@ -38,12 +38,12 @@ export function OtsukaLogo({
     : {};
   // 1. EMBLEM ONLY (Blue motif with red accent dot)
   if (variant === "emblem") {
-    return (
+    const el = (
       <div
         className={cn(
           "inline-flex items-center justify-center select-none flex-shrink-0",
           interactive && "transition-transform duration-300 hover:scale-105",
-          className
+          !href && className
         )}
       >
         <img
@@ -59,6 +59,18 @@ export function OtsukaLogo({
         />
       </div>
     );
+    if (href) {
+      return (
+        <a
+          href={href}
+          {...linkProps}
+          className={cn("inline-flex items-center flex-shrink-0 text-inherit no-underline", className)}
+        >
+          {el}
+        </a>
+      );
+    }
+    return el;
   }
 
   // 2. HORIZONTAL LOGO (Motif + Otsuka Wordmark)
@@ -68,7 +80,7 @@ export function OtsukaLogo({
         className={cn(
           "inline-flex items-center gap-1.5 select-none flex-shrink-0 group px-2.5 py-1 rounded-full hover:bg-black/[0.04] dark:hover:bg-white/[0.08] transition-colors",
           interactive && "cursor-pointer",
-          className
+          !href && className
         )}
         title="Member of Otsuka Group Indonesia"
       >
@@ -87,7 +99,11 @@ export function OtsukaLogo({
     );
     if (href) {
       return (
-        <a href={href} {...linkProps} className="inline-flex items-center flex-shrink-0 text-inherit no-underline">
+        <a
+          href={href}
+          {...linkProps}
+          className={cn("inline-flex items-center flex-shrink-0 text-inherit no-underline", className)}
+        >
           {el}
         </a>
       );
@@ -106,7 +122,7 @@ export function OtsukaLogo({
         size === "sm" && "px-3 py-1.5 text-[10px]",
         size === "md" && "px-3.5 sm:px-4 py-1.5 text-[11px]",
         size === "lg" && "px-4.5 py-2 text-[12px]",
-        className
+        !href && className
       )}
       title="Member of Otsuka Group Indonesia · Est. 1921 (Japan) / 1986 (Indonesia)"
     >
@@ -131,7 +147,11 @@ export function OtsukaLogo({
 
   if (href) {
     return (
-      <a href={href} {...linkProps} className="inline-block flex-shrink-0 text-inherit no-underline">
+      <a
+        href={href}
+        {...linkProps}
+        className={cn("inline-block flex-shrink-0 text-inherit no-underline", className)}
+      >
         {content}
       </a>
     );

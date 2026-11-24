@@ -69,7 +69,7 @@ function ManagementPage() {
           - Sisi Kiri: Foto HD Presiden Direktur dalam bingkai minimalis modern
           - Sisi Kanan: Judul, 3 Paragraf Pesan Resmi, Metadata Poin, & Quote Box
       ================================================================= */}
-      <section id="mgmt-letter" className="py-16 sm:py-24 bg-white dark:bg-card scroll-mt-28">
+      <section id="mgmt-letter" className="py-16 sm:py-24 bg-surface scroll-mt-28">
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             

@@ -140,7 +140,7 @@ export function SiteNav() {
       <div className="pt-3 sm:pt-5 px-3 sm:px-5">
         <nav
           aria-label="Main navigation"
-          className={`pointer-events-auto mx-auto w-full max-w-[1440px] rounded-[50px] bg-white/95 dark:bg-popover/95 backdrop-blur-xl ring-1 ring-black/[0.06] dark:ring-white/[0.10] transition-all duration-300 ease-in-out ${
+          className={`pointer-events-auto mx-auto w-full max-w-[1440px] 2xl:max-w-[1540px] min-[1800px]:max-w-[1600px] rounded-[50px] bg-white/95 dark:bg-popover/95 backdrop-blur-xl ring-1 ring-black/[0.06] dark:ring-white/[0.10] transition-all duration-300 ease-in-out ${
             visible ? "translate-y-0 opacity-100" : "-translate-y-28 opacity-0 pointer-events-none"
           } ${
             scrolled
@@ -148,20 +148,20 @@ export function SiteNav() {
               : "h-[58px] sm:h-[64px] shadow-[0_8px_36px_0_rgba(9,42,125,0.14)] dark:shadow-[0_8px_36px_0_rgba(0,0,0,0.55)]"
           }`}
         >
-        <div className="h-full px-3.5 sm:px-5 xl:px-4 2xl:px-6 flex items-center justify-between gap-1.5 xl:gap-2 2xl:gap-4">
+        <div className="h-full px-3.5 sm:px-5 xl:px-4 2xl:px-5 flex items-center justify-between gap-1.5 xl:gap-2 2xl:gap-3">
           {/* Brand Logo */}
           <Link to="/" className="flex items-center group flex-shrink-0 mr-0.5 xl:mr-1" aria-label="PT Widatra Bhakti Home">
             <WidatraLogo
               variant="horizontal"
               size="md"
               subtitle={slogan}
-              subtitleClassName="hidden min-[1380px]:block"
+              subtitleClassName="hidden min-[1380px]:block max-w-[210px] 2xl:max-w-[250px] min-[1680px]:max-w-none truncate"
               showAccentAnimation={true}
             />
           </Link>
 
           {/* Desktop Centered Nav Links */}
-          <div className="hidden xl:flex items-center gap-0.5 min-[1380px]:gap-1 2xl:gap-1.5 flex-1 justify-center min-w-0">
+          <div className="hidden xl:flex items-center gap-0.5 min-[1380px]:gap-0.5 2xl:gap-1 min-[1680px]:gap-1.5 flex-1 justify-center min-w-0">
             {NAV.map((item) => {
               const hasChildren = "children" in item;
               const isActive = hasChildren
@@ -186,7 +186,7 @@ export function SiteNav() {
                       }
                       onFocus={() => openDropdown(item.labelKey)}
                       aria-expanded={isOpen}
-                      className={`group/nav relative flex items-center gap-1 px-1.5 min-[1380px]:px-2.5 2xl:px-3.5 py-1.5 text-[12px] min-[1380px]:text-[13px] 2xl:text-[14px] font-semibold tracking-[-0.01em] whitespace-nowrap rounded-full transition-all duration-200 outline-none focus-visible:ring-2 focus-visible:ring-primary/40 ${
+                      className={`group/nav relative flex items-center gap-1 px-1.5 min-[1380px]:px-2 2xl:px-2.5 min-[1680px]:px-3 py-1.5 text-[11.5px] min-[1380px]:text-[12.5px] min-[1680px]:text-[13.5px] font-semibold tracking-[-0.01em] whitespace-nowrap rounded-full transition-all duration-200 outline-none focus-visible:ring-2 focus-visible:ring-primary/40 ${
                         isActive
                           ? "text-primary bg-brand-tint/70 dark:bg-white/[0.08]"
                           : "text-corporate-black/75 dark:text-white/80 hover:text-primary hover:bg-brand-soft dark:hover:bg-white/[0.05]"
@@ -255,7 +255,7 @@ export function SiteNav() {
                 <Link
                   key={item.to}
                   to={item.to}
-                  className={`group/nav relative px-1.5 min-[1380px]:px-2.5 2xl:px-3.5 py-1.5 text-[12px] min-[1380px]:text-[13px] 2xl:text-[14px] font-semibold tracking-[-0.01em] whitespace-nowrap rounded-full transition-all duration-200 outline-none focus-visible:ring-2 focus-visible:ring-primary/40 ${
+                  className={`group/nav relative px-1.5 min-[1380px]:px-2 2xl:px-2.5 min-[1680px]:px-3 py-1.5 text-[11.5px] min-[1380px]:text-[12.5px] min-[1680px]:text-[13.5px] font-semibold tracking-[-0.01em] whitespace-nowrap rounded-full transition-all duration-200 outline-none focus-visible:ring-2 focus-visible:ring-primary/40 ${
                     isActive
                       ? "text-primary bg-brand-tint/70 dark:bg-white/[0.08]"
                       : "text-corporate-black/75 dark:text-white/80 hover:text-primary hover:bg-brand-soft dark:hover:bg-white/[0.05]"
@@ -278,9 +278,11 @@ export function SiteNav() {
           {/* Desktop Utility Cluster */}
           <div className="hidden xl:flex items-center gap-1 2xl:gap-2 flex-shrink-0 ml-1">
             <div className="flex items-center mr-0.5 2xl:mr-1">
-              <OtsukaLogo variant="emblem" size="sm" className="hidden xl:inline-flex min-[1380px]:hidden" href="https://www.otsuka.com/en/company/group/#asia" />
-              <OtsukaLogo variant="horizontal" size="sm" className="hidden min-[1380px]:inline-flex 2xl:hidden" href="https://www.otsuka.com/en/company/group/#asia" />
-              <OtsukaLogo variant="horizontal" size="md" className="hidden 2xl:inline-flex" href="https://www.otsuka.com/en/company/group/#asia" />
+              <OtsukaLogo
+                variant="horizontal"
+                size="sm"
+                href="https://www.otsuka.com/en/company/group/#asia"
+              />
             </div>
             <LanguageSwitcher />
             <ThemeToggle />
@@ -306,7 +308,7 @@ export function SiteNav() {
             </Link>
             <Link
               to="/careers"
-              className="inline-flex items-center gap-1.5 2xl:gap-2 px-3 min-[1360px]:px-4 2xl:px-5 py-2 2xl:py-2.5 text-[10.5px] min-[1360px]:text-[11px] 2xl:text-[11.5px] font-bold uppercase tracking-[0.10em] 2xl:tracking-[0.12em] whitespace-nowrap rounded-full bg-gradient-to-r from-primary via-brand-deep to-primary text-primary-foreground shadow-[0_8px_20px_-6px_rgba(14,49,146,0.5)] hover:shadow-[0_12px_24px_-6px_rgba(14,49,146,0.65)] hover:scale-[1.03] active:scale-[0.98] transition-all duration-200"
+              className="inline-flex items-center gap-1.5 2xl:gap-2 px-3 min-[1360px]:px-3.5 2xl:px-4 py-2 2xl:py-2.5 text-[10.5px] min-[1360px]:text-[11px] font-bold uppercase tracking-[0.10em] whitespace-nowrap rounded-full bg-gradient-to-r from-primary via-brand-deep to-primary text-primary-foreground shadow-[0_8px_20px_-6px_rgba(14,49,146,0.5)] hover:shadow-[0_12px_24px_-6px_rgba(14,49,146,0.65)] hover:scale-[1.03] active:scale-[0.98] transition-all duration-200"
             >
               {t("nav.joinUs")}
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none">

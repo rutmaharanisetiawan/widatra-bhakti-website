@@ -108,7 +108,7 @@ function AboutPage() {
           CHAPTER 01: COMPANY PROFILE & HERITAGE
           Foundational story from 1986 to Otsuka Group integration
       ================================================================= */}
-      <section id="profile" className="py-16 sm:py-24 bg-white dark:bg-card scroll-mt-32">
+      <section id="profile" className="py-16 sm:py-24 bg-surface scroll-mt-32">
         <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <ScrollReveal animation="fade-up" className="mb-10 sm:mb-12">
             <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tint dark:bg-white/[0.06] text-primary text-[10px] font-bold uppercase tracking-[0.22em] mb-4">
