@@ -401,6 +401,18 @@
       "pandaanLabel": "Pandaan Plant",
       "pandaanAddress": "Jl. Stadion No. 1, Pandaan, Pasuruan · +62-343-631575",
       "cta": "Open Contact Center"
+    },
+    "pharmacovigilance": {
+      "eyebrow": "Pharmacovigilance · Patient Safety",
+      "title": "More Contact Pharmacovigilance: Drug Side Effect Reporting",
+      "intro1": "Adverse Drug Reaction (ADR) is an unexpected reaction that occurs during treatment.",
+      "intro2": "If you suspect an ADR reaction due to PT Widatra Bhakti products, please fill in the following link:",
+      "scanInstruction": "Scan Barcode or click this link",
+      "participationNote": "By reporting suspected ADR reactions, you participate in improving drug safety in the community and help us in evaluating product safety.",
+      "openFormCta": "Open ADR Report Form",
+      "copyLink": "Copy Form Link",
+      "linkCopied": "Reporting form link copied to clipboard!",
+      "officialBadge": "Official Widatra Microsoft Forms"
     }
   },
   "footer": {

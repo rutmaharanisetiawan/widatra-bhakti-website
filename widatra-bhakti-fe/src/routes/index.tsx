@@ -7,6 +7,7 @@ import { SubNavbar } from "@/components/sub-navbar";
 import { usePublishedArticles } from "@/hooks/use-news";
 import { MediaImage } from "@/components/media/media-image";
 import { NewsDetailModal } from "@/components/news/news-detail-modal";
+import { PharmacovigilanceCard } from "@/components/home/pharmacovigilance-card";
 import type { Article } from "@/lib/news-data";
 import { ScrollReveal, ScrollStagger } from "@/components/ui/scroll-reveal";
 import {
@@ -1528,9 +1529,10 @@ function HomePage() {
         </div>
       </section>
 
-      {/* CONTACT CTA */}
+      {/* CONTACT & PHARMACOVIGILANCE CTA */}
       <section className="py-16 sm:py-20 bg-white dark:bg-card">
-        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-8 sm:space-y-12">
+          {/* Talk to Widatra Card */}
           <div className="rounded-[28px] sm:rounded-[36px] bg-gradient-to-br from-primary via-brand-deep to-brand-ink text-primary-foreground p-7 sm:p-12 lg:p-14 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center shadow-xl">
             <div className="lg:col-span-7">
               <span className="inline-block px-3.5 py-1.5 rounded-full bg-white/15 text-[10px] font-bold uppercase tracking-[0.22em] mb-4">
@@ -1572,6 +1574,9 @@ function HomePage() {
               </Link>
             </div>
           </div>
+
+          {/* Pharmacovigilance Reporting Card */}
+          <PharmacovigilanceCard />
         </div>
       </section>
     </>

@@ -401,6 +401,18 @@
       "pandaanLabel": "Pabrik Pandaan",
       "pandaanAddress": "Jl. Stadion No. 1, Pandaan, Pasuruan · +62-343-631575",
       "cta": "Buka Pusat Kontak"
+    },
+    "pharmacovigilance": {
+      "eyebrow": "Farmakovigilans · Keamanan Pasien",
+      "title": "Kontak Lanjutan Farmakovigilans: Pelaporan Efek Samping Obat",
+      "intro1": "Adverse Drug Reaction (ADR) adalah respons tak terduga yang terjadi selama masa pengobatan.",
+      "intro2": "Jika Anda mencurigai adanya reaksi ADR akibat produk PT Widatra Bhakti, silakan isi formulir pada tautan berikut:",
+      "scanInstruction": "Pindai Barcode atau klik tautan ini",
+      "participationNote": "Dengan melaporkan dugaan reaksi ADR, Anda berpartisipasi dalam meningkatkan keamanan obat di masyarakat dan membantu kami dalam mengevaluasi keamanan produk.",
+      "openFormCta": "Buka Formulir Pelaporan",
+      "copyLink": "Salin Tautan Formulir",
+      "linkCopied": "Tautan formulir berhasil disalin!",
+      "officialBadge": "Formulir Resmi Microsoft Forms Widatra"
     }
   },
   "footer": {
