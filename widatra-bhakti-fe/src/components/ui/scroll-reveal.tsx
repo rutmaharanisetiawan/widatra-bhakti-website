@@ -42,6 +42,14 @@ export function ScrollReveal({
     const el = elementRef.current;
     if (!el) return;
 
+    if (
+      typeof window !== "undefined" &&
+      window.matchMedia?.("(prefers-reduced-motion: reduce)").matches
+    ) {
+      setIsVisible(true);
+      return;
+    }
+
     // Check if element is already in viewport on mount (e.g. above the fold)
     const rect = el.getBoundingClientRect();
     if (rect.top < window.innerHeight && rect.bottom > 0) {
@@ -49,30 +57,48 @@ export function ScrollReveal({
       if (once) return;
     }
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-            if (once) {
-              observer.unobserve(entry.target);
-            }
-          } else if (!once) {
-            // Re-arm when out of view so scrolling back down triggers the motion transition
-            setIsVisible(false);
+    // Cap threshold on tall elements so large sections still reveal smoothly
+    const effectiveThreshold =
+      el.offsetHeight > window.innerHeight * 0.8 ? Math.min(threshold, 0.02) : threshold;
+
+    const revealObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          if (once) {
+            revealObserver.disconnect();
           }
-        });
+        }
       },
       {
-        threshold,
+        threshold: effectiveThreshold,
         rootMargin: "0px 0px -40px 0px",
       }
     );
 
-    observer.observe(el);
+    revealObserver.observe(el);
+
+    // Separate off-screen observer with a >96px hysteresis buffer so CSS translate3d (±36px)
+    // can never push the element back across the boundary into an infinite flicker loop.
+    let resetObserver: IntersectionObserver | null = null;
+    if (!once) {
+      resetObserver = new IntersectionObserver(
+        ([entry]) => {
+          if (!entry.isIntersecting) {
+            setIsVisible(false);
+          }
+        },
+        {
+          threshold: 0,
+          rootMargin: "96px 0px 96px 0px",
+        }
+      );
+      resetObserver.observe(el);
+    }
 
     return () => {
-      observer.disconnect();
+      revealObserver.disconnect();
+      resetObserver?.disconnect();
     };
   }, [threshold, once]);
 
@@ -99,7 +125,7 @@ export function ScrollReveal({
   return (
     <div
       ref={elementRef}
-      className={cn("transition-all ease-[cubic-bezier(0.16,1,0.3,1)]", className)}
+      className={cn("transition-[opacity,transform] ease-[cubic-bezier(0.16,1,0.3,1)]", className)}
       style={{
         opacity: isVisible ? 1 : 0,
         transform: getTransform(),
