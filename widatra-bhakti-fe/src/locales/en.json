@@ -2658,6 +2658,32 @@
         "published": "Event published to News & Event.",
         "saved": "Changes saved."
       }
+    },
+    "contact": {
+      "deleteDialog": {
+        "title": "Delete this inquiry?",
+        "bodyPrefix": "This will permanently remove the inquiry from",
+        "bodySuffix": "from the Contact Inbox. This action cannot be undone.",
+        "cancel": "Cancel",
+        "delete": "Delete"
+      },
+      "toast": {
+        "deleted": "Inquiry deleted successfully."
+      }
+    },
+    "media": {
+      "deleteDialog": {
+        "title": "Delete media asset?",
+        "bodyPrefix": "This will permanently remove",
+        "bodySuffix": "from the Media Library. This action cannot be undone.",
+        "usedWarningPrefix": "This file is currently referenced in",
+        "usedWarningSuffix": "place(s). Items will show a placeholder until a replacement is assigned.",
+        "cancel": "Cancel",
+        "delete": "Delete"
+      },
+      "toast": {
+        "deleted": "Media asset deleted successfully."
+      }
     }
   }
 }

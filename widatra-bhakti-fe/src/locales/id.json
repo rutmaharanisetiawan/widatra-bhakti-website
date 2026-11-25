@@ -2658,6 +2658,32 @@
         "published": "Acara dipublikasikan ke Berita & Acara.",
         "saved": "Perubahan disimpan."
       }
+    },
+    "contact": {
+      "deleteDialog": {
+        "title": "Hapus pesan kontak ini?",
+        "bodyPrefix": "Tindakan ini akan menghapus pesan dari",
+        "bodySuffix": "secara permanen dari Kotak Masuk Kontak. Tindakan ini tidak dapat dibatalkan.",
+        "cancel": "Batal",
+        "delete": "Hapus"
+      },
+      "toast": {
+        "deleted": "Pesan kontak berhasil dihapus."
+      }
+    },
+    "media": {
+      "deleteDialog": {
+        "title": "Hapus berkas media?",
+        "bodyPrefix": "Tindakan ini akan menghapus",
+        "bodySuffix": "secara permanen dari Pustaka Media. Tindakan ini tidak dapat dibatalkan.",
+        "usedWarningPrefix": "Berkas ini sedang digunakan di",
+        "usedWarningSuffix": "tempat. Konten terkait akan memakai placeholder hingga berkas baru dipilih.",
+        "cancel": "Batal",
+        "delete": "Hapus"
+      },
+      "toast": {
+        "deleted": "Berkas media berhasil dihapus."
+      }
     }
   }
 }

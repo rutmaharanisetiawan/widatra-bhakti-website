@@ -11,16 +11,7 @@ import {
   AdminNewsFormModal,
   type ArticleFormValues,
 } from "@/components/news/admin-news-form-modal";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-} from "@/components/ui/alert-dialog";
+import { AdminDeleteDialog } from "@/components/admin/admin-delete-dialog";
 import { Plus, Pencil, Trash2, Eye, EyeOff } from "lucide-react";
 import { toast } from "sonner";
 
@@ -45,6 +36,7 @@ function AdminNewsPage() {
   const [formOpen, setFormOpen] = useState(false);
   const [editing, setEditing] = useState<Article | null>(null);
   const [deleteTarget, setDeleteTarget] = useState<Article | null>(null);
+  const [isDeleting, setIsDeleting] = useState(false);
 
   const filterLabel = (f: (typeof FILTERS)[number]) => t(`news.categories.${CATEGORY_KEY_MAP[f] ?? "all"}`);
 
@@ -84,6 +76,7 @@ function AdminNewsPage() {
 
   async function confirmDelete() {
     if (!deleteTarget) return;
+    setIsDeleting(true);
     try {
       await deleteArticle(deleteTarget.slug);
       toast.success(`"${deleteTarget.title}" ${t("admin.news.toast.removedSuffix")}`);
@@ -91,6 +84,7 @@ function AdminNewsPage() {
     } catch (err) {
       toast.error(err instanceof Error ? err.message : "Couldn't delete the article.");
     } finally {
+      setIsDeleting(false);
       setDeleteTarget(null);
     }
   }
@@ -215,22 +209,20 @@ function AdminNewsPage() {
         onSubmit={handleSubmit}
       />
 
-      <AlertDialog open={!!deleteTarget} onOpenChange={(o) => !o && setDeleteTarget(null)}>
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <AlertDialogTitle>{t("admin.news.deleteDialog.title")}</AlertDialogTitle>
-            <AlertDialogDescription>
-              {t("admin.news.deleteDialog.bodyPrefix")} "{deleteTarget?.title}" {t("admin.news.deleteDialog.bodySuffix")}
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel>{t("admin.news.deleteDialog.cancel")}</AlertDialogCancel>
-            <AlertDialogAction onClick={confirmDelete} className="bg-destructive hover:bg-destructive/90">
-              {t("admin.news.deleteDialog.delete")}
-            </AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
+      <AdminDeleteDialog
+        open={!!deleteTarget}
+        onOpenChange={(o) => !o && setDeleteTarget(null)}
+        title={t("admin.news.deleteDialog.title")}
+        itemName={deleteTarget?.title}
+        itemType="ARTICLE"
+        description={
+          deleteTarget
+            ? `${t("admin.news.deleteDialog.bodyPrefix")} "${deleteTarget.title}" ${t("admin.news.deleteDialog.bodySuffix")}`
+            : undefined
+        }
+        isDeleting={isDeleting}
+        onConfirm={confirmDelete}
+      />
     </AdminShell>
   );
 }

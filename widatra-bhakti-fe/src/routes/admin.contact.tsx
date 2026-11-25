@@ -15,6 +15,8 @@ import {
   type ContactStatus,
 } from "@/lib/contact-data";
 import { ContactDetailModal } from "@/components/contact/contact-detail-modal";
+import { AdminDeleteDialog } from "@/components/admin/admin-delete-dialog";
+import { useLanguage } from "@/hooks/use-language";
 import { Search, Eye, MailOpen, Mail as MailIcon, Archive, ArchiveRestore, Trash2, Inbox } from "lucide-react";
 import { toast } from "sonner";
 
@@ -32,11 +34,14 @@ const FILTERS: { label: string; value: "All" | ContactStatus }[] = [
 ];
 
 function AdminContactPage() {
+  const { t } = useLanguage();
   const { inquiries, unreadCount, refresh } = useContactInbox();
   const [query, setQuery] = useState("");
   const [filter, setFilter] = useState<"All" | ContactStatus>("All");
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
+  const [deleteTarget, setDeleteTarget] = useState<ContactInquiry | null>(null);
+  const [isDeleting, setIsDeleting] = useState(false);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -82,9 +87,17 @@ function AdminContactPage() {
   }
 
   async function handleDelete(id: string) {
-    await deleteContactInquiry(id);
-    toast.success("Inquiry archived.");
-    await refresh();
+    try {
+      await deleteContactInquiry(id);
+      if (selectedId === id) {
+        setSelectedId(null);
+        setModalOpen(false);
+      }
+      toast.success(t("admin.contact.toast.deleted"));
+      await refresh();
+    } catch (err) {
+      toast.error(err instanceof Error ? err.message : "Couldn't delete the inquiry.");
+    }
   }
 
   async function handleReply(id: string, message: string) {
@@ -189,7 +202,7 @@ function AdminContactPage() {
                       >
                         {i.archived ? <ArchiveRestore className="w-4 h-4" /> : <Archive className="w-4 h-4" />}
                       </IconAction>
-                      <IconAction label="Delete" danger onClick={() => handleDelete(i.id)}>
+                      <IconAction label={t("admin.common.delete")} danger onClick={() => setDeleteTarget(i)}>
                         <Trash2 className="w-4 h-4" />
                       </IconAction>
                     </div>
@@ -209,6 +222,38 @@ function AdminContactPage() {
         onToggleArchive={handleToggleArchive}
         onDelete={handleDelete}
         onReply={handleReply}
+      />
+
+      <AdminDeleteDialog
+        open={!!deleteTarget}
+        onOpenChange={(open) => !open && setDeleteTarget(null)}
+        title={t("admin.contact.deleteDialog.title")}
+        itemName={deleteTarget ? `${deleteTarget.name} — ${deleteTarget.subject}` : undefined}
+        itemType="INQUIRY"
+        description={
+          deleteTarget
+            ? `${t("admin.contact.deleteDialog.bodyPrefix")} "${deleteTarget.name}" ${t("admin.contact.deleteDialog.bodySuffix")}`
+            : undefined
+        }
+        isDeleting={isDeleting}
+        onConfirm={async () => {
+          if (!deleteTarget) return;
+          setIsDeleting(true);
+          try {
+            await deleteContactInquiry(deleteTarget.id);
+            if (selectedId === deleteTarget.id) {
+              setSelectedId(null);
+              setModalOpen(false);
+            }
+            toast.success(t("admin.contact.toast.deleted"));
+            await refresh();
+          } catch (err) {
+            toast.error(err instanceof Error ? err.message : "Couldn't delete the inquiry.");
+          } finally {
+            setIsDeleting(false);
+            setDeleteTarget(null);
+          }
+        }}
       />
     </AdminShell>
   );

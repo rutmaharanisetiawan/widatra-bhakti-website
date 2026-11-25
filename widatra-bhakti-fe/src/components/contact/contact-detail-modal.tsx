@@ -7,16 +7,8 @@ import {
   formatReceivedAgo,
   type ContactInquiry,
 } from "@/lib/contact-data";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-} from "@/components/ui/alert-dialog";
+import { AdminDeleteDialog } from "@/components/admin/admin-delete-dialog";
+import { useLanguage } from "@/hooks/use-language";
 
 export function ContactDetailModal({
   inquiry,
@@ -35,6 +27,7 @@ export function ContactDetailModal({
   onDelete: (id: string) => void;
   onReply: (id: string, message: string) => void;
 }) {
+  const { t } = useLanguage();
   const [replyText, setReplyText] = useState("");
   const [sending, setSending] = useState(false);
   const [confirmDelete, setConfirmDelete] = useState(false);
@@ -207,30 +200,19 @@ export function ContactDetailModal({
         </DialogPrimitive.Portal>
       </DialogPrimitive.Root>
 
-      <AlertDialog open={confirmDelete} onOpenChange={setConfirmDelete}>
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <AlertDialogTitle>Delete this inquiry?</AlertDialogTitle>
-            <AlertDialogDescription>
-              This will permanently remove the message from "{inquiry.name}" from the Contact Inbox. This
-              action cannot be undone.
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel>Cancel</AlertDialogCancel>
-            <AlertDialogAction
-              onClick={() => {
-                setConfirmDelete(false);
-                onOpenChange(false);
-                onDelete(inquiry.id);
-              }}
-              className="bg-destructive hover:bg-destructive/90"
-            >
-              Delete
-            </AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
+      <AdminDeleteDialog
+        open={confirmDelete}
+        onOpenChange={setConfirmDelete}
+        title={t("admin.contact.deleteDialog.title")}
+        itemName={`${inquiry.name} — ${inquiry.subject}`}
+        itemType="INQUIRY"
+        description={`${t("admin.contact.deleteDialog.bodyPrefix")} "${inquiry.name}" ${t("admin.contact.deleteDialog.bodySuffix")}`}
+        onConfirm={() => {
+          setConfirmDelete(false);
+          onOpenChange(false);
+          onDelete(inquiry.id);
+        }}
+      />
     </>
   );
 }

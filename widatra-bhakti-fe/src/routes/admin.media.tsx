@@ -26,16 +26,8 @@ import {
 import { fileToOptimizedImage, ACCEPTED_IMAGE_ACCEPT_ATTR } from "@/lib/image-upload";
 import { getMediaUsages } from "@/lib/media-usage";
 import { MediaImage } from "@/components/media/media-image";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-} from "@/components/ui/alert-dialog";
+import { AdminDeleteDialog } from "@/components/admin/admin-delete-dialog";
+import { useLanguage } from "@/hooks/use-language";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { toast } from "sonner";
 
@@ -45,6 +37,7 @@ export const Route = createFileRoute("/admin/media")({
 });
 
 function AdminMediaPage() {
+  const { t } = useLanguage();
   const { assets, refresh } = useMedia();
   const [folder, setFolder] = useState<MediaFolder | "All">("All");
   const [query, setQuery] = useState("");
@@ -53,6 +46,7 @@ function AdminMediaPage() {
   const [renaming, setRenaming] = useState<MediaAsset | null>(null);
   const [renameValue, setRenameValue] = useState("");
   const [deleteTarget, setDeleteTarget] = useState<MediaAsset | null>(null);
+  const [isDeleting, setIsDeleting] = useState(false);
   const uploadInputRef = useRef<HTMLInputElement>(null);
   const replaceInputRef = useRef<HTMLInputElement>(null);
   const [replaceTarget, setReplaceTarget] = useState<MediaAsset | null>(null);
@@ -119,10 +113,17 @@ function AdminMediaPage() {
 
   async function confirmDelete() {
     if (!deleteTarget) return;
-    await deleteMediaAsset(deleteTarget.id);
-    refresh();
-    toast.success(`"${deleteTarget.name}" deleted`);
-    setDeleteTarget(null);
+    setIsDeleting(true);
+    try {
+      await deleteMediaAsset(deleteTarget.id);
+      refresh();
+      toast.success(t("admin.media.toast.deleted"));
+    } catch (err) {
+      toast.error(err instanceof Error ? err.message : "Couldn't delete the media file.");
+    } finally {
+      setIsDeleting(false);
+      setDeleteTarget(null);
+    }
   }
 
   const deleteUsages = deleteTarget ? getMediaUsages(deleteTarget.id) : [];
@@ -393,28 +394,32 @@ function AdminMediaPage() {
       </DialogPrimitive.Root>
 
       {/* Delete confirmation */}
-      <AlertDialog open={!!deleteTarget} onOpenChange={(o) => !o && setDeleteTarget(null)}>
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <AlertDialogTitle>Delete "{deleteTarget?.name}"?</AlertDialogTitle>
-            <AlertDialogDescription>
-              {deleteUsages.length > 0 ? (
-                <>
-                  This image is currently used in {deleteUsages.length} place{deleteUsages.length === 1 ? "" : "s"}
-                  {" "}({deleteUsages.map((u) => u.module).join(", ")}). Those items will fall back to a broken-image
-                  placeholder until you assign a new image. This action cannot be undone.
-                </>
-              ) : (
-                "This image isn't referenced anywhere right now. This action cannot be undone."
-              )}
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel>Cancel</AlertDialogCancel>
-            <AlertDialogAction onClick={confirmDelete}>Delete</AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
+      <AdminDeleteDialog
+        open={!!deleteTarget}
+        onOpenChange={(o) => !o && setDeleteTarget(null)}
+        title={t("admin.media.deleteDialog.title")}
+        itemName={deleteTarget?.name}
+        itemType="MEDIA"
+        description={
+          deleteUsages.length > 0 ? (
+            <span className="space-y-1 block">
+              <span className="font-semibold text-rose-600 dark:text-rose-400 block">
+                {t("admin.media.deleteDialog.usedWarningPrefix")} {deleteUsages.length} {t("admin.media.deleteDialog.usedWarningSuffix")}
+              </span>
+              <span className="text-[11px] text-muted-foreground block">
+                ({deleteUsages.map((u) => u.module).join(", ")})
+              </span>
+              <span>{t("admin.media.deleteDialog.bodySuffix")}</span>
+            </span>
+          ) : (
+            deleteTarget
+              ? `${t("admin.media.deleteDialog.bodyPrefix")} "${deleteTarget.name}" ${t("admin.media.deleteDialog.bodySuffix")}`
+              : undefined
+          )
+        }
+        isDeleting={isDeleting}
+        onConfirm={confirmDelete}
+      />
     </AdminShell>
   );
 }

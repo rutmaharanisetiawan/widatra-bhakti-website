@@ -10,16 +10,7 @@ import {
   AdminProductFormModal,
   type ProductFormValues,
 } from "@/components/products/admin-product-form-modal";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-} from "@/components/ui/alert-dialog";
+import { AdminDeleteDialog } from "@/components/admin/admin-delete-dialog";
 import { Plus, Pencil, Trash2 } from "lucide-react";
 import { toast } from "sonner";
 
@@ -37,6 +28,7 @@ function AdminProductsPage() {
   const [formOpen, setFormOpen] = useState(false);
   const [editing, setEditing] = useState<Product | null>(null);
   const [deleteTarget, setDeleteTarget] = useState<Product | null>(null);
+  const [isDeleting, setIsDeleting] = useState(false);
 
   const filterLabel = (f: (typeof FILTERS)[number]) =>
     f === "All" ? t("admin.products.filters.all") : f === "Branded" ? t("admin.products.filters.branded") : t("admin.products.filters.generic");
@@ -75,6 +67,7 @@ function AdminProductsPage() {
 
   async function confirmDelete() {
     if (!deleteTarget) return;
+    setIsDeleting(true);
     try {
       await deleteProduct(deleteTarget.code);
       toast.success(`"${deleteTarget.name}" ${t("admin.products.toast.removedSuffix")}`);
@@ -82,6 +75,7 @@ function AdminProductsPage() {
     } catch (err) {
       toast.error(err instanceof Error ? err.message : "Couldn't delete the product.");
     } finally {
+      setIsDeleting(false);
       setDeleteTarget(null);
     }
   }
@@ -188,22 +182,20 @@ function AdminProductsPage() {
         onSubmit={handleSubmit}
       />
 
-      <AlertDialog open={!!deleteTarget} onOpenChange={(o) => !o && setDeleteTarget(null)}>
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <AlertDialogTitle>{t("admin.products.deleteDialog.title")}</AlertDialogTitle>
-            <AlertDialogDescription>
-              {t("admin.products.deleteDialog.bodyPrefix")} "{deleteTarget?.name}" {t("admin.products.deleteDialog.bodySuffix")}
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel>{t("admin.products.deleteDialog.cancel")}</AlertDialogCancel>
-            <AlertDialogAction onClick={confirmDelete} className="bg-destructive hover:bg-destructive/90">
-              {t("admin.products.deleteDialog.delete")}
-            </AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
+      <AdminDeleteDialog
+        open={!!deleteTarget}
+        onOpenChange={(o) => !o && setDeleteTarget(null)}
+        title={t("admin.products.deleteDialog.title")}
+        itemName={deleteTarget?.name}
+        itemType="PRODUCT"
+        description={
+          deleteTarget
+            ? `${t("admin.products.deleteDialog.bodyPrefix")} "${deleteTarget.name}" ${t("admin.products.deleteDialog.bodySuffix")}`
+            : undefined
+        }
+        isDeleting={isDeleting}
+        onConfirm={confirmDelete}
+      />
     </AdminShell>
   );
 }

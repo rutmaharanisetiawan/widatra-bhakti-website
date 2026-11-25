@@ -11,16 +11,7 @@ import {
   AdminCsrFormModal,
   type CsrFormValues,
 } from "@/components/csr/admin-csr-form-modal";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-} from "@/components/ui/alert-dialog";
+import { AdminDeleteDialog } from "@/components/admin/admin-delete-dialog";
 import { Plus, Pencil, Trash2, Eye, EyeOff } from "lucide-react";
 import { toast } from "sonner";
 
@@ -38,6 +29,7 @@ function AdminCsrPage() {
   const [formOpen, setFormOpen] = useState(false);
   const [editing, setEditing] = useState<CsrProgram | null>(null);
   const [deleteTarget, setDeleteTarget] = useState<CsrProgram | null>(null);
+  const [isDeleting, setIsDeleting] = useState(false);
 
   const filtered = useMemo(() => {
     if (filter === "All") return programs;
@@ -84,6 +76,7 @@ function AdminCsrPage() {
 
   async function confirmDelete() {
     if (!deleteTarget) return;
+    setIsDeleting(true);
     try {
       await deleteCsrProgram(deleteTarget.slug);
       toast.success(`"${deleteTarget.title}" ${t("admin.csr.toast.removedSuffix")}`);
@@ -91,6 +84,7 @@ function AdminCsrPage() {
     } catch (err) {
       toast.error(err instanceof Error ? err.message : "Couldn't delete the program.");
     } finally {
+      setIsDeleting(false);
       setDeleteTarget(null);
     }
   }
@@ -225,22 +219,20 @@ function AdminCsrPage() {
         onSubmit={handleSubmit}
       />
 
-      <AlertDialog open={!!deleteTarget} onOpenChange={(o) => !o && setDeleteTarget(null)}>
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <AlertDialogTitle>{t("admin.csr.deleteDialog.title")}</AlertDialogTitle>
-            <AlertDialogDescription>
-              {t("admin.csr.deleteDialog.bodyPrefix")} "{deleteTarget?.title}" {t("admin.csr.deleteDialog.bodySuffix")}
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel>{t("admin.csr.deleteDialog.cancel")}</AlertDialogCancel>
-            <AlertDialogAction onClick={confirmDelete} className="bg-destructive hover:bg-destructive/90">
-              {t("admin.csr.deleteDialog.delete")}
-            </AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
+      <AdminDeleteDialog
+        open={!!deleteTarget}
+        onOpenChange={(o) => !o && setDeleteTarget(null)}
+        title={t("admin.csr.deleteDialog.title")}
+        itemName={deleteTarget?.title}
+        itemType="CSR"
+        description={
+          deleteTarget
+            ? `${t("admin.csr.deleteDialog.bodyPrefix")} "${deleteTarget.title}" ${t("admin.csr.deleteDialog.bodySuffix")}`
+            : undefined
+        }
+        isDeleting={isDeleting}
+        onConfirm={confirmDelete}
+      />
     </AdminShell>
   );
 }

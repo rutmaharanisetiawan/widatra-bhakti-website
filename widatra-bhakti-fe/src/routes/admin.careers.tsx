@@ -10,16 +10,7 @@ import { APPLICATION_STATUSES, type StoredApplication } from "@/lib/ats-store";
 import { addJob, deleteJob, updateJob, setJobStatus, setJobFeatured } from "@/lib/jobs-store";
 import { formatJobDate, type Job } from "@/lib/jobs-data";
 import { MediaImage } from "@/components/media/media-image";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-} from "@/components/ui/alert-dialog";
+import { AdminDeleteDialog } from "@/components/admin/admin-delete-dialog";
 import { Plus, Search, Pencil, Trash2, Eye, EyeOff, Star } from "lucide-react";
 import { toast } from "sonner";
 
@@ -51,6 +42,7 @@ function CareersAdmin() {
   const [jobFormOpen, setJobFormOpen] = useState(false);
   const [editingJob, setEditingJob] = useState<Job | null>(null);
   const [deleteJobTarget, setDeleteJobTarget] = useState<Job | null>(null);
+  const [isDeleting, setIsDeleting] = useState(false);
 
   const TAB_LABELS: Record<Tab, string> = {
     "Job posts": t("admin.ats.tabs.jobPosts"),
@@ -112,6 +104,7 @@ function CareersAdmin() {
 
   async function confirmDeleteJob() {
     if (!deleteJobTarget) return;
+    setIsDeleting(true);
     try {
       await deleteJob(deleteJobTarget.slug);
       toast.success(`"${deleteJobTarget.title}" ${t("admin.ats.jobPosts.toast.removedSuffix")}`);
@@ -119,6 +112,7 @@ function CareersAdmin() {
     } catch (err) {
       toast.error(err instanceof Error ? err.message : "Couldn't delete the job posting.");
     } finally {
+      setIsDeleting(false);
       setDeleteJobTarget(null);
     }
   }
@@ -347,22 +341,20 @@ function CareersAdmin() {
         onSubmit={handleJobSubmit}
       />
 
-      <AlertDialog open={!!deleteJobTarget} onOpenChange={(o) => !o && setDeleteJobTarget(null)}>
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <AlertDialogTitle>{t("admin.ats.jobPosts.deleteDialog.title")}</AlertDialogTitle>
-            <AlertDialogDescription>
-              {t("admin.ats.jobPosts.deleteDialog.bodyPrefix")} "{deleteJobTarget?.title}" {t("admin.ats.jobPosts.deleteDialog.bodySuffix")}
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel>{t("admin.ats.jobPosts.deleteDialog.cancel")}</AlertDialogCancel>
-            <AlertDialogAction onClick={confirmDeleteJob} className="bg-destructive hover:bg-destructive/90">
-              {t("admin.ats.jobPosts.deleteDialog.delete")}
-            </AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
+      <AdminDeleteDialog
+        open={!!deleteJobTarget}
+        onOpenChange={(o) => !o && setDeleteJobTarget(null)}
+        title={t("admin.ats.jobPosts.deleteDialog.title")}
+        itemName={deleteJobTarget?.title}
+        itemType="JOB POST"
+        description={
+          deleteJobTarget
+            ? `${t("admin.ats.jobPosts.deleteDialog.bodyPrefix")} "${deleteJobTarget.title}" ${t("admin.ats.jobPosts.deleteDialog.bodySuffix")}`
+            : undefined
+        }
+        isDeleting={isDeleting}
+        onConfirm={confirmDeleteJob}
+      />
     </AdminShell>
   );
 }
