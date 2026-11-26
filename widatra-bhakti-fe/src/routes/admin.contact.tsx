@@ -25,8 +25,11 @@ export const Route = createFileRoute("/admin/contact")({
   component: AdminContactPage,
 });
 
-const FILTERS: { label: string; value: "All" | ContactStatus }[] = [
+type ContactFilter = "All" | "PV" | ContactStatus;
+
+const FILTERS: { label: string; value: ContactFilter }[] = [
   { label: "All", value: "All" },
+  { label: "ADR / Farmakovigilans", value: "PV" },
   { label: "Unread", value: "Unread" },
   { label: "Read", value: "Read" },
   { label: "Replied", value: "Replied" },
@@ -37,7 +40,7 @@ function AdminContactPage() {
   const { t } = useLanguage();
   const { inquiries, unreadCount, refresh } = useContactInbox();
   const [query, setQuery] = useState("");
-  const [filter, setFilter] = useState<"All" | ContactStatus>("All");
+  const [filter, setFilter] = useState<ContactFilter>("All");
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
   const [deleteTarget, setDeleteTarget] = useState<ContactInquiry | null>(null);
@@ -47,15 +50,24 @@ function AdminContactPage() {
     const q = query.trim().toLowerCase();
     return inquiries.filter((i) => {
       const status = getContactStatus(i);
+      const isPv =
+        i.source?.toLowerCase().includes("pharmacovigilance") ||
+        i.source?.toLowerCase().includes("adr") ||
+        i.id.startsWith("PV-") ||
+        i.subject.toLowerCase().includes("[adr]");
+
+      if (filter === "PV" && !isPv) return false;
       if (filter === "All" && status === "Archived") return false;
-      if (filter !== "All" && status !== filter) return false;
+      if (filter !== "All" && filter !== "PV" && status !== filter) return false;
       if (!q) return true;
       return (
         i.name.toLowerCase().includes(q) ||
         i.email.toLowerCase().includes(q) ||
         i.subject.toLowerCase().includes(q) ||
         i.message.toLowerCase().includes(q) ||
-        (i.organization ?? "").toLowerCase().includes(q)
+        (i.organization ?? "").toLowerCase().includes(q) ||
+        (i.source ?? "").toLowerCase().includes(q) ||
+        i.id.toLowerCase().includes(q)
       );
     });
   }, [inquiries, query, filter]);
@@ -166,6 +178,12 @@ function AdminContactPage() {
             )}
             {filtered.map((i) => {
               const status = getContactStatus(i);
+              const isPv =
+                i.source?.toLowerCase().includes("pharmacovigilance") ||
+                i.source?.toLowerCase().includes("adr") ||
+                i.id.startsWith("PV-") ||
+                i.subject.toLowerCase().includes("[adr]");
+
               return (
                 <tr
                   key={i.id}
@@ -178,7 +196,16 @@ function AdminContactPage() {
                     <span className={i.read ? "font-medium" : "font-bold"}>{i.name}</span>
                     <div className="text-[11px] text-corporate-gray">{i.email}</div>
                   </td>
-                  <td className="px-5 py-3.5 text-corporate-gray max-w-xs truncate">{i.subject}</td>
+                  <td className="px-5 py-3.5 text-corporate-gray max-w-xs">
+                    <div className="flex items-center gap-1.5">
+                      {isPv && (
+                        <span className="shrink-0 px-2 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-wider bg-rose-100 text-rose-700 dark:bg-rose-950/70 dark:text-rose-300 border border-rose-300/60 dark:border-rose-800">
+                          ADR / PV
+                        </span>
+                      )}
+                      <span className="truncate">{i.subject}</span>
+                    </div>
+                  </td>
                   <td className="px-5 py-3.5 text-corporate-gray whitespace-nowrap">
                     {formatReceivedAgo(i.receivedAt)}
                   </td>

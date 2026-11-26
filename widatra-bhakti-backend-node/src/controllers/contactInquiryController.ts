@@ -5,8 +5,10 @@ import { prisma } from "../config/prisma.js";
 import { validate, sendData, notFound, param } from "../utils/http.js";
 import { recordAudit } from "../utils/auditLogger.js";
 import { nowDb, toIso } from "../utils/dates.js";
+import { sendPvReportEmail } from "../services/mailer.js";
 
 const SubmitInquirySchema = z.object({
+  id: z.string().optional().nullable(),
   name: z.string().min(1).max(255),
   organization: z.string().max(255).optional().nullable(),
   email: z.string().email(),
@@ -95,7 +97,7 @@ export async function getInquiry(req: Request, res: Response) {
 export async function submitInquiry(req: Request, res: Response) {
   const input = validate(SubmitInquirySchema, req.body);
   const now = nowDb();
-  const id = `ci-${crypto.randomUUID()}`;
+  const id = input.id?.trim() || `ci-${crypto.randomUUID()}`;
 
   const created = await prisma.contact_inquiries.create({
     data: {
@@ -115,6 +117,28 @@ export async function submitInquiry(req: Request, res: Response) {
     },
     include: { contact_replies: true },
   });
+
+  // If this is a Pharmacovigilance / ADR report, dispatch email to the PV unit
+  const isPvReport =
+    input.source?.toLowerCase().includes("pharmacovigilance") ||
+    input.source?.toLowerCase().includes("adr") ||
+    input.source?.toLowerCase().includes("side effect") ||
+    id.startsWith("PV-");
+
+  if (isPvReport) {
+    sendPvReportEmail({
+      id,
+      name: input.name,
+      organization: input.organization,
+      email: input.email,
+      phone: input.phone,
+      subject: input.subject,
+      message: input.message,
+      receivedAt: toIso(now) ?? new Date().toISOString(),
+    }).catch((err) => {
+      console.error("[PV Mail Dispatch Error]", err);
+    });
+  }
 
   sendData(res, serializeInquiry(created), 201);
 }

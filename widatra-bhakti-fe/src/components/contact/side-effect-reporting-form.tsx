@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useLanguage } from "@/hooks/use-language";
+import { addContactInquiry } from "@/lib/contact-store";
 import {
   ShieldCheck,
   AlertTriangle,
@@ -17,6 +18,7 @@ import {
   Loader2,
   QrCode,
   Lock,
+  Mail,
 } from "lucide-react";
 import { toast } from "sonner";
 import pharmacovigilanceQr from "@/assets/pharmacovigilance-qr.png";
@@ -54,6 +56,7 @@ export interface SideEffectFormData {
   patientDob: string;
   patientAge: string;
   reporterName: string;
+  reporterEmail?: string;
   profession: string;
   professionOther?: string;
   institutionAddress: string;
@@ -64,9 +67,19 @@ export function SideEffectReportingForm() {
   const { t, language } = useLanguage();
   const isId = language === "id";
 
+  const formTopRef = useRef<HTMLDivElement>(null);
   const [step, setStep] = useState<1 | 2 | 3>(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [referenceCode, setReferenceCode] = useState<string>("");
+
+  const scrollToForm = () => {
+    if (formTopRef.current) {
+      formTopRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      const el = document.getElementById("report-form");
+      el?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   const [formData, setFormData] = useState<SideEffectFormData>({
     agreedToPolicy: false,
@@ -78,6 +91,7 @@ export function SideEffectReportingForm() {
     patientDob: "",
     patientAge: "",
     reporterName: "",
+    reporterEmail: "",
     profession: "Dokter",
     professionOther: "",
     institutionAddress: "",
@@ -109,7 +123,7 @@ export function SideEffectReportingForm() {
     }
     setErrors({});
     setStep(2);
-    window.scrollTo({ top: 320, behavior: "smooth" });
+    setTimeout(scrollToForm, 50);
   };
 
   const validateStep2 = () => {
@@ -163,17 +177,60 @@ export function SideEffectReportingForm() {
     }
 
     setIsSubmitting(true);
-    // Simulate safe local persistence and processing
-    await new Promise((resolve) => setTimeout(resolve, 800));
 
     const code = `PV-${new Date().getFullYear()}-${Math.floor(
       100000 + Math.random() * 900000
     )}`;
+
+    const formattedMessage = [
+      `=== LAPORAN FARMAKOVIGILANS / EFEK SAMPING OBAT (ADR) ===`,
+      `Kode Referensi : ${code}`,
+      `Waktu Lapor    : ${new Date().toLocaleString("id-ID", { timeZone: "Asia/Jakarta" })} WIB`,
+      ``,
+      `[1. INFORMASI PRODUK & EFEK SAMPING]`,
+      `• Nama Produk              : ${formData.productName}`,
+      `• Tanggal Penggunaan Obat  : ${formData.usageDate}`,
+      `• Tanggal Kejadian Reaksi  : ${formData.reactionDate || "-"}`,
+      `• Gejala / Reaksi Pasien   :`,
+      `${formData.reactionDescription}`,
+      ``,
+      `[2. INFORMASI PASIEN]`,
+      `• Nama / Inisial Pasien    : ${formData.patientName}`,
+      `• Tanggal Lahir            : ${formData.patientDob}`,
+      `• Umur Pasien              : ${formData.patientAge} Tahun`,
+      ``,
+      `[3. DATA PELAPOR & FASILITAS KESEHATAN]`,
+      `• Nama Pelapor             : ${formData.reporterName}`,
+      `• Profesi / Kategori       : ${formData.profession === "Other" ? `Lainnya (${formData.professionOther})` : formData.profession}`,
+      `• Telepon / WhatsApp       : ${formData.phone}`,
+      `• Email Pelapor            : ${formData.reporterEmail?.trim() || "-"}`,
+      `• Fasilitas Kesehatan / Alamat :`,
+      `${formData.institutionAddress}`,
+      ``,
+      `[4. REGULASI & PERSETUJUAN DATA PRIBADI]`,
+      `• Status Persetujuan       : Disetujui (Sesuai Peraturan BPOM No. 4 Tahun 2026)`,
+    ].join("\n");
+
+    try {
+      await addContactInquiry({
+        id: code,
+        name: formData.reporterName,
+        organization: formData.institutionAddress.split("\n")[0] || formData.profession,
+        email: formData.reporterEmail?.trim() || "pv-report@widatra.com",
+        phone: formData.phone,
+        subject: `[ADR] ${formData.productName} - Pasien: ${formData.patientName} (${code})`,
+        message: formattedMessage,
+        source: "Pharmacovigilance (ADR)",
+      });
+    } catch (err) {
+      console.warn("Backend ADR record warning:", err);
+    }
+
     setReferenceCode(code);
     setIsSubmitting(false);
     setStep(3);
     toast.success(t("sideEffectReporting.successTitle"));
-    window.scrollTo({ top: 320, behavior: "smooth" });
+    setTimeout(scrollToForm, 60);
   };
 
   const handlePrint = () => {
@@ -191,6 +248,7 @@ export function SideEffectReportingForm() {
       patientDob: "",
       patientAge: "",
       reporterName: "",
+      reporterEmail: "",
       profession: "Dokter",
       professionOther: "",
       institutionAddress: "",
@@ -199,10 +257,11 @@ export function SideEffectReportingForm() {
     setErrors({});
     setReferenceCode("");
     setStep(1);
+    setTimeout(scrollToForm, 60);
   };
 
   return (
-    <div className="space-y-8">
+    <div ref={formTopRef} id="reporting-form-card" className="space-y-8 scroll-mt-28">
       {/* Top Helper Banner with QR link to Microsoft Forms */}
       <div className="rounded-2xl sm:rounded-3xl border border-primary/15 dark:border-white/10 bg-gradient-to-r from-blue-50/70 via-white to-rose-50/40 dark:from-surface-2 dark:via-card dark:to-background p-4 sm:p-6 shadow-sm flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-3.5">
@@ -626,7 +685,7 @@ export function SideEffectReportingForm() {
                   </span>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   {/* Question 9: Reporter Name */}
                   <div>
                     <label className="block text-xs font-bold uppercase tracking-wider text-corporate-black/85 dark:text-foreground mb-1.5">
@@ -675,6 +734,24 @@ export function SideEffectReportingForm() {
                     {errors.phone && (
                       <p className="mt-1 text-xs text-rose-600">{errors.phone}</p>
                     )}
+                  </div>
+
+                  {/* Optional Email for Confirmation Receipt */}
+                  <div>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-corporate-black/85 dark:text-foreground mb-1.5">
+                      {isId ? "Email Pelapor (Opsional)" : "Reporter Email (Optional)"}
+                    </label>
+                    <div className="relative">
+                      <input
+                        type="email"
+                        placeholder="e.g. pelapor@rs.co.id"
+                        value={formData.reporterEmail || ""}
+                        onChange={(e) =>
+                          handleFieldChange("reporterEmail", e.target.value)
+                        }
+                        className="w-full h-11 px-3.5 rounded-xl border border-slate-300 dark:border-white/15 text-xs sm:text-sm bg-white dark:bg-card focus:outline-none focus:ring-2 focus:ring-primary/20"
+                      />
+                    </div>
                   </div>
                 </div>
 
@@ -768,7 +845,10 @@ export function SideEffectReportingForm() {
               <div className="flex items-center justify-between pt-4 border-t border-slate-200 dark:border-white/10">
                 <button
                   type="button"
-                  onClick={() => setStep(1)}
+                  onClick={() => {
+                    setStep(1);
+                    setTimeout(scrollToForm, 50);
+                  }}
                   className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-slate-300 dark:border-white/15 hover:bg-slate-100 dark:hover:bg-white/[0.06] text-xs font-semibold text-corporate-black dark:text-foreground transition-all"
                 >
                   <ChevronLeft className="w-4 h-4" />

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "@/components/page-hero";
 import { useLanguage } from "@/hooks/use-language";
@@ -30,6 +31,17 @@ function SideEffectReportingPage() {
   const { t, language } = useLanguage();
   const isId = language === "id";
 
+  useEffect(() => {
+    // Smooth scroll down to the form when page loads so user doesn't get stuck on the top hero
+    const timer = setTimeout(() => {
+      const el = document.getElementById("report-form");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, 120);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
       <PageHero
@@ -42,7 +54,7 @@ function SideEffectReportingPage() {
       />
 
       {/* Main Section */}
-      <section className="py-12 sm:py-16 bg-surface">
+      <section id="report-form" className="py-12 sm:py-16 bg-surface scroll-mt-24 sm:scroll-mt-28">
         <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           {/* Sub Navigation Switcher */}
           <div className="flex items-center justify-center mb-8 sm:mb-12">

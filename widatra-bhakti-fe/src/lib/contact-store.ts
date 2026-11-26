@@ -116,6 +116,7 @@ export function getTotalContactCount(): number {
 }
 
 export type NewContactInput = {
+  id?: string;
   name: string;
   organization?: string;
   email: string;
@@ -130,6 +131,7 @@ export type NewContactInput = {
 export async function addContactInquiry(input: NewContactInput): Promise<ContactInquiry> {
   const created = mapInquiry(
     await api.post<ApiContactInquiry>("/contact-inquiries", {
+      id: input.id?.trim() || undefined,
       name: input.name.trim(),
       organization: input.organization?.trim() || undefined,
       email: input.email.trim(),
