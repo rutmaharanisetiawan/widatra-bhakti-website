@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { useLanguage } from "@/hooks/use-language";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
-import { HeartPulse, ExternalLink, Copy, Check, QrCode } from "lucide-react";
+import { HeartPulse, ExternalLink, Copy, Check, QrCode, ArrowRight } from "lucide-react";
 import { toast } from "sonner";
 import pharmacovigilanceQr from "@/assets/pharmacovigilance-qr.png";
 
@@ -56,14 +57,22 @@ export function PharmacovigilanceCard({ className = "" }: { className?: string }
 
             {/* Action Buttons */}
             <div className="flex flex-wrap items-center gap-3 pt-1">
+              <Link
+                to="/contact/reporting"
+                className="inline-flex items-center gap-2 px-6 sm:px-7 py-3.5 rounded-full bg-gradient-to-r from-rose-600 via-rose-700 to-rose-600 hover:from-rose-700 hover:to-rose-800 text-white text-xs font-bold uppercase tracking-[0.18em] shadow-lg shadow-rose-600/20 hover:shadow-rose-600/35 hover:scale-[1.02] active:scale-[0.98] transition-all"
+              >
+                <span>{t("home.pharmacovigilance.openFormCta")}</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+
               <a
                 href={PHARMACOVIGILANCE_FORM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 sm:px-7 py-3.5 rounded-full bg-gradient-to-r from-rose-600 via-rose-700 to-rose-600 hover:from-rose-700 hover:to-rose-800 text-white text-xs font-bold uppercase tracking-[0.18em] shadow-lg shadow-rose-600/20 hover:shadow-rose-600/35 hover:scale-[1.02] active:scale-[0.98] transition-all"
+                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-full border border-black/[0.12] dark:border-white/[0.15] bg-white dark:bg-card hover:bg-slate-50 dark:hover:bg-white/[0.06] text-corporate-black dark:text-white text-xs font-semibold tracking-wider transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
-                <span>{t("home.pharmacovigilance.openFormCta")}</span>
-                <ExternalLink className="w-4 h-4" />
+                <span>Microsoft Forms</span>
+                <ExternalLink className="w-3.5 h-3.5 text-corporate-gray" />
               </a>
 
               <button

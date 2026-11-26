@@ -17,7 +17,9 @@
     "joinUs": "Bergabung",
     "signIn": "Masuk",
     "signInRegister": "Masuk / Daftar",
-    "myAccount": "Akun Saya"
+    "myAccount": "Akun Saya",
+    "contactUs": "Hubungi Kami",
+    "sideEffectReporting": "Pelaporan Efek Samping Obat"
   },
   "home": {
     "hero": {
@@ -2697,5 +2699,45 @@
         "deleted": "Berkas media berhasil dihapus."
       }
     }
+  },
+  "sideEffectReporting": {
+    "heroEyebrow": "(PV) Farmakovigilans",
+    "heroTitle": "Pelaporan Efek Samping",
+    "heroItalic": "Obat (MESO).",
+    "heroDescription": "Efek Samping Obat (ESO) merupakan reaksi yang tidak diharapkan yang terjadi selama pengobatan. Apabila Anda menduga adanya reaksi ESO akibat dari produk PT Widatra Bhakti, silakan mengisi formulir resmi ini.",
+    "tabContact": "Hubungi Kami",
+    "tabReporting": "Pelaporan Efek Samping",
+    "msFormsNote": "Anda juga dapat mengisi formulir ini langsung di halaman resmi Microsoft Forms atau memindai barcode QR.",
+    "openMsForms": "Buka di Microsoft Forms",
+    "step1Title": "Persetujuan Kebijakan Data Pribadi",
+    "step1Description": "Berdasarkan Peraturan Badan POM No. 4 tahun 2026 tentang Pelaksanaan Farmakovigilans, kami memerlukan izin Anda untuk menyimpan dan memproses data laporan secara khusus demi keselamatan pengobatan.",
+    "consentCheckbox": "Saya telah membaca, memahami, dan menyetujui syarat & ketentuan kebijakan data pribadi pada form ini.",
+    "step2Title": "Informasi Keluhan & Data Pasien",
+    "step3Title": "Data Pelapor & Instansi",
+    "productLabel": "Nama Produk",
+    "selectProductPlaceholder": "-- Pilih Produk Cairan Widatra / Otsuka --",
+    "usageDateLabel": "Tanggal Penggunaan Obat",
+    "reactionLabel": "Reaksi ESO Pasien",
+    "reactionHint": "Contoh: Ruam, Sesak Napas, Diare, alergi, atau reaksi lainnya. Minimal 30 karakter.",
+    "reactionDateLabel": "Tanggal ESO Terjadi (Opsional)",
+    "patientNameLabel": "Nama / Inisial Pasien",
+    "patientDobLabel": "Tanggal Lahir Pasien",
+    "patientAgeLabel": "Usia Pasien (Tahun)",
+    "reporterNameLabel": "Nama Pelapor",
+    "professionLabel": "Profesi / Hubungan dengan Pasien",
+    "institutionLabel": "Instansi dan Alamat Instansi (Untuk: Tenaga Kesehatan)",
+    "phoneLabel": "Nomor Handphone / WhatsApp",
+    "nextStep": "Lanjut ke Rincian Keluhan",
+    "prevStep": "Kembali",
+    "submitReport": "Kirim Laporan ESO",
+    "submitting": "Mengirimkan Laporan...",
+    "successTitle": "Laporan Berhasil Terkirim",
+    "successMessage": "Terima kasih atas partisipasi Anda dalam menjaga keamanan obat. Laporan telah masuk ke Unit Farmakovigilans PT Widatra Bhakti dan akan ditindaklanjuti secara rahasia sesuai standar PIC/S GMP dan BPOM RI.",
+    "refCode": "Nomor Referensi Laporan",
+    "printReport": "Cetak Bukti Laporan",
+    "submitAnother": "Kirim Laporan Baru",
+    "requiredError": "Bidang ini wajib diisi.",
+    "minCharError": "Mohon masukkan minimal 30 karakter untuk penjelasan reaksi ESO.",
+    "consentError": "Anda wajib menyetujui kebijakan data pribadi untuk melanjutkan."
   }
 }

@@ -26,6 +26,7 @@ import { Route as ApplicantIndexRouteImport } from './routes/applicant.index'
 import { Route as AdminIndexRouteImport } from './routes/admin.index'
 import { Route as ProductsCodeRouteImport } from './routes/products.$code'
 import { Route as NewsSlugRouteImport } from './routes/news.$slug'
+import { Route as ContactReportingRouteImport } from './routes/contact_.reporting'
 import { Route as CareersSlugRouteImport } from './routes/careers.$slug'
 import { Route as AuthVerifyEmailRouteImport } from './routes/auth.verify-email'
 import { Route as AuthSuccessRouteImport } from './routes/auth.success'
@@ -139,6 +140,11 @@ const NewsSlugRoute = NewsSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
   getParentRoute: () => NewsRoute,
+} as any)
+const ContactReportingRoute = ContactReportingRouteImport.update({
+  id: '/contact_/reporting',
+  path: '/contact/reporting',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const CareersSlugRoute = CareersSlugRouteImport.update({
   id: '/$slug',
@@ -323,6 +329,7 @@ export interface FileRoutesByFullPath {
   '/auth/success': typeof AuthSuccessRoute
   '/auth/verify-email': typeof AuthVerifyEmailRoute
   '/careers/$slug': typeof CareersSlugRoute
+  '/contact/reporting': typeof ContactReportingRoute
   '/news/$slug': typeof NewsSlugRoute
   '/products/$code': typeof ProductsCodeRoute
   '/admin/': typeof AdminIndexRoute
@@ -368,6 +375,7 @@ export interface FileRoutesByTo {
   '/auth/success': typeof AuthSuccessRoute
   '/auth/verify-email': typeof AuthVerifyEmailRoute
   '/careers/$slug': typeof CareersSlugRoute
+  '/contact/reporting': typeof ContactReportingRoute
   '/news/$slug': typeof NewsSlugRoute
   '/products/$code': typeof ProductsCodeRoute
   '/admin': typeof AdminIndexRoute
@@ -416,6 +424,7 @@ export interface FileRoutesById {
   '/auth/success': typeof AuthSuccessRoute
   '/auth/verify-email': typeof AuthVerifyEmailRoute
   '/careers/$slug': typeof CareersSlugRoute
+  '/contact_/reporting': typeof ContactReportingRoute
   '/news/$slug': typeof NewsSlugRoute
   '/products/$code': typeof ProductsCodeRoute
   '/admin/': typeof AdminIndexRoute
@@ -465,6 +474,7 @@ export interface FileRouteTypes {
     | '/auth/success'
     | '/auth/verify-email'
     | '/careers/$slug'
+    | '/contact/reporting'
     | '/news/$slug'
     | '/products/$code'
     | '/admin/'
@@ -510,6 +520,7 @@ export interface FileRouteTypes {
     | '/auth/success'
     | '/auth/verify-email'
     | '/careers/$slug'
+    | '/contact/reporting'
     | '/news/$slug'
     | '/products/$code'
     | '/admin'
@@ -557,6 +568,7 @@ export interface FileRouteTypes {
     | '/auth/success'
     | '/auth/verify-email'
     | '/careers/$slug'
+    | '/contact_/reporting'
     | '/news/$slug'
     | '/products/$code'
     | '/admin/'
@@ -584,6 +596,7 @@ export interface RootRouteChildren {
   AuthResetPasswordRoute: typeof AuthResetPasswordRoute
   AuthSuccessRoute: typeof AuthSuccessRoute
   AuthVerifyEmailRoute: typeof AuthVerifyEmailRoute
+  ContactReportingRoute: typeof ContactReportingRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -706,6 +719,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/news/$slug'
       preLoaderRoute: typeof NewsSlugRouteImport
       parentRoute: typeof NewsRoute
+    }
+    '/contact_/reporting': {
+      id: '/contact_/reporting'
+      path: '/contact/reporting'
+      fullPath: '/contact/reporting'
+      preLoaderRoute: typeof ContactReportingRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/careers/$slug': {
       id: '/careers/$slug'
@@ -1022,6 +1042,7 @@ const rootRouteChildren: RootRouteChildren = {
   AuthResetPasswordRoute: AuthResetPasswordRoute,
   AuthSuccessRoute: AuthSuccessRoute,
   AuthVerifyEmailRoute: AuthVerifyEmailRoute,
+  ContactReportingRoute: ContactReportingRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

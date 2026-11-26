@@ -17,7 +17,9 @@
     "joinUs": "Join Us",
     "signIn": "Sign In",
     "signInRegister": "Sign in / Register",
-    "myAccount": "My Account"
+    "myAccount": "My Account",
+    "contactUs": "Contact Us",
+    "sideEffectReporting": "Side Effect Reporting"
   },
   "home": {
     "hero": {
@@ -2697,5 +2699,45 @@
         "deleted": "Media asset deleted successfully."
       }
     }
+  },
+  "sideEffectReporting": {
+    "heroEyebrow": "(PV) Pharmacovigilance",
+    "heroTitle": "Drug Side Effect",
+    "heroItalic": "Reporting.",
+    "heroDescription": "Adverse Drug Reaction (ADR) is an unexpected reaction that occurs during treatment. If you suspect an ADR reaction due to PT Widatra Bhakti products, please submit this official report.",
+    "tabContact": "Contact Us",
+    "tabReporting": "Side Effect Reporting",
+    "msFormsNote": "You can also submit this form directly on the official Microsoft Forms page or scan the QR code.",
+    "openMsForms": "Open in Microsoft Forms",
+    "step1Title": "Privacy Policy & Data Processing Consent",
+    "step1Description": "Under Indonesian BPOM Regulation No. 4/2026 on Pharmacovigilance, we require your explicit consent to store and process ADR report data strictly for drug safety monitoring.",
+    "consentCheckbox": "I have read, understood, and agree to the terms and privacy conditions of this pharmacovigilance report.",
+    "step2Title": "Adverse Reaction & Patient Information",
+    "step3Title": "Reporter & Healthcare Facility Details",
+    "productLabel": "Product Name",
+    "selectProductPlaceholder": "-- Select Widatra / Otsuka Product --",
+    "usageDateLabel": "Date of Drug Usage",
+    "reactionLabel": "Patient ADR Symptoms / Reaction",
+    "reactionHint": "Example: Rash, Dyspnea / Shortness of breath, Diarrhea, etc. Minimum 30 characters.",
+    "reactionDateLabel": "Date ADR Occurred (Optional)",
+    "patientNameLabel": "Patient Name / Initials",
+    "patientDobLabel": "Patient Date of Birth",
+    "patientAgeLabel": "Patient Age (Years)",
+    "reporterNameLabel": "Reporter Name",
+    "professionLabel": "Profession / Relationship to Patient",
+    "institutionLabel": "Institution & Address (For Healthcare Professionals)",
+    "phoneLabel": "Mobile / WhatsApp Phone Number",
+    "nextStep": "Continue to Complaint Details",
+    "prevStep": "Back",
+    "submitReport": "Submit ADR Report",
+    "submitting": "Submitting Report...",
+    "successTitle": "Report Submitted Successfully",
+    "successMessage": "Thank you for contributing to drug safety. Your report has been submitted to the Pharmacovigilance Unit of PT Widatra Bhakti and will be processed confidentially according to PIC/S GMP and BPOM standards.",
+    "refCode": "Reference Code",
+    "printReport": "Print Report Receipt",
+    "submitAnother": "Submit Another Report",
+    "requiredError": "This field is required.",
+    "minCharError": "Please enter at least 30 characters for the reaction description.",
+    "consentError": "You must agree to the privacy policy to proceed."
   }
 }

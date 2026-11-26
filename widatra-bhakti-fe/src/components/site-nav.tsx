@@ -26,7 +26,14 @@ const NAV = [
   { labelKey: "nav.newsEvent", to: "/news" },
   { labelKey: "nav.csr", to: "/csr" },
   { labelKey: "nav.careers", to: "/careers" },
-  { labelKey: "nav.contact", to: "/contact" },
+  {
+    labelKey: "nav.contact",
+    to: "/contact",
+    children: [
+      { labelKey: "nav.contactUs", to: "/contact" },
+      { labelKey: "nav.sideEffectReporting", to: "/contact/reporting" },
+    ],
+  },
 ] as const;
 
 export function SiteNav() {
