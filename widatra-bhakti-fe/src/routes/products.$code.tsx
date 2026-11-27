@@ -53,14 +53,14 @@ function ProductDetailPage() {
       </section>
 
       {/* Hero */}
-      <section className="bg-white dark:bg-card py-20">
-        <div className="max-w-[1600px] mx-auto px-6 lg:px-10 grid grid-cols-12 gap-12">
-          <ScrollReveal animation="fade-right" className="col-span-12 lg:col-span-7">
+      <section className="bg-white dark:bg-card py-16 sm:py-20">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+          <ScrollReveal animation="fade-right" className="col-span-1 lg:col-span-7">
             <div className="aspect-[4/5] bg-surface flex items-center justify-center overflow-hidden rounded-[24px]">
               <MediaImage src={product.img} alt={product.name} className="h-[80%] w-auto object-contain" />
             </div>
           </ScrollReveal>
-          <ScrollReveal animation="fade-left" className="col-span-12 lg:col-span-5">
+          <ScrollReveal animation="fade-left" className="col-span-1 lg:col-span-5">
             <div className="flex gap-3 mb-6">
               <span className="eyebrow text-primary px-3 py-1 bg-primary/10 rounded-full">{product.category}</span>
               <span className="eyebrow text-corporate-gray px-3 py-1 border border-black/10 rounded-full">{brandLabel}</span>
@@ -92,14 +92,14 @@ function ProductDetailPage() {
       </section>
 
       {/* Overview / Composition */}
-      <section className="bg-surface py-24">
-        <ScrollReveal animation="fade-up" className="max-w-[1600px] mx-auto px-6 lg:px-10 grid grid-cols-12 gap-12">
-          <div className="col-span-12 lg:col-span-5">
+      <section className="bg-surface py-16 sm:py-24">
+        <ScrollReveal animation="fade-up" className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+          <div className="col-span-1 lg:col-span-5">
             <span className="eyebrow text-primary mb-4 block">{t("products.detail.overview.eyebrow")}</span>
             <h2 className="text-3xl lg:text-4xl font-light tracking-tight mb-6">{t("products.detail.overview.title")}</h2>
             <p className="text-corporate-gray leading-relaxed">{product.composition}</p>
           </div>
-          <div className="col-span-12 lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-px bg-black/5 dark:bg-white/5 rounded-2xl overflow-hidden">
+          <div className="col-span-1 lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-px bg-black/5 dark:bg-white/5 rounded-2xl overflow-hidden">
             <Block label={t("products.modal.blocks.packagingVariants")} items={product.packaging} />
             <Block label={t("products.modal.blocks.availableSizes")} items={product.sizes} />
             <Block label={t("products.modal.blocks.applications")} items={product.applications} />
@@ -109,48 +109,50 @@ function ProductDetailPage() {
       </section>
 
       {/* Specifications table */}
-      <section className="py-24 bg-white dark:bg-card">
-        <ScrollReveal animation="fade-up" className="max-w-[1600px] mx-auto px-6 lg:px-10">
+      <section className="py-16 sm:py-24 bg-white dark:bg-card">
+        <ScrollReveal animation="fade-up" className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10">
           <div className="mb-10">
             <span className="eyebrow text-primary mb-4 block">{t("products.detail.specifications.eyebrow")}</span>
             <h2 className="text-3xl lg:text-4xl font-light tracking-tight">{t("products.detail.specifications.title")}</h2>
           </div>
-          <table className="w-full text-sm border-t border-black/10">
-            <tbody>
-              {[
-                [t("products.detail.table.productCode"), product.code],
-                [t("products.detail.table.genericBranded"), brandLabel],
-                [t("products.detail.table.category"), product.category],
-                [t("products.detail.table.indication"), product.indication],
-                [t("products.detail.table.composition"), product.composition],
-                [t("products.detail.table.osmolarity"), product.osmolarity],
-                [t("products.detail.table.calorie"), product.calorie],
-                [t("products.detail.table.packaging"), product.packaging.join(" · ")],
-                [t("products.detail.table.availableSizes"), product.sizes.join(" · ")],
-                [t("products.detail.table.nieBpom"), product.nie],
-                [t("products.detail.table.shelfLife"), product.shelfLife],
-                [t("products.detail.table.storage"), product.storage],
-                [t("products.detail.table.manufacturingStandard"), product.manufacturingNote],
-              ].map(([k, v]) => (
-                <tr key={k} className="border-b border-black/5">
-                  <th className="text-left py-5 pr-8 align-top eyebrow text-corporate-gray w-1/4">{k}</th>
-                  <td className="py-5 text-corporate-black dark:text-foreground leading-relaxed">{v}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <div className="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
+            <table className="w-full min-w-[500px] sm:min-w-full text-sm border-t border-black/10">
+              <tbody>
+                {[
+                  [t("products.detail.table.productCode"), product.code],
+                  [t("products.detail.table.genericBranded"), brandLabel],
+                  [t("products.detail.table.category"), product.category],
+                  [t("products.detail.table.indication"), product.indication],
+                  [t("products.detail.table.composition"), product.composition],
+                  [t("products.detail.table.osmolarity"), product.osmolarity],
+                  [t("products.detail.table.calorie"), product.calorie],
+                  [t("products.detail.table.packaging"), product.packaging.join(" · ")],
+                  [t("products.detail.table.availableSizes"), product.sizes.join(" · ")],
+                  [t("products.detail.table.nieBpom"), product.nie],
+                  [t("products.detail.table.shelfLife"), product.shelfLife],
+                  [t("products.detail.table.storage"), product.storage],
+                  [t("products.detail.table.manufacturingStandard"), product.manufacturingNote],
+                ].map(([k, v]) => (
+                  <tr key={k} className="border-b border-black/5">
+                    <th className="text-left py-5 pr-8 align-top eyebrow text-corporate-gray w-1/4">{k}</th>
+                    <td className="py-5 text-corporate-black dark:text-foreground leading-relaxed">{v}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </ScrollReveal>
       </section>
 
       {/* Manufacturing quality + storage */}
-      <section className="bg-corporate-black text-white py-24">
-        <ScrollReveal animation="fade-up" className="max-w-[1600px] mx-auto px-6 lg:px-10 grid grid-cols-12 gap-12">
-          <div className="col-span-12 lg:col-span-6">
+      <section className="bg-corporate-black text-white py-16 sm:py-24">
+        <ScrollReveal animation="fade-up" className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+          <div className="col-span-1 lg:col-span-6">
             <span className="eyebrow text-white/50 mb-4 block">{t("products.detail.manufacturingQuality.eyebrow")}</span>
             <h3 className="text-3xl font-light mb-6">{t("products.detail.manufacturingQuality.title")}</h3>
             <p className="text-white/70 leading-relaxed">{product.manufacturingNote}</p>
           </div>
-          <div className="col-span-12 lg:col-span-6">
+          <div className="col-span-1 lg:col-span-6">
             <span className="eyebrow text-white/50 mb-4 block">{t("products.detail.storageInfo.eyebrow")}</span>
             <h3 className="text-3xl font-light mb-6">{t("products.detail.storageInfo.title")}</h3>
             <p className="text-white/70 leading-relaxed">{product.storage}</p>

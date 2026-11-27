@@ -81,9 +81,9 @@ function JobDetailPage() {
       </section>
 
       {/* Hero */}
-      <section className="bg-white dark:bg-card py-20">
-        <div className="max-w-[1600px] mx-auto px-6 lg:px-10 grid grid-cols-12 gap-12">
-          <ScrollReveal animation="fade-right" className="col-span-12 lg:col-span-8">
+      <section className="bg-white dark:bg-card py-16 sm:py-20">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+          <ScrollReveal animation="fade-right" className="col-span-1 lg:col-span-8">
             <span className="eyebrow text-primary mb-4 block">{job.department} · {job.level}</span>
             <h1 className="text-4xl lg:text-6xl font-light tracking-tighter mb-6 text-balance">{job.title}</h1>
             <p className="text-xl text-corporate-gray leading-relaxed max-w-2xl mb-8">{job.summary}</p>
@@ -91,7 +91,7 @@ function JobDetailPage() {
               <MediaImage src={job.coverImage} alt={job.title} className="w-full h-full object-cover" />
             </div>
           </ScrollReveal>
-          <ScrollReveal animation="fade-left" className="col-span-12 lg:col-span-4 bg-white dark:bg-card border border-black/[0.07] dark:border-white/[0.07] rounded-xl p-8 self-start shadow-[0_10px_30px_-15px_rgba(9,42,125,0.18)]">
+          <ScrollReveal animation="fade-left" className="col-span-1 lg:col-span-4 bg-white dark:bg-card border border-black/[0.07] dark:border-white/[0.07] rounded-xl p-6 sm:p-8 self-start shadow-[0_10px_30px_-15px_rgba(9,42,125,0.18)]">
             <dl className="space-y-5 mb-8">
               <Row k={t("careers.detail.workingLocation")} v={job.location} />
               <Row k={t("careers.detail.workMode")} v={job.workMode} />

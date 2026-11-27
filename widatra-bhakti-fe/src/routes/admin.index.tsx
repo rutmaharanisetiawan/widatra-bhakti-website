@@ -6,7 +6,7 @@ import { useTourBookings } from "@/hooks/use-tour-bookings";
 import { getContactStatus, formatReceivedAgo } from "@/lib/contact-data";
 import { useLanguage } from "@/hooks/use-language";
 import { useAuth } from "@/hooks/use-auth";
-import { Users, Package, Briefcase, CalendarCheck, Factory, CheckCircle2 } from "lucide-react";
+import { Users, Package, Briefcase, CalendarCheck, Factory, CheckCircle2, HeartPulse } from "lucide-react";
 
 export const Route = createFileRoute("/admin/")({
   head: () => ({ meta: [{ title: "Admin Dashboard — Widatra" }] }),
@@ -35,11 +35,29 @@ function AdminHome() {
   const { applications } = useAtsApplications();
   const { bookings } = useTourBookings(canManageTours);
 
-  const latestInquiries = inquiries.filter((i) => !i.archived).slice(0, 5);
-  const totalContacts = inquiries.filter((i) => !i.archived).length;
+  const isPv = (i: { source?: string; id: string; subject: string }) =>
+    Boolean(
+      i.source?.toLowerCase().includes("pharmacovigilance") ||
+      i.source?.toLowerCase().includes("adr") ||
+      i.id.startsWith("PV-") ||
+      i.subject.toLowerCase().includes("[adr]")
+    );
+
+  const pvReports = inquiries.filter((i) => !i.archived && isPv(i));
+  const unreadPvCount = pvReports.filter((r) => !r.read).length;
+
+  const generalInquiries = inquiries.filter((i) => !i.archived && !isPv(i));
+  const latestInquiries = generalInquiries.slice(0, 5);
+  const totalContacts = generalInquiries.length;
+  const generalUnreadCount = generalInquiries.filter((i) => !i.read).length;
   const recentApplicants = applications.slice(0, 5);
 
   const quickActions = [
+    canManageContent && {
+      label: "Farmakovigilans (ADR)",
+      icon: HeartPulse,
+      to: "/admin/pharmacovigilance",
+    },
     canManageContent && { label: t("admin.index.quickActions.publishProduct"), icon: Package, to: "/admin/products" },
     canManageHR && { label: t("admin.index.quickActions.postJob"), icon: Briefcase, to: "/admin/careers" },
     canManageTours && { label: "Kelola Tur Pabrik", icon: Factory, to: "/admin/factory-tour" },
@@ -54,7 +72,15 @@ function AdminHome() {
         key="inquiries"
         label={t("admin.index.stats.inquiries")}
         value={totalContacts.toString()}
-        delta={unreadCount > 0 ? `${unreadCount} unread` : t("admin.index.stats.inquiriesDelta")}
+        delta={generalUnreadCount > 0 ? `${generalUnreadCount} unread` : t("admin.index.stats.inquiriesDelta")}
+      />
+    ),
+    canManageContent && (
+      <StatCard
+        key="pv"
+        label="Farmakovigilans (ADR)"
+        value={pvReports.length.toString()}
+        delta={unreadPvCount > 0 ? `${unreadPvCount} perlu evaluasi BPOM` : "Semua tertangani"}
       />
     ),
     canManageHR && (
@@ -112,6 +138,74 @@ function AdminHome() {
           ))}
         </div>
       </div>
+
+      {/* Pharmacovigilance (ADR) Dedicated Wadah Container */}
+      {canManageContent && (
+        <div className="card-elevated p-6 mb-6 border-l-4 border-l-rose-500">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 pb-3 border-b border-hairline">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800/40 text-rose-600 flex items-center justify-center shrink-0">
+                <HeartPulse className="w-5 h-5" />
+              </div>
+              <div>
+                <div className="flex items-center gap-2">
+                  <h2 className="font-display text-lg font-semibold text-corporate-black dark:text-white">
+                    Laporan Farmakovigilans (ADR)
+                  </h2>
+                  {unreadPvCount > 0 ? (
+                    <span className="px-2 py-0.5 rounded-full bg-rose-100 text-rose-700 dark:bg-rose-950 dark:text-rose-300 text-[10px] font-bold animate-pulse">
+                      {unreadPvCount} Perlu Evaluasi Klinis
+                    </span>
+                  ) : (
+                    <span className="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-300 text-[10px] font-bold">
+                      Semua Tertangani
+                    </span>
+                  )}
+                </div>
+                <p className="text-xs text-corporate-gray mt-0.5">
+                  Wadah evaluasi Kejadian Tidak Diinginkan (KTD) &amp; Kepatuhan Regulasi BPOM No. 4/2026
+                </p>
+              </div>
+            </div>
+            <Link
+              to="/admin/pharmacovigilance"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-rose-50 hover:bg-rose-100 dark:bg-rose-950/40 dark:hover:bg-rose-900/40 text-rose-700 dark:text-rose-300 text-xs font-semibold transition-colors shrink-0"
+            >
+              <span>Buka Modul Farmakovigilans</span>
+              <span>→</span>
+            </Link>
+          </div>
+
+          {pvReports.length === 0 ? (
+            <div className="p-8 text-center text-xs text-corporate-gray rounded-xl border border-dashed border-hairline">
+              Belum ada laporan efek samping (ADR) masuk. Seluruh laporan yang dikirim melalui formulir publik akan otomatis tercatat di wadah ini.
+            </div>
+          ) : (
+            <DataTable
+              columns={["No. Referensi & Pasien", "Produk Terduga", "Pelapor / Faskes", "Waktu Terima", "Status"]}
+              rows={pvReports.slice(0, 5).map((r) => [
+                <div key={r.id}>
+                  <div className="font-mono text-xs font-bold text-primary">{r.id}</div>
+                  <div className="text-xs text-corporate-black dark:text-white font-medium mt-0.5">
+                    {r.subject.replace(/\[ADR\]\s*/i, "")}
+                  </div>
+                </div>,
+                <span key={r.id + "-p"} className="text-xs font-medium text-slate-700 dark:text-slate-300">
+                  {r.subject.split("-")[0]?.replace(/\[ADR\]\s*/i, "").trim() || "Produk Infus"}
+                </span>,
+                <div key={r.id + "-rep"}>
+                  <div className="text-xs font-medium">{r.name}</div>
+                  <div className="text-[11px] text-corporate-gray truncate max-w-[180px]">{r.organization || "-"}</div>
+                </div>,
+                <span key={r.id + "-t"} className="text-[11px] text-corporate-gray whitespace-nowrap">
+                  {formatReceivedAgo(r.receivedAt)}
+                </span>,
+                <StatusPill key={r.id + "-st"} status={getContactStatus(r)} />,
+              ])}
+            />
+          )}
+        </div>
+      )}
 
       {/* Primary Data Tables */}
       <div className={hasMultipleTables ? "grid lg:grid-cols-2 gap-6" : "space-y-6"}>

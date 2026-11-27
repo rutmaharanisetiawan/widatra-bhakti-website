@@ -167,23 +167,23 @@ export function SiteNav() {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 ${open ? "z-[1050]" : "z-50"} pointer-events-none`}
+      className={`fixed top-0 inset-x-0 ${open ? "z-[1050]" : "z-50"} pointer-events-none transition-all duration-300`}
     >
       {/* Floating Pill Navbar Wrapper */}
-      <div className="pt-3 sm:pt-5 px-3 sm:px-5">
+      <div className="pt-3 sm:pt-5 lg:pt-6 px-3 sm:px-5 lg:px-8 max-w-full">
         <nav
           aria-label="Main navigation"
-          className={`pointer-events-auto mx-auto w-full max-w-[1440px] 2xl:max-w-[1540px] min-[1800px]:max-w-[1600px] rounded-[50px] bg-white/95 dark:bg-popover/95 backdrop-blur-xl ring-1 ring-black/[0.06] dark:ring-white/[0.10] transition-all duration-300 ease-in-out ${
+          className={`pointer-events-auto mx-auto w-full max-w-[1240px] 2xl:max-w-[1280px] rounded-[50px] bg-white/95 dark:bg-popover/95 backdrop-blur-xl ring-1 ring-black/[0.06] dark:ring-white/[0.10] transition-all duration-300 ease-in-out ${
             visible ? "translate-y-0 opacity-100" : "-translate-y-28 opacity-0 pointer-events-none"
           } ${
             scrolled
-              ? "h-[54px] sm:h-[60px] shadow-[0_14px_44px_-10px_rgba(9,42,125,0.22)] dark:shadow-[0_14px_44px_-10px_rgba(0,0,0,0.65)]"
-              : "h-[58px] sm:h-[64px] shadow-[0_8px_36px_0_rgba(9,42,125,0.14)] dark:shadow-[0_8px_36px_0_rgba(0,0,0,0.55)]"
+              ? "h-[50px] sm:h-[56px] shadow-[0_14px_44px_-10px_rgba(9,42,125,0.22)] dark:shadow-[0_14px_44px_-10px_rgba(0,0,0,0.65)]"
+              : "h-[54px] sm:h-[60px] shadow-[0_8px_36px_0_rgba(9,42,125,0.14)] dark:shadow-[0_8px_36px_0_rgba(0,0,0,0.55)]"
           }`}
         >
-        <div className="h-full px-3.5 sm:px-5 xl:px-4 2xl:px-5 flex items-center justify-between gap-1.5 xl:gap-2 2xl:gap-3">
+        <div className="h-full px-3.5 sm:px-5 xl:px-4 2xl:px-5 flex items-center justify-between gap-1 xl:gap-2">
           {/* Brand Logo */}
-          <Link to="/" className="flex items-center group flex-shrink-0 mr-0.5 xl:mr-1" aria-label="PT Widatra Bhakti Home">
+          <Link to="/" className="flex items-center group flex-shrink-0 min-w-0 mr-0.5 xl:mr-1" aria-label="PT Widatra Bhakti Home">
             <WidatraLogo
               variant="horizontal"
               size="md"

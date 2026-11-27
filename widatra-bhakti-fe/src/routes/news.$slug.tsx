@@ -35,7 +35,7 @@ function NewsDetailPage() {
   return (
     <>
       {/* Hero / Banner */}
-      <section className="relative min-h-[60vh] -mt-20 flex items-end overflow-hidden">
+      <section className="relative min-h-[55vh] -mt-20 flex items-end overflow-hidden">
         <div className="absolute inset-0 z-0">
           <MediaImage
             src={article.img}
@@ -89,11 +89,11 @@ function NewsDetailPage() {
       </section>
 
       {/* Article body */}
-      <section className="py-20 bg-white dark:bg-card">
-        <div className="max-w-[1600px] mx-auto px-6 lg:px-10">
-          <div className="grid grid-cols-12 gap-12 lg:gap-20">
+      <section className="py-16 sm:py-20 bg-white dark:bg-card">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-20">
             {/* Main content */}
-            <ScrollReveal animation="fade-right" className="col-span-12 lg:col-span-7 xl:col-span-8">
+            <ScrollReveal animation="fade-right" className="col-span-1 lg:col-span-7 xl:col-span-8">
               {/* Excerpt / lead */}
               <p className="text-xl lg:text-2xl font-light text-corporate-black dark:text-foreground leading-relaxed border-l-4 border-primary pl-6 mb-12">
                 {article.excerpt}
@@ -177,14 +177,14 @@ function NewsDetailPage() {
         <section className="py-20 bg-surface border-t border-black/5">
           <ScrollReveal animation="fade-up" className="max-w-[1600px] mx-auto px-6 lg:px-10">
             <span className="eyebrow text-primary mb-8 block">Gallery</span>
-            <div className="grid grid-cols-12 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
               {article.gallery.map((img, i) => (
                 <div
                   key={i}
                   className={`overflow-hidden rounded-md ${
                     i === 0
-                      ? "col-span-12 lg:col-span-7"
-                      : "col-span-12 md:col-span-6 lg:col-span-5"
+                      ? "col-span-1 md:col-span-12 lg:col-span-7"
+                      : "col-span-1 md:col-span-6 lg:col-span-5"
                   }`}
                 >
                   <img

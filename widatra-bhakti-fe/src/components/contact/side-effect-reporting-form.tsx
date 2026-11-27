@@ -72,13 +72,20 @@ export function SideEffectReportingForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [referenceCode, setReferenceCode] = useState<string>("");
 
-  const scrollToForm = () => {
-    if (formTopRef.current) {
-      formTopRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
-    } else {
-      const el = document.getElementById("report-form");
-      el?.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+  const scrollToFormCard = (smooth = true) => {
+    requestAnimationFrame(() => {
+      const el = document.getElementById("reporting-form-card-main");
+      if (!el) return;
+      const navbarOffset = 88;
+      const targetY = el.getBoundingClientRect().top + window.scrollY - navbarOffset;
+      const currentY = window.scrollY;
+      if (Math.abs(currentY - targetY) > 30) {
+        window.scrollTo({
+          top: Math.max(0, targetY),
+          behavior: smooth ? "smooth" : "auto",
+        });
+      }
+    });
   };
 
   const [formData, setFormData] = useState<SideEffectFormData>({
@@ -123,7 +130,7 @@ export function SideEffectReportingForm() {
     }
     setErrors({});
     setStep(2);
-    setTimeout(scrollToForm, 50);
+    setTimeout(() => scrollToFormCard(true), 50);
   };
 
   const validateStep2 = () => {
@@ -230,7 +237,7 @@ export function SideEffectReportingForm() {
     setIsSubmitting(false);
     setStep(3);
     toast.success(t("sideEffectReporting.successTitle"));
-    setTimeout(scrollToForm, 60);
+    setTimeout(() => scrollToFormCard(true), 60);
   };
 
   const handlePrint = () => {
@@ -257,7 +264,7 @@ export function SideEffectReportingForm() {
     setErrors({});
     setReferenceCode("");
     setStep(1);
-    setTimeout(scrollToForm, 60);
+    setTimeout(() => scrollToFormCard(true), 60);
   };
 
   return (
@@ -290,7 +297,7 @@ export function SideEffectReportingForm() {
       </div>
 
       {/* Main Form Container */}
-      <div className="rounded-3xl border border-black/[0.08] dark:border-white/[0.12] bg-white dark:bg-card shadow-xl overflow-hidden">
+      <div id="reporting-form-card-main" className="rounded-3xl border border-black/[0.08] dark:border-white/[0.12] bg-white dark:bg-card shadow-xl overflow-hidden scroll-mt-24">
         {/* Progress Stepper Bar */}
         <div className="border-b border-black/[0.06] dark:border-white/[0.08] bg-slate-50/70 dark:bg-white/[0.02] px-6 sm:px-10 py-4">
           <div className="flex items-center justify-between max-w-2xl mx-auto">
@@ -847,7 +854,7 @@ export function SideEffectReportingForm() {
                   type="button"
                   onClick={() => {
                     setStep(1);
-                    setTimeout(scrollToForm, 50);
+                    setTimeout(() => scrollToFormCard(true), 50);
                   }}
                   className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-slate-300 dark:border-white/15 hover:bg-slate-100 dark:hover:bg-white/[0.06] text-xs font-semibold text-corporate-black dark:text-foreground transition-all"
                 >

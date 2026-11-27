@@ -2,7 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState, useMemo } from "react";
 import { useCountUp } from "@/hooks/use-countup";
 import { useLanguage } from "@/hooks/use-language";
-import { WavyMarqueeRibbon } from "@/components/wavy-marquee-ribbon";
 import { SubNavbar } from "@/components/sub-navbar";
 import { usePublishedArticles } from "@/hooks/use-news";
 import { MediaImage } from "@/components/media/media-image";
@@ -233,30 +232,22 @@ function HomePage() {
       {/* =================================================================
           TAHAP 1: INTERACTIVE HERO + CAPSULE COLLAGE + MARQUEE RIBBON
       ================================================================= */}
-      <section className="relative min-h-[95vh] lg:min-h-[calc(100vh-12px)] 2xl:min-h-screen -mt-20 pt-24 sm:pt-26 lg:pt-28 xl:pt-30 2xl:pt-34 pb-20 sm:pb-24 lg:pb-24 xl:pb-28 2xl:pb-32 flex items-center overflow-hidden bg-[#061844] text-white">
+      <section className="relative min-h-[100dvh] lg:h-[100dvh] lg:min-h-[760px] 2xl:min-h-[820px] w-full -mt-20 pt-36 sm:pt-40 lg:pt-44 pb-16 sm:pb-20 lg:pb-24 flex items-center overflow-hidden bg-[#061844] text-white">
         {/* Rich Layered Background — Cleanroom image smoothly dissolves into cleanroom navy */}
         <div className="absolute inset-0 z-0">
           <img
             src={heroImg}
             alt="Sterile pharmaceutical cleanroom"
-            className="w-full h-full object-cover object-center scale-105 opacity-75"
-            style={{
-              maskImage:
-                "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 45%, rgba(0,0,0,0.7) 68%, rgba(0,0,0,0.2) 88%, transparent 100%)",
-              WebkitMaskImage:
-                "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 45%, rgba(0,0,0,0.7) 68%, rgba(0,0,0,0.2) 88%, transparent 100%)",
-            }}
+            className="w-full h-full object-cover object-center scale-105 opacity-60"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#05153d]/80 via-[#082266]/55 to-[#0b2b80]/30" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_30%,rgba(27,72,196,0.22),transparent_60%)]" />
-          {/* Deep Navy Grounding: ensures seamless navy tone before easing into surface */}
-          <div className="absolute inset-x-0 bottom-0 h-64 sm:h-80 bg-gradient-to-t from-[#061844] via-[#061844]/80 to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#05153d]/85 via-[#082266]/65 to-[#0b2b80]/40" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_30%,rgba(27,72,196,0.25),transparent_60%)]" />
         </div>
 
-        {/* Ultra-Smooth Non-Linear Scrim Gradient Fade into Ribbon & Next Section (Zero Hard Cuts / Banding) */}
+        {/* Silky Non-Linear Gradient to Surface: seamlessly dissolves deep navy hero into surface */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-48 sm:h-64 lg:h-72 z-[5] hero-bottom-scrim"
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-48 sm:h-64 lg:h-80 z-[5] hero-bottom-scrim"
         />
 
         <div className="container mx-auto max-w-[1240px] 2xl:max-w-[1360px] px-4 sm:px-6 lg:px-8 xl:px-10 relative z-10 w-full">
@@ -371,16 +362,13 @@ function HomePage() {
         </div>
       </section>
 
-      {/* CONTINUOUS WAVY MARQUEE RIBBON DIVIDER */}
-      <WavyMarqueeRibbon variant="wave" />
-
       {/* =================================================================
           CORPORATE STATS BAND — 2-Col Mobile / 4-Col Desktop Rounded Cards
       ================================================================= */}
       <section className="py-10 sm:py-14 bg-surface border-b border-black/5 dark:border-white/5">
         <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
-            <StatCard value={38} suffix="+" label={t("home.stats.years")} index={0} />
+            <StatCard value={40} suffix="+" label={t("home.stats.years")} index={0} />
             <StatCard value={150} suffix="M+" label={t("home.stats.units")} index={1} />
             <StatCard value={11} suffix="" label={t("home.stats.productLines")} index={2} />
             <StatCard accentText="A-Grade" label={t("home.stats.cleanroom")} index={3} />

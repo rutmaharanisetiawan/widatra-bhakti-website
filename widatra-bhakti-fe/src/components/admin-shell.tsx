@@ -6,7 +6,7 @@ import { WidatraLogo } from "@/components/ui/widatra-logo";
 import { useLanguage } from "@/hooks/use-language";
 import { useAuth } from "@/hooks/use-auth";
 import { logoutUser, type UserRole } from "@/lib/auth-store";
-import { useUnreadContactCount } from "@/hooks/use-contact-inbox";
+import { useUnreadContactCount, useUnreadPvCount } from "@/hooks/use-contact-inbox";
 import {
   LayoutDashboard,
   Package,
@@ -27,6 +27,7 @@ import {
   Menu,
   X,
   ShieldAlert,
+  HeartPulse,
 } from "lucide-react";
 
 type NavItem = {
@@ -80,6 +81,21 @@ const NAV: readonly NavItem[] = [
     to: "/admin/contact",
     icon: Inbox,
     allowedRoles: ["Super Admin", "Content Admin", "Administrator", "Content Editor"],
+  },
+  {
+    labelKey: "pharmacovigilance",
+    to: "/admin/pharmacovigilance",
+    icon: HeartPulse,
+    allowedRoles: [
+      "Super Admin",
+      "Content Admin",
+      "Administrator",
+      "Content Editor",
+      "CSR Coordinator",
+      "HR Manager",
+      "Event Moderator",
+      "Factory Tour Admin",
+    ],
   },
   {
     labelKey: "companyCms",
@@ -146,6 +162,7 @@ export function AdminShell({ title, subtitle, actions, children }: {
   const isSuperAdmin = userRoles.includes("Super Admin") || userRoles.includes("Administrator");
   const canManageContact = isSuperAdmin || userRoles.includes("Content Admin") || userRoles.includes("Content Editor");
   const unreadContactCount = useUnreadContactCount(canManageContact);
+  const unreadPvCount = useUnreadPvCount(true);
 
   // Filter modules: if not permitted, completely exclude it from the menu
   const visibleNav = NAV.filter((item) => {
@@ -214,9 +231,14 @@ export function AdminShell({ title, subtitle, actions, children }: {
               >
                 <Icon className="w-4 h-4" />
                 <span className="flex-1">{t(`admin.shell.nav.${item.labelKey}`)}</span>
-                {showBadge && (
+                {item.labelKey === "contactInbox" && unreadContactCount > 0 && (
                   <span className="min-w-[18px] h-[18px] px-1 rounded-full bg-destructive text-white text-[10px] font-bold grid place-items-center">
                     {unreadContactCount > 99 ? "99+" : unreadContactCount}
+                  </span>
+                )}
+                {item.labelKey === "pharmacovigilance" && unreadPvCount > 0 && (
+                  <span className="min-w-[18px] h-[18px] px-1 rounded-full bg-rose-600 text-white text-[10px] font-bold grid place-items-center animate-pulse">
+                    {unreadPvCount > 99 ? "99+" : unreadPvCount}
                   </span>
                 )}
               </Link>
@@ -270,9 +292,14 @@ export function AdminShell({ title, subtitle, actions, children }: {
                   >
                     <Icon className="w-4 h-4" />
                     <span className="flex-1">{t(`admin.shell.nav.${item.labelKey}`)}</span>
-                    {showBadge && (
+                    {item.labelKey === "contactInbox" && unreadContactCount > 0 && (
                       <span className="min-w-[18px] h-[18px] px-1 rounded-full bg-destructive text-white text-[10px] font-bold grid place-items-center">
                         {unreadContactCount > 99 ? "99+" : unreadContactCount}
+                      </span>
+                    )}
+                    {item.labelKey === "pharmacovigilance" && unreadPvCount > 0 && (
+                      <span className="min-w-[18px] h-[18px] px-1 rounded-full bg-rose-600 text-white text-[10px] font-bold grid place-items-center animate-pulse">
+                        {unreadPvCount > 99 ? "99+" : unreadPvCount}
                       </span>
                     )}
                   </Link>

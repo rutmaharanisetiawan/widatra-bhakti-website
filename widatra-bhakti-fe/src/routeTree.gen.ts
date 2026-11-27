@@ -45,6 +45,7 @@ import { Route as ApplicantApplicationsRouteImport } from './routes/applicant.ap
 import { Route as AdminUsersRouteImport } from './routes/admin.users'
 import { Route as AdminSettingsRouteImport } from './routes/admin.settings'
 import { Route as AdminProductsRouteImport } from './routes/admin.products'
+import { Route as AdminPharmacovigilanceRouteImport } from './routes/admin.pharmacovigilance'
 import { Route as AdminNewsRouteImport } from './routes/admin.news'
 import { Route as AdminMediaRouteImport } from './routes/admin.media'
 import { Route as AdminLoginRouteImport } from './routes/admin.login'
@@ -236,6 +237,11 @@ const AdminProductsRoute = AdminProductsRouteImport.update({
   path: '/products',
   getParentRoute: () => AdminRoute,
 } as any)
+const AdminPharmacovigilanceRoute = AdminPharmacovigilanceRouteImport.update({
+  id: '/pharmacovigilance',
+  path: '/pharmacovigilance',
+  getParentRoute: () => AdminRoute,
+} as any)
 const AdminNewsRoute = AdminNewsRouteImport.update({
   id: '/news',
   path: '/news',
@@ -311,6 +317,7 @@ export interface FileRoutesByFullPath {
   '/admin/login': typeof AdminLoginRoute
   '/admin/media': typeof AdminMediaRoute
   '/admin/news': typeof AdminNewsRoute
+  '/admin/pharmacovigilance': typeof AdminPharmacovigilanceRoute
   '/admin/products': typeof AdminProductsRoute
   '/admin/settings': typeof AdminSettingsRoute
   '/admin/users': typeof AdminUsersRoute
@@ -357,6 +364,7 @@ export interface FileRoutesByTo {
   '/admin/login': typeof AdminLoginRoute
   '/admin/media': typeof AdminMediaRoute
   '/admin/news': typeof AdminNewsRoute
+  '/admin/pharmacovigilance': typeof AdminPharmacovigilanceRoute
   '/admin/products': typeof AdminProductsRoute
   '/admin/settings': typeof AdminSettingsRoute
   '/admin/users': typeof AdminUsersRoute
@@ -406,6 +414,7 @@ export interface FileRoutesById {
   '/admin/login': typeof AdminLoginRoute
   '/admin/media': typeof AdminMediaRoute
   '/admin/news': typeof AdminNewsRoute
+  '/admin/pharmacovigilance': typeof AdminPharmacovigilanceRoute
   '/admin/products': typeof AdminProductsRoute
   '/admin/settings': typeof AdminSettingsRoute
   '/admin/users': typeof AdminUsersRoute
@@ -456,6 +465,7 @@ export interface FileRouteTypes {
     | '/admin/login'
     | '/admin/media'
     | '/admin/news'
+    | '/admin/pharmacovigilance'
     | '/admin/products'
     | '/admin/settings'
     | '/admin/users'
@@ -502,6 +512,7 @@ export interface FileRouteTypes {
     | '/admin/login'
     | '/admin/media'
     | '/admin/news'
+    | '/admin/pharmacovigilance'
     | '/admin/products'
     | '/admin/settings'
     | '/admin/users'
@@ -550,6 +561,7 @@ export interface FileRouteTypes {
     | '/admin/login'
     | '/admin/media'
     | '/admin/news'
+    | '/admin/pharmacovigilance'
     | '/admin/products'
     | '/admin/settings'
     | '/admin/users'
@@ -853,6 +865,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminProductsRouteImport
       parentRoute: typeof AdminRoute
     }
+    '/admin/pharmacovigilance': {
+      id: '/admin/pharmacovigilance'
+      path: '/pharmacovigilance'
+      fullPath: '/admin/pharmacovigilance'
+      preLoaderRoute: typeof AdminPharmacovigilanceRouteImport
+      parentRoute: typeof AdminRoute
+    }
     '/admin/news': {
       id: '/admin/news'
       path: '/news'
@@ -937,6 +956,7 @@ interface AdminRouteChildren {
   AdminLoginRoute: typeof AdminLoginRoute
   AdminMediaRoute: typeof AdminMediaRoute
   AdminNewsRoute: typeof AdminNewsRoute
+  AdminPharmacovigilanceRoute: typeof AdminPharmacovigilanceRoute
   AdminProductsRoute: typeof AdminProductsRoute
   AdminSettingsRoute: typeof AdminSettingsRoute
   AdminUsersRoute: typeof AdminUsersRoute
@@ -954,6 +974,7 @@ const AdminRouteChildren: AdminRouteChildren = {
   AdminLoginRoute: AdminLoginRoute,
   AdminMediaRoute: AdminMediaRoute,
   AdminNewsRoute: AdminNewsRoute,
+  AdminPharmacovigilanceRoute: AdminPharmacovigilanceRoute,
   AdminProductsRoute: AdminProductsRoute,
   AdminSettingsRoute: AdminSettingsRoute,
   AdminUsersRoute: AdminUsersRoute,

@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import {
   getAllContactInquiries,
   getUnreadContactCount,
+  getUnreadPvCount,
   initContactStore,
   onContactStoreChange,
   refreshContactStore,
@@ -44,6 +45,28 @@ export function useUnreadContactCount(enabled = true) {
 
   const refresh = useCallback(() => {
     setUnreadCount(getUnreadContactCount());
+  }, []);
+
+  useEffect(() => {
+    if (!enabled) {
+      setUnreadCount(0);
+      return;
+    }
+    initContactStore();
+    refresh();
+    const unsubscribe = onContactStoreChange(refresh);
+    return unsubscribe;
+  }, [enabled, refresh]);
+
+  return unreadCount;
+}
+
+/** Live unread badge count specifically for Pharmacovigilance (ADR) reports. */
+export function useUnreadPvCount(enabled = true) {
+  const [unreadCount, setUnreadCount] = useState(0);
+
+  const refresh = useCallback(() => {
+    setUnreadCount(getUnreadPvCount());
   }, []);
 
   useEffect(() => {

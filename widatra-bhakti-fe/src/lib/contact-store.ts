@@ -115,6 +115,23 @@ export function getTotalContactCount(): number {
   return loaded ? counts.total : cache.filter((i) => !i.archived).length;
 }
 
+export function isPvInquiry(i: ContactInquiry): boolean {
+  return Boolean(
+    i.source?.toLowerCase().includes("pharmacovigilance") ||
+    i.source?.toLowerCase().includes("adr") ||
+    i.id.startsWith("PV-") ||
+    i.subject.toLowerCase().includes("[adr]")
+  );
+}
+
+export function getPvContactInquiries(): ContactInquiry[] {
+  return sortByReceivedDesc(cache.filter(isPvInquiry));
+}
+
+export function getUnreadPvCount(): number {
+  return cache.filter((i) => isPvInquiry(i) && !i.read && !i.archived).length;
+}
+
 export type NewContactInput = {
   id?: string;
   name: string;

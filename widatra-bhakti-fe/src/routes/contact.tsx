@@ -1,15 +1,23 @@
 import { useState } from "react";
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, redirect } from "@tanstack/react-router";
 import { PageHero } from "@/components/page-hero";
 import { useLanguage } from "@/hooks/use-language";
 import { SubNavbar } from "@/components/sub-navbar";
-import { CheckCircle2, Mail, Phone, MapPin, Clock, ArrowUpRight, ArrowRight } from "lucide-react";
+import { CheckCircle2, Mail, Phone, MapPin, Clock, ArrowUpRight, ArrowRight, MessageSquare } from "lucide-react";
 import { addContactInquiry } from "@/lib/contact-store";
 import officeImg from "@/assets/office-building.jpg";
 import aerialImg from "@/assets/factory-aerial.jpg";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
 export const Route = createFileRoute("/contact")({
+  validateSearch: (search: Record<string, unknown>): { tab?: string } => ({
+    tab: (search.tab as string) || undefined,
+  }),
+  beforeLoad: ({ search }) => {
+    if (search.tab === "reporting") {
+      throw redirect({ to: "/contact/reporting" });
+    }
+  },
   head: () => ({
     meta: [
       { title: "Our Contact — PT Widatra Bhakti" },
@@ -68,7 +76,8 @@ const DEPARTMENTS_DIR = [
 ] as const;
 
 function ContactPage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const isId = language === "id";
   const [activeOfficeTab, setActiveOfficeTab] = useState<number>(0);
 
   const navItems = [
@@ -89,23 +98,6 @@ function ContactPage() {
         description="Sales, partnerships, media, pharmacovigilance, or a simple hello — our Jakarta head office and Pandaan plant are at your service."
         image={officeImg}
       />
-
-      {/* Sub Navigation Switcher */}
-      <div className="bg-surface pt-8 sm:pt-10">
-        <div className="max-w-[1240px] 2xl:max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 flex justify-center">
-          <div className="inline-flex p-1.5 rounded-full bg-white dark:bg-card border border-black/[0.08] dark:border-white/[0.10] shadow-sm">
-            <span className="px-5 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-bold bg-primary text-white shadow-sm">
-              {t("sideEffectReporting.tabContact")}
-            </span>
-            <Link
-              to="/contact/reporting"
-              className="px-5 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-semibold text-corporate-gray dark:text-muted-foreground hover:text-primary transition-colors"
-            >
-              {t("sideEffectReporting.tabReporting")}
-            </Link>
-          </div>
-        </div>
-      </div>
 
       {/* Quick contact strip — Interactive Rounded Cards */}
       <section className="py-10 sm:py-14 bg-surface border-b border-black/5 dark:border-white/5">
@@ -272,7 +264,7 @@ function ContactPage() {
                   to="/contact/reporting"
                   className="px-6 py-3.5 rounded-full bg-white text-accent text-xs font-bold uppercase tracking-[0.18em] text-center hover:scale-[1.02] transition-all shadow-md"
                 >
-                  {t("sideEffectReporting.heroTitle")}
+                  {isId ? "Isi Formulir Pelaporan" : "Fill Reporting Form"}
                 </Link>
                 <a
                   href="https://wa.me/628001234567"

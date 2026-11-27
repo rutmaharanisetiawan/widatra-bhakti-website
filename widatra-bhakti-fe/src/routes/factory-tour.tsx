@@ -849,9 +849,9 @@ function CheckBookingStatus() {
   }
 
   return (
-    <section className="py-20 bg-white dark:bg-card">
-      <div className="max-w-[1600px] mx-auto px-6 lg:px-10 grid grid-cols-12 gap-12 items-start">
-        <div className="col-span-12 lg:col-span-5">
+    <section className="py-16 sm:py-20 bg-white dark:bg-card">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        <div className="col-span-1 lg:col-span-5">
           <span className="eyebrow text-primary mb-4 block">{t("factoryTour.checkStatus.eyebrow")}</span>
           <h3 className="text-3xl lg:text-4xl font-light tracking-tight mb-4">{t("factoryTour.checkStatus.title")}</h3>
           <p className="text-corporate-gray leading-relaxed">
@@ -859,7 +859,7 @@ function CheckBookingStatus() {
             <span className="font-medium text-corporate-black dark:text-foreground">{t("factoryTour.checkStatus.descriptionStatuses")}</span>{t("factoryTour.checkStatus.descriptionSuffix")}
           </p>
         </div>
-        <div className="col-span-12 lg:col-span-7">
+        <div className="col-span-1 lg:col-span-7">
           <form onSubmit={handleLookup} className="grid grid-cols-1 sm:grid-cols-[1fr_1fr_auto] gap-3 items-end">
             <label className="block">
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-corporate-gray mb-1.5 block">{t("factoryTour.checkStatus.referenceLabel")}</span>

@@ -82,7 +82,7 @@ function RootComponent() {
     <>
       <SitePreloader initialDurationMs={1600} />
       <SiteNav />
-      <main className="pt-20">
+      <main className="pt-20 overflow-x-clip w-full">
         <Outlet />
       </main>
       <SiteFooter />

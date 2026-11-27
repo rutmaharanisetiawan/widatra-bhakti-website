@@ -286,7 +286,7 @@ export function WidaBotWidget() {
           </div>
 
           {/* LAYER 2 (z-20): Slim Vertical Pill Bar Docked Flush on Right Edge */}
-          <div className="relative z-20 flex flex-col items-center justify-between py-2 sm:py-2.5 px-1 sm:px-1.5 min-h-[125px] sm:min-h-[155px] rounded-l-[14px] sm:rounded-l-[18px] bg-gradient-to-b from-[#0E3192] via-[#0284c7] to-[#0E3192] text-white shadow-[-6px_8px_20px_-4px_rgba(14,49,146,0.45)] border-y border-l border-white/25 translate-x-[1px] group-hover:translate-x-0 group-hover:pr-2 transition-all duration-300">
+          <div className="relative z-20 flex flex-col items-center justify-between py-2 sm:py-2.5 px-1 sm:px-1.5 min-h-[125px] sm:min-h-[155px] rounded-l-[14px] sm:rounded-l-[18px] bg-gradient-to-b from-[#0E3192] via-[#0284c7] to-[#0E3192] text-white shadow-[-6px_8px_20px_-4px_rgba(14,49,146,0.45)] border-y border-l border-white/25 translate-x-0 group-hover:pr-2 transition-all duration-300">
             <ChevronLeft className="w-3 h-3 sm:w-3.5 sm:h-3.5 stroke-[2.6] text-white/90 group-hover:text-white group-hover:-translate-x-0.5 transition-all" />
 
             <span
